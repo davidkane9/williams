@@ -11,7 +11,7 @@ Christine Angele Pace
 Danielle Feldman Tarantolo
 Zuzana Tóthová, with highest honors in Biology
 Bachelor of Arts, Magna Cum Laude
-Laura Louise Almstead, with highest honors in Chemistry 
+Laura Louise Almstead, with highest honors in Chemistry
 Leah Ann Amakawa, with honors in Art
 Charis Hagyard Anderson
 Christopher Anthony Anzivino
@@ -179,10 +179,10 @@ Alison Michelle Swain, with highest honors in American Studies
 Sarah Megan Thomas, with honors in Theatre
 Benjamin Guy Thompson
 Elena Martina Traister
-†Erin Brigid Troy
+Erin Brigid Troy
 Michael Thomas Valenti
 Julia Megan Vaughan
-†Darik Omar Velez, with honors in Astrophysics
+Darik Omar Velez, with honors in Astrophysics
 Ana Veselic
 Elizabeth Alice Wall
 Elizabeth Holland Walsh
@@ -191,7 +191,7 @@ Andrew James Weller
 Georgi Zhelev Zhelev
 Bachelor of Arts
 Jennifer Annaliis Abrego, with honors in Political Science
-†Robert John Adamo, with honors in Biology
+Robert John Adamo, with honors in Biology
 Samee Ahmed
 Feyisara R. Akanki
 Timothy Francis Albrecht
@@ -251,7 +251,7 @@ Michael Lipsey Cooper
 Katherine Hadley Cornell
 Michael David Cortese
 Clifton Waugh Covington
-†Misa Melina Cowee, with honors in Astrophysics
+Misa Melina Cowee, with honors in Astrophysics
 Jonathan Craig Crafts
 Ryan Dennis Crisp
 John Patrick Crowley-Delman, with honors in History
@@ -269,7 +269,7 @@ Mayur Sarjerao Deshmukh
 Daniel Adam DiCenzo
 Daniel Cross Dickens
 Devon Thomson DiClerico
-†Kathryn Moyer Dingman, with honors in Psychology
+Kathryn Moyer Dingman, with honors in Psychology
 Kristin Marie Dissinger
 Graham Bruce Dobbin
 Thomas Joseph Douglas
@@ -321,7 +321,7 @@ Andrew Fyfe Hall
 Elizabeth Marie Hamachek
 Reed Thompson Harlow
 Heather Adora Hatcher
-†Ryan Balfour Hayman, with honors in Chemistry
+Ryan Balfour Hayman, with honors in Chemistry
 Patricia Mary Hennessey
 Anne Goodloe Hereford, with honors in Geosciences
 Allison Marie Herling
@@ -445,7 +445,7 @@ Robert Rivas
 Allison Rachel Robbins
 Amanda Caroline Robinson
 Matthew Sean Roessing
-†Elizabeth Ellen Roller, with honors in Chemistry
+Elizabeth Ellen Roller, with honors in Chemistry
 William Matthew Ronco
 Edward Joseph Rossier
 Jeremy William Rothe-Kushel
@@ -468,14 +468,14 @@ Rebecca Dana Semble, with honors in Biology
 Tailer Francis Senior
 Matthew Shafeek
 Moira Kearney Shanahan
-†Joey Rebecca Valis Shapiro, with highest honors in Astrophysics
+Joey Rebecca Valis Shapiro, with highest honors in Astrophysics
 Dana Lauren Shaps
 Geraldine Yun Shen, with honors in Asian Studies
 Elissa Beth Shevinsky
 James Andrew Shilkett, with honors in Economics
 Carol Pauline McClelland Shirai
 Ee-Lynn Sim
-†Jay Gates Slowik, with honors in Chemistry
+Jay Gates Slowik, with honors in Chemistry
 Elizabeth Glover Smith
 Garrett Michael Smith
 Royce Wood-son Smith
@@ -531,7 +531,7 @@ Lauren Elizabeth Wiener
 Eain Armond Williams
 Steven Robert Wollkind
 Elizabeth Megumi Wood
-†Brooke Stimson Wright, with highest honors in Biology
+Brooke Stimson Wright, with highest honors in Biology
 Illie I-San Wu
 Jae-Ho Yim
 Ryu Andrew Yokoi

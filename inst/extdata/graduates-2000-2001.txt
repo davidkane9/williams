@@ -24,16 +24,16 @@ Mary Bowman Cummins
 Yana Dadiomova
 Katharine Elizabeth Davis
 Meg Elizabeth Davis, with honors in Sociology
-Michelle Beth Dunn, with honors in Chemistry 
+Michelle Beth Dunn, with honors in Chemistry
 Peter Jacobs Eyre
-Lily Christine Filip, with honors in History 
+Lily Christine Filip, with honors in History
 Jon Wesley Foreman
 Meghan Amanda Freeman, with honors in English
 Brad Kenneth Geddes
-Richard James Giarusso, with highest honors in Music, with honors in English 
+Richard James Giarusso, with highest honors in Music, with honors in English
 Katharine Ross Gold
 Joshua Howard Goldstein, with highest honors in Biology
-Stephen Michael Gray, with honors in Psychology 
+Stephen Michael Gray, with honors in Psychology
 Haibo Gu
 Jessica Anne Haffajee
 Victor Lahiri Hart, with honors in Political Science
@@ -54,10 +54,10 @@ Meghan Nicole Moscati, with honors in Psychology
 Michelle Sarah Mourad, with highest honors in Chemistry
 Charles Nelson Munyon, with honors in Biology
 Brendan Nelson
-Dawn Christiana Nelson 
+Dawn Christiana Nelson
 Catherine Jean Nicholson
 Rebecca Joy Norwick
-Rachel Kate Oberter, with highest honors in Art 
+Rachel Kate Oberter, with highest honors in Art
 Jason Christopher Rutledge Oraker, with honors in Psychology
 Elizabeth Anne Overbay
 Jillian Annice Pesin, with honors in Biology
@@ -69,7 +69,7 @@ Matthew Patrick Scherer, with honors in Political Science
 Amish Ajit Shah, with highest honors in Chemistry
 James Lampert Shutzer
 Kathryn Dawn Simpson
-Andrew J Speck, with honors in Physics 
+Andrew J Speck, with honors in Physics
 Anita Ellen Spielman
 Jason Troy Stanley, with honors in Asian Studies
 Kevin Lee Eckart Stephans
@@ -80,7 +80,7 @@ Elizabeth Hamilton Wells, with honors in Biology
 Andrew Harris Werbrock, with highest honors in Biology
 Robert Andrew Wiygul, with highest honors in History, with honors in Philosophy
 Alona Zaitzeff
-Kimberly Helene Zelnick, with honors in English 
+Kimberly Helene Zelnick, with honors in English
 Leila Ruth Zelnick
 Bachelor of Arts, Cum Laude
 Katherine Osborn Abbott, with honors in English
@@ -88,13 +88,13 @@ Khaleefah Ali Khaleefah Al-Sabah
 Andrew Carl Arbesman
 Jonathan Seth Asarch
 Aida Avdic
-Gwendolyn Rebecca Baxter 
+Gwendolyn Rebecca Baxter
 Amina Belghiti
-Katharine Kimi Berlin 
+Katharine Kimi Berlin
 Katherine Birnie
 Emily Elaine Boer
 Ira Martin Boudway
-Lauren Beth Buckley, with honors in Biology 
+Lauren Beth Buckley, with honors in Biology
 Joseph John Busnengo
 Andrew Louis Chang
 Molly Beth Chase
@@ -102,7 +102,7 @@ Tegan Elyze Cheslack-Postava, with highest honors in Mathematics
 Catherine Francoise Coueignoux
 Tara Resha Crowley
 Elise Luisa Cucchi
-Alicia Rochelle Currier, with honors in Art 
+Alicia Rochelle Currier, with honors in Art
 Erin Lane Davies, with highest honors in Biology
 Megan Marta Doherty
 Melissa Jean Duggan
@@ -110,16 +110,16 @@ Deborah Maura Ebert
 Emily Frances Eustis, with honors in Psychology
 Thomas Roy Fleming, with honors in Mathematics
 Anna Jordan Frantz
-Megan Hayes Fredericks 
+Megan Hayes Fredericks
 Rebecca Joan French
 Deborah Florence Frisone, with honors in Psychology
 Susannah Sarah Mahinaokapolanialoha Fyrberg
 Dorothy Ida Gambrell
 Kristina Marie Gehrman, with honors in Philosophy
 David Goodrich Gilford
-Alfonso Rodrigo González del Riego 
+Alfonso Rodrigo González del Riego
 Mary Victoria Gorges
-Andrew Jonathan Gow, with honors in Art 
+Andrew Jonathan Gow, with honors in Art
 Thomas Durfee Grant
 Kristen Alexandra Grippi
 Michael William Hacker
@@ -140,7 +140,7 @@ Angela Elizabeth Lankford
 Bria Heidi Larson
 Amanda May Leach
 Jennifer Hoi-Shan Leung, with honors in Economics
-David Albert Lombino 
+David Albert Lombino
 Katharine Adams Lusk
 Kimberly Frahm Massimiano
 Nancy Marie Moeur
@@ -236,7 +236,7 @@ Shawn Michael Boburg
 William Eric Bodenstab
 Carlos Alberto Bongioanni
 Zelle Akua Bonney, with highest honors in Afro-American Studies
-Alison Arlene Booth 
+Alison Arlene Booth
 Megan Julia Bott
 Elizabeth Louise Boyd
 Craig David Branca
@@ -262,7 +262,7 @@ Sadruddin Kassamali Chandani, with honors in Biology
 Neng-Chao Chang
 Colin William Blizzard Chard
 Audrey Marie Chen
-Charles Matthew Chen, with honors in Art 
+Charles Matthew Chen, with honors in Art
 Yung-En Chen, with highest honors in Art
 Andy Chiu
 Carla Bergen Chokel, with honors in Geosciences
@@ -467,7 +467,7 @@ Leah Louise Rabin
 Imelda Valerie Ramirez
 Alberto David Ramos
 Denise Joy Ramzy
-†Cordelia Rose Ransom, with honors in Geosciences
+Cordelia Rose Ransom, with honors in Geosciences
 Ryan John Raveis
 Will James Rawls
 Samantha Denise Reed
@@ -492,7 +492,7 @@ Lisa Sanchez
 Julia Rachel Sandy
 Cristina Marie Santiestevan
 Katherine Felice Schulte
-†Adam David Schuyler, with honors in Mathematics
+Adam David Schuyler, with honors in Mathematics
 Alexis Joanna Scott
 Teal Stephen Scott
 Kevin Engler See
@@ -501,7 +501,7 @@ Boudhayan Sen
 Kevin Patrick Sendlenski
 Joe Sensenbrenner
 Robin Carroll Severud
-†David Joseph Seward, with honors in Biology
+David Joseph Seward, with honors in Biology
 James Michael Sheehy
 Sarah Deming Sheppe
 Daniel McClelland Shirai
@@ -529,7 +529,7 @@ Sweatman Ryan Sylvia
 Haruko Takeuchi
 Mark Tanno
 Harin Tantongsirisak
-Marie-Michel Elizabeth Tassé
+Marie-Michel Elizabeth Tassé
 Kenric Omar Taylor
 Gabriella Thiele
 David Takashi
@@ -558,6 +558,6 @@ Boisseau Michael Woltz, with honors in Afro-American Studies
 Raquel Farrah Wong
 Donald Franklin Wood
 Robin L. Yan
-Rebecca Ann Young, with honors in English 
+Rebecca Ann Young, with honors in English
 James Martin Ziai
 Damian Delafield Zunino
