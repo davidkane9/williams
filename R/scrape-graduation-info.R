@@ -53,7 +53,22 @@ scrape_middle_name <- function(grad_details){
 #' @param grad_details a graduates graduation details
 #'                     supplied as: (1) <firstname> <midlename(s)> <lastname>, <honors details>
 #'                              or, (2) <firstname> <midlename(s)> <lastname>
-#' @return (1) "None" if no honors
-#'         (2) "Highest" if grad recieved (highest) honors for thesis
-#'         (3) "Honors" if grad received (ordinary) honors for thesis
-
+#' @return (1) "NONE" if no honors
+#'         (2) "HIGHEST" if grad recieved (highest) honors for thesis
+#'         (3) "HONORS" if grad received (ordinary) honors for thesis
+scrape_primary_honors <- function(grad_details) {
+  prim_honors_start_index <- regexpr(",", grad_details) + 1
+  if(prim_honors_start_index == -1){
+    return("NONE")
+  }
+  grad_details <- substr(grad_details, prim_honors_start_index, nchar(grad_details))
+  prim_honors_end_index <- regexpr(",", grad_details)
+  if(prim_honors_end_index > 0){
+    grad_details <- substr(grad_details, 1, prim_honors_end_index - 1)
+  }
+  if(regexpr("highest", grad_details) > 0){
+    return("HIGHEST")
+  } else {
+    return("HONORS")
+  }
+}
