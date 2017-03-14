@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "#' @title Summa Cum Laude Scraper\n#' @description Scrapes data for Summa Cum Laude graduates for given year\n#' @param filepath file to scrape data from\n#' @return A list of Summa Cum Laude graduates w/ honors information (if any)\nscrape_suma_cum_laude <- function(filepath){\n  # Load in file from specified file path as a character string\n  if(!file.exists(filepath)){\n    stop(\"ERROR: No file found at specified file path\")\n  }\n  text <- readChar(filepath, file.info(filepath)$size)\n\n  # Substring text for Summa Cum Laude graduates\n  START_STRING <- \"Bachelor of Arts, Summa Cum Laude\"\n  END_STRING <- \"Bachelor of Arts, Magna Cum Laude\"\n  start_pos <- regexpr(START_STRING, text) + nchar(START_STRING) + 1\n  end_pos <- regexpr(END_STRING, text)-1\n  summa_grads <- substr(text, start_pos, end_pos)\n\n  # Split string into a list of Summa Cum Laude grads, and return it\n  trimws(strsplit(summa_grads, \"\\n\")[[1]])\n}\n\n#' @title Magna Cum Laude Scraper\n#' @description Scrapes data for Magna Cum Laude graduates for given year\n#' @param filepath file to scrape data from\n#' @return A list of Magna Cum Laude graduates w/ honors information (if any)\nscrape_magna_cum_laude <- function(filepath){\n  # Load in file from specified file path as a character string\n  if(!file.exists(filepath)){\n    stop(\"ERROR: No file found at specified file path\")\n  }\n  text <- readChar(filepath, file.info(filepath)$size)\n\n  # Substring text for Magna Cum Laude graduates\n  START_STRING <- \"Bachelor of Arts, Magna Cum Laude\"\n  END_STRING <- \"Bachelor of Arts, Cum Laude\"\n  start_pos <- regexpr(START_STRING, text) + nchar(START_STRING) + 1\n  end_pos <- regexpr(END_STRING, text)-1\n  magna_grads <- substr(text, start_pos, end_pos)\n\n  # Split string into a list of Magna Cum Laude grads, and return it\n  trimws(strsplit(magna_grads, \"\\n\")[[1]])\n}\n\n#' @title Cum Laude Scraper\n#' @description Scrapes data for Cum Laude graduates for given year\n#' @param filepath file to scrape data from\n#' @return A list of Cum Laude graduates w/ honors information (if any)\nscrape_cum_laude <- function(filepath){\n  # Load in file from specified file path as a character string\n  if(!file.exists(filepath)){\n    stop(\"ERROR: No file found at specified file path\")\n  }\n  text <- readChar(filepath, file.info(filepath)$size)\n\n  # Substring text for Cum Laude graduates\n  START_STRING <- \"Bachelor of Arts, Cum Laude\"\n  END_STRING <- \"Bachelor of Arts\\n\"\n  start_pos <- regexpr(START_STRING, text) + nchar(START_STRING) + 1\n  end_pos <- regexpr(END_STRING, text)-1\n  cum_grads <- substr(text, start_pos, end_pos)\n\n  # Split string into a list of Cum Laude grads, and return it\n  trimws(strsplit(cum_grads, \"\\n\")[[1]])\n}\n\n\n#' @title Bachelor of Arts Scraper\n#' @description Scrapes data for graduates w/ no latin honors for given year\n#' @param filepath file to scrape data from\n#' @return A list of graduates (w/ no latin honors) w/ honors information (if any)\nscrape_graduates <- function(filepath){\n  # Load in file from specified file path as a character string\n  if(!file.exists(filepath)){\n    stop(\"ERROR: No file found at specified file path\")\n  }\n  text <- readChar(filepath, file.info(filepath)$size)\n\n  # Substring text for Cum Laude graduates\n  START_STRING <- \"Bachelor of Arts\\n\"\n  start_pos <- regexpr(START_STRING, text) + nchar(START_STRING) + 1\n  end_pos <- nchar(text)\n  grads <- substr(text, start_pos, end_pos)\n\n  # Split string into a list of Cum Laude grads, and return it\n  trimws(strsplit(grads, \"\\n\")[[1]])\n}\n",
+    "created" : 1488493669911.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1068731213",
+    "id" : "76C57D2F",
+    "lastKnownWriteTime" : 1488493563,
+    "last_content_update" : 1488493563,
+    "path" : "~/KT/williamsmetrics/R/extract-from-source.R",
+    "project_path" : "R/extract-from-source.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
