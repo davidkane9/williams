@@ -2,6 +2,15 @@
 #' @description The function loads in the graduate information for the
 #'              given year, scrapes appropriate information, & organizes
 #'              it into a dataframe.
+#'
+#'              The function first scrapes information about students with different latin honors
+#'              ("Suma", "Magna", "Cum", and "None") as different lists using appropriate scraping
+#'              functions from "extract-from-source.R".
+#'
+#'              Then, from each entry in these lists, we extract information about the students', their
+#'              latin honors, and their theses and maintain them as corresponding lists. Finally, we
+#'              organize the data into a dataframe in the required format.
+#'
 #' @param year year to build data frame for <YYYY>
 #' @return dataframe with # rows = # graduates for the year,
 #'                        # variabels = 9
@@ -23,11 +32,16 @@
 #' }
 build_annual_dataframe <- function(year) {
   filename <- paste(getwd(), "/inst/extdata/graduates-", year, "-", (year + 1), ".txt", sep = "")
+
+  # scraping information about students with different latin honors
+  # ("Suma", "Magna", "Cum", and "None") as different lists using appropriate scraping
+  # functions from "extract-from-source.R"
   suma_grads <- scrape_suma_cum_laude(filename)
   magna_grads <- scrape_magna_cum_laude(filename)
   cum_grads <- scrape_cum_laude(filename)
   no_latin_honors_grads <- scrape_graduates(filename)
 
+  # scraping information about students using appropriate functions from "scrape-graduation-info.R"
   firstnames <- c(sapply(suma_grads, scrape_first_name),
                   sapply(magna_grads, scrape_first_name),
                   sapply(cum_grads, scrape_first_name),
@@ -45,11 +59,14 @@ build_annual_dataframe <- function(year) {
 
   years <- rep(year, length(middlenames))
 
+  # scraping information about students' latin honors using appropriate functions from
+  # "scrape-graduation-info.R"
   latin.honors <- c(rep("SUMA", length(suma_grads)),
                     rep("MAGNA", length(magna_grads)),
                     rep("CUM", length(cum_grads)),
                     rep("NONE", length(no_latin_honors_grads)))
 
+  # scraping information about students' theses using appropriate functions from "scrape-graduation-info.R"
   honors <- c(sapply(suma_grads, scrape_primary_honors),
               sapply(magna_grads, scrape_primary_honors),
               sapply(cum_grads, scrape_primary_honors),
@@ -70,6 +87,7 @@ build_annual_dataframe <- function(year) {
                 sapply(cum_grads, scrape_secondary_honors_major),
                 sapply(no_latin_honors_grads, scrape_secondary_honors_major))
 
+  # compiling into dataframe
   df <- data.frame(firstname = firstnames,
                    middlename = middlenames,
                    lastname = lastnames,
