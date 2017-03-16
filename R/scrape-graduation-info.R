@@ -14,8 +14,17 @@
 #'                              or, (2) <firstname> <midlename(s)> <lastname>
 #' @return graduate's first name
 scrape_first_name <- function(grad_details){
+  #edge case for WGES
+  grad_details <-   gsub(pattern = "Women’s, Gender and Sexuality Studies", x = grad_details, replacement = "WGES")
+  # delete theses details
+  if(regexpr(",", grad_details) > 0) {
+    grad_details <- substr(grad_details, 1, regexpr(",", grad_details) - 1)
+  }
   start_pos <- 1
   end_pos <- regexpr(' ', grad_details) - 1
+  if(end_pos <= 1) {
+    stop(paste("No first name in graduation details...\n", grad_details, sep = ""))
+  }
   return(substr(grad_details, start_pos, end_pos))
 }
 
@@ -38,6 +47,8 @@ scrape_first_name <- function(grad_details){
 #'                              or, (2) <firstname> <midlename(s)> <lastname>
 #' @return graduate's last name
 scrape_last_name <- function(grad_details){
+  #edge case for WGES
+  grad_details <-   gsub(pattern = "Women’s, Gender and Sexuality Studies", x = grad_details, replacement = "WGES")
   # delete honors details
   honors_index <- regexpr(",", grad_details)
   if(honors_index > 0){
@@ -46,6 +57,9 @@ scrape_last_name <- function(grad_details){
   # now, substring
   space_indices <- gregexpr(" ", grad_details)[[1]]
   last_space_index <- space_indices[length(space_indices)]
+  if(last_space_index <= 1 || last_space_index == nchar(grad_details)){
+    stop(paste("No last name in graduation details...\n", grad_details, sep = ""))
+  }
   return(substr(grad_details, last_space_index + 1, nchar(grad_details)))
 }
 
@@ -68,6 +82,8 @@ scrape_last_name <- function(grad_details){
 #'                              or, (2) <firstname> <midlename(s)> <lastname>
 #' @return graduate's middle name
 scrape_middle_name <- function(grad_details){
+  #edge case for WGES
+  grad_details <-   gsub(pattern = "Women’s, Gender and Sexuality Studies", x = grad_details, replacement = "WGES")
   # delete honors details
   honors_index <- regexpr(",", grad_details)
   if(honors_index > 0){
@@ -104,6 +120,8 @@ scrape_middle_name <- function(grad_details){
 #'         (2) "HIGHEST" if grad recieved (highest) honors for thesis
 #'         (3) "HONORS" if grad received (ordinary) honors for thesis
 scrape_primary_honors <- function(grad_details) {
+  #edge case for WGES
+  grad_details <-   gsub(pattern = "Women’s, Gender and Sexuality Studies", x = grad_details, replacement = "WGES")
   prim_honors_start_index <- regexpr(",", grad_details) + 1
 
   if(prim_honors_start_index <= 0){ # format (1) ?? If yes, student didn't write a thesis
@@ -146,6 +164,8 @@ scrape_primary_honors <- function(grad_details) {
 #' @return (1) "NONE" if no honors
 #'         (2) <major> if grad did a thesis
 scrape_primary_honors_major <- function(grad_details) {
+  #edge case for WGES
+  grad_details <-   gsub(pattern = "Women’s, Gender and Sexuality Studies", x = grad_details, replacement = "WGES")
   prim_honors_start_index <- regexpr(",", grad_details) + 1
   if(prim_honors_start_index <= 0){ # format (1) ?? If yes, student didn't write a thesis
     return("NONE")
@@ -185,6 +205,8 @@ scrape_primary_honors_major <- function(grad_details) {
 #'         (2) "HIGHEST" if grad recieved (highest) honors for thesis
 #'         (3) "HONORS" if grad received (ordinary) honors for thesis
 scrape_secondary_honors <- function(grad_details) {
+  #edge case for WGES
+  grad_details <-   gsub(pattern = "Women’s, Gender and Sexuality Studies", x = grad_details, replacement = "WGES")
   comma_indices <- gregexpr(",", grad_details)[[1]]
   if(length(comma_indices) < 2){ # format (1) or no secondary thesis??
     return("NONE")
@@ -225,6 +247,8 @@ scrape_secondary_honors <- function(grad_details) {
 #' @return (1) "NONE" if no honors
 #'         (2) <major> if grad did a second thesis
 scrape_secondary_honors_major <- function(grad_details) {
+  #edge case for WGES
+  grad_details <-   gsub(pattern = "Women’s, Gender and Sexuality Studies", x = grad_details, replacement = "WGES")
   comma_indices <- gregexpr(",", grad_details)[[1]]
   if(length(comma_indices) < 2){ # format (1) or no secondary thesis??
     return("NONE")
