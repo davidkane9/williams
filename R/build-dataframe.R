@@ -31,16 +31,15 @@
 #'     \item{major.2}{major in which graduate completed secondary honor}
 #' }
 build_annual_dataframe <- function(year) {
-  print(year)
   filename <- paste(getwd(), "/inst/extdata/graduates-", year, "-", (year + 1), ".txt", sep = "")
-
+  data <- readFile(filename)
   # scraping information about students with different latin honors
   # ("Suma", "Magna", "Cum", and "None") as different lists using appropriate scraping
   # functions from "extract-from-source.R"
-  suma_grads <- scrape_suma_cum_laude(filename)
-  magna_grads <- scrape_magna_cum_laude(filename)
-  cum_grads <- scrape_cum_laude(filename)
-  no_latin_honors_grads <- scrape_graduates(filename)
+  suma_grads <- scrape_suma_cum_laude(data)
+  magna_grads <- scrape_magna_cum_laude(data)
+  cum_grads <- scrape_cum_laude(data)
+  no_latin_honors_grads <- scrape_graduates(data)
 
   # scraping information about students using appropriate functions from "scrape-graduation-info.R"
   firstnames <- c(sapply(suma_grads, scrape_first_name),
