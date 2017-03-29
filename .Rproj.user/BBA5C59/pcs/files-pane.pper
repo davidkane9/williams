@@ -1,5 +1,5 @@
 {
-    "path" : "~/KT/williamsmetrics/data",
+    "path" : "~/KT/williamsmetrics/inst/extdata",
     "sortOrder" : [
         {
             "ascending" : true,
