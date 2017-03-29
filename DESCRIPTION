@@ -19,4 +19,5 @@ VignetteBuilder: knitr
 RoxygenNote: 6.0.1
 Imports: pdftools,
     stringr,
-    testthat
+    testthat,
+    gender
