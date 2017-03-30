@@ -4,24 +4,23 @@
 \alias{slice_and_delimit}
 \title{Slice and Delimit}
 \usage{
-slice_and_delimit(source_string, start_str, stop_str = "", delim = "\\n")
+slice_and_delimit(source_str, start_str, stop_str = "", delim = "\\n")
 }
 \arguments{
-\item{start_str}{This function will delimit text after first ocurrance of \code{start_str}}
+\item{source_str}{String containing target text}
 
-\item{stop_str}{This function will delimit text till before the first occurance of \code{stop_str}
-default: empty; equivalent to EOF.}
+\item{start_str}{String at which process should start}
+
+\item{stop_str}{String at which process should end. The default is empty, which is equivalent to EOF.}
 
 \item{delim}{character to delimite string on
 default: "\n"}
-
-\item{source_str}{String containing target text}
 }
 \value{
 target text in \code{source_str} delimited at character \code{delim}
 }
 \description{
-This function slices the \code{source_str} at \code{start_string}
+This function slices the \code{source_str} at \code{start_str}
              till \code{stop_str}, and seperates the string in between as
              a list seperated by delimiter \code{delim}
 }

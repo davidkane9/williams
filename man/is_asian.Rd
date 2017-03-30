@@ -8,6 +8,8 @@ is_asian(lastname, asian_lastnames)
 }
 \arguments{
 \item{lastname}{lastname to flag}
+
+\item{asian_lastnames}{data frame of the percentage of people with a given last name who identify as Asian}
 }
 \value{
 TRUE if majority of people with given lastname self identify as ASIAN

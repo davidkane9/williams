@@ -54,10 +54,10 @@ to 2015. Each observation is associated with 14 variables. These are outlined be
 \section{Step One}{
 
 \bold{The Course Catalogs} \cr
-The college maintains an archive of former course catalogs
-(\link{http://web.williams.edu/admin/registrar/catalog/archive.html}) that serves as a rich basis for
-information on graduating ephs. More specifically, under the "Degrees Conferred" section in said archives,
-we find a list of names for graduating ephs (catagorized by latin honor conferred), along with information
+The college maintains an [archive](http://web.williams.edu/admin/registrar/catalog/archive.html) of
+former course catalogs that serves as a rich basis for
+information on graduating ephs. More specifically, under the "Degrees Conferred" section in each course catalog,
+we find a list of names for graduating students (catagorized by latin honor conferred), along with information
 about their senior theses, and any related distinctions. \cr
 For each course catalog, we copy-paste the "Degrees Conferred" section into a text file. We save this in
 the \code{inst/extdata} directory of the package, using the naming convention

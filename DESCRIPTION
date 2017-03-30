@@ -19,7 +19,6 @@ Suggests: knitr,
     testthat
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1
-Imports: pdftools,
+Imports:
     stringr,
-    testthat,
     gender

@@ -3,9 +3,11 @@
 #'              "NA" (if no data available). This is in accordance with data compiled by www.mongabay.com
 #'              from the U.S. Bureau of the Census.
 #' @param lastname lastname to flag
+#' @param asian_lastnames data frame of the percentage of people with a given last name who identify as Asian
 #' @return TRUE if majority of people with given lastname self identify as ASIAN
 #'         FALSE if majority of people with given lastname do not self identify as ASIAN
 #'         NA if no data is available
+
 is_asian <- function(lastname, asian_lastnames){
   lastname <- toupper(lastname)
   index <- which(asian_lastnames$lastname == lastname)
