@@ -14,6 +14,8 @@
 #'              honors in Mathematics", we infer "Mathematics" as the student's secondary thesis major.
 #'@param grad_details A student's graduation details as appearing in the catalog.
 #'@return Student's secondary thesis major
+#' @export
+
 scrape_secondary_thesis_major <- function(grad_details){
   comma_indices <- gregexpr(",", grad_details)[[1]]
   if(length(comma_indices) < 2){ # format (1) or no secondary thesis??

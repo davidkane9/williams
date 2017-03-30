@@ -6,6 +6,8 @@
 #'                       \code{gender} package
 #' @return probability that given name belongs to a male student. If information for given name is not
 #'         present in \code{gender} package, we will return NA
+#' @export
+
 get_male_probability <- function(name, predict_gender){
   prediction <- predict_gender[which(predict_gender$name == name), ]$proportion_male
   if(length(prediction) == 0){

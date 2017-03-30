@@ -13,6 +13,8 @@
 #'              level of honors), "HONORS" (for thesis completion), "NONE" (if no thesis was written).
 #'@param grad_details A student's graduation details as appearing in the catalog.
 #'@return Student's secondary thesis distinction level (i.e. "HIGHEST", "HONORS", or "NONE")
+#' @export
+
 scrape_secondary_thesis_distinction <- function(grad_details){
   comma_indices <- gregexpr(",", grad_details)[[1]]
   if(length(comma_indices) < 2){ # format (1) or no secondary thesis??

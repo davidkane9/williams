@@ -27,6 +27,8 @@
 #'     \item{major.2}{major in which graduate completed secondary honor}
 #'     \item{raw.text}{graduation details as appearing in course catalog}
 #' }
+#' @export
+
 build_dataframes <- function(start_year = 2000, end_year = 2015) {
   years <- start_year:end_year
   do.call(rbind, lapply(years, build_annual_dataframe) )

@@ -14,6 +14,8 @@
 #'              we infer "Political Economy" as the student's primary thesis major.
 #'@param grad_details A student's graduation details as appearing in the catalog.
 #'@return Student's primary thesis major
+#' @export
+
 scrape_primary_thesis_major <- function(grad_details){
   prim_honors_start_index <- regexpr(",", grad_details) + 1
   if(prim_honors_start_index <= 0){ # format (1) ?? If yes, student didn't write a thesis

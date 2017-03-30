@@ -15,6 +15,8 @@
 #'        (but not including) the last white space.
 #'        For example, given graduation details, "DoHyun Tony Chung, with honors in Political Economy",
 #'        we infer "Tony" as the student's middlename.
+#' @export
+
 scrape_middle_name <- function(grad_details){
   # delete honors details
   honors_index <- regexpr(",", grad_details)

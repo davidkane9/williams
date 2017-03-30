@@ -6,6 +6,8 @@
 #'                  and replaced as "WGES".
 #' @param grad_details A student's graduation details
 #' @return Standardizes deiscrepencies in graduation_details (if any)
+#' @export
+
 standardize_graduation_details <- function(grad_details){
 
   #edge case (1) for WGES

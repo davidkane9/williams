@@ -13,6 +13,8 @@
 #'              name uptill (but not including) the first white space. For example, given graduation
 #'              details, "DoHyun Tony Chung, with honors in Political Economy", we infer "DoHyun" as
 #'              the student's firstname.
+#' @export
+
 scrape_first_name <- function(grad_details){
   # delete theses details
   if(regexpr(",", grad_details) > 0) {

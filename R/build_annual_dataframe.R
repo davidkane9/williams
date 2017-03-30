@@ -24,11 +24,11 @@
 #'     \item{major.2}{major in which graduate completed secondary honor}
 #'     \item{raw.text}{graduation details as appearing in course catalog}
 #'     }
-#'
+#' @export
 
 build_annual_dataframe <- function(year){
   filename <- paste(getwd(), "/inst/extdata/graduates-", year, "-", (year + 1), ".txt", sep = "")
-  data <- read_file(filename)
+  data <- readr::read_file(filename)
 
   # scraping information about students with different latin honors
   # ("Suma", "Magna", "Cum", and "None") as different lists

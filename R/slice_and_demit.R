@@ -8,6 +8,7 @@
 #'@param delim character to delimite string on
 #'             default: "\n"
 #'@return target text in \code{source_str} delimited at character \code{delim}
+#' @export
 
 slice_and_delimit <- function(source_str, start_str, stop_str = "", delim = "\n"){
   start_pos <- regexpr(start_str, source_str) + nchar(start_str)

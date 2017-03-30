@@ -7,6 +7,7 @@
 #' @return TRUE if majority of people with given lastname self identify as ASIAN
 #'         FALSE if majority of people with given lastname do not self identify as ASIAN
 #'         NA if no data is available
+#' @export
 
 is_asian <- function(lastname, asian_lastnames){
   lastname <- toupper(lastname)

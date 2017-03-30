@@ -13,6 +13,8 @@
 #'        appearing in a student's name after (but not including) the last white space. For example,
 #'        given graduation details, "DoHyun Tony Chung, with honors in Political Economy", we infer "Chung" as
 #'        the student's lastname.
+#' @export
+
 scrape_last_name <- function(grad_details){
   # delete honors details
   honors_index <- regexpr(",", grad_details)

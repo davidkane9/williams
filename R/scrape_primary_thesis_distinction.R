@@ -13,6 +13,8 @@
 #'              level of honors), "HONORS" (for thesis completion), "NONE" (if no thesis was written).
 #'@param grad_details A student's graduation details as appearing in the catalog.
 #'@return Student's primary honors distinction level (i.e. "HIGHEST", "HONORS", or "NONE")
+#' @export
+
 scrape_primary_thesis_distinction <- function(grad_details){
   prim_honors_start_index <- regexpr(",", grad_details) + 1
   if(prim_honors_start_index <= 0){ # format (1) ?? If yes, student didn't write a thesis

@@ -6,6 +6,8 @@
 #' @return A table containing gender prediction probabilities for each unique first name in the
 #'         \code{graduates} dataset.
 #'
+#' @export
+
 load_gender_predictions <- function(){
   load("~karantibrewal/KT/williamsmetrics/data/graduates.RData")
   unique_first_names <- unique(as.character(graduates$firstname))
