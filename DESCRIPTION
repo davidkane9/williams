@@ -1,7 +1,7 @@
 Package: williamsmetrics
 Type: Package
 Title: Williams College Related Metrics
-Version: 0.1.0
+Version: 0.1.1
 Author: c(
         person("Karan", "Tibrewal", email = "karan.tibrewal@williams.edu",
                   role = c("aut", "cre")), 
