@@ -13,8 +13,7 @@ slice_and_delimit(source_str, start_str, stop_str = "", delim = "\\n")
 
 \item{stop_str}{String at which process should end. The default is empty, which is equivalent to EOF.}
 
-\item{delim}{character to delimite string on
-default: "\n"}
+\item{delim}{character to delimite string on.}
 }
 \value{
 target text in \code{source_str} delimited at character \code{delim}

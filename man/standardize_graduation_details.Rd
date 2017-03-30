@@ -10,12 +10,9 @@ standardize_graduation_details(grad_details)
 \item{grad_details}{A student's graduation details}
 }
 \value{
-Standardizes deiscrepencies in graduation_details (if any)
+Standardizes discrepencies in graduation_details (if any)
 }
 \description{
-This function standardizes a student's graduation details to account for discrepancies
-             in the catalogs over the years. Each edge case is described in this description in detail.
-
-            (1) "Women's, Gender and Sexuality", "Women's Gender & Sexuality" are treated as one
-                 and replaced as "WGES".
+This function standardizes a student's graduation details to account for changes
+             in the catalogs over the years.
 }

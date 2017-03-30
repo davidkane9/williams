@@ -5,8 +5,7 @@
 #'@param source_str String containing target text
 #'@param start_str String at which process should start
 #'@param stop_str String at which process should end. The default is empty, which is equivalent to EOF.
-#'@param delim character to delimite string on
-#'             default: "\n"
+#'@param delim character to delimite string on.
 #'@return target text in \code{source_str} delimited at character \code{delim}
 #' @export
 

@@ -31,6 +31,6 @@ a dataframe for the specified year of
                        # variabels = 10
 }
 \description{
-This function compiles information for the given year's degrees and graduates and presents
-             it as a dataframe. Details on this process can be found in the vignette.
+This function compiles information for the given year's degrees and graduates and returns a
+      dataframe. Details on this process can be found in the vignette.
 }

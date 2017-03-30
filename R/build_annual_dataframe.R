@@ -1,7 +1,6 @@
 #' @title Build Annual Dataframe
-#' @description This function compiles information for the given year's degrees and graduates and presents
-#'              it as a dataframe. Details on this process can be found in the vignette.
-#'
+#' @description This function compiles information for the given year's degrees and graduates and returns a
+#'       dataframe. Details on this process can be found in the vignette.
 #'
 #' @param year year to build dataframe for
 #' @return a dataframe for the specified year of
@@ -27,18 +26,25 @@
 #' @export
 
 build_annual_dataframe <- function(year){
-  filename <- paste(getwd(), "/inst/extdata/graduates-", year, "-", (year + 1), ".txt", sep = "")
-  data <- readr::read_file(filename)
+
+  name <- paste0("extdata/graduates-", year, "-", (year + 1), ".txt", sep = "")
+  filename <- system.file(name, package = "williamsmetrics")
+
+  x <- readr::read_file(filename)
+
+  ## x containts all the information in one long string. First, we replace some problematic strings.
+
 
   # scraping information about students with different latin honors
   # ("Suma", "Magna", "Cum", and "None") as different lists
-  suma_grads <- slice_and_delimit(source_string = data, start_str = "Bachelor of Arts, Summa Cum Laude\n",
-                                  stop_str = "Bachelor of Arts, Magna Cum Laude\n", delim = "\n")
-  magna_grads <- slice_and_delimit(source_string = data, start_str = "Bachelor of Arts, Magna Cum Laude\n",
-                                   stop_str = "Bachelor of Arts, Cum Laude\n", delim = "\n")
-  cum_grads <- slice_and_delimit(source_string = data, start_str = "Bachelor of Arts, Cum Laude\n",
-                                stop_str = "Bachelor of Arts\n", delim = "\n")
-  no_latin_honors_grads <- slice_and_delimit(source_string = data, start_str = "Bachelor of Arts\n",
+
+  suma_grads <- slice_and_delimit(source_str = x, start_str = "Bachelor of Arts, Summa Cum Laude\r\n",
+                                  stop_str = "Bachelor of Arts, Magna Cum Laude\r\n", delim = "\n")
+  magna_grads <- slice_and_delimit(source_str = x, start_str = "Bachelor of Arts, Magna Cum Laude\r\n",
+                                   stop_str = "Bachelor of Arts, Cum Laude\r\n", delim = "\n")
+  cum_grads <- slice_and_delimit(source_str = x, start_str = "Bachelor of Arts, Cum Laude\r\n",
+                                stop_str = "Bachelor of Arts\r\n", delim = "\n")
+  no_latin_honors_grads <- slice_and_delimit(source_str = x, start_str = "Bachelor of Arts\r\n",
                                             stop_str = "", delim = "\n")
 
   # Standardize scraped info for discrepencies
@@ -66,12 +72,15 @@ build_annual_dataframe <- function(year){
   years <- rep(year, length(middlenames))
 
   # scraping information about students' latin honors using appropriate functions from
-  # "scrape-graduation-info.R"
-  latin.honors <- c(rep("SUMA", length(suma_grads.standard)),
-                    rep("MAGNA", length(magna_grads.standard)),
-                    rep("CUM", length(cum_grads.standard)),
-                    rep("NONE", length(no_latin_honors_grads.standard)))
+  # "scrape-graduation-info.R". Make sure everyone stays in the same order!
+
+  latin.honors <- c(rep("Summa Cum Laude", length(suma_grads.standard)),
+                    rep("Magna Cum Laude", length(magna_grads.standard)),
+                    rep("Cum Laude", length(cum_grads.standard)),
+                    rep("None", length(no_latin_honors_grads.standard)))
+
   # scraping information about students' theses using appropriate functions from "scrape-graduation-info.R"
+
   honors <- c(sapply(suma_grads.standard, scrape_primary_thesis_distinction),
               sapply(magna_grads.standard, scrape_primary_thesis_distinction),
               sapply(cum_grads.standard, scrape_primary_thesis_distinction),

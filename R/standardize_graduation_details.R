@@ -1,11 +1,8 @@
 #' @title Standardize Graduation Details
-#' @description This function standardizes a student's graduation details to account for discrepancies
-#'              in the catalogs over the years. Each edge case is described in this description in detail.
-#'
-#'             (1) "Women's, Gender and Sexuality", "Women's Gender & Sexuality" are treated as one
-#'                  and replaced as "WGES".
+#' @description This function standardizes a student's graduation details to account for changes
+#'              in the catalogs over the years.
 #' @param grad_details A student's graduation details
-#' @return Standardizes deiscrepencies in graduation_details (if any)
+#' @return Standardizes discrepencies in graduation_details (if any)
 #' @export
 
 standardize_graduation_details <- function(grad_details){
