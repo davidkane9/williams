@@ -1,0 +1,40 @@
+#' Graduation Information (Latin Honors, Theses Distinctions & Majors) for 8353 Ephs (2000 - 2015)
+#'
+#' A dataset containing graduation information for 8353 ephs (class of 2000 to 2015), extracted from the
+#' College's course catalogs.
+#' @source \url{http://web.williams.edu/admin/registrar/catalog/archive.html}
+#' @source \url{http://names.mongabay.com/data/asian_pacific_islander.html}
+#' @source \url{https://cran.r-project.org/web/packages/gender/README.html}
+#'
+#' @format A data frame with 8353 rows and 14 variables:
+#' \describe{
+#'     \item{firstname}{firstname of graduate}
+#'     \item{middlename}{middlename(s) of graduate}
+#'     \item{lastname}{lastname of graduate}
+#'     \item{year}{year of graduation}
+#'     \item{latin.honor}{latin honor recieved by graduate (if any)}
+#'     \item{honor}{details of distinction of primary thesis honor (if any)
+#'                    We define the "primary" thesis honor as the first honor
+#'                    appearing alongside grad's name}
+#'     \item{major}{major in which graduate completed primary honor}
+#'     \item{honor.2}{details of distinction of secondary thesis honor (if any)
+#'                   We define the "secondary" thesis honor as the second honor
+#'                  appearing alongside grad's name}
+#'     \item{major.2}{major in which graduate completed secondary honor}
+#'     \item{raw.text}{graduation details as appearing in course catalog}
+#'     \item{male_prob}{probability that given firstname belongs to a "male" based on
+#'                      \code{gender} package which encodes gender based on names and
+#'                      dates of birth, using U.S. Census or Social Security datasets.}
+#'     \item{female_prob}{probability that given firstname belongs to a "female" based on
+#'                      \code{gender} package which encodes gender based on names and
+#'                      dates of birth, using U.S. Census or Social Security datasets.}
+#'     \item{gender}{Gender based on \code{male_prob} and \code{female_prob}. We predict gender
+#'                   as the higher of the two.}
+#'     \item{is.asian}{Predicts if given lastname belongs to an asian student on the basis of data compiled
+#'                     by MongaBay.com. MongaBay derives from the U.S. Bureau of the Census, and finds the
+#'                     Percentage of people with a given surname who classified themselves as "non-hispanic
+#'                     Asian & Pacific Islander" (race). We flag a given lastname as asian if this percentage
+#'                     is > 50%.
+#'                     }
+#' }
+"graduates"
