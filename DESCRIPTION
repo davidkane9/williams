@@ -8,10 +8,12 @@ Author: c(
         person("David", "Kane", email = "dave.kane@gmail.com",
                   role = c("aut", "cre")))
 Maintainer: Karan Tibrewal <karan.tibrewal@williams.edu>
-Description: [placeholder] williamsmetrics retrieves Williams College from the college's course catalogs, and reports relevant analysis. 
+Description: williamsmetrics retrieves Williams College from the college's course catalogs, 
+  and reports relevant analysis. 
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
+Depends: pdftools
 Suggests: knitr,
     rmarkdown,
     testthat
