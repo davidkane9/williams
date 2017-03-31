@@ -1,7 +1,7 @@
 Package: williamsmetrics
 Type: Package
 Title: Williams College Related Metrics
-Version: 0.1.2
+Version: 0.2.0
 Author: c(
         person("Karan", "Tibrewal", email = "karan.tibrewal@williams.edu",
                   role = c("aut", "cre")), 
@@ -13,7 +13,7 @@ Description: williamsmetrics retrieves Williams College from the college's cours
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Depends: pdftools, readr
+Depends: pdftools, readr, tibble, purrr
 Suggests: knitr,
     rmarkdown,
     testthat

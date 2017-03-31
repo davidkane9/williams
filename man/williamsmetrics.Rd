@@ -65,7 +65,7 @@ the \code{inst/extdata} directory of the package, using the naming convention
 For example, for the year 2015, we save the "Degrees Conferred" section into a text file named
 "graduates-2015-2016.txt" in the \code{inst/extdata} directory. \cr
 \cr
-\emph{Please note: Due to copy-pasting difficulties from PDFs, the "copy-paste" step outlines above may
+Please note: Due to copy-pasting difficulties from the PDFs, the "copy-paste" step outlines above may
 be more tedious than it immediately seems: often, details about several graduates our clumped onto a
 single line (that is, they appear without line breaks). Here, it is essential to manually seperate these
 lines out, and ensure that a single line contains information only about a single graduating eph.
@@ -74,7 +74,12 @@ For example,
 should be separated into: \cr
 DoHyun Tony Chung, with honors in Political Economy \cr
 Rebecca Tamar Cover, with highest honors in Astrophysics \cr
-Amanda Bouvier Edmonds}
+Amanda Bouvier Edmonds \cr
+
+Another complexity that we handle by hand is the apostrophe in "Women's" as it is used in both
+Women's and Gender Studies and in Women's, Gender and Sexuality Studies. We had trouble handling this
+apostrophe, because it was a strange encoding. So, we simply changed it to a simple apostrophe by hand.
+Future years will need to be handled similarly.
 }
 
 \section{Step Two}{
@@ -97,27 +102,11 @@ honors organized in its own independent section. Therefore, we just need to subs
 appropriately (subsetting logic can be viewed in \code{build_annual_dataframe}). Each entry in these lists
 correspond to graduation details for an eph (for example, "DoHyun Kevin Chung, honors in Political Economy").
 These entries are exactly the text supplied to the \code{raw.text} column! We will use \code{raw.text} to
-infer additional information. Before delving into details of such iference, we need to standardize the
-\code{raw.text} for discrepencies over the years: \code{standardize_graduation_details(...)}. \cr
-\cr
-Next up, we are ready to munge \code{firstname, lastname, middlename, honor, major, honor.2, major.2} using
-appropriate functions: \code{scrape_first_name, scrape_last_name, scrape_middle_name, scrape_primary_thesis_distinction,
-scrape_primary_thesis_major, scrape_secondary_thesis_distinction, scrape_secondary_thesis_major}. The logic for each of these
-can be accessed in their respective files. \cr
-\cr
-We now combine the standalone vectors into a single dataset \emph{(caution: keep stringsAsFactors = F)}.
+infer additional information. \cr
+\cr.
 }
 
 \section{Step Three}{
-
-\bold{Combining Multiple Catalogs} \cr
-To obtain a dataframe spanning across multiple years, use \code{build_dataframes(start_year, stop_year)}.
-For each year in the specified range, \code{build_dataframes} runs \code{build_annual_dataframe}, and
-combines them together using \code{rbind} operations. At present, we use \code{build_annual_dataframe(2000, 2015)}
-to generate the \code{graduates} dataframe.
-}
-
-\section{Step Four}{
 
 \bold{Adding Gender Columns} \cr
 Given the \code{firstname} of a graduate, we now want to predict his/her gender. More specificially, we
@@ -133,7 +122,7 @@ Simply call \code{build_gender_df()} which loads the \code{graduates} dataset an
 add \code{male_prob, female_prob, gender} columns to it.
 }
 
-\section{Step Five}{
+\section{Step Four}{
 
 \bold{Adding Ethnicity Columns} \cr
 TO DO...

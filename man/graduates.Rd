@@ -6,9 +6,8 @@
 \title{Graduation Information (Latin Honors, Theses Distinctions & Majors) for 8353 Ephs (2000 - 2015)}
 \format{A data frame with 8353 rows and 14 variables:
 \describe{
-    \item{firstname}{firstname of graduate}
-    \item{middlename}{middlename(s) of graduate}
-    \item{lastname}{lastname of graduate}
+    \item{first.name}{firstname of graduate}
+    \item{last.name}{lastname of graduate}
     \item{year}{year of graduation}
     \item{latin.honor}{latin honor recieved by graduate (if any)}
     \item{honor}{details of distinction of primary thesis honor (if any)
