@@ -25,7 +25,7 @@ add_graduate_names <- function(x){
   ## one. Then split the names by spaces into a list of lists, after getting rid
   ## of the */+ that signify Phi Beta Kappa and Sigma Xi.
 
-  names <- str_replace_all(x$raw.text, "\\*|\\+", "")
+  names <- stringr::str_replace_all(x$raw.text, "\\*|\\+", "")
   names <- stringr::str_split(names, ",", simplify = TRUE)[ ,1]
   names <- stringr::str_split(names, " ")
 

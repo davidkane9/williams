@@ -4,13 +4,15 @@
 #'   graduates for the years that we have downloaded the data in the package. It
 #'   also adds Latin honors information.
 #'
-#' @return a dataframe for the specified year with a row for each graduating
-#'   senior and three variables.
+#' @return a dataframe for the specified years with a row for each graduating
+#'   senior and five variables.
 #'
 #' @format \describe{
 #'   \item{year}{Graduation year}
 #'   \item{raw.text}{Raw text from the Course Catlog associated with each graduate}
 #'   \item{latin.honors}{Latin honors}
+#'   \item{Phi.Beta.Kappa}{Boolean value indicating membership in Phi Beta Kappa}
+#'   \item{Sigma.Xi}{Boolean value indicating membership in Sigma Xi}
 #'   }
 #' @export
 
@@ -28,7 +30,7 @@ gather_graduates <- function(){
     filename <- system.file(name, package = "williamsmetrics")
     raw <- readr::read_lines(filename)
 
-    clean <- raw[! str_detect(raw, "Bachelor of Arts")]
+    clean <- raw[! stringr::str_detect(raw, "Bachelor of Arts")]
 
     df <- tibble::data_frame(year = rep(year, length(clean)),
                              raw.text = clean)
@@ -38,7 +40,7 @@ gather_graduates <- function(){
     ## change the order of things. Might add error checking which takes advantage
     ## of the alphabetical listing of last names within honors categories.
 
-    br <- which(str_detect(raw, "Bachelor of Arts"))
+    br <- which(stringr::str_detect(raw, "Bachelor of Arts"))
 
     df$latin.honors <- c(rep("Summa Cum Laude", br[2] - br[1] - 1),
                    rep("Magna Cum Laude", br[3] - br[2] - 1),
