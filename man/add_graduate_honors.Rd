@@ -4,20 +4,24 @@
 \alias{add_graduate_honors}
 \title{Add Graduate Honors}
 \format{\describe{
-    \item{honor}{details of distinction of primary thesis honor (if any)
+    \item{honor.1}{details of distinction of primary thesis honor (if any)
                    We define the "primary" thesis honor as the first honor
                    appearing alongside grad's name}
-    \item{major}{major in which graduate completed primary honor}
+    \item{major.1}{major in which graduate completed primary honor}
     \item{honor.2}{details of distinction of secondary thesis honor (if any)
                   We define the "secondary" thesis honor as the second honor
                  appearing alongside grad's name}
     \item{major.2}{major in which graduate completed secondary honor}
+    \item{major}{Simplified major with the highest honor}
+    \item{honor}{Highest honor received, if any}
   }}
 \usage{
-add_graduate_honors(x)
+add_graduate_honors(x, complete = FALSE)
 }
 \arguments{
 \item{x}{data frame with raw.text column}
+
+\item{complete}{logical to indicate how many variables to add to x. Default is FALSE.}
 }
 \value{
 the input data frame along with four new columns.
@@ -25,5 +29,5 @@ the input data frame along with four new columns.
 \description{
 This function takes as input a data frame which includes the raw
   text associated with each graduate. It returns that data frame along with
-  four new columns associated with department honors.
+  six new columns associated with department honors.
 }

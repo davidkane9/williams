@@ -45,6 +45,11 @@ gather_graduates <- function(){
                    rep("Cum Laude", br[4] - br[3] - 1),
                    rep(NA, length(raw) - br[4]))
 
+    ## Also figure out Phi Beta Kappa and Sigma Xi.
+
+    df$Phi.Beta.Kappa <- str_detect(df$raw.text, "\\*")
+    df$Sigma.Xi <- str_detect(df$raw.text, "\\+")
+
     x <- rbind(x, df)
   }
 

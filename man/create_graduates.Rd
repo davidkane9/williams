@@ -20,7 +20,11 @@
     \item{gender}{male or female, based on the \code{gender} package}
     }}
 \usage{
-create_graduates()
+create_graduates(complete = FALSE)
+}
+\arguments{
+\item{complete}{logical to indicate how many variables to return in the data frame.
+Default is FALSE.}
 }
 \value{
 a dataframe with a row for each graduating senior and 9 associated variables.

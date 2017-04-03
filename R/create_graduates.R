@@ -3,6 +3,9 @@
 #' @description This function compiles information for all graduates and returns a
 #'       dataframe. Details on this process can be found in the vignette.
 #'
+#' @param complete logical to indicate how many variables to return in the data frame.
+#'  Default is FALSE.
+#'
 #' @return a dataframe with a row for each graduating senior and 9 associated variables.
 #'
 #' @format
@@ -24,11 +27,15 @@
 #'     }
 #' @export
 
-create_graduates <- function(){
+create_graduates <- function(complete = FALSE){
 
   x <- gather_graduates()
   x <- add_graduate_names(x)
-  x <- add_graduate_honors(x)
+  x <- add_graduate_honors(x, complete = complete)
+
+  if(! complete){
+    x$raw.text <- NULL
+  }
 
   ## Dealing with gender and ethnicity is much trickier. We need the genderdata
   ## package to run the gender command. I am not sure how to handle this in
@@ -36,8 +43,11 @@ create_graduates <- function(){
 
   x$birth.year <- x$year - 22
 
-  z <- gender_df(x, name_col = "first.name", year_col = "birth.year")
-  z <- z %>% select(name, year_min, gender) %>% rename(year = year_min, first.name = name) %>% mutate(year = year + 22)
+  z <- gender::gender_df(x, name_col = "first.name", year_col = "birth.year")
+  z <- z %>%
+    dplyr::select(name, year_min, gender) %>%
+    rename(year = year_min, first.name = name) %>%
+    mutate(year = year + 22)
 
   ## For now, we are only keep a simple gender. We might play with the
   ## probabilities at some point. Biggest problem is the more than 8% of names
@@ -59,11 +69,9 @@ create_graduates <- function(){
   stopifnot(all(table(x$year) > 500 & table(x$year) < 600))
 
   stopifnot(sum(!is.na(x$major))   == sum(!is.na(x$honor)))
-  stopifnot(sum(!is.na(x$major.2)) == sum(!is.na(x$honor.2)))
 
   stopifnot(length(unique(x$latin.honors)) == 4)
   stopifnot(length(unique(x$honor)) == 3)
-  stopifnot(length(unique(x$honor.2)) == 3)
 
   x
 }

@@ -10,24 +10,15 @@
     \item{last.name}{lastname of graduate}
     \item{year}{year of graduation}
     \item{latin.honor}{latin honor recieved by graduate (if any)}
+    \item{Phi.Beta.Kappa}{lgical; indicates Phi Beta Kappa membership}
+    \item{Sigma.Xi}{lgical; indicates Sigma Xi membership}
     \item{honor}{details of distinction of primary thesis honor (if any)
                    We define the "primary" thesis honor as the first honor
                    appearing alongside grad's name}
     \item{major}{major in which graduate completed primary honor}
-    \item{honor.2}{details of distinction of secondary thesis honor (if any)
-                  We define the "secondary" thesis honor as the second honor
-                 appearing alongside grad's name}
-    \item{major.2}{major in which graduate completed secondary honor}
-    \item{raw.text}{graduation details as appearing in course catalog}
-    \item{male_prob}{probability that given firstname belongs to a "male" based on
-                     \code{gender} package which encodes gender based on names and
-                     dates of birth, using U.S. Census or Social Security datasets.}
-    \item{female_prob}{probability that given firstname belongs to a "female" based on
-                     \code{gender} package which encodes gender based on names and
-                     dates of birth, using U.S. Census or Social Security datasets.}
     \item{gender}{Gender based on \code{male_prob} and \code{female_prob}. We predict gender
                   as the higher of the two.}
-    \item{is.asian}{Predicts if given lastname belongs to an asian student on the basis of data compiled
+    \item{asian}{Predicts if given lastname belongs to an asian student on the basis of data compiled
                     by MongaBay.com. MongaBay derives from the U.S. Bureau of the Census, and finds the
                     Percentage of people with a given surname who classified themselves as "non-hispanic
                     Asian & Pacific Islander" (race). We flag a given lastname as asian if this percentage

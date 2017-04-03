@@ -22,9 +22,11 @@ add_graduate_names <- function(x){
   stopifnot(is.character(x$raw.text))
 
   ## Grab all the names --- which are always before the first comma, if there is
-  ## one. Then split the names by spaces into a list of lists.
+  ## one. Then split the names by spaces into a list of lists, after getting rid
+  ## of the */+ that signify Phi Beta Kappa and Sigma Xi.
 
-  names <- stringr::str_split(x$raw.text, ",", simplify = TRUE)[ ,1]
+  names <- str_replace_all(x$raw.text, "\\*|\\+", "")
+  names <- stringr::str_split(names, ",", simplify = TRUE)[ ,1]
   names <- stringr::str_split(names, " ")
 
   ## Big problem is that, although the vast majority of people have 3 names,
