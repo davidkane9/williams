@@ -1,89 +1,89 @@
 Bachelor of Arts, Summa Cum Laude
-Benjamin Lee Augenbraun, with highest honors in Physics
-Julia Elena Damion
-Jesse Benjamin Freeman, with highest honors in Mathematics
-Emma Krynski Harrington, with highest honors in Computer Science
-Lydia Clare Heinrichs, with highest honors in English
-Isaiah Herschel Leonard, with highest honors in Computer Science
-Samuel William Lewis
-Isaac Cheng-qi Loh, with highest honors in Mathematics
-Michael Frederick Neubauer, with highest honors in Economics
-Lauren Olivia Nevin
++*Benjamin Lee Augenbraun, with highest honors in Physics
+*Julia Elena Damion
++*Jesse Benjamin Freeman, with highest honors in Mathematics
++*Emma Krynski Harrington, with highest honors in Computer Science
+*Lydia Clare Heinrichs, with highest honors in English
++*Isaiah Herschel Leonard, with highest honors in Computer Science
+*Samuel William Lewis
++*Isaac Cheng-qi Loh, with highest honors in Mathematics
+*Michael Frederick Neubauer, with highest honors in Economics
+*Lauren Olivia Nevin
 Bachelor of Arts, Magna Cum Laude
-Sarah Monique Abramson, with highest honors in Computer Science
-Samuel Theodore Herzl Amdur, with honors in Physics
-Andrew James Best
-Ethan Daniel Borre, with honors in Biology
-Chelsea Danae Boydstun, with highest honors in Chemistry
-Talia Jeanne Calnek-Sugin
++*Sarah Monique Abramson, with highest honors in Computer Science
++*Samuel Theodore Herzl Amdur, with honors in Physics
+*Andrew James Best
+*Ethan Daniel Borre, with honors in Biology
+*Chelsea Danae Boydstun, with highest honors in Chemistry
+*Talia Jeanne Calnek-Sugin
 Sara Lindsay Clark
 Sarah Croft Cottrill
-Erin Elizabeth Curley, with highest honors in Psychology
-Rebecca Elizabeth Curran
-Benjamin Jenks Dalzell
-Benjamin Hayes DeMeo, with honors in Mathematics
-Katherine Elizabeth Dennis, with highest honors in Classics
-Samuel Softness Devine
-Amber Denise Ellis, with honors in Africana Studies
-Clyde William Engle
-Charlotte Eleanor Currie Fleming
-Hannah Rose Friedland, with honors in English
-Madeline Jane Gilmore, with honors in English
-Nitsan Goldstein, with highest honors in Biology
-Andrew Christopher Grabowski
-Alexander Guo
-Jennifer Joan Helinek
-John Vandermark Hoover, with honors in Arabic Studies
-Benjamin Carlton Hoyle
-Laurel Elizabeth Jarombek, with honors in International Studies
+*Erin Elizabeth Curley, with highest honors in Psychology
+*Rebecca Elizabeth Curran
+*Benjamin Jenks Dalzell
++*Benjamin Hayes DeMeo, with honors in Mathematics
+*Katherine Elizabeth Dennis, with highest honors in Classics
+*Samuel Softness Devine
+*Amber Denise Ellis, with honors in Africana Studies
+*Clyde William Engle
+*Charlotte Eleanor Currie Fleming
+*Hannah Rose Friedland, with honors in English
+*Madeline Jane Gilmore, with honors in English
++*Nitsan Goldstein, with highest honors in Biology
+*Andrew Christopher Grabowski
+*Alexander Guo
+*Jennifer Joan Helinek
+*John Vandermark Hoover, with honors in Arabic Studies
+*Benjamin Carlton Hoyle
+*Laurel Elizabeth Jarombek, with honors in International Studies
 Joseph Richard Kinney
-Anastasija Kovalova
-Kelsey Reed Leonard
-Claire Allison Leukhardt Lidston, with honors in Chemistry
-Brandon Vincent Ling, with honors in Physics
+*Anastasija Kovalova
+*Kelsey Reed Leonard
++*Claire Allison Leukhardt Lidston, with honors in Chemistry
++*Brandon Vincent Ling, with honors in Physics
 Aviv M. Lipman
-Nile Marcelles Livingston
-Kelsey Alexandra Loy, with highest honors in Biology
+*Nile Marcelles Livingston
+*Kelsey Alexandra Loy, with highest honors in Biology
 Alison Stewart Magruder
-James Benjamin Marvel-Coen, with highest honors in Biology
-Dylan Russell Meacham, with honors in Philosophy
-Cole Mitchell Meisenhelder, with honors in Physics
-Tara King Miller
-Adrian Alexander Mitchell, with highest honors in Biology
-Erica Lyn Moszkowski, with highest honors in Economics
-Moneesha Rani Mukherjee
-Alexander Krishan Nanda, with highest honors in English
-Charles Taylor Oddleifson, with honors in Philosophy
-Sam Donovan O’Donnell, with highest honors in Comparative Literature
++*James Benjamin Marvel-Coen, with highest honors in Biology
+*Dylan Russell Meacham, with honors in Philosophy
++Cole Mitchell Meisenhelder, with honors in Physics
++*Tara King Miller
++*Adrian Alexander Mitchell, with highest honors in Biology
+*Erica Lyn Moszkowski, with highest honors in Economics
+*Moneesha Rani Mukherjee
+*Alexander Krishan Nanda, with highest honors in English
+*Charles Taylor Oddleifson, with honors in Philosophy
+*Sam Donovan O’Donnell, with highest honors in Comparative Literature
 Collin Chapman Peck-Gray
-Samantha Nicole Petti, with honors in Mathematics
-Molly Mack Pickel
-Jaclyn Duker Porfilio, with highest honors in Computer Science
-William Beck Raskin, with honors in English
-Raea Elise Rasmussen, with highest honors in Psychology
-Bryn Marie Reinstadler
-Miho Sakuma, with honors in History
-Gabriel Orr Samach, with honors in Physics
-Alexander James Silver, with highest honors in Chemistry
-Anna Jayne Fisher Solovy, with honors in History
-Tyler Joseph Sparks
-Haley Ann Stewart, with highest honors in Comparative Literature
-Zachary Lee Stewart, with highest honors in Music
-John Phillip Sutton
-Phonkrit Tanavisarut
-Jasmine McKay Thomasian, with highest honors in Religion
-Nathan James Thompson, with highest honors in History
++*Samantha Nicole Petti, with honors in Mathematics
+*Molly Mack Pickel
+*Jaclyn Duker Porfilio, with highest honors in Computer Science
+*William Beck Raskin, with honors in English
++*Raea Elise Rasmussen, with highest honors in Psychology
+*Bryn Marie Reinstadler
+*Miho Sakuma, with honors in History
++*Gabriel Orr Samach, with honors in Physics
++*Alexander James Silver, with highest honors in Chemistry
+*Anna Jayne Fisher Solovy, with honors in History
+*Tyler Joseph Sparks
+*Haley Ann Stewart, with highest honors in Comparative Literature
+*Zachary Lee Stewart, with highest honors in Music
+*John Phillip Sutton
+*Phonkrit Tanavisarut
+*Jasmine McKay Thomasian, with highest honors in Religion
+*Nathan James Thompson, with highest honors in History
 Philip Augustus Baron von Hahn, with honors in History
-Christopher George Weihs
-Paige Lauren Whidbee, with highest honors in History
-Jeewon Yoo, with highest honors in English
-Shannon Marie Zikovich, with honors in Chemistry
+*Christopher George Weihs
+*Paige Lauren Whidbee, with highest honors in History
+*Jeewon Yoo, with highest honors in English
+*Shannon Marie Zikovich, with honors in Chemistry
 Bachelor of Arts, Cum Laude
 Isabel Eve Abraham-Raveson, with honors in Women's, Gender and Sexuality Studies
 Shaan Nishith Amin
 Garrett Arthur Anstreicher, with honors in Economics
 Ryan Christopher Barry
-Gregory Blum Becker, with honors in Computer Science
++Gregory Blum Becker, with honors in Computer Science
 Rohan Samir Bhatt
 Emma Wilkinson Bick
 Jacob Farwell Blau
@@ -97,12 +97,12 @@ Samuel Richard Revelle Chapin, with honors in History
 Yogeeta Malinie Chatoredussy
 Nicole Guan Chen
 Elliot Maxwell Chester
-Weng-Him Cheung, with honors in Physics
-Julia Rose Kahn Cline, with highest honors in Physics
++Weng-Him Cheung, with honors in Physics
++Julia Rose Kahn Cline, with highest honors in Physics
 Eirann Hope Cohen
 Matthew Christopher Conway, with honors in History
 Cody Eugene Cotner
-Nell Carlyle Davis, with highest honors in Geosciences
++Nell Carlyle Davis, with highest honors in Geosciences
 Jonathan Laurence Dely
 Bethany Joy Rockwell Dixon
 Adrien Paul Downey
@@ -113,8 +113,8 @@ Elena Leigh Faverio, with honors in Theatre
 Alisdair James Ferguson
 Katherine Gillie Flanagan
 Simone Claire Frank, with honors in Anthropology
-Emily Eggleston Gaddis, with honors in Biology
-Nicholas Kirtland Gardner, with honors in Mathematics
++Emily Eggleston Gaddis, with honors in Biology
++Nicholas Kirtland Gardner, with honors in Mathematics
 Rebecca Elaine Gendelman, with honors in English
 Emily Michaels Gerber
 Lauren Elizabeth Glenn
@@ -123,7 +123,7 @@ Veronica Jean Gould
 Samuel Ian Green
 Jasmyne Lanette Grismore
 Siobhan Justine Harrity
-Amir Daniel Hay, with highest honors in Biology
++Amir Daniel Hay, with highest honors in Biology
 Tiantian He
 Andrée Caroline Heller
 Joshua Kevin Helmkamp
@@ -132,7 +132,7 @@ Michelle Irene Higgins, with honors in Biology
 Samuel Nieboer Hine
 Miles Dakota Horton
 Christopher Knight Huffaker
-Elissa Mairen Barhite Hult, with honors in Biology
++Elissa Mairen Barhite Hult, with honors in Biology
 Aldis Pauls Inde
 David Anthony Jarrett
 Gloria Jong Hee Joo
@@ -140,14 +140,14 @@ Grace Kim
 Simmon Kim
 Victoria Kate Lippman
 En Tzu Liu
-Lillian Ma, with honors in Chemistry
++Lillian Ma, with honors in Chemistry
 Michael Gordon Madding
 Jenna Margot Maddock
 Jeremy David Markson
 Conor Cornell McClintock
 Katherine Sturgis McDowell
 Philip Francis McGovern
-Alexandra Grace McInturf, with honors in Biology
++Alexandra Grace McInturf, with honors in Biology
 Michael Curran McPhee
 Lauren Elaine Miller, with honors in Classics
 Peter Joseph Mistretta
@@ -166,20 +166,20 @@ Stacy Nelson Purcell
 Christopher Andrew Riegg
 Sophia Leung Rosenfeld
 Gwendolyn Elspeth Schultz, with honors in Biology
-Anuj Kamlesh Shah, with highest honors in Neuroscience
++Anuj Kamlesh Shah, with highest honors in Neuroscience
 Daniel Max Siegel
 Chetan Singhal
 Alison Grace Carswell Smith, with highest honors in Biology
 Hannah Witten Smith
 Melissa Ayn Soule, with highest honors in Women's, Gender and Sexuality Studies
 Benno Jacob Stein
-Gabriel Scott Stephens, with highest honors in Biology
-Katherine Julia Susa, with honors in Chemistry
++Gabriel Scott Stephens, with highest honors in Biology
++Katherine Julia Susa, with honors in Chemistry
 Ali Reza Tafreshi
 Alexandra Ting
 Catherine Marie Treesh, with honors in History
 Nakita Gaetane VanBiene
-Kiah Ashley Walker
++Kiah Ashley Walker
 Erika Danielle Watkins
 Garrett Gabriel Welson
 Mariah Capps Widman
@@ -203,7 +203,7 @@ Joseph Alfred Baca
 Mizzel Muhammad Badruddin
 Yeljas Bakhyt
 Klejdi Banka
-Dylan Matthew Barber, with honors in Chemistry
++Dylan Matthew Barber, with honors in Chemistry
 Tatum Ali Barnes
 Alyson Helena Barrett
 Thomas Andrew Beaudoin, with honors in Mathematics
@@ -220,7 +220,7 @@ Christie Elizabeth Black, with honors in Biology
 Antonio Blanco
 Batjin Boldbat
 Brent Ernest Bomkamp
-Wyatt Bradley Boyer, with honors in Mathematics
++Wyatt Bradley Boyer, with honors in Mathematics
 Kathleen Elisabeth Brantley
 Jonathan Evan Brenner
 Sarah Lamoreaux Brink
@@ -239,11 +239,11 @@ Timothy Richard Cannon, with highest honors in Art
 Guedis Steven Cardenas Cabrera
 Alejandra Trinidad Castañeda
 Christopher MacLean Chandler
-Alice Ultes Chapman
++Alice Ultes Chapman
 Kevin Michael Chen
-Tamuka Chidanguro, with honors in Chemistry
++Tamuka Chidanguro, with honors in Chemistry
 Charles Brandon Chirinos
-Achala Chittor, with honors in Biology
++Achala Chittor, with honors in Biology
 Juno Cho, with honors in Chemistry
 Joowon Michelle Choi
 Carrie Guan Huey Chu
@@ -282,13 +282,13 @@ Carolina E. Echenique Catinchi
 Ayodele Justice Ekhator
 Taylor Dean Epley
 Jean-Luc Ocaya Etienne
-Daniel Evangelakos, with honors in Computer Science
++Daniel Evangelakos, with honors in Computer Science
 Hamza Farrukh
 Adrienne Marcelle Dimalanta Favis
 Alan Carlos Felix
 Marguerite Alexis Ferrera-Anthony
 Moses Jacob Elijah Flash
-Michael James Flynn, with highest honors in Physics
++Michael James Flynn, with highest honors in Physics
 Qadir Jibril Forbes
 Alexander Crowley Foucault
 Emily Louise Fox, with honors in Economics
@@ -325,25 +325,25 @@ Gillian Kathleen Hornor, with honors in Economics
 Carson Vincent Houle
 Shannon Shao Hsu
 Banyi Huang
-Ivan Jacob Huerfano, with honors in Chemistry
++Ivan Jacob Huerfano, with honors in Chemistry
 Margaret Anne Hughes
 Veroneque Felicia Ignace, with highest honors in Africana Studies
 Alexandra Suzanne Jensen
 Katherine Ann Jolin
 Benjamin Sneath Jones
 Aaron Jordan, with honors in Psychology
-Julie Jung, with honors in Biology
-Diana D. Kang, with honors in Biology
++Julie Jung, with honors in Biology
++Diana D. Kang, with honors in Biology
 Mpaza Sichilima Kapembwa
-Salmaan Anver Karim, with honors in Chemistry
-Caroline Cecil Kaufman, with honors in Psychology
++Salmaan Anver Karim, with honors in Chemistry
++Caroline Cecil Kaufman, with honors in Psychology
 Michaela Erin Kearney
 Eric Michael Kelley
 Edward Joseph Kelly
 Katherine Callahan Kiernan
 Steven Jeffrey Kiesel
 Joseph Ryan Kilcullen
-Ashley A. Kim, with highest honors in Chemistry
++Ashley A. Kim, with highest honors in Chemistry
 Douglas Jae Woo Kim
 Donald Rae Kost
 Adin Moshe Kreiger-Benson
@@ -368,7 +368,7 @@ Michael Benser Luciani
 Elena Luethi
 Kellie Thomson Macdonald
 John Maimone-Medwick
-Victor Whitesel Major, with honors in Geosciences
++Victor Whitesel Major, with honors in Geosciences
 Bridget Anne Malicki
 Molly Ryan Malinowski
 Tyler Paek Mallery
@@ -391,7 +391,7 @@ Juan Rolando Mena
 Tanzim Khan Milkey
 Camila Paola Miller
 Claire Petra Miller
-Linamarie Miller, with honors in Chemistry
++Linamarie Miller, with honors in Chemistry
 Nathan Graham Fox Miller
 Medina Siobhan Mody-Fitzmaurice, with honors in Africana Studies
 Thobo Mogojwe
@@ -458,8 +458,8 @@ Salelaye Samoura
 Caroline Cassidy Sawin
 Shanice Tatiana Scantlebury
 Benjamin Allan Schneider
-Eric George Schneider, with honors in Mathematics
-Amanda Lee Schott, with honors in Neuroscience
++Eric George Schneider, with honors in Mathematics
++Amanda Lee Schott, with honors in Neuroscience
 Jack Vidal Schweighauser
 Alexander Frederick Scyocurka
 Christopher Florian Seitz
@@ -479,7 +479,7 @@ Herbert Postyn Smith
 Llewellyn Stuart Smith
 Anna Isabel Spiers
 Rebecca Elizabeth Staff
-Alice Elizabeth Stears, with honors in Biology
++Alice Elizabeth Stears, with honors in Biology
 Morgan Kelso Stevens
 Adrienne DelSignore Strait, with honors in Biology
 Phillip Christian Sull
@@ -504,12 +504,12 @@ Tess Elizabeth Vorselen, with honors in English
 Amanda Mae Walker
 Kelly Darlene Wall
 Alexander James Walsh
-Oona Goetz Watkins, with honors in Geosciences
++Oona Goetz Watkins, with honors in Geosciences
 Madison McKee Weist
 Lilly Becker Wellenbach
 Natalie Merrill Weyerhaeuser
 Daniel James Whittam
-Will Johnson Wicherski, with highest honors in Geosciences
++Will Johnson Wicherski, with highest honors in Geosciences
 Christopher Kossmann Wilkinson
 Michael Austin Williams
 Lani Willmar
@@ -519,7 +519,7 @@ Daniel Rock Wohl
 Robert William Yang
 Arran Y. Yip
 Jimeen Yoo
-Daniela Zarate, with honors in Biology
++Daniela Zarate, with honors in Biology
 Nancy Zhong
 Chelsea Xian Zhu
 Abigail Rose Zimmermann-Niefield
