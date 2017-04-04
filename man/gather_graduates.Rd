@@ -7,13 +7,15 @@
   \item{year}{Graduation year}
   \item{raw.text}{Raw text from the Course Catlog associated with each graduate}
   \item{latin.honors}{Latin honors}
+  \item{Phi.Beta.Kappa}{Boolean value indicating membership in Phi Beta Kappa}
+  \item{Sigma.Xi}{Boolean value indicating membership in Sigma Xi}
   }}
 \usage{
 gather_graduates()
 }
 \value{
-a dataframe for the specified year with a row for each graduating
-  senior and three variables.
+a dataframe for the specified years with a row for each graduating
+  senior and five variables.
 }
 \description{
 This function brings together the information on all Williams

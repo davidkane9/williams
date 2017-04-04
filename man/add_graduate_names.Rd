@@ -6,10 +6,12 @@
 \format{\describe{ \item{first.name}{Graduate's first name.}#'
   \item{last.name}{Graduate's last name.} }}
 \usage{
-add_graduate_names(x)
+add_graduate_names(x, complete = FALSE)
 }
 \arguments{
 \item{x}{data frame with raw.text column}
+
+\item{complete}{logical to indicate how many variables to add to x. Default is FALSE.}
 }
 \value{
 the input data frame along with two new columns.
@@ -20,5 +22,5 @@ This function takes as input a data frame which includes the raw
   two new columns: first.name and last.name. We assume that both the first
   name and the last name consist of a single string. That is, even if
   someone's true last name is González del Riego, we record the last name as
-  Riego.
+  Riego. If \code{complete} is FALSE, it also returns full.name.
 }

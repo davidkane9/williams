@@ -12,11 +12,6 @@
                    We define the "primary" thesis honor as the first honor
                    appearing alongside grad's name}
     \item{major}{major in which graduate completed primary honor}
-    \item{honor.2}{details of distinction of secondary thesis honor (if any)
-                  We define the "secondary" thesis honor as the second honor
-                 appearing alongside grad's name}
-    \item{major.2}{major in which graduate completed secondary honor}
-    \item{raw.text}{graduate details as appearing in course catalog}
     \item{gender}{male or female, based on the \code{gender} package}
     }}
 \usage{
@@ -24,12 +19,13 @@ create_graduates(complete = FALSE)
 }
 \arguments{
 \item{complete}{logical to indicate how many variables to return in the data frame.
-Default is FALSE.}
+Default is FALSE, which returns the same information as in the \code{graduates}
+data frame distributed with the package.}
 }
 \value{
 a dataframe with a row for each graduating senior and 9 associated variables.
 }
 \description{
 This function compiles information for all graduates and returns a
-      dataframe. Details on this process can be found in the vignette.
+      dataframe.
 }
