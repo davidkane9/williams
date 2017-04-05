@@ -29,3 +29,6 @@ a dataframe with a row for each graduating senior and 9 associated variables.
 This function compiles information for all graduates and returns a
       dataframe.
 }
+\examples{
+
+}

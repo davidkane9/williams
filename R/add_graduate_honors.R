@@ -30,7 +30,9 @@ add_graduate_honors <- function(x, complete = FALSE){
   stopifnot(is.character(x$raw.text))
 
   ## Grab both possible honors  --- which are always after the first comma, if
-  ## there is one.
+  ## there is one. Never figured out a cool way to deal with the comma in the
+  ## two versions of WGES in the data, so just replace the whole thing at the
+  ## start.
 
   raw <- stringr::str_replace_all(x$raw.text, "Women's, Gender and Sexuality Studies|Women's and Gender Studies", "WGES")
 
@@ -43,8 +45,8 @@ add_graduate_honors <- function(x, complete = FALSE){
   h.1 <- stringr::str_replace_all(raw[ ,2],  " with | in", "")
   h.2 <- stringr::str_replace_all(raw[ ,3],  " with | in", "")
 
-  honor.1 <- stringr::str_match(h.1, "^.*honors")
-  honor.2 <- stringr::str_match(h.2, "^.*honors")
+  honor.1 <- stringr::str_match(h.1, "^.*honors")[ ,1]  ## Recall that str_match returns a matrix.
+  honor.2 <- stringr::str_match(h.2, "^.*honors")[ ,1]
 
   major.1 <- stringr::str_replace(h.1, "^.*honors ", "")
   major.2 <- stringr::str_replace(h.2, "^.*honors ", "")

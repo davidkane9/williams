@@ -3,7 +3,6 @@
 export(add_graduate_gender)
 export(add_graduate_honors)
 export(add_graduate_names)
-export(add_is_asian)
+export(add_graduate_race)
 export(create_graduates)
 export(gather_graduates)
-export(is_asian)

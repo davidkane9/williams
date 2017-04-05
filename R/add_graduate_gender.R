@@ -2,13 +2,13 @@
 #'
 #' @description This function takes as input a data frame which includes the
 #'   \code{first.name} of each graduate. It returns that data frame along with a
-#'   new columns: \code{gender}.
+#'   new column: \code{gender}.
 #'
 #' @param x data frame with \code{first.name} column
 #' @param complete logical to indicate how many variables to add to x. Default
 #'   is FALSE. If TRUE, other diagnostic variables are also added.
 #'
-#' @return the input data frame along with two new columns.
+#' @return the input data frame along with new column(s).
 #'
 #' @format \describe{
 #'   \item{gender}{Graduate's gender as determined by the gender package.}

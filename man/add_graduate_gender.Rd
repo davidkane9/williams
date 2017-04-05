@@ -16,10 +16,10 @@ add_graduate_gender(x, complete = FALSE)
 is FALSE. If TRUE, other diagnostic variables are also added.}
 }
 \value{
-the input data frame along with two new columns.
+the input data frame along with new column(s).
 }
 \description{
 This function takes as input a data frame which includes the
   \code{first.name} of each graduate. It returns that data frame along with a
-  new columns: \code{gender}.
+  new column: \code{gender}.
 }

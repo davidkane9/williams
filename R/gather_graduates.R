@@ -49,8 +49,8 @@ gather_graduates <- function(){
 
     ## Also figure out Phi Beta Kappa and Sigma Xi.
 
-    df$Phi.Beta.Kappa <- str_detect(df$raw.text, "\\*")
-    df$Sigma.Xi <- str_detect(df$raw.text, "\\+")
+    df$Phi.Beta.Kappa <- stringr::str_detect(df$raw.text, "\\*")
+    df$Sigma.Xi <- stringr::str_detect(df$raw.text, "\\+")
 
     x <- rbind(x, df)
   }

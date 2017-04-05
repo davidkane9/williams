@@ -21,6 +21,9 @@
 #'     \item{major}{major in which graduate completed primary honor}
 #'     \item{gender}{male or female, based on the \code{gender} package}
 #'     }
+#'
+#' @examples
+#'
 #' @export
 
 create_graduates <- function(complete = FALSE){
@@ -29,17 +32,14 @@ create_graduates <- function(complete = FALSE){
   x <- add_graduate_names(x, complete = complete)
   x <- add_graduate_honors(x, complete = complete)
   x <- add_graduate_gender(x, complete = complete)
+  x <- add_graduate_race(x, complete = complete)
+
 
   if(! complete){
     x$raw.text <- NULL
   }
 
-
-
-  ## Deal with ethnicity
-
-
-
+  x <- as_tibble(x)
 
   ## Could have lots of error checking. Start with:
 

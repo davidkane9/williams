@@ -3,40 +3,32 @@
 \docType{data}
 \name{graduates}
 \alias{graduates}
-\title{Graduation Information (Latin Honors, Theses Distinctions & Majors) for 8353 Ephs (2000 - 2015)}
+\title{Williams College Graduates}
 \format{A data frame with 8353 rows and 14 variables:
 \describe{
-    \item{first.name}{firstname of graduate}
-    \item{last.name}{lastname of graduate}
-    \item{year}{year of graduation}
-    \item{latin.honor}{latin honor recieved by graduate (if any)}
-    \item{Phi.Beta.Kappa}{lgical; indicates Phi Beta Kappa membership}
-    \item{Sigma.Xi}{lgical; indicates Sigma Xi membership}
-    \item{honor}{details of distinction of primary thesis honor (if any)
-                   We define the "primary" thesis honor as the first honor
-                   appearing alongside grad's name}
-    \item{major}{major in which graduate completed primary honor}
-    \item{gender}{Gender based on \code{male_prob} and \code{female_prob}. We predict gender
-                  as the higher of the two.}
-    \item{asian}{Predicts if given lastname belongs to an asian student on the basis of data compiled
-                    by MongaBay.com. MongaBay derives from the U.S. Bureau of the Census, and finds the
-                    Percentage of people with a given surname who classified themselves as "non-hispanic
-                    Asian & Pacific Islander" (race). We flag a given lastname as asian if this percentage
-                    is > 50%.
-                    }
+    \item{year}{numeric, year of graduation}
+    \item{first.name}{character, first name of graduate}
+    \item{last.name}{character, last name of graduate}
+    \item{latin.honors}{character, Latin Honors recieved by graduate (if any)}
+    \item{Phi.Beta.Kappa}{lgical, indicates Phi Beta Kappa membership}
+    \item{Sigma.Xi}{lgical, indicates Sigma Xi membership}
+    \item{honor}{character, first department honor awarded, if any.}
+    \item{major}{character, academic field in which graduate won primary honor.}
+    \item{gender}{character, based on \code{first.name}, using the gender package.}
+    \item{race}{character, based on \code{last.name}, using the wru package.}
 }}
 \source{
 \url{http://web.williams.edu/admin/registrar/catalog/archive.html}
 
-\url{http://names.mongabay.com/data/asian_pacific_islander.html}
-
 \url{https://cran.r-project.org/web/packages/gender/README.html}
+
+\url{https://cran.r-project.org/web/packages/wru/index.html}
 }
 \usage{
 graduates
 }
 \description{
-A dataset containing graduation information for 8353 ephs (class of 2000 to 2015), extracted from the
-College's course catalogs.
+A dataset containing graduation information for 8,357 ephs (classes of 2001 to 2016), extracted from the
+Williams College course catalog.
 }
 \keyword{datasets}
