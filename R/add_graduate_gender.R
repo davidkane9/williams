@@ -14,6 +14,8 @@
 #'   \item{gender}{Graduate's gender as determined by the gender package.}
 #'   }
 #'
+#' @importFrom dplyr %>%
+#'
 #' @export
 
 add_graduate_gender <- function(x, complete = FALSE){
@@ -30,15 +32,15 @@ add_graduate_gender <- function(x, complete = FALSE){
   z <- gender::gender_df(x, name_col = "first.name", year_col = "birth.year")
   z <- z %>%
     dplyr::select(name, year_min, proportion_male, proportion_female, gender) %>%
-    rename(year = year_min, first.name = name) %>%
-    mutate(year = year + 22)
+    dplyr::rename(year = year_min, first.name = name) %>%
+    dplyr::mutate(year = year + 22)
 
-  x <- left_join(x, z) %>% select(-birth.year)
+  x <- dplyr::left_join(x, z) %>% dplyr::select(-birth.year)
 
   ## Keep only gender unless complete = TRUE.
 
   if(! complete){
-    x <- x %>% select(-proportion_male, -proportion_female)
+    x <- x %>% dplyr::select(-proportion_male, -proportion_female)
   }
 
   x

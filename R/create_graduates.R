@@ -22,8 +22,6 @@
 #'     \item{gender}{male or female, based on the \code{gender} package}
 #'     }
 #'
-#' @examples
-#'
 #' @export
 
 create_graduates <- function(complete = FALSE){
@@ -39,7 +37,7 @@ create_graduates <- function(complete = FALSE){
     x$raw.text <- NULL
   }
 
-  x <- as_tibble(x)
+  x <- tibble::as_tibble(x)
 
   ## Could have lots of error checking. Start with:
 

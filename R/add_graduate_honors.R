@@ -21,6 +21,7 @@
 #'     \item{major}{Simplified major with the highest honor}
 #'     \item{honor}{Highest honor received, if any}
 #'   }
+#'
 #' @export
 
 add_graduate_honors <- function(x, complete = FALSE){

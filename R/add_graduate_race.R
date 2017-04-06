@@ -14,6 +14,8 @@
 #'   \item{race}{Graduate's race as determined by the wru package.}
 #'   }
 #'
+#' @importFrom dplyr %>%
+#'
 #' @export
 
 add_graduate_race <- function(x, complete = FALSE){
@@ -22,19 +24,23 @@ add_graduate_race <- function(x, complete = FALSE){
   stopifnot(all(c("last.name") %in% names(x)))
   stopifnot(is.character(x$last.name))
 
-  ## We need the wru package. I am still confused about how to handle this
-  ## requirement in DESCRIPTION.
+  ## I think that the wru package is suspect and/or that merge_surnames works in
+  ## weird ways. Or perhaps I don't understand the correct way to use
+  ## Imports/Depends.
 
   x$surname <- x$last.name
+  x <- wru::merge_surnames(x)
 
-  x <- wru::merge_surnames(x) %>%
-    select(-surname, -surname.match)
+  ## Manipulation to make things nice.
+
+
+  x <- x %>%  dplyr::select(-surname, -surname.match)
 
   z <- x[c("p_whi", "p_bla", "p_his", "p_asi", "p_oth")]
 
   x$race <- colnames(z)[max.col(z)]
 
-  x <- x %>% mutate(race = forcats::fct_recode(race,
+  x <- x %>% dplyr::mutate(race = forcats::fct_recode(race,
                                     "White" = "p_whi",
                                     "Black" = "p_bla",
                                     "Hispanic" = "p_his",
@@ -45,7 +51,7 @@ add_graduate_race <- function(x, complete = FALSE){
   ## Keep only race unless complete = TRUE.
 
   if(! complete){
-    x <- x %>% select(-p_whi, -p_bla, -p_his, -p_asi, -p_oth)
+    x <- x %>% dplyr::select(-p_whi, -p_bla, -p_his, -p_asi, -p_oth)
   }
 
   x

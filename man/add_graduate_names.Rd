@@ -3,8 +3,10 @@
 \name{add_graduate_names}
 \alias{add_graduate_names}
 \title{Add Graduate Names}
-\format{\describe{ \item{first.name}{Graduate's first name.}#'
-  \item{last.name}{Graduate's last name.} }}
+\format{\describe{
+ \item{first.name}{Graduate's first name.}
+ \item{last.name}{Graduate's last name.}
+ }}
 \usage{
 add_graduate_names(x, complete = FALSE)
 }

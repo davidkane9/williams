@@ -12,8 +12,13 @@
 #'
 #' @return the input data frame along with two new columns.
 #'
-#' @format \describe{ \item{first.name}{Graduate's first name.}#'
-#'   \item{last.name}{Graduate's last name.} }
+#' @format \describe{
+#'  \item{first.name}{Graduate's first name.}
+#'  \item{last.name}{Graduate's last name.}
+#'  }
+#'
+#' @importFrom dplyr %>%
+#'
 #' @export
 
 add_graduate_names <- function(x, complete = FALSE){
@@ -43,8 +48,8 @@ add_graduate_names <- function(x, complete = FALSE){
   ## ignore complications associated with last names that are of length more
   ## than one.
 
-  x$first.name <- names %>% map_chr(1)
-  x$last.name  <- names %>% map_chr(tail, 1)
+  x$first.name <- names %>% purrr::map_chr(1)
+  x$last.name  <- names %>% purrr::map_chr(tail, 1)
 
   if(complete){
     x$full.name <- full.name
