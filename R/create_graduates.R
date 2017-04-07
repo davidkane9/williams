@@ -22,6 +22,12 @@
 #'     \item{gender}{male or female, based on the \code{gender} package}
 #'     }
 #'
+#' @examples
+#'
+#' \donttest{
+#'    x <- create_graduates()
+#' }
+#'
 #' @export
 
 create_graduates <- function(complete = FALSE){
