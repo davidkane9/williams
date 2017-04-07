@@ -8,7 +8,7 @@
 #' @source \url{https://cran.r-project.org/web/packages/wru/index.html}
 
 #'
-#' @format A data frame with 8353 rows and 14 variables:
+#' @format A data frame with 8,357 rows and 10 variables:
 #' \describe{
 #'     \item{year}{numeric, year of graduation}
 #'     \item{first.name}{character, first name of graduate}

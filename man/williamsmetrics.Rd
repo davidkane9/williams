@@ -4,71 +4,28 @@
 \name{williamsmetrics}
 \alias{williamsmetrics}
 \alias{williamsmetrics-package}
-\title{williamsmetrics: A package for accessing graduating details (latin honors, theses, majors)
-       for Ephs.}
+\title{williamsmetrics: A package of data associated with Williams College and tools for creating it.}
 \description{
-The heart of \code{williamsmetrics} is the dataset \code{graduates} that can be found under the
-\code{data} directory of the package. At present, it reports data for ephs from class of 2000 to
-class of 2015.
-This documents describes how the said data was collected, and provides instructions for adding data
-for subsequent years to the dataset.
-}
-\section{The Dataset}{
-
-At present, the \code{graduates} dataset contains observations about 8353 ephs who graduates from 2000
-to 2015. Each observation is associated with 14 variables. These are outlined below:
-\describe{
-    \item{firstname}{firstname of graduate}
-    \item{middlename}{middlename(s) of graduate}
-    \item{lastname}{lastname of graduate}
-    \item{year}{year of graduation}
-    \item{latin.honor}{latin honor recieved by graduate (if any)}
-    \item{honor}{details of distinction of primary thesis honor (if any)
-                   We define the "primary" thesis honor as the first honor
-                   appearing alongside grad's name}
-    \item{major}{major in which graduate completed primary honor}
-    \item{honor.2}{details of distinction of secondary thesis honor (if any)
-                  We define the "secondary" thesis honor as the second honor
-                 appearing alongside grad's name}
-    \item{major.2}{major in which graduate completed secondary honor}
-    \item{raw.text}{graduation details as appearing in course catalog}
-    \item{male_prob}{probability that given firstname belongs to a "male" based on
-                     \code{gender} package which encodes gender based on names and
-                     dates of birth, using U.S. Census or Social Security datasets.}
-    \item{female_prob}{probability that given firstname belongs to a "female" based on
-                     \code{gender} package which encodes gender based on names and
-                     dates of birth, using U.S. Census or Social Security datasets.}
-    \item{gender}{Gender based on \code{male_prob} and \code{female_prob}. We predict gender
-                  as the higher of the two.}
-    \item{is.asian}{Predicts if given lastname belongs to an asian student on the basis of data compiled
-                    by MongaBay.com. MongaBay derives from the U.S. Bureau of the Census, and finds the
-                    Percentage of people with a given surname who classified themselves as "non-hispanic
-                    Asian & Pacific Islander" (race). We flag a given lastname as asian if this percentage
-                    is > 50%.
-                    }
-}
-
-\bold{We now provide a step by step guide of compiling this data:}
-}
-
-\section{Step One}{
+The heart of \code{williamsmetrics} is the dataset \code{graduates}. This documents
+describes how this data was collected, and provides instructions for adding data in subsequent
+years.
 
 \bold{The Course Catalogs} \cr
 The college maintains an [archive](http://web.williams.edu/admin/registrar/catalog/archive.html) of
-former course catalogs that serves as a rich basis for
-information on graduating ephs. More specifically, under the "Degrees Conferred" section in each course catalog,
-we find a list of names for graduating students (catagorized by latin honor conferred), along with information
-about their senior theses, and any related distinctions. \cr
+annual course catalogs that serves as a rich basis for information on graduating students.
+More specifically, under the "Degrees Conferred" section in each course catalog,
+we find a list of names for graduating students (catagorized by Latin honor conferred), along with information
+about their senior thesis, and any related distinctions. \cr
 For each course catalog, we copy-paste the "Degrees Conferred" section into a text file. We save this in
 the \code{inst/extdata} directory of the package, using the naming convention
-"graduates-<year>-<year + 1>.txt". \cr
-For example, for the year 2015, we save the "Degrees Conferred" section into a text file named
-"graduates-2015-2016.txt" in the \code{inst/extdata} directory. \cr
+"graduates-<year - 1>-<year>.txt". \cr
+For example, for course catalog for the 2016-2017 academic year, we save the "Degrees Conferred"
+section into a text file named "graduates-2015-2016.txt" in the \code{inst/extdata} directory. \cr
 \cr
-Please note: Due to copy-pasting difficulties from the PDFs, the "copy-paste" step outlines above may
-be more tedious than it immediately seems: often, details about several graduates our clumped onto a
+Please note: Due to copy-pasting difficulties from the PDFs, the "copy-paste" step is sometimes tedious.
+often, details about several graduates our clumped onto a
 single line (that is, they appear without line breaks). Here, it is essential to manually seperate these
-lines out, and ensure that a single line contains information only about a single graduating eph.
+lines out, and ensure that a single line contains information only about a single graduate.
 For example,
 "DoHyun Tony Chung, with honors in Political EconomyRebecca Tamar Cover, with highest honors in AstrophysicsAmanda Bouvier Edmonds"
 should be separated into: \cr
@@ -78,53 +35,10 @@ Amanda Bouvier Edmonds \cr
 
 Another complexity that we handle by hand is the apostrophe in "Women's" as it is used in both
 Women's and Gender Studies and in Women's, Gender and Sexuality Studies. We had trouble handling this
-apostrophe, because it was a strange encoding. So, we simply changed it to a simple apostrophe by hand.
+apostrophe, because it has a strange encoding. So, we simply changed it to a simple apostrophe by hand.
 Future years will need to be handled similarly.
+
+Once the new file is added, and the package rebuilt, running \code{x <- create_graduates()} will generate
+a new data frame with all the relevant data. Use the \code{complete = TRUE} argument to provide more detailed
+information.
 }
-
-\section{Step Two}{
-
-\bold{Munging a Single Catalog} \cr
-Here, we describe the process of munging information from the text file of a single catalog. The following
-steps elaborate on combining datasets across years, and adding any additional columns. \cr
-As per \bold{Step One}, you should already have the "Degrees Conferred" section of your course catalog
-copy-pasted into an appropriately named text file in the \code{inst/extdata} directory. In order to compile
-the dataset for the year, say 2015, use \code{build_annual_dataframe(year = 2015)}.
-
-We will briefly review the procedure used by \code{build_annual_dataframe()}.
-What follows is a description of how each of the variables \code{firstname, lastname, middlename, year, latin.honor, honor, major, honor.2,
-major.2, raw.text} are obtained. Following this description alongside logic from \code{build_annual_dataframe.R}
-maybe instructive to the reader.\cr
-\cr
-At the very outset, we build lists for \code{suma_grads, magna_grads, cum_grads, no_latin_honor_grads}.
-This is easy to do as the catalogs are catagorized according to latin honors conferred with each level of
-honors organized in its own independent section. Therefore, we just need to substring our text file
-appropriately (subsetting logic can be viewed in \code{build_annual_dataframe}). Each entry in these lists
-correspond to graduation details for an eph (for example, "DoHyun Kevin Chung, honors in Political Economy").
-These entries are exactly the text supplied to the \code{raw.text} column! We will use \code{raw.text} to
-infer additional information. \cr
-\cr.
-}
-
-\section{Step Three}{
-
-\bold{Adding Gender Columns} \cr
-Given the \code{firstname} of a graduate, we now want to predict his/her gender. More specificially, we
-are interested in \code{male_prob} (that is, the probability that the firstname belongs to a male), and
-\code{female_prob} (that is, the probability that the firstname belongs to a female). We will infer the
-graduate's gender as the higher of the two quantities. \cr
-\cr
-We use the R package \code{gender} to achieve this. \code{gender} predicts \code{male_prob} and
-\code{female_prob} for a given firstname on the basis of self-identified genders drawn from
-Social Security Administration data from 1930 to 2012 in the United States. \cr
-
-Simply call \code{build_gender_df()} which loads the \code{graduates} dataset and uses \code{gender} to
-add \code{male_prob, female_prob, gender} columns to it.
-}
-
-\section{Step Four}{
-
-\bold{Adding Ethnicity Columns} \cr
-TO DO...
-}
-

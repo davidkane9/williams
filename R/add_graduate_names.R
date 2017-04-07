@@ -49,7 +49,7 @@ add_graduate_names <- function(x, complete = FALSE){
   ## than one.
 
   x$first.name <- names %>% purrr::map_chr(1)
-  x$last.name  <- names %>% purrr::map_chr(tail, 1)
+  x$last.name  <- names %>% purrr::map_chr(utils::tail, 1)
 
   if(complete){
     x$full.name <- full.name
