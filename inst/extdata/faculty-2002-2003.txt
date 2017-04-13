@@ -13,7 +13,7 @@ Randall Bartlett # Visiting Professor of Economics # B.A. (1966) Occidental Coll
 * Annemarie Bean # Assistant Professor of Theatre # B.A. (1988) Wesleyan; Ph.D. (2001) New York University
 Donald deB Beaver # Professor of History of Science # A.B. (1958) Harvard; Ph.D. (1966) Yale
 Olga R. Beaver # Professor of Mathematics # B.A. (1968) University of Missouri; Ph.D. (1979) University of Massachusetts
-Barbara Bell # Visiting Costume Designer and Costume Shop Manager # 
+Barbara Bell # Visiting Costume Designer and Costume Shop Manager #
 Ilona D. Bell # Professor of English # B.A. (1969) Radcliffe; Ph.D. (1977) Boston College
 Robert H. Bell # William R. Kenan, Jr., Professor of English # B.A. (1967) Dartmouth; Ph.D. (1972) Harvard
 Gene H. Bell-Villada # Professor of Romance Languages # B.A. (1963) University of Arizona; Ph.D. (1974) Harvard
@@ -51,7 +51,7 @@ Stacy Cochran # Arthur Levitt, Jr. ’52 Artist-in-Residence in English, Second 
 Michael P. Conforti # Part-time Lecturer in the Graduate Art Program # B.A. (1968) Trinity College; Ph.D. (1977) Harvard
 Jonathan H. Conning # Assistant Professor of Economics # B.A. (1986) Swarthmore; Ph.D. (1995) Yale
 ** Timothy E. Cook # Fairleigh S. Dickinson, Jr. Professor of Political Science # B.A. (1976) Pomona; Ph.D. (1982) University of Wisconsin, Madison
-Wanda Corn # Robert Sterling Clark Visiting Professor of Art History, Second Semester # 
+Wanda Corn # Robert Sterling Clark Visiting Professor of Art History, Second Semester #
 Ronadh Cox # Assistant Professor of Geosciences # B.S. (1985) University College Dublin; Ph.D. (1993) Stanford
 Phebe Cramer # Professor of Psychology # B.A. (1957) University of California, Berkeley; Ph.D. (1962) New York University
 George T. Crane # Professor of Political Science # B.A. (1979) S.U.N.Y., Purchase; Ph.D. (1986) University of Wisconsin, Madison
@@ -70,7 +70,7 @@ David P. Dethier # Edward Brust Professor of Geology and Mineralogy # B.A. (1972
 Charles B. Dew # Charles R. Keller Professor of History # B.A. (1958) Williams; Ph.D. (1964) Johns Hopkins
 *** William DeWitt # C. Carlisle and Margaret Tippit Professor of Biology # B.A. (1961) Williams; Ph.D. (1966) Princeton
 Margaret Diggs # Part-time Lecturer in the Arts and Humanities # B.A. (1968) George Washington; M.F.A. (1975) Cranbrook Art Academy
-Hsiu-huei Lin Domizio # Visiting Assistant Professor of Chinese # 
+Hsiu-huei Lin Domizio # Visiting Assistant Professor of Chinese #
 Georges B. Dreyfus # Professor of Religion # Bachelors (1969) La Chaux-de-Fonds; Ph.D. (1991) University of Virginia
 Helga Druxes # Professor of German # A.M. (1985) Brown; Ph.D. (1987) Brown
 *William C. Dudley # Assistant Professor of Philosophy and Fellow of the Oakley Center for the Humanities and Social Sciences # B.A. (1989) Williams; Ph.D. (1998) Northwestern
@@ -95,7 +95,7 @@ Kevin R. Forkey # Part-time Lecturer in Physics # B.A. (1981) Cornell
 Michael Fortunato # Visiting Professor of Economics # A.B. (1976) Columbia University; Ph.D. (1984) Havard University
 Soledad Fox Assistant # Professor of Romance Languages # B.A. (1990) Sarah Lawrence College; Ph.D. (2001) City University of New York
 * Jennifer Frankl # Assistant Professor of Economics # B.A. (1987)Princeton; Ph.D. (1996) University of California, Berkeley
-Sekou M. Franklin # Visiting Assistant Professor of Political Science # 
+Sekou M. Franklin # Visiting Assistant Professor of Political Science #
 Hilary F. French # Class of 1946 Visiting Professor of International Environmental Studies, First Semester # A.B. (1986) Dartmouth College; M.A. (1996) Fletcher School of Law - Tufts
 Jennifer L. French # Assistant Professor in Latin-American Literature and Spanish Language # B.A. (1995) College of William & Mary; Ph.D. (2001) Rutgers
 Elliot M. Friedman # Assistant Professor of Psychology # A.B. (1985) Columbia; Ph.D. (1993) University of Wisconsin, Madison
@@ -109,7 +109,7 @@ Amy Gehring # Assistant Professor of Chemistry # B.A. (1994) Williams College; P
 Chris R.A. Geiregat # Assistant Professor of Economics # B.A. (1991) Universiteit Ghent-Belgium; M.A. (1996) Johns Hopkins University
 Steven B. Gerrard # Professor of Philosophy # B.A. (1978) Amherst; Ph.D. (1987) University of Chicago
 Michael A. Glier # Associate Professor of Art # B.A. (1976) Williams; M.A. (1979) Hunter
-Louise E. Glück # Preston S. Parish ’41 Third Century Senior Lecturer in English # 
+Louise E. Glück # Preston S. Parish ’41 Third Century Senior Lecturer in English #
 George R. Goethals # Webster Atwell—Class of 1921 Professor of Psychology # A.B. (1966) Harvard; Ph.D. (1970) Duke
 Eric J. Goldberg # Assistant Professor of History # B.A. (1991) University of Pennsylvania; Ph.D. (1998) University of Virginia
 Darra J. Goldstein # Professor of Russian # B.A. (1973) Vassar; Ph.D. (1983) Stanford
@@ -130,7 +130,7 @@ Catharine B. Hill # John J. Gibson Professor of Economics and Provost of the Col
 ** Victor E. Hill # Thomas T. Read Professor of Mathematics # B.S. (1961) Carnegie-Mellon; Ph.D. (1966) University of Oregon
 Marjorie W. Hirsch # Assistant Professor of Music # B.A. (1982) Yale; Ph.D. (1989) Yale
 Michael Ann Holl # Part-time Lecturer in the Graduate Program in Art History, First Semester # Ph.D (1983) Cornell
-Renata Holod # Robert Sterling Clark Visiting Professor of Art History, First Semester # 
+Renata Holod # Robert Sterling Clark Visiting Professor of Art History, First Semester #
 Meredith C. Hoppin # Frank M. Gagliardi Professor of Classics # B.A. (1972) Carleton; Ph.D. (1976) University of Michigan
 G. Robert Jackall # Class of 1956 Professor of Sociology and Social Thought # B.A. (1963) Fordham; Ph.D. (1976) New School of Social Research
 Gary J. Jacobsohn # Woodrow Wilson Professor of Political Science # B.A. (1967) City College, C.U.N.Y.; Ph.D. (1972) Cornell
@@ -191,15 +191,15 @@ Jenna L. MacIntire # Part-time Instructor in Chemistry and Part-time Instructor 
 Henry Maguire # Croghan Bicentennial Visiting Professor of Art History # B.A. (1965) Kings College; Ph.D. (1973) Harvard University
 ** James E. Mahon # Associate Professor of Political Science # A.B. (1977) Dartmouth; Ph.D. (1989) University of California, Berkeley
 Protik Kumar Majumder # Associate Professor of Physics # B.S. (1982) Yale; Ph.D. (1989) Harvard
-Anandi Mani # Assistant Professor of Economics # 
+Anandi Mani # Assistant Professor of Economics #
 Patricia M. Manning # Assistant Professor of Physical Education # B.S. (1977) Cortland; M.S. (1988) Smith
 Eleni Manolaraki # Visiting Assistant Professor of Classics # B.A. (1995) University of Crete
 George E. Marcus # Professor of Political Science # A.B. (1964) Columbia; Ph.D. (1968) Northwestern
-Sarah Marks # Visiting Instructor of Physical Education and Head Women’s Tennis and Squash Coach # 
+Sarah Marks # Visiting Instructor of Physical Education and Head Women’s Tennis and Squash Coach #
 Stephan E. Martin # Part-time Instructor in Astronomy # B.A. Colgate; M.A. University of Wyoming
 Christine L. Mason # Assistant Professor of Physical Education and Athletic Insurance Coordinator # Ed.M. (1986) Boston University
 Victor Matheson # Visiting Assistant Professor of Economics # B.A. (1991) St. Olaf College; Ph.D. (2001) University of Minnesota
-Nancy Mowll # Mathews Part-time Lecturer in the Graduate Program in Art History, First Semester # 
+Nancy Mowll # Mathews Part-time Lecturer in the Graduate Program in Art History, First Semester #
 James McAllister # Assistant Professor of Political Science # B.A. (1986) S.U.N.Y., Buffalo; M.Phil. (1994) Columbia
 Ann K. McCallum # Part-time Lecturer in Art # B.A. (1974) McGill University; M.Arch. (1980) Yale
 George M. McCormack # Assistant Professor of Physical Education # B.S. (1987) Ithaca College
@@ -215,7 +215,7 @@ Douglas B. Moore # Mary A. and William Wirt Warren Professor of Music # B.Mus. (
 Justin Moore # Assistant Professor of Physical Education # B.A. (1990) Rollins College
 Manuel A. Morales # Assistant Professor in Biology # Ph.D. (1999) University of Conneticut
 * Frank Morgan # Dennis Meenan ’54 Third Century Professor of Mathematics # S.B. (1974) M.I.T.; Ph.D. (1977) Princeton
-Willard Morgan # Visiting Instructor of Physical Education and Director of the Williams Outing Club # 
+Willard Morgan # Visiting Instructor of Physical Education and Director of the Williams Outing Club #
 Peter T. Murphy # Associate Professor of English # B.A. (1981) Yale; Ph.D. (1986) Johns Hopkins
 Thomas P. Murtagh # Professor of Computer Science # A.B. (1974) Princeton; Ph.D. (1983) Cornell
 Kenda B. Mutongi # Associate Professor of History # B.A. (1989) Coe College; Ph.D. (1996) University of Virginia
@@ -268,7 +268,7 @@ Lucie Schmidt # Assistant Professor of Economics # A.B. (1992) Smith College; Ph
 Cheryl L. Shanks # Associate Professor of Political Science # B.A. (1983) University of California, Santa Cruz; Ph.D. (1994) University of Michigan
 Linda B. Shearer # Part-time Lecturer in Art and Director of the Williams College Museum of Art # B.A. (1968) Sarah Lawrence
 Harry C. Sheehy # Chair and Director of Physical Education, Athletics and Recreation and Lecturer in Physical Education # B.A. (1975) Williams; M.Ed. (1988) University of Washington
-Betina Shepard # Part-time Lecturer in Theatre, First Semester # 
+Betina Shepard # Part-time Lecturer in Theatre, First Semester #
 James R. Shepard # J. Leland Miller Professor of American History, Literature, and Eloquence # B.A. (1978) Trinity; M.F.A. (1980) Brown
 Karen L. Shepard # Part-time Lecturer in English, Second Semester # B.A. (1987) Williams; M.F.A. (1992) University of Houston
 Stephen C. Sheppard # James Phinney Baxter, 3rd, Professor of Public Affairs # B.S. (1977) University of Utah; Ph.D. (1984) Washington University
@@ -289,13 +289,13 @@ Stefanie Solum # Assistant Professor of Art # B.A. (1991) University of Wisconsi
 Marvin S. Soroos # Class of 1946 Visiting Professor of International Environmental Studies # B.A. (1967) Dartmouth; Ph.D. (1972) Northwestern
 Jane South # Visiting Part-time Lecturer in Art # B.A. (1987) Central School of Art, London; M.F.A. (1997) University of North Carolina, Greensboro
 Steven P. Souza # Observatory Supervisor/Instructor # B.S. (1973) Cooper Union; Ph.D. (1979) SUNY, Stoney Brook
-David C. Stahl # Visiting Assistant Professor of Asian Studies # 
+David C. Stahl # Visiting Assistant Professor of Asian Studies #
 *** Richard H. Stamelman # Professor of Romance Languages # B.A. (1963) Hamilton; Ph.D. (1968) Duke
 Peter E. Starenko # Visiting Assistant Professor of History # B.A. (1987)Augustana College
 Heather M. Stoll # Assistant Professor of Geosciences # B.A. (1994) Williams College; Ph.D. (1998) Princeton
 Jefferson Strait # Associate Professor of Physics # A.B. (1975) Harvard; Ph.D. (1985) Brown
 Christopher R. Stone # Mellon Postdoctoral Fellow in Contemporary Middle-Eastern Literature # B.A. (1986) Haverford; Ph.D. (2002) Princeton
-Timothy P. Stone # Visiting Instructor of Physical Education and Head Nordic Ski Coach # 
+Timothy P. Stone # Visiting Instructor of Physical Education and Head Nordic Ski Coach #
 Atsuko Suda # Visiting Lecturer in Japanese # B.A. (1998) Obirin University, Japan; M.A. (2000) University of Arizona
 Anand V. Swamy # Associate Professor of Economics # B.A. (1983) University of Delhi, India; Ph.D. (1993) Northwestern University
 Karen E. Swann # Professor of English # B.A. (1975) Oberlin; Ph.D. (1983) Cornell
