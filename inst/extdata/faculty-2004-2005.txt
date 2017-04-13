@@ -12,7 +12,7 @@ Jon M. Bakija # Assistant Professor of Economics # B.A. (1990) Wesleyan; Ph.D. (
 Debra Bricker Balton # Robert Sterling Clark Visiting Professor of Art History, Second Semester # B.A. (1977) University of British Columbia; M.A. (1980) University of Chicago
 Lois Banta # Visiting Associate Professor of Biology # B.A. (1983) Johns Hopkins; Ph.D. (1990) California Institute of Technology
 David E. Barnard # Assistant Professor of Physical Education # B.A. (1981) Wesleyan M.A.L.S. (1989) Wesleyan
-Bill Barrale # Assistant Professor of Physical Education # 
+Bill Barrale # Assistant Professor of Physical Education #
 Andrea Barrett # Lecturer in English # B.S. (1974) Union College
 Melissa Barry # Assistant Professor of Philosophy # B.A. (1988) Wheaton; Ph.D. (1998) Notre Dame
 Annemarie Bean # Assistant Professor of Theatre # B.A. (1988) Wesleyan; Ph.D. (2001) New York University
@@ -47,7 +47,7 @@ Alison A. Case # Professor of English # B.A. (1984) Oberlin; Ph.D. (1991) Cornel
 * Julie A. Cassiday # Associate Professor of Russian # B.A. (1986) Grinnell; Ph.D. (1995) Stanford
 Cosmo A. Catalano # Production Manager of the Adams Memorial Theatre and Lecturer in Theatre # B.A. (1976) University of Iowa; M.F.A. (1979) Yale
 Tess Chakkalakal # Assistant Professor of English # B.A. (1995) University of Toronto; M.A. (1996) York University
-John Chandler # Class of 1948 Distinguished Visiting Professor of Leadership Studies, Second Semester # 
+John Chandler # Class of 1948 Distinguished Visiting Professor of Leadership Studies, Second Semester #
 Cecilia Chang # Assistant Professor of Chinese # B.A. (1981) Fu-Jen University; M.A. (1986) U.C.L.A.
 Raymond Chang # Visiting Professor of Chemistry # B.S. (1962) London University; Ph.D. (1966) Yale
 Ondine Chavoya # Assistant Professor of Art # B.A. (1992) University of California, Santa Cruz; Ph.D. (2002) University of Rochester
@@ -112,7 +112,7 @@ Amy Gehring # Assistant Professor of Chemistry # B.A. (1994) Williams College; P
 William Gentry # Assistant Professor of Economics # S.B. (1986) MIT; Ph.D. (1991) Princeton
 Steven B. Gerrard # Professor of Philosophy # B.A. (1978) Amherst; Ph.D. (1987) University of Chicago
 Michael A. Glier # Associate Professor of Art # B.A. (1976) Williams; M.A. (1979) Hunter
-* Louise E. Glück # Margaret Bundy Scott Senior Lecturer in English # 
+* Louise E. Glück # Margaret Bundy Scott Senior Lecturer in English #
 ** George R. Goethals # Dennis Meenan ’54 Third Century Professor of Leadership Studies # A.B. (1966) Harvard; Ph.D. (1970) Duke
 Sarah Goh # Assistant Professor of Chemistry # B.S. (1996) University of Michigan; Ph.D. (2004) University of California, Berkeley
 ** Eric J. Goldberg # Assistant Professor of History # B.A. (1991) University of Pennsylvania; Ph.D. (1998) University of Virginia
@@ -178,14 +178,14 @@ Regina G. Kunzel # Fairleigh S. Dickinson, Jr. Professor of History and Director
 Steven Kuster # Assistant Professor of Physical Education # B.A. (1993) University of Pennsylvania; M.A. (1999) Harvard
 * Karen B. Kwitter # Ebenezer Fitch Professor of Astronomy # B.A. (1972) Wellesley; Ph.D. (1979) U.C.L.A.
 Aida Laleian # Professor of Art # B.F.A. (1978) Art Institute of Chicago; M.F.A. (1980) University of California, Davis
-Fred Lawrence # Visiting Professor of Legal Studies, Second Semester # 
+Fred Lawrence # Visiting Professor of Legal Studies, Second Semester #
 *** Kai N. Lee # Rosenburg Professor of Environmental Studies # A.B. (1966) Columbia; Ph.D. (1971) Princeton
 Timothy Lehmann # Visiting Assistant Professor of Political Science # B.A. (1990) Amherst; Ph.D. Ohio State University
 Michael Leja # Robert Sterling Clark Visiting Professor of Art History, First Semester # B.A. (1974) Swarthmore; Ph.D. (1988) Harvard
 *** William J. Lenhart # A. Barton Hepburn Professor of Computer Science and Dean of the Faculty, First Semester # B.A. (1977) St. Joseph’s; Ph.D. (1983) Dartmouth
 Barbara S. Lerner # Assistant Professor of Computer Science # B.S. (1981) Moravian College; Ph.D. (1989) Carnegie Mellon University
 Steven P. Levin # Associate Professor of Art # B.A. (1976) Reed; M.F.A. (1980) University of California, Davis
-Laura Levitt # Visiting Professor of Religion, Second Semester # 
+Laura Levitt # Visiting Professor of Religion, Second Semester #
 Zafrir Levy # Assistant Professor of Physical Education and Head Coach of Men’s & Woman’s Squash # B.A. (2001) Williams
 * Michael J. Lewis # Professor of Art # B.A. (1979) Haverford; Ph.D. (1989) University of Pennsylvania
 Scott A. Lewis # Assistant Professor of Physical Education # B.S. (1980) Springfield College; M.Ed. (1995) Springfield College
@@ -209,7 +209,7 @@ Erika Maruko # Assistant Professor of History # B.A. (1997) Williams; Ph.D. (200
 George E. Marcus # Professor of Political Science # A.B. (1964) Columbia; Ph.D. (1968) Northwestern
 Brian Martin # Assistant Professor of French Literature and French Language # A.B. (1993) Harvard; Ph.D. (2003) Harvard
 Christine L. Mason # Assistant Professor of Physical Education and Athletic Insurance Coordinator # Ed.M. (1986) Boston University
-Nancy Mowll Mathews # Lecturer in Art History # 
+Nancy Mowll Mathews # Lecturer in Art History #
 James McAllister # Associate Professor of Political Science # B.A. (1986) S.U.N.Y., Buffalo; M.Phil. (1994) Columbia
 Ann K. McCallum # Lecturer in Art # B.A. (1974) McGill University; M.Arch. (1980) Yale
 George M. McCormack # Assistant Professor of Physical Education # B.S. (1987) Ithaca College
@@ -256,7 +256,7 @@ David M. Pilachowski # College Librarian # B.A. (1971) University of Vermont; M.
 Michelyne Pinard # Assistant Professor of Physical Education and Head Women’s Soccer Coach # B.A. (1998) Dartmouth; M.S. (2002) University of Pennsylvania
 Amy D. Podmore # Assistant Professor of Art # B.S. (1982) State University College of Buffalo; M.F.A. (1987) University of California, Davis
 David H. Porter # The Harry C. Payne Visiting Professor of Liberal Arts # B.A. (1958) Swarthmore; Ph.D. (1962) Princeton
-Arturo C. Porzenanski # Visiting Professor of Economics at the Center for Development Economics # 
+Arturo C. Porzenanski # Visiting Professor of Economics at the Center for Development Economics #
 * Christopher L. Pye # Class of 1924 Professor of English and Fellow of the Oakley Center for the Humanities and Social Sciences # B.A. (1975) Oberlin; Ph.D. (1985) Cornell
 Lawrence E. Raab # Morris Professor of Rhetoric # B.A. (1968) Middlebury; M.A. (1972) Syracuse
 Ashok S. Rai # Assistant Professor of Economics # A.B. (1992) Stanford; Ph.D. (1997) University of Chicago
@@ -270,7 +270,7 @@ Nancy A. Roseman # Professor of Biology and Dean of the College # A.B. (1980) Sm
 Shawn J. Rosenheim # Professor of English # B.A. (1983) Oberlin; Ph.D. (1992) Yale
 Valerie A. Ross # Visiting Assistant Professor of English, First Semester # B.A. (1988) University of California, Santa Cruz; Ph.D. (1995) University of California, Santa Cruz
 * Leyla Rouhi # Professor of Spanish # B.A. (1987) Oxford; Ph.D. (1995) Harvard
-Merida Rúa # Assistant Professor of American Studies # 
+Merida Rúa # Assistant Professor of American Studies #
 T. Michael Russo # Assistant Professor of Physical Education and Coordinator of Physical Education # B.A. (1967) University of Massachusetts; M.S. (1970) University of Massachusetts
 Michael Samson # Visiting Associate Professor of Economics # B.A. (1983) Yale; Ph.D. (1994) Stanford
 Nathan Sanders # Assistant Professor of Linguistics # S.B. (1996) MIT; Ph.D. (2003) University of California, Santa Cruz
@@ -333,7 +333,7 @@ William von Hippel # Visiting Professor of Psychology, First Semester # B.A. (19
 Alan Walton # Visiting Lecturer in Physics # B.A. (1956) Trinity College, University of Dublin; Ph.D. (1964) University of Cambridge
 * Christopher M. Waters # Hans W. Gatzke ’38 Professor of Modern European History # B.A. (1977) California State, Long Beach; Ph.D. (1985) Harvard
 Tara Watson # Assistant Professor of Economics # B.A. (1996) Wesleyan; Ph.D. (2003) Harvard
-Leon Webster # Lab Instructor in Physics # 
+Leon Webster # Lab Instructor in Physics #
 Bradley Wells # Artist-in-Residence in Choral and Vocal Performance and Lecturer in Music # B.A. (1984) Principia College; M.M.A. (1998) Yale
 Peter S. Wells # Assistant Professor of Physical Education, Coordinator of Crew Programs, and Head Coach of Men’s Crew # B.A. (1979) Williams
 * Carmen Whalen # Assistant Professor of History # B.A. (1985) Hampshire College; Ph.D. (1994) Rutgers
