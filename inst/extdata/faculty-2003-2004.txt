@@ -69,7 +69,7 @@ Stacy S. Cochran # Visiting Lecturer in English, Spring Semester # B.A. (1981) W
 Michael P. Conforti # Lecturer in the Graduate Art Program in Art History # B.A. (1968) Trinity College; Ph.D. (1977) Harvard
 Christopher Cook # Visiting Assistant Professor of Political Science # B.S. (1993) Fitchburg State College; Ph.D. (2004) University of California, Santa Barbara
 Ronadh Cox # Associate Professor of Geosciences # B.S. (1985) University College Dublin; Ph.D. (1993) Stanford
-David Craft # Visiting Assistant Professor of Statistics # 
+David Craft # Visiting Assistant Professor of Statistics #
 Phebe Cramer # Professor of Psychology # B.A. (1957) University of California, Berkeley; Ph.D. (1962) New York University
 George T. Crane # Professor of Political Science # B.A. (1979) S.U.N.Y., Purchase; Ph.D. (1986) University of Wisconsin, Madison
 Joseph L. Cruz # Assistant Professor of Philosophy # B.A. (1991) Williams; Ph.D. (1999) University of Arizona
@@ -130,7 +130,7 @@ William Gentry # Associate Professor of Economics # S.B. (1986) MIT; Ph.D. (1991
 Steven B. Gerrard # Professor of Philosophy # B.A. (1978) Amherst; Ph.D. (1987) University of Chicago
 Michael A. Glier # Associate Professor of Art # B.A. (1976) Williams; M.A. (1979) Hunter
 Allison Glover # Visiting Lecturer in Spanish # B.A. (1992) Allegany College; M.A. (2003) Middlebury
-* Louise E. Glück # Margaret Bundy Scott Senior Lecturer in English # 
+* Louise E. Glück # Margaret Bundy Scott Senior Lecturer in English #
 *** George R. Goethals # Dennis Meenan ’54 Third Century Professor of Leadership Studies # A.B. (1966) Harvard; Ph.D. (1970) Duke
 Sarah Goh # Assistant Professor of Chemistry # B.S. (1996) University of Michigan; Ph.D. (2004) University of California, Berkeley
 Eric J. Goldberg # Assistant Professor of History # B.A. (1991) University of Pennsylvania; Ph.D. (1998) University of Virginia
@@ -158,7 +158,7 @@ Catharine B. Hill # John J. Gibson Professor of Economics and Provost of the Col
 Alan Hirsch # Visiting Assistant Professor of Legal Studies # B.A. (1981) Amherst; J.D. (1985) Yale
 Marjorie W. Hirsch # Assistant Professor of Music # B.A. (1982) Yale; Ph.D. (1989) Yale
 Rick Hoffenburg # Visiting Assistant Professor of Music # A.B. (1994) Princeton; M.M.A. (2005) Yale University School of Music
-Michael Ann Holly # Lecturer in the Graduate Program in Art History # 
+Michael Ann Holly # Lecturer in the Graduate Program in Art History #
 Kiaran Honderich # Visiting Assistant Professor of Economics, Fall Semester # B.A. (1983) Oxford; Ph.D. (1991) University of Massachusetts
 Meredith C. Hoppin # Frank M. Gagliardi Professor of Classics # B.A. (1972) Carleton; Ph.D. (1976) University of Michigan
 Lara Hutson # Assistant Professor of Biology # B.A. (1989) University of California, San Diego; Ph.D. (1998) University of Washington
@@ -354,7 +354,7 @@ Armando Vargas # Assistant Professor in Comparative Literature # B.S. (1992) Geo
 William G. Wagner # Brown Professor of History and Coordinator of the Tutorial Program # B.A. (1972) Haverford; D.Phil. (1980) Oxford
 Christopher M. Waters # Hans W. Gatzke ’38 Professor of Modern European History # B.A. (1977) California State, Long Beach; Ph.D. (1985) Harvard
 Tara Watson # Assistant Professor of Economics # B.A. (1996) Wesleyan; Ph.D. (2003) Harvard
-Leon Webster # Lab Instructor in Physics # 
+Leon Webster # Lab Instructor in Physics #
 * Bradley Wells # Clay Artist-in-Residence, Director of Choral/Vocal Activities, and Lecturer in Music and Fellow of the Oakley Center for the Humanities and Social Sciences, Fall Semester # B.A. (1984) Principia College; M.M.A. (1998) Yale
 Peter S. Wells # Assistant Professor of Physical Education, Coordinator of Crew Programs, and Head Coach of Men’s Crew # B.A. (1979) Williams
 Carmen Whalen # Associate Professor of History # B.A. (1985) Hampshire College; Ph.D. (1994) Rutgers
