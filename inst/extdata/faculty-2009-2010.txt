@@ -63,7 +63,7 @@ Marshall K. Creighton # Lecturer in Physical Education # B.A. (2002) Williams
 Jennifer Randall Crosby # Assistant Professor of Psychology # B.A. (1994) Stanford University; Ph.D. (2006) Stanford University
 Joseph L. Cruz # Associate Professor of Philosophy # B.A. (1991) Williams; Ph.D. (1999) University of Arizona
 ** Robert F. Dalzell # Frederick Rudolph 1942 Professor of American Culture # B.A. (1959) Amherst; Ph.D. (1966) Yale
-Erica Dankmeyer # Visiting Lecturer in Humanities and Dance # 
+Erica Dankmeyer # Visiting Lecturer in Humanities and Dance #
 Andrea Danyluk # Professor of Computer Science and Acting Dean of the Faculty # A.B. (1984) Vassar; Ph.D. (1992) Columbia
 *** William R. Darrow # Lissack Professor for Social Responsibility and Personal Ethics # B.A. (1970) University of California, Santa Barbara; Ph.D. (1981) Harvard
 * Theo Davis # Associate Professor of English and Fellow of the Oakley Center for the Humanities and Social Sciences # B.A. (1994) Brown; Ph.D. (2002) Johns Hopkins University
@@ -78,7 +78,7 @@ David P. Dethier # Edward Brust Professor of Geology and Mineralogy # B.A. (1972
 Charles B. Dew # Ephraim Williams Professor of American History # B.A. (1958) Williams; Ph.D. (1964) Johns Hopkins
 William DeWitt # C. Carlisle and Margaret Tippit Professor of Biology # B.A. (1961) Williams; Ph.D. (1966) Princeton
 Daniel A. Di Cenzo # Assistant Professor of Physical Education # B.A. (2001) Williams
-David Donn # Lecturer in Physical Education # 
+David Donn # Lecturer in Physical Education #
 Georges B. Dreyfus # Jackson Professor of Religion # Bachelors (1969) La Chaux-de-Fonds; Ph.D. (1991) University of Virginia
 Helga Druxes # Professor of German # A.M. (1985) Brown; Ph.D. (1987) Brown
 Sara L. Dubow # Assistant Professor of History # B.A. (1991) Williams; Ph.D. (2003) Rutgers
@@ -108,7 +108,7 @@ Stephen N. Freund # Associate Professor of Computer Science # B.S. (1995) Stanfo
 Alexandra Garbarini # Assistant Professor of History # B.A. (1994) Williams; Ph.D. (2003) UCLA
 Sarah Gardner # Lecturer in Environmental Studies # B.A. (1985) Smith; Ph.D. (2000) C.U.N.Y.
 Thomas A. Garrity # William R. Kenan, Jr. Professor of Mathematics # B.S. (1981) University of Texas; Ph.D. (1986) Brown
-David Gates # Margaret Bundy Scott Visiting Professor of English, Second Semester # 
+David Gates # Margaret Bundy Scott Visiting Professor of English, Second Semester #
 Robert Gazzale # Assistant Professor of Economics # B.S. (1990) Georgetown; Ph.D. (2004) University of Michigan
 *** Amy Gehring # Associate Professor of Chemistry # B.A. (1994) Williams; Ph.D. (1998) Harvard
 William Gentry # Associate Professor of Economics # S.B. (1986) MIT; Ph.D. (1991) Princeton
@@ -120,7 +120,7 @@ George R. Goethals # Professor of Psychology # A.B. (1966) Harvard; Ph.D. (1970)
 Christopher Goh # Assistant Professor of Chemistry # B.S. (1989) University of Durham; Ph.D. (1996) Harvard
 Sarah Goh # Assistant Professor of Chemistry # B.S. (1996) University of Michigan; Ph.D. (2004) University of California, Berkeley
 * Eric J. Goldberg # Associate Professor of History # B.A. (1991) University of Pennsylvania; Ph.D. (1998) University of Virginia
-Barry Goldstein # Visiting Professor of Humanities # 
+Barry Goldstein # Visiting Professor of Humanities #
 Darra J. Goldstein # Francis Christopher Oakley Third Century Professor of Russian # B.A. (1973) Vassar; Ph.D. (1983) Stanford
 * Douglas Gollin # Professor of Economics # A.B. (1983) Harvard; Ph.D. (1990) University of Minnesota
 Edward Gollin # Associate Professor of Music # B.A. (1992) MIT; Ph.D. (2000) Harvard
@@ -158,7 +158,7 @@ Stewart D. Johnson # Professor of Mathematics # B.A. (1979) Ft. Lewis College; P
 Kevin M. Jones # William Edward McElfresh Professor of Physics # B.A. (1977) Williams; Ph.D. (1983) Stanford
 Jason A. Josephson # Assistant Professor of Religion # B.A. (1999) Hampshire College; Ph.D. (2006) Stanford
 *** Berta P. Jottar # Assistant Professor of Latina/o Studies and Theatre # B.A. (1993) VCSD; Ph.D. (2000) New York University
-Ann-Cathrine Jungar # STINT Fellow of Political Science # 
+Ann-Cathrine Jungar # STINT Fellow of Political Science #
 Peter Just # Professor of Anthropology # B.A. (1972) University of Chicago; Ph.D. (1986) University of Pennsylvania
 Shinko Kagaya # Associate Professor of Japanese # B.A. (1989) Aoyama Gakuin University; Ph.D. (1998) Ohio State University
 William R. Kangas # Assistant Professor of Physical Education # B.A. (1982) University of Vermont; M.Ed. (1994) North Adams State College
@@ -198,13 +198,13 @@ David Love # Assistant Professor of Economics # B.A. (1996) University of Michig
 Charles M. Lovett # Philip and Dorothy Schein Professor of Chemistry and Director of the Science Center # B.S. (1979) California State Poly.; Ph.D. (1985) Cornell
 Peter D. Low # Assistant Professor of Art # B.A. (1994) University of Toronto; Ph.D. (2001) Johns Hopkins
 Daniel V. Lynch # Professor of Biology # B.S. (1979) University of Lowell; Ph.D. (1983) University of Texas, Austin
-William Lynn # Visiting Assistant Professor of Environmental Studies # 
+William Lynn # Visiting Assistant Professor of Environmental Studies #
 Michael D. MacDonald # Frederick L. Schuman Professor in International Relations # A.B. (1972) University of California, Berkeley; Ph.D. (1983) University of California, Berkeley
 Paul K. MacDonald # Assistant Professor of Political Science # B.A. (1998) University of California, Berkeley; Ph.D. (2007) Columbia University
 Jenna L. MacIntire # Instructor in Chemistry and in Biology # B.A. (1992) University of Vermont
 James E. Mahon # Woodrow Wilson Professor of Political Science # A.B. (1977) Dartmouth; Ph.D. (1989) University of California, Berkeley
 * Protik Kumar Majumder # Professor of Physics # B.S. (1982) Yale; Ph.D. (1989) Harvard
-Michael Maker # Assistant Professor of Physical Education and Head Coach of Men’s Basketball # 
+Michael Maker # Assistant Professor of Physical Education and Head Coach of Men’s Basketball #
 Patricia M. Manning # Assistant Professor of Physical Education # B.S. (1977) Cortland; M.S. (1988) Smith
 George E. Marcus # Professor of Political Science # A.B. (1964) Columbia; Ph.D. (1968) Northwestern
 Brian Martin # Assistant Professor of French Literature and French Language # A.B. (1993) Harvard; Ph.D. (2003) Harvard
@@ -215,7 +215,7 @@ Nancy Mowll #  Mathews, Lecturer in Art History # B.A. (1968) Goucher College; P
 James McAllister # Professor of Political Science # B.A. (1986) S.U.N.Y., Buffalo; M.Phil. (1994) Columbia
 Ann K. McCallum # Lecturer in Art # B.A. (1974) McGill University; M.Arch. (1980) Yale
 George M. McCormack # Assistant Professor of Physical Education # B.S. (1987) Ithaca College
-Christian McEwen # Visiting Lecturer in Environmental Studies, Second Semester # 
+Christian McEwen # Visiting Lecturer in Environmental Studies, Second Semester #
 ** Elizabeth P. McGowan # Professor of Art and Fellow of the Oakley Center for the Humanities and Social Sciences, First Semester # B.A. (1979) Princeton; Ph.D. (1993) New York University Institute of Fine Arts
 * Morgan McGuire # Assistant Professor of Computer Science # B.S. (2000) Massachusetts Institute of Technology; Ph.D. (2006) Brown
 Keith E. McPartland # Assistant Professor of Philosophy # B.A. (1994) Rutgers; Ph.D. (2007) Cornell
@@ -261,14 +261,14 @@ Amy D. Podmore # Professor of Art # B.S. (1982) State University College of Buff
 Christopher L. Pye # Class of 1924 Professor of English # B.A. (1975) Oberlin; Ph.D. (1985) Cornell
 Lawrence E. Raab # Morris Professor of Rhetoric # B.A. (1968) Middlebury; M.A. (1972) Syracuse
 Ashok S. Rai # Associate Professor of Economics # A.B. (1992) Stanford; Ph.D. (1997) University of Chicago
-Richard Rand # Lecturer in Graduate Program in Art History # 
+Richard Rand # Lecturer in Graduate Program in Art History #
 Wendy E. Raymond # Professor of Biology # A.B. (1982) Cornell; Ph.D. (1990) Harvard
 Anne Reinhardt # Assistant Professor of History # B.A. (1990) Harvard; Ph.D. (2002) Princeton
 Mark T. Reinhardt # Professor of Political Science and Class of 1956 Professor of American Civilization # B.A. (1983) Wesleyan; Ph.D. (1991) University of California, Santa Cruz
 Joel Revill # Visiting Assistant Professor of History # B.A. (1997) Reed College; Ph.D. (2006) Duke University
 ** Bernard J. Rhie # Assistant Professor of English # B.A. (1997) University of California, Berkeley; Ph.D. (2005) University of Pennsylvania
 David P. Richardson # William R. Kenan, Jr. Professor of Chemistry # B.A. (1979) University of Michigan; Ph.D. (1984) University of California, Berkeley
-Mark L. Roberts # Clark-Oakley Fellow # 
+Mark L. Roberts # Clark-Oakley Fellow #
 Neil Roberts # Assistant Professor of Africana Studies # B.A. (1998) Brown University; Ph.D. (2007) University of Chicago
 * Stephane P. R. Robolin # Assistant Professor of Africana Studies # B.A. (1998) Tulane; Ph.D. (2005) Duke
 Michael Rolleigh # Assistant Professor of Economics # B.A. (1998) Hendrix College; Ph.D. (2004) University of Minnesota
@@ -305,7 +305,7 @@ Marc A. Simpson # Lecturer in the Graduate Program in Art History and Associate 
 Shanti M. Singham # Professor of History # B.A. (1980) Swarthmore; Ph.D. (1991) Princeton
 Anne R. Skinner # Senior Lecturer in Chemistry # B.A. (1961) Radcliffe; Ph.D. (1966) Yale
 David C. Smith # Senior Lecturer in Biology # B.S. (1968) Yale; Ph.D. (1977) University of Michigan
-David L. Smith # John W. Chandler Professor of English # 
+David L. Smith # John W. Chandler Professor of English #
 Thomas E. Smith # Associate Professor of Chemistry # B.A. (1988) Williams; Ph.D. (1996) Stanford
 Richard Jean So # Gaius Charles Bolin Fellow in Comparative Literature # B.A. (2001) Brown University; M.A. (2003) Columbia University
 Anita R. Sokolsky # Professor of English # B.A. (1974) Oberlin; Ph.D. (1985) Cornell
@@ -330,7 +330,7 @@ Ji-Young Um # Visiting Assistant Professor of English # B.A. (1996) Oberlin; M.A
 ** Arafaat Valiani # Assistant Professor of Sociology # B.A. (1996) Concordia University; Ph.D. (2005) Columbia
 Janneke van de Stadt # Associate Professor of Russian # B.A. (1988) Amherst College; Ph.D. (2000) University of Wisconsin, Madison
 * Armando Vargas # Assistant Professor of Comparative Literature # B.S. (1992) Georgetown; M.A. (1995) Harvard
-Rafael Vega # Lecturer in Physical Education # 
+Rafael Vega # Lecturer in Physical Education #
 Manu Vimalassery # Mellon Postdoctoral Fellow in Asian-American Studies # B.A. (2000) Oberlin
 William G. Wagner # Interim President, Dean of the Faculty and Brown Professor of History # B.A. (1972) Haverford; D.Phil. (1981) Oxford
 * Dorothy J. Wang # Assistant Professor of American Studies # B.A. (1985) Duke; Ph.D. (1998) University of California, Berkeley
@@ -339,7 +339,7 @@ Tara Watson # Assistant Professor of Economics # B.A. (1996) Wesleyan; Ph.D. (20
 Bradley Wells # Clay Artist-in-Residence, Director of Choral/Vocal Activities, and Lecturer in Music # B.A. (1984) Principia College; D.M.A. (2005) Yale
 Peter S. Wells # Assistant Professor of Physical Education, Coordinator of Crew Programs, and Head Coach of Men’s Crew # B.A. (1979) Williams
 Carmen Whalen # Professor of History # B.A. (1985) Hampshire College; Ph.D. (1994) Rutgers
-Michael F. Whalen # Assistant Professor of Physical Education # 
+Michael F. Whalen # Assistant Professor of Physical Education #
 Alan E. White # Mark Hopkins Professor of Philosophy # B.A. (1972) Tulane; Ph.D. (1980) Pennsylvania State University
 * Amanda Wilcox # Assistant Professor of Classics and Herbert H. Lehman Fellow of the Oakley Center for Humanities and Social Sciences # B.A. (1996) Reed College; Ph.D. (2002) University of Pennsylvania
 Heather Williams # Professor of Biology # B.A. (1977) Bowdoin; Ph.D. (1985) Rockefeller

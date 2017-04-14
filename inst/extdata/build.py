@@ -1,5 +1,5 @@
 import re
-with open('faculty-2008-2009.txt') as f:
+with open('faculty-2009-2010.txt') as f:
 	lines = f.readlines()
 
 thefile = open('correctedFac.txt', 'w')
