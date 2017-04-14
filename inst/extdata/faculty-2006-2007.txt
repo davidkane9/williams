@@ -33,7 +33,7 @@ M. Jennifer Bloxam #  Professor of Music # B.M. (1979) University of Illinois; P
 * Christopher A. Bolton #  Assistant Professor of Japanese and Comparative Literature and Fellow of the Oakley Center for the Humanities and Social Sciences # A.B. (1989) Harvard; Ph.D. (1998) Stanford
 *** Sarah R. Bolton #  Associate Professor of Physics # B.S. (1988) Brown; Ph.D. (1995) University of California, Berkeley
 Youngshik Bong #  Visiting Assistant Professor of Korean Studies # B.A. (1991) Yonsei University; Ph.D. (2002) University of Pennsylvania
-Gautam Bose # Visiting Associate Professor of Economics at the Center for Development Economics # 
+Gautam Bose # Visiting Associate Professor of Economics at the Center for Development Economics #
 Carsten Botts #  Assistant Professor of Statistics # B.S. (1998) Georgetown; Ph.D. (2005) Iowa State University
 Ralph M. Bradburd #  David A. Wells Professor of Political Economy # B.A. (1970) Columbia; Ph.D. (1976) Columbia
 Elizabeth Brainerd #  Associate Professor of Economics # B.A. (1985) Bowdoin; Ph.D. (1996) Harvard
@@ -108,7 +108,7 @@ Steven Fein #  Professor of Psychology # A.B. (1986) Princeton; Ph.D. (1991) Uni
 Ronald L. Feldman #  Artist-in-Residence in Orchestral/Instrumental Performance # B.M. (1971) Boston University School for the Arts;
 Zirka Z. Filipczak #  Preston S. Parish ’41 Third Century Professor of Art # B.A. (1964) Barnard; Ph.D. (1973) Harvard
 Robert L. Fisher #  Assistant Professor of Physical Education and Associate Director of Athletics # B.A. (1970) St. Lawrence; M.Ed. (1974) St. Lawrence
-Anna Fishzon # Visiting Assistant Professor of History # 
+Anna Fishzon # Visiting Assistant Professor of History #
 Stephen E. Fix Robert #  G. Scott ’68 Professor of English aned Coordinator of the Tutorial Program # A.B. (1974) Boston College; Ph.D. (1980) Cornell
 Antonia E. Foias #  Associate Professor of Anthropology # B.A. (1987) Harvard/Radcliffe; Ph.D. (1996) Vanderbilt University
 Kevin R. Forkey #  Lecturer in Physics # B.A. (1981) Cornell
@@ -153,7 +153,7 @@ Cheryl D. Hicks #  Assistant Professor of History # B.A. (1993) University of Vi
 Alan Hirsch #  Visiting Assistant Professor of Legal Studies # B.A. (1981) Amherst; J.D. (1985) Yale
 Marjorie W. Hirsch #  Assistant Professor of Music # B.A. (1982) Yale; Ph.D. (1989) Yale
 Theron J. Hitchman # Visiting Assistant Professor of Mathematics # B.A. (1997) Ohio State University; Ph.D. (2003) University of Michigan, Ann Arbor
-Michael Ann Holly #  Lecturer in the Graduate Program in Art History # 
+Michael Ann Holly #  Lecturer in the Graduate Program in Art History #
 Kiaran Honderich # Visiting Associate Professor of Economics # B.A. (1983) Oxford; Ph.D. (1991) University of Massachusetts
 John Hope # Visiting Assistant Professor of Russian, Fall Semester # B.A. (1992) Dickinson College; Ph.D. (2003) University of Michigan
 Meredith C. Hoppin #  Frank M. Gagliardi Professor of Classics # B.A. (1972) Carleton; Ph.D. (1976) University of Michigan
@@ -182,7 +182,7 @@ Philip Kasinitz #  Visiting Professor of Sociology for the Williams in New York 
 * Saul M. Kassin #  Massachusetts Professor of Psychology # B.A. (1974) Brooklyn College; Ph.D. (1978) University of Connecticut
 Robert D. Kavanaugh #  Hales Professor of Psychology # B.A. (1967) Holy Cross; Ph.D. (1974) Boston University
 David S. Kechley #  Professor of Music # B.Mus. (1970) University of Washington; D.M.A. (1979) Cleveland Institute of Music
-Kara Keeling # Visiting Assistant Professor of Art and Africana Studies, Spring Semester # 
+Kara Keeling # Visiting Assistant Professor of Art and Africana Studies, Spring Semester #
 ** Kathryn R. Kent #  Associate Professor of English and Herbert H. Lehman Fellow of the Oakley Center for the Humanities and Social Sciences, Fall Semester # B.A. (1988) Williams; Ph.D. (1996) Duke
 Herbert L. Kessler # Croghan Bicentennial Visiting Professor in Art History, Fall Semester # B.A. (1961) University of Chicago; Ph.D. (1965) Princeton
 Denise Khor # Gaius Charles Bolin Fellow in American Studies # M.A. (2003) University of California, San Diego; Ph.D. (2006) University of California, San Diego
@@ -244,7 +244,7 @@ Karen R. Merrill #  Associate Professor of History # B.A. (1986) Oberlin; Ph.D. 
 James Meyer # Robert Sterling Clark Visiting Professor in Art History, Fall Semester # B.A. (1984) Yale; Ph.D. (1995) Johns Hopkins
 Robert Michelin # Visiting Lecturer in Music and Director of Zambezi # B.A. (2003) Williams
 Bojana Mladenovic #  Assistant Professor of Philosophy # B.A. (1984) University of Belgrade; Ph.D. (1995) University of California, Berkeley
-Shamim M. Momin # Visiting Lecturer in Art at Williams in New York # 
+Shamim M. Momin # Visiting Lecturer in Art at Williams in New York #
 * Peter J. Montiel #  Fred Greene Third Century Professor of Political Economy # B.A. (1973) Yale; Ph.D. (1978) M.I.T.
 Douglas B. Moore #  Mary A. and William Wirt Warren Professor of Music # B.Mus. (1967) Indiana University; D.M.A (1977) Catholic University
 * Justin Moore #  Assistant Professor of Physical Education # B.A. (1990) Rollins College; M.A. (2004) University of Central Michigan
@@ -274,7 +274,7 @@ Enrique Peacock-López #  Professor of Chemistry # B.S. (1974) University Nac. A
 Peter L. Pedroni #  Associate Professor of Economics # B.A. (1986) Miami University; Ph.D. (1993) Columbia
 Ileana Perez Velazquez #  Associate Professor of Music # B.M. Higher Institute of Arts-Havana, Cuba; D.M. (2000) Indiana University
 James L. Pethica #  Visiting Associate Professor of English and Lecturer of Freshmen Residential Seminars # B.A. (1980) Oxford; Ph.D (1987) Oxford
-Adam Petrie # Visiting Instructor in Mathematics, Fall Semester # 
+Adam Petrie # Visiting Instructor in Mathematics, Fall Semester #
 * Katarzyna Pieprzak #  Assistant Professor of Francophone, Literature and French Language # B.A. (1995) Rice; Ph.D. (2001) University of Michigan
 David M. Pilachowski #  College Librarian # B.A. (1971) University of Vermont; M.L.S. (1973) University of Illinois
 Michelyne Pinard #  Assistant Professor of Physical Education and Head Women’s Soccer Coach # B.A. (1998) Dartmouth; M.S. (2002) University of Pennsylvania
@@ -282,14 +282,14 @@ Michelyne Pinard #  Assistant Professor of Physical Education and Head Women’s
 David H. Porter #  Harry C. Payne Visiting Professor of Liberal Arts # B.A. (1958) Swarthmore; Ph.D. (1962) Princeton
 Miroslava Prazak # Visiting Professor of Anthropology, Fall Semester # B.A. (1979) Smith; Ph.D. (1992) Yale
 Christopher L. Pye #  Class of 1924 Professor of English # B.A. (1975) Oberlin; Ph.D. (1985) Cornell
-Joseph Pyle # Lecturer in Geosciences # 
+Joseph Pyle # Lecturer in Geosciences #
 Lawrence E. Raab #  Morris Professor of Rhetoric # B.A. (1968) Middlebury; M.A. (1972) Syracuse
 * Ashok S. Rai #  Assistant Professor of Economics # A.B. (1992) Stanford; Ph.D. (1997) University of Chicago
 Wendy E. Raymond #  Associate Professor of Biology # A.B. (1982) Cornell; Ph.D. (1990) Harvard
 Anne Reinhardt #  Assistant Professor of History # B.A. (1990) Harvard; Ph.D. (2002) Princeton
 Mark T. Reinhardt #  Professor of Political Science and Director of the Oakley Center for the Humanities and Social Sciences # B.A. (1983) Wesleyan; Ph.D. (1991) University of California, Santa Cruz
 Bernard J. Rhie #  Assistant Professor of English # B.A. (1997) University of California, Berkeley; Ph.D. (2005) University of Pennsylvania
-Marc Richard # Visiting Assistant Professor of Chemistry # 
+Marc Richard # Visiting Assistant Professor of Chemistry #
 David P. Richardson #  William R. Kenan, Jr. Professor of Chemistry # B.A. (1979) University of Michigan; Ph.D. (1984) University of California, Berkeley
 Anthony W. Robins # Visiting Lecturer in Art at Williams in New York, Spring Semester # B.A. (1972) Williams; M.A. (1976) Courtauld Institute of Art, University of London
 Stephane P. R. Robolin # Assistant Professor of Africana Studies # B.A. (1998) Tulane; Ph.D. (2005) Duke
@@ -332,7 +332,7 @@ Shanti M. Singham #  Professor of History # B.A. (1980) Swarthmore; Ph.D. (1991)
 Anne R. Skinner #  Senior Lecturer in Chemistry # B.A. (1961) Radcliffe; Ph.D. (1966) Yale
 Richard Skinner # Visiting Assistant Professor of Political Science # B.A. (1992) Hamilton College; Ph.D. (2004) University of Virginia
 David C. Smith #  Senior Lecturer in Biology # B.S. (1968) Yale; Ph.D. (1977) University of Michigan
-David L. Smith #  John W. Chandler #  Professor of English # B.A. (1974) New College, Florida; Ph.D. (1980) University of Chicago
+David L. Smith # John W. Chandler Professor of English # B.A. (1974) New College, Florida; Ph.D. (1980) University of Chicago
 * Thomas E. Smith #  Associate Professor of Chemistry # B.A. (1988) Williams; Ph.D. (1996) Stanford
 Anita R. Sokolsky #  Professor of English # B.A. (1974) Oberlin; Ph.D. (1985) Cornell
 Ari Solomon #  Assistant Professor of Psychology # A.B. (1989) Brown; Ph.D. (1997) American University
@@ -362,7 +362,7 @@ Stephen J. Tifft #  Professor of English # B.A. (1975) Harvard; Ph.D. (1984) Cor
 * Claire S. Ting #  Assistant Professor of Biology # B.A. (1986) Yale; Ph.D. (1994) Cornell
 Herbert F. Tucker # Margaret Bundy Scott Professor of English, Fall Semester # B.A. (1971) Amherst; Ph.D. (1977) Yale
 * David Tucker-Smith #  Assistant Professor of Physics # B.A. (1995) Amherst; Ph.D. (2001) University of California, Berkeley
-Patrick Tynan # Visiting Assistant Professor of Physical Education # 
+Patrick Tynan # Visiting Assistant Professor of Physical Education #
 Arafaat Valiani #  Assistant Professor of Sociology # B.A. (1996) Concordia University; Ph.D. (2005) Columbia
 Frances Vandermeer #  Assistant Professor of Physical Education # B.S. (1987) Southern Connecticut State University
 Janneke van de Stadt #  Assistant Professor of Russian # B.A. (1988) Amherst College; Ph.D. (2000) University of Wisconsin, Madison
@@ -381,7 +381,7 @@ Dwight L. Whitaker #  Assistant Professor of Physics # B.S. (1992) University of
 Alan E. White #  Mark Hopkins Professor of Philosophy # B.A. (1972) Tulane; Ph.D. (1980) Pennsylvania State University
 Ralph White #  Assistant Professor of Physical Education # B.S. (1974) Pennsylvania State University; M.A. (2004) Rockville University
 James Wilberding #  Assistant Professor of Philosophy # B.A. (1994) University of Notre Dame; Ph.D. (2002) University of Chicago
-Amanda Wilcox Assistant Professor of Classics # B.A. (1996) Reed College; Ph.D. (2002) University of Pennsylvania
+Amanda Wilcox # Assistant Professor of Classics # B.A. (1996) Reed College; Ph.D. (2002) University of Pennsylvania
 Jason Wilder #  Assistant Professor of Biology # B.A. (1997) Williams; Ph.D. (2002) Princeton
 Heather Williams #  Professor of Biology # B.A. (1977) Bowdoin; Ph.D. (1985) Rockefeller
 *** Alex W. Willingham #  Professor of Political Science # B.A. (1963) Southern University, Baton Rouge; Ph.D. (1974) U.N.C., Chapel Hill
