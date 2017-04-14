@@ -1,5 +1,5 @@
 import re
-with open('faculty-2010-2011.txt') as f:
+with open('faculty-2011-2012.txt') as f:
 	lines = f.readlines()
 
 
