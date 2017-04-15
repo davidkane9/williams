@@ -1,7 +1,7 @@
 Package: williamsmetrics
 Type: Package
 Title: Williams College Related Metrics
-Version: 0.3.2
+Version: 0.3.3
 Author: c(
         person("Karan", "Tibrewal", email = "karan.tibrewal@williams.edu",
                   role = c("aut", "cre")), 
@@ -15,10 +15,11 @@ Encoding: UTF-8
 LazyData: true
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1
-Suggests: knitr, genderdata, wru
+Suggests: knitr, genderdata
 Imports:
     utils,
     gender,
+    wru,
     dplyr,
     readr,
     tibble,

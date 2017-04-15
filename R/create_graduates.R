@@ -24,9 +24,7 @@
 #'
 #' @examples
 #'
-#' \donttest{
 #'    x <- create_graduates()
-#' }
 #'
 #' @export
 
