@@ -3,7 +3,7 @@ Colin C. Adams # Thomas T. Read Professor of Mathematics
 Zaid Adhami # Visiting Instructor in Religion
 *Jeannie R Albrecht # Associate Professor of Computer Science
 Laylah Ali # Professor of Art
-Kris Allen, Lyell B. Clay Artist in Residence in Jazz Activities/Lecturer in Music, Director of the Jazz Ensemble
+Kris Allen #   Lyell B. Clay Artist in Residence in Jazz Activities/Lecturer in Music, Director of the Jazz Ensemble
 Olla Najah Al–Shalchi # Visiting Lecturer In the Program in Comparative Literature
 ++Sarah K. Amos # Visiting Lecturer in Art
 John Andrews # Visiting Assistant Professor in the Program in American Studies
@@ -32,7 +32,7 @@ Ben Benedict # Lecturer in Art
 *Dieter Bingemann # Professor of Chemistry
 Julie C. Blackwood # Assistant Professor of Mathematics
 Jimmy A. Blair # Assistant Professor of Chemistry
-Jennifer Bloxam, Herbert H. Lehman Professor of Music
+Jennifer Bloxam #   Herbert H. Lehman Professor of Music
 ***Christopher A. Bolton # Associate Professor of Comparative and Japanese Literature
 Sarah R. Bolton # Professor of Physics
 Ralph M. Bradburd # Chair of CES and David A. Wells Professor of Political Economy
@@ -43,7 +43,7 @@ Denise K. Buell # Professor of Religion
 Sandra L. Burton # Lipp Family Director of Dance and Senior Lecturer in Dance
 Corinna S. Campbell # Assistant Professor of Music
 Gerard Caprio # Chair of the Executive Committee for the Center of Development Economics and William Brough Professor of Economics
-+Allen R. Carlson, Class of 1955 Visiting Professor of International Studies
++Allen R. Carlson #   Class of 1955 Visiting Professor of International Studies
 James T. Carlton # Professor of Marine Sciences & Director of the Williams–Mystic Program
 Benjamin R. Carone # Visiting Assistant Professor of Biology
 Dawn M. Carone # Assistant Professor of Biology
@@ -52,7 +52,7 @@ Alison A. Case # Professor of English
 Julie A. Cassiday # Chair of German and Russian and Professor of Russian
 Cosmo A. Catalano # Theatre Department Production Manager, Technical Supervisor for the ’62 Center for Theatre and Dance, and Lecturer in Theatre
 Maria Elena Cepeda # Associate Professor of Latina/o Studies and Faculty Affiliate in American Studies and Women’s, Gender and Sexuality Studies
-Chip Chandler, George R. Goethals Distinguished Visiting Professor of Leadership Studies
+Chip Chandler #   George R. Goethals Distinguished Visiting Professor of Leadership Studies
 Cecilia Chang # Professor of Chinese
 Jinhwa Chang # Visiting Lecturer in Japanese
 Jessica M. Chapman # Associate Professor of History
@@ -68,11 +68,11 @@ Mea S. Cook # Assistant Professor of Geosciences
 Margaux E. Cowden # Visiting Assistant Professor of English
 Ronadh Cox # Chair and Professor of Geosciences
 George T. Crane # Chair and W Van Alan Clark ’41 Third Century Professor in the Social Sciences
-Marshall K. Creighton # Lecturer in Physical Education # Assistant Football and Assistant Baseball Coach
+Marshall K. Creighton # Lecturer in Physical Education, Assistant Football and Assistant Baseball Coach
 Justin Crowe # Assistant Professor of Political Science
 ***Joseph L. Cruz # Professor of Philosophy
 Annelle M. Curulla # Assistant Professor of French Literature and Language
-Erica Dankmeyer, Artist–in–Residence
+Erica Dankmeyer #   Artist–in–Residence
 Andrea Danyluk # Dennis A. Meenan ’54 Third Century Professor of Computer Science
 William R. Darrow # Cluett Professor of Religion
 Alan W. De Gooyer # Lecturer in English
@@ -86,27 +86,26 @@ Satyan L. Devadoss # Professor of Mathematics
 Charles B. Dew # Ephraim Williams Professor of American History
 Charlie Doret # Assistant Professor of Physics
 Georges B. Dreyfus # Jackson Professor of Religion
-472
 Helga Druxes # Professor of German
 Sara L. Dubow # Associate Professor of History
 William C. Dudley # Professor of Philosophy
 **Susan Dunn # Preston S. Parish ’41 Third Century Professor in the Arts and Humanities
 ***Joan Edwards # Washington Gladden 1859 Professor of Biology
 David B. Edwards # James N. Lambert ’39 Professor of Anthropology
-Holly Edwards, Senior Lecturer in Art
-+Joseph Ellis, Distinguished Visiting Professor of Leadership Studies
+Holly Edwards #   Senior Lecturer in Art
++Joseph Ellis #   Distinguished Visiting Professor of Leadership Studies
 Alex C. Engel # Assistant Professor of Biology
 Susan L. Engel # Senior Lecturer in Psychology
 Laura D. Ephraim # Assistant Professor of Political Science
 David Eppel # Chair and Professor of Theatre
-Ed Epping, Alexander Falck Class of 1899 Professor of Art
+Ed Epping #   Alexander Falck Class of 1899 Professor of Art
 Amal Eqeiq # Visiting Assistant Professor of Arabic
 Kevin A. Escudero # Gaius Charles Bolin Fellow in Latina/o Studies
-Stacy Fahrenthold, Mellon Postdoctoral Fellow in Middle Eastern History
+Stacy Fahrenthold #   Mellon Postdoctoral Fellow in Middle Eastern History
 +Kim Anne Faler # Visiting Lecturer in Art
 Adam F. Falk # Professor of Physics
-+Anne Farewell, STINT – Research Scholar
-*Richard J. Farley # Assistant Professor of Physical Education # Assistant Track Coach and Coordinator of Clubs
++Anne Farewell #   STINT – Research Scholar
+*Richard J. Farley # Assistant Professor of Physical Education, Assistant Track Coach and Coordinator of Clubs
 Pete Farwell # Assistant Professor of Physical Education and Head Cross Country Coach
 Steven Fein # Professor of Psychology
 Ronald L. Feldman # Artist in Residence in Orchestral and Instrumental Activities/Lecturer in Music, Director of the Berkshire Symphony
@@ -114,7 +113,7 @@ Ronald L. Feldman # Artist in Residence in Orchestral and Instrumental Activitie
 **Zirka Z. Filipczak # J. Kirk T. Varnedoe ’67 Professor of Art
 *Robert L. Fisher # Assistant Professor of Athletics and Associate Director of Athletics
 Jessica M. Fisher # Assistant Professor of English
-Stephen Fix, Robert G Scott ’68 Professor of English
+Stephen Fix #   Robert G Scott ’68 Professor of English
 *Antonia E. Foias # Professor of Anthropology
 VaNatta S. Ford # Visiting Assistant Professor of Africana Studies
 Kevin R. Forkey # Lecturer in Physics
@@ -138,15 +137,15 @@ Leo Goldmakher # Assistant Professor of Mathematics
 +Barry Goldstein # Visiting Professor of Humanities
 Darra J. Goldstein # Willcox B. and Harriet M. Adsit Professor of Russian
 Ed Gollin # Associate Professor of Music
-**MarcGotlieb, Director of the Graduate Program in Art History and Class of 1955 Memorial Professor of Art
-Alma M. Granado, C3 Mellon Postdoctoral Fellow in Latina/o Studies
+**MarcGotlieb #   Director of the Graduate Program in Art History and Class of 1955 Memorial Professor of Art
+Alma M. Granado #   C3 Mellon Postdoctoral Fellow in Latina/o Studies
 Daniel R. Greenberg # Assistant Professor of Physical Education and Head Coach of Men’s Tennis
 David Gurcay–Morris # Assistant Professor of Theatre
 Kim Gutschow # Lecturer in Religion and Anthropology/Sociology
 Amie A. Hane # Associate Professor of Psychology
 ++Jim A. Hanson # Visiting Professor of Economics
 +Nicole T. Harrington # Visiting Assistant Professor of Psychology
-***Mark Haxthausen, Robert Sterling Clark Professor of Art History
+***Mark Haxthausen #   Robert Sterling Clark Professor of Art History
 Man He # Lecturer in Chinese
 Laurie Heatherington # Edward Dorr Griffin Professor of Psychology
 Guy M. Hedreen # Professor of Art
@@ -159,17 +158,17 @@ Josh D. Hillman # Lecturer in Physical Education and Head Men’s Golf Coach
 Alan Hirsch # Lecturer
 Marjorie W. Hirsch # Professor of Music
 Nate D. Hoey # Assistant Professor of Physical Education, Head Women’s Track & Field Coach
-Michael Ann Holly, Robert Sterling Clark Visiting Professor of Art History
+Michael Ann Holly #   Robert Sterling Clark Visiting Professor of Art History
 Amy S. Holzapfel # Associate Professor of Theatre
 Kiaran Honderich # Lecturer in Women’s, Gender and Sexuality Studies
 Scott D. Honecker # Assistant Professor of Physical Education and Head Coach of Wrestling
 ***Meredith C. Hoppin # Frank M Gagliardi Professor of Classics
-Silas Howard, Arthur Levitt, Jr. ’52 Artist–in–Residence in Art
+Silas Howard #   Arthur Levitt, Jr. ’52 Artist–in–Residence in Art
 Catherine N. Howe # Visiting Lecturer in Art
 Nicolas C. Howe # Assistant Professor of Environmental Studies
 Vivian L. Huang # Gaius Charles Bolin Fellow in Women’s, Gender, and Sexuality Studies and Comparative Literature
 Jeffrey I. Israel # Assistant Professor of Religion
-*Robert Jackall, Willmott Family Third Century Professor Sociology & Public Affairs
+*Robert Jackall #   Willmott Family Third Century Professor Sociology & Public Affairs
 ++Frank Jackson # Visiting Lecturer in Art
 **Sarah A. Jacobson # Assistant Professor of Economics
 Andrew W. Jaffe # Lyell B. Clay Artist in Residence in Jazz and Senior Lecturer in Music
@@ -182,9 +181,8 @@ Stewart D. Johnson # Chair and Professor of Mathematics
 Walter Johnston # Visiting Assistant Professor of English
 Kevin M. Jones # Chair & William Edward McElfresh Professor of Physics
 ++Annette K. Joseph–Gabriel # Visiting Assistant Professor of French Language and Francophone Literature
-Jason Josephson, Chair and Associate Professor of Religion
+Jason Josephson #   Chair and Associate Professor of Religion
 Peter Just # Professor of Anthropology
-473
 **Shinko Kagaya # Professor of Japanese
 William R. Kangas # Assistant Professor of Physical Education and Head Men’s Ice Hockey Coach
 Aparna Kapadia # Assistant Professor of History
@@ -221,7 +219,7 @@ Aida Laleian # Professor of Art
 SaraLaLumia # Associate Professor of Economics
 Edwin I. Lawrence # Artist Associate in Harpsichord, Piano, and Organ, and Instructor in Music
 *Tim J. Lebestky # Assistant Professor of Biology
-Seulghee Lee, C3 Mellon Postdoctoral Fellow in English
+Seulghee Lee #   C3 Mellon Postdoctoral Fellow in English
 Jessica E. Leight # Assistant Professor of Economics
 Jason Lemieux # Assistant Professor of Athletics and Head Nordic Ski Coach
 William J. Lenhart # A. Barton Hepburn Professor of Computer Science
@@ -241,7 +239,7 @@ Christopher P. Lovell # Visiting Assistant Professor of Classics
 Charles M. Lovett # Philip and Dorothy Schein Professor of Chemistry
 Peter D. Low # Professor of Art
 **Daniel V. Lynch # Professor of Biology
-++Douglas J. MacDonald, Stanley Kaplan Visiting Professor of American Foreign Policy
+++Douglas J. MacDonald #   Stanley Kaplan Visiting Professor of American Foreign Policy
 Michael D. MacDonald # Frederick L. Schuman Professor of International Relations
 Jenna L. MacIntire # Lecturer in Biology and Chemistry
 James E. Mahon # Woodrow Wilson Professor of Political Science
@@ -253,7 +251,7 @@ Patricia M. Manning # Assistant Professor of Physical Education and Head Women�
 ++Mona Mansour # Visiting Lecturer in Theatre
 George E. Marcus # Professor of Political Science
 Luana S. Maroja # Assistant Professor of Biology
-Matthew M. Marsit, Artist–in–Residence in Winds and Director of the Wind Ensemble
+Matthew M. Marsit #   Artist–in–Residence in Winds and Director of the Wind Ensemble
 Brian Martin # Associate Professor of French and Comparative Literature
 Martha J. Marvin # Lecturer in Neuroscience
 Christine L. Mason # Assistant Professor of Physical Education and Head Women’s Lacrosse Coach
@@ -276,23 +274,22 @@ Jeff Moher # Visiting Assistant Professor of Psychology
 *Peter J. Montiel # Fairleigh S. Dickinson, Jr. ’41 Professor of Economics
 Manuel A. Morales # Professor of Biology
 *Frank Morgan # Webster Atwell – Class of 1921 Professor of Mathematics
-+Halvor Moxnes, Croghan Bicentennial Visiting Professor of Religion
++Halvor Moxnes #   Croghan Bicentennial Visiting Professor of Religion
 Ngonidzashe Munemo # Associate Professor of Political Science
-Tendai Muparutsa, Artist in Residence in African Music Performance, Director of Zambezi, Co–Director of Kusika &  Lecturer in Music
+Tendai Muparutsa #   Artist in Residence in African Music Performance, Director of Zambezi, Co–Director of Kusika &  Lecturer in Music
 **Peter T. Murphy # Professor of English
 *Thomas P. Murtagh # Professor of Computer Science
 Kenda B. Mutongi # Professor of History
-474
 **Steven E. Nafziger # Associate Professor of Economics
 EricNathan # Visiting Assistant Professor of Music
 ***Gail M. Newman # Harold J. Henry Professor of German
 Anthony J. Nicastro # Visiting Professor of Romance Languages
 Nimu Njoya # Assistant Professor of Political Science
 James L. Nolan # Professor of Sociology
-Carrie Noland, Clark Oakley Fellow
+Carrie Noland #   Clark Oakley Fellow
 Christopher M. B. Nugent # Associate Professor of Chinese
 Carol Ockman # Professor of Art
-Kristen Oehlrich, Postdoctoral Research Fellow in the Graduate Program in Art History
+Kristen Oehlrich # Postdoctoral Research Fellow in the Graduate Program in Art History
 **Will Olney # Assistant Professor of Economics
 **Allison Pacelli # Associate Professor of Mathematics
 Eyvindur A. Palsson # Assistant Professor of Mathematics
@@ -326,7 +323,7 @@ Neil Roberts # Associate Professor Africana Studies and Faculty Affiliate in Pol
 Michael M. Rolleigh # Visiting Assistant Professor of Economics
 Shawn J. Rosenheim # Professor of English
 Leyla Rouhi # John B. McCoy and John T. McCoy Professor of Romance Languages
-Reginold A. Royston, C3 Mellon Postdoctoral Fellow in Africana Studies
+Reginold A. Royston # C3 Mellon Postdoctoral Fellow in Africana Studies
 *Merida Rua # Associate Professor of Latina/o Studies and American Studies
 Benjamin B. Rubin # Assistant Professor of Classics
 ++Marketa Rulikova # Visiting Assistant Professor of Sociology
@@ -339,10 +336,10 @@ Michael Samson # Senior Lecturer in Economics
 Omar A. Sangare # Associate Professor of Theatre
 Robert M. Savage # Professor of Biology
 ***Kenneth K. Savitsky # Professor of Psychology
-Jana Sawicki, Carl W. Vogt ’58 Professor of Philosophy
+Jana Sawicki # Carl W. Vogt ’58 Professor of Philosophy
 Vincent J. Schleitwiler # Assistant Professor of English
 Lucie Schmidt # Professor of Economics
-+Silvia Schultermandl, Fulbright Visiting Assistant Professor of American Studies
++Silvia Schultermandl # Fulbright Visiting Assistant Professor of American Studies
 Shaila Seshia Galvin # Mellon Postdoctoral Fellow in Environmental Studies
 Justin B. Shaddock # Visiting Assistant Professor of Philosophy
 Cheryl Shanks # Professor of Political Science
@@ -357,7 +354,7 @@ Glenn W. Shuck # Assistant Professor of Religion
 Cesar E. Silva # Hagey Family Professor of Mathematics
 Shanti M. Singham # Professor of History
 Eiko Maruko Siniawer # Chair and Associate Professor of History
-Kyle W. Smesko # Lecturer in Physical Education # Assistant Football Coach
+Kyle W. Smesko # Lecturer in Physical Education, Assistant Football Coach
 *David C. Smith # Senior Lecturer in Biology
 Candis W. Smith # Assistant Professor of Political Science
 David L. Smith # John W Chandler Professor of English
@@ -375,15 +372,14 @@ Jefferson Strait # Professor of Physics
 Frederick W. Strauch # Associate Professor of Physics
 Laura R. Strauch # Instructor in Chemistry
 *Catherine B. Stroud # Assistant Professor of Psychology
-LaShandra P. Sullivan, Postdoctoral Fellow in Environmental Studies and Anthropology / Sociology
+LaShandra P. Sullivan #   Postdoctoral Fellow in Environmental Studies and Anthropology / Sociology
 Alison M. Swain # Assistant Professor of Physical Education and Head Coach of Women’s Tennis
 Anand V. Swamy # Professor of Economics
 Karen E. Swann # Morris Professor of Rhetoric
 ++Jane M. Swift # Visiting Lecturer in Leadership Studies
-475
 Steven J. Swoap # Chair and Professor of Biology
 ***Barbara E. Takenaga # Mary A and William Wirt Warren Professor
-+Gregory S. Tate, Sterling Brown ’22 Visiting Professor of Africana Studies
++Gregory S. Tate #   Sterling Brown ’22 Visiting Professor of Africana Studies
 Rebecca E. Taurog # Assistant Professor of Chemistry
 Christopher Taylor # Visiting Assistant Professor of English
 John W. Thoman # J. Hodge Markgraf Professor of Chemistry
@@ -399,15 +395,15 @@ Armando Vargas # Assistant Professor in the Program of Comparative Literature
 Natalie B. Vena # Gaius Charles Bolin Fellow in Anthropology and Environmental Studies
 William G. Wagner # Brown Professor of History
 **Dorothy J. Wang # Associate Professor of American Studies and Faculty Affiliate in English
-Guowei Wang, Artist–in–Residence in Chinese Music Performance
+Guowei Wang #   Artist–in–Residence in Chinese Music Performance
 Wendy Wang # Assistant Professor of Statistics
-Chris Waters, Hans W. Gatzke ’38 Professor of Modern European History
+Chris Waters # Hans W. Gatzke ’38 Professor of Modern European History
 Tara E. Watson # Associate Professor of Economics
-+Barbara Young Welke, W. Ford Schumann Visiting Professor in Democratic Studies
-Brad Wells, Lyell B. Clay Artist in Residence and Director of Choral/Vocal Activities and Lecturer in Music
++Barbara Young Welke #   W. Ford Schumann Visiting Professor in Democratic Studies
+Brad Wells # Lyell B. Clay Artist in Residence and Director of Choral/Vocal Activities and Lecturer in Music
 Peter S. Wells # Assistant Professor of Physical Education, Coordinator of Men’s and Women’s Crew, and Head Coach of Men’s Crew
 Carmen T. Whalen # Professor of History
-Alan White, Mark Hopkins Professor of Philosophy
+Alan White # Mark Hopkins Professor of Philosophy
 Amanda R. Wilcox # Associate Professor of Classics
 Heather Williams # William Dwight Whitney Professor of Biology
 Mason B. Williams # Visiting Assistant Professor of Leadership Studies
@@ -416,7 +412,7 @@ Bud Wobus # Edna McConnell Clark Professor of Geology
 Scott Wong # James Phinney Baxter III Professor of History and Public Affairs
 ***James B. Wood # Charles R. Keller Professor of History
 William K. Wootters # Barclay Jermain Professor of Natural Philosophy
-Saadia Yacoob, Mellon Postdoctoral Fellow in Religion
+Saadia Yacoob # Mellon Postdoctoral Fellow in Religion
 Kasumi Yamamoto # Chair and Professor of Japanese
 Brent A. Yorgey # Visiting Assistant Professor Computer Science
 Li Yu # Associate Professor of Chinese
