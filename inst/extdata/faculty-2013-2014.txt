@@ -22,9 +22,9 @@ Donald deB. Beaver # Professor of History of Science # B.A. (1958) Harvard Unive
 Robert H. Bell # Frederick Latimer Wells Professor of English # B.A. (1967) Dartmouth; Ph.D. (1972) Harvard
 Gene H. Bell–Villada # Professor of Romance Languages # B.A. (1963) University of AZ ; M.A. (1967) University of California, Berkeley ; Ph.D. (1974) Harvard University
 Henry H. Benedict III# Lecturer in Art # B.A. (1973) Yale University; M.A.R. (1976) Yale University
-Magnus T. Bernhardsson #Professor of History # B.A. (1990) University of Iceland, Ph.D. (1999) Yale
+Magnus T. Bernhardsson #Professor of History # B.A. (1990) University of Iceland; Ph.D. (1999) Yale
 Dieter Bingemann # Associate Professor of Chemistry # Ph.D. (1994) University Gottengen, Germany
-Michael J. Biro# Visiting Assistant Professor of Mathematics # B.E. (2008), Cooper Union ; Ph.D. (2013) Stony Brook University
+Michael J. Biro# Visiting Assistant Professor of Mathematics # B.E. (2008) Cooper Union ; Ph.D. (2013) Stony Brook University
 Julie C. Blackwood # Assistant Professor of Mathematics # Ph.D. (2010) University of California, Davis
 James Abellera Blair# Assistant Professor of Chemistry # B.A. (2002) Carleton College ; Ph.D. (2008) University of California, Berkeley
 *Mary Jennifer Bloxam # Professor of Music # B.M. (1979) University of IL ; M.A. (1982) Yale University ; Ph.D. (1987) Yale University
@@ -38,7 +38,7 @@ Janis E. Bravo# Visiting Instructor in Biology # B.S. (1980) Cornell University 
 Deborah A. Brothers # Costume Director and Lecturer in Theatre # B.A. (1976) University of New Orleans; M.F.A. (1979) California Institute ofthe Arts
 Leslie Brown # Associate Professor of History # B.A. (1977) Tufts University; Ph.D. (1997) Duke University
 Michael F. Brown # James N. Lambert ’39 Professor of Latin American Studies # A.B. (1972) Princeton; Ph.D. (1981) University of Michigan
-Denise K. Buell # Professor of Religion # B.A. (1987) Princeton University, 1990, MDiv, Harvard University ; Ph.D. (1995) Harvard University
+Denise K. Buell # Professor of Religion # B.A. (1987) Princeton University ; Ph.D. (1995) Harvard University
 *Sandra L. Burton # Lipp Family Director of Dance # B.A. (1976) C.U.N.Y.; M.F.A. (1987) Bennington College
 +Mary Channen Caldwell# Visiting Assistant Professor of Music #
 ***Gerard Caprio  # William Brough Professor of Economics # B.A. (1972) Williams; Ph.D. (1976) University of Michigan
@@ -55,7 +55,7 @@ Jinhwa Chang# Visiting Lecturer in Japanese # B.A. (1994) Kyungpook National Uni
 Jessica M. Chapman # Assistant Professor of History # B.A. (1999) Valparaiso University; Ph.D. (2006) University of California, Santa Barbara
 C. Ondine L. Chavoya # Associate Professor of Art # B.A. (1992) University of California, Santa Cruz ; M.A. (1996) University of Rochester ; Ph.D. (2002) University of Rochester
 *Kerry A. Christensen # Garfield Professorship of Ancient Languages # B.A. (1981) Swarthmore; Ph.D. (1993) Princeton
-Jennifer E. Chuks# Assistant Professor of Physical Education and Assistant Athletic Administrator # B.A. (2006) University of Hartford, 2009, MBA, University of New Haven
+Jennifer E. Chuks# Assistant Professor of Physical Education and Assistant Athletic Administrator # B.A. (2006) University of Hartford; MBA (2009)  University of New Haven
 ++Jay A. Clarke# Lecturer in the Graduate Program in Art History # B.A. (1988) Holy Cross College ; M.A. (1991) Brown University ; Ph.D. (1999) Brown University
 Cassandra J. Cleghorn # Senior Lecturer in English and American Studies # B.A. (1983) University of California, Santa Cruz; Ph.D. (1995) Yale
 +Daniel Clowes# Visiting Lecturer in Art #
@@ -86,7 +86,7 @@ Eva M. Dessein# Visiting Assistant Professor of French Language and Pedagogy # B
 David P. Dethier # Edward Brust Professor of Geology and Mineralogy # B.A. (1972) Dartmouth; Ph.D. (1977) University of Washington
 Satyan L. Devadoss # Associate Professor of Mathematics # B.S. (1993) North Central College; Ph.D. (1999) Johns Hopkins University
 Charles B. Dew # Ephraim Williams Professor of American History # B.A. (1958) Williams; Ph.D. (1964) Johns Hopkins
-Michael R. Dilthey # Visiting Instructor in Music # M.M. (1986) Northwestern University 1990, DM, Northwestern University
+Michael R. Dilthey # Visiting Instructor in Music # M.M. (1986) Northwestern University; DM (1990) Northwestern University
 *Georges B. Dreyfus # Jackson Professor of Religion # Bachelors (1969) La Chaux-de-Fonds; Ph.D. (1991) University of Virginia
 Helga Druxes # Professor of German # A.M. (1985) Brown; Ph.D. (1987) Brown
 *Sara L. Dubow # Associate Professor of History and Fellow of the Oakley Center for Humanities and Social Sciences # B.A. (1991) Williams; Ph.D. (2003) Rutgers
@@ -181,7 +181,7 @@ Jason A. Josephson # Assistant Professor of Religion # B.A. (1999) Hampshire Col
 *Peter Just # Professor of Anthropology # B.A. (1972) University of Chicago; Ph.D. (1986) University of Pennsylvania
 Shinko Kagaya #Professor of Japanese # B.A. (1989) Aoyama Gakuin University; Ph.D. (1998) Ohio State University
 William R. Kangas # Assistant Professor of Physical Education # B.A. (1982) University of Vermont; M.Ed. (1994) North Adams State College
-Aparna Kapadia# Assistant Professor of History # B.A. (1998) St Xavier’s College, Mumbai University, 2005, PHM, Jawaharlal Nehru University ; Ph.D. (2010) University of London
+Aparna Kapadia# Assistant Professor of History # B.A. (1998) St Xavier’s College, Mumbai University; Ph.D. (2010) University of London
 Lawrence J. Kaplan # Halford R. Clark Professor of Natural Science # B.S. (1965) University of Pittsburgh; Ph.D. (1970) Purdue
 *Paul M. Karabinos # Charles L. MacMillan Professor of Natural Sciences # B.S. (1975) University of Connecticut; Ph.D. (1981) Johns Hopkins
 Saul M. Kassin # Massachusetts Professor of Psychology # B.A. (1974) Brooklyn College; Ph.D. (1978) University of Connecticut
@@ -201,14 +201,14 @@ Eric C. Knibbs# Assistant Professor of History # B.A. (2004) University of PA ; 
 Sherron E. Knopp # John Hawley Roberts Professor of English # A.B. (1971) Loyola; Ph.D. (1975) U.C.L.A.
 Pia M. Kohler # Assistant Professor of Environmental Studies # B.S. (1998) McGill University; MESc (2001) Yale School of Forestry and Environmental Studies; Ph.D. (2006) Massachusetts Institute of Technology
 Thomas A. Kohut # Sue and Edgar Wachenheim III Professor of History # B.A. (1972) Oberlin; Ph.D. (1983) University of Minnesota
-Anjuli F. Kolb# Assistant Professor of English # B.A. (2003) Columbia University, 2008, PHM, Columbia University ; Ph.D. (2013) Columbia University
+Anjuli F. Kolb# Assistant Professor of English # B.A. (2003) Columbia University; Ph.D. (2013) Columbia University
 Christophe A. Koné # Visiting Assistant Professor of German  # M.A. (2006) Universite Lumiere Lyon 2 ; Ph.D. (2013) Rutgers University
 Nathan Kornell# Assistant Professor of Psychology # B.A. (1996) Reed College ; M.A. (2001) Columbia University ; Ph.D. (2005) Columbia University
 +Thomas Krens # Distinguished Visiting Professor of Art #
 Cornelius C. Kubler # Stanfield Professor of Asian Studies # B.A. (1972) Cornell; M.A. (1978) National Taiwan University; Ph.D. (1981) Cornell
 Joanna Kurkowicz # Lyell B Clay Artist in Residence, Violin and Concertmaster, Berkshire Symphony # B.M. (1989) Lublin Coll of Music ; M.M. (1994) University of Massachussets Amherst
 +David Kurnick # Margaret Bundy Scott Visiting Professor of English #
-Steven J. Kuster# Assistant Professor of Physical Education and Head Swim Coach # B.A. (1993) University of PA, 1999, MED, Harvard University
+Steven J. Kuster# Assistant Professor of Physical Education and Head Swim Coach # B.A. (1993) University of PA; MED (1999) Harvard University
 Kenneth N. Kuttner # Robert F. White Class of 1952 Professor of Economics # B.A. (1982) University of California, Berkeley; Ph.D. (1989) Harvard University
 Karen B. Kwitter # Ebenezer Fitch Professor of Astronomy # B.A. (1972) Wellesley; Ph.D. (1979) U.C.L.A.
 Sara LaLumia # Assistant Professor of Economics # B.A. (2000) Youngstown State University; Ph.D. (2006) University of Michigan
@@ -217,7 +217,7 @@ Sara LaLumia # Assistant Professor of Economics # B.A. (2000) Youngstown State U
 Edwin I. Lawrence # Instructor in Music #
 Tim J. Lebestky# Assistant Professor of Biology # B.S. (1995) University of KS ; Ph.D. (2002) University of California, LA
 Yongsuk Lee# Assistant Professor of Economics # B.S. (1999) Seoul National University ; M.A. (2008) Brown University ; Ph.D. (2012) Brown University
-Jessica E. Leight# Assistant Professor of Economics # B.A. (2006) Yale University, 2008, PHM, Oxford University
+Jessica E. Leight# Assistant Professor of Economics # B.A. (2006) Yale University; PHM (2008) Oxford University
 *William J. Lenhart # A. Barton Hepburn Professor of Computer Science # B.A. (1977) St. Joseph’s; Ph.D. (1983) Dartmouth
 **Steven P. Levin # Professor of Art # B.A. (1976) Reed; M.F.A. (1980) University of California, Davis
 Zafrir Levy # Assistant Professor of Physical Education and Head Coach of Men’s & Woman’s Squash # B.A. (2001) Williams
@@ -227,7 +227,7 @@ Nini Li# Visiting Lecturer in Chinese # B.A. (2004) Shanxi Teachers University ;
 John K. Limon # John J. Gibson Professor of English # B.A. (1974) Harvard; Ph.D. (1981) University of California, Berkeley
 Robert A. Livingstone# Lecturer in Physical Education, Head Strength and Conditioning Coach # B.S. (2000) Jacksonville State University ; M.S. (2001) Jacksonville State University
 Susan R. Loepp # Professor of Mathematics # B.A. (1989) Bethel College; Ph.D. (1994) University of Texas, Austin
-Margaret G. Long # Associate Professor of History # B.A. (1989) Wesleyan, Ph.D. (2003) University of Chicago
+Margaret G. Long # Associate Professor of History # B.A. (1989) Wesleyan; Ph.D. (2003) University of Chicago
 Ward Lopes # Assistant Professor of Physics # B.A. (1992) Swarthmore; Ph.D. (2001) University of Chicago
 David A. Love # Associate Professor of Economics # B.A. (1996) University of MI ; M.A. (1998) Yale University ; Ph.D. (2003) Yale University
 **Charles M. Lovett  # Philip and Dorothy Schein Professor of Chemistry # B.S. (1979) California State Poly.; Ph.D. (1985) Cornell
@@ -237,10 +237,10 @@ Daniel V. Lynch # Professor of Biology # B.S. (1979) University of Lowell; Ph.D.
 Jennifer L. MacIntire# Lecturer in Biology and Chemistry # B.A. (1992) University of VT,
 James E. Mahon  # Woodrow Wilson Professor of Political Science # A.B. (1977) Dartmouth; Ph.D. (1989) University of California, Berkeley
 **Protik K. Majumder # Professor of Physics # B.S. (1982) Yale University ; Ph.D. (1989) Harvard University
-Michael J. Maker# Assistant Professor of Physical Education and Head Coach of Men’s Basketball # B.S. (1988) CA Baptist College, 1990, MED, Azusa Pacific University
+Michael J. Maker# Assistant Professor of Physical Education and Head Coach of Men’s Basketball # B.S. (1988) CA Baptist College; MED (1990) Azusa Pacific University
 Katherine S. Maloney# Assistant Professor of Physical Education and Head Coach of Women’s Crew # B.A. (2001) University of WA,
 **James A. Manigault–Bryant # Associate Professor of Africana Studies # B.A. (1995) Tulane University ; Ph.D. (2002) Brown University
-LeRhonda S. Manigault–Bryant# Assistant Professor of Africana Studies # A.B. (1999) Duke University, 2002, MDiv, Emory University ; Ph.D. (2007) Emory University
+LeRhonda S. Manigault–Bryant# Assistant Professor of Africana Studies # A.B. (1999) Duke University; Ph.D. (2007) Emory University
 Patricia M. Manning # Assistant Professor of Physical Education # B.S. (1977) Cortland; M.S. (1988) Smith
 *George E. Marcus # Professor of Political Science # A.B. (1964) Columbia; Ph.D. (1968) Northwestern
 *Luana S. Maroja# Assistant Professor of Biology # B.S. (1999) University Federal do Rio de Janeiro ; M.S. (2001) University Federal do Rio de Janeiro ; Ph.D. (2008) Cornell University
@@ -318,7 +318,7 @@ Michael M. Rolleigh# Visiting Professor of Economics # B.A. (1998) Hendrix Colle
 Marcela Romero# Visiting Assistant Professor of Romance Language # M.A. (2009) Cornell University ; Ph.D. (2012) Cornell University
 Shawn J. Rosenheim # Professor of English # B.A. (1983) Oberlin; Ph.D. (1992) Yale
 Leyla Rouhi # John B. McCoy and John T. McCoy Professor of Romance Languages and Director of the Oakley Center for Humanities and Social Sciences # B.A. (1987) Oxford; Ph.D. (1995) Harvard
-Merida M. Rua # Associate Professor of Latina/o Studies and American Studies # B.A. (1993) University of IL, 1995, MED, University of IL ; Ph.D. (2004) University of MI
+Merida M. Rua # Associate Professor of Latina/o Studies and American Studies # B.A. (1993) University of IL; MED (1995) University of IL ; Ph.D. (2004) University of MI
 Benjamin B. Rubin# Assistant Professor of Classics # B.A. (2001) Macalester College ; Ph.D. (2008) University of MI, Ann Arbor
 +Marketa Rulikova # Visiting Assistant Professor of Sociology # B.A. (1996) University of Pardubice ; M.A. (1997) Central European University ; Ph.D. (2001) Polish Academy of Sci
 T. Michael Russo # Assistant Professor of Physical Education and Coordinator of Physical Education # B.A. (1967) University of Massachusetts; M.S. (1970) University of Massachusetts
@@ -348,7 +348,7 @@ Glenn W. Shuck # Assistant Professor of Religion # B.A. (1994) Texas Lutheran Un
 Cesar E. Silva # Hagey Family Professor of Mathematics # B.S. (1977) Catholic University, Peru; Ph.D. (1984) University of Rochester
 *Shanti M. Singham # Professor of History # B.A. (1980) Swarthmore; Ph.D. (1991) Princeton
 Eiko Maruko Siniawer # Chair and Associate Professor of History # B.A. (1997) Williams College ; M.A. (1999) Harvard University ; Ph.D. (2003) Harvard University
-Kyle W. Smesko# Lecturer in Physical Education# Assistant Football Coach
+Kyle W. Smesko # Lecturer in Physical Education, Assistant Football Coach #
 Candis W. Smith# Assistant Professor of Political Science # B.A. (2005) Duke University ; M.A. (2008) Duke University ; Ph.D. (2011) Duke University
 David C. Smith # Senior Lecturer in Biology # B.S. (1968) Yale; Ph.D. (1977) University of Michigan
 David L. Smith # John W. Chandler Professor of English # B.A. (1974) New College; Ph.D. (1980) Univ. of Chicago
@@ -366,7 +366,7 @@ Jefferson Strait # Professor of Physics and College Marshal # A.B. (1975) Harvar
 Frederick W. Strauch # Assistant Professor of Physics # B.S. (1998) Loyola College; Ph.D. (2004) University of Maryland
 Laura R. Strauch # Instructor in Chemistry # B.A. (1999) Loyola College
 Catherine B. Stroud # Assistant Professor of Psychology # B.A. (2002) University of Wisconsin, Madison; Ph.D. (2009) State University of New York, Storrs
-Alison M. Swain# Assistant Professor of Physical Education and Head Coach of Women’s Tennis # B.A. (2001) Williams College, 2006, MED, University of WA
+Alison M. Swain# Assistant Professor of Physical Education and Head Coach of Women’s Tennis # B.A. (2001) Williams College; MED (2006) University of WA
 Anand V. Swamy # Professor of Economics # B.A. (1983) University of Delhi, India; Ph.D. (1993) Northwestern
 Karen E. Swann # Professor of English # B.A. (1975) Oberlin; Ph.D. (1983) Cornell
 ++Jane M. Swift# Visiting Lecturer in Leadership Studies # B.A. (1987) Trinity College,
@@ -393,7 +393,7 @@ Dorothy J. Wang # Associate Professor of American Studies # B.A. (1985) Duke; Ph
 Qing Wang # Assistant Professor of Statistics #
 *Christopher M. Waters # Hans W. Gatzke ’38 Professor of Modern European History # B.A. (1977) California State, Long Beach; Ph.D. (1985) Harvard
 **Tara E. Watson # Associate Professor of Economics # B.A. (1996) Wesleyan University ; Ph.D. (2003) Harvard University
-Bradley C. Wells, Clay Artist in Residence and Director of Choral/Vocal Activities# Lecturer in Music # B.A. (1984) Principia College, 1998, Massachussets Yale University 2005, DMassachussets Yale University
+Bradley C. Wells, Clay Artist in Residence and Director of Choral/Vocal Activities# Lecturer in Music # B.A. (1984) Principia College;
 Peter S. Wells # Assistant Professor of Physical Education, Coordinator of Crew Programs, and Head Coach of Men’s Crew # B.A. (1979) Williams
 **Carmen T. Whalen # Professor of History # B.A. (1985) Hampshire College ; M.A. (1989) Rutgers University ; Ph.D. (1994) Rutgers University
 Alan E. White # Mark Hopkins Professor of Philosophy # B.A. (1972) Tulane; Ph.D. (1980) Pennsylvania State

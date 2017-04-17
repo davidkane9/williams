@@ -24,7 +24,7 @@ Robert H. Bell #  Frederick Latimer Wells Professor of English # B.A. (1967) Dar
 Ben Benedict #  Lecturer in Art # B.A. (1973) Yale; M.Arch. (1976) Yale School of Architecture
 Devyn Spence Benson # Gaius Charles Bolin Fellow in Africana Studies and History # B.A. (2001) University of North Carolina; M.A. (2004) University of North Carolina
 Tim Benton # Robert Sterling Clark Visiting Professor of Art History, Second Semester # B.A. (1967) University of Cambridge; M.A. (1969) The Courtauld Institute of Art
-Magnus T. Bernhardsson #  Associate Professor of History # B.A. (1990) University of Iceland, Ph.D. (1999) Yale
+Magnus T. Bernhardsson #  Associate Professor of History # B.A. (1990) University of Iceland; Ph.D. (1999) Yale
 Dieter Bingemann #  Associate Professor of Chemistry # Ph.D. (1994) University Gottengen, Germany
 *** M. Jennifer Bloxam #  Professor of Music and Fellow of the Oakley Center for the Humanities and Social Sciences, Second Semester # B.M. (1979) University of Illinois; Ph.D. (1987) Yale
 Christopher A. Bolton #  Assistant Professor of Japanese and Comparative Literature # A.B. (1989) Harvard; Ph.D. (1998) Stanford
@@ -67,7 +67,7 @@ Mea S. Cook # Visiting Assistant Professor of Geosciences # B.A. (1999) Princeto
 * Phebe Cramer #  Professor of Psychology # B.A. (1957) University of California, Berkeley; Ph.D. (1962) New York University
 George T. Crane #  Professor of Political Science # B.A. (1979) S.U.N.Y., Purchase; Ph.D. (1986) University of Wisconsin, Madison
 Marshall K. Creighton #  Lecturer in Physical Education # B.A. (2002) Williams
-Michael Crewdson # Adjunct Lecturer in Environmental Studies # in the Williams in New York Program, First Semester
+Michael Crewdson # Adjunct Lecturer in Environmental Studies in the Williams in New York Program, First Semester #
 Jennifer Randall Crosby # Assistant Professor of Psychology # B.A. (1994) Stanford University; Ph.D. (2006) Stanford University
 Susan M. Cross # Lecturer in the Graduate Program in Art History, First Semester #
 Joseph L. Cruz #  Associate Professor of Philosophy # B.A. (1991) Williams; Ph.D. (1999) University of Arizona
@@ -220,7 +220,7 @@ Scott A. Lewis #  Assistant Professor of Physical Education # B.S. (1980) Spring
 Ralph Lieberman #  Visiting Lecturer in Art, First Semester #
 John K. Limon #  John J. Gibson Professor of English # B.A. (1974) Harvard; Ph.D. (1981) University of California, Berkeley
 Susan R. Loepp #  Professor of Mathematics # B.A. (1989) Bethel College; Ph.D. (1994) University of Texas, Austin
-Margaret G. Long #  Assistant Professor of History # B.A. (1989) Wesleyan, Ph.D. (2003) University of Chicago
+Margaret G. Long #  Assistant Professor of History # B.A. (1989) Wesleyan; Ph.D. (2003) University of Chicago
 Daniel M. Look # Visiting Assistant Professor of Mathematics # B.A. (1996) University of Maine; Ph.D. (2005) Boston University
 Ward Lopes # Assistant Professor of Physics # B.A. (1992) Swarthmore; Ph.D. (2001) University of Chicago
 ** David Love #  Assistant Professor of Economics # B.A. (1996) University of Michigan; Ph.D. (2003) Yale
@@ -320,7 +320,7 @@ Sheafe Satterthwaite #  Lecturer in Art # B.A. (1962) University of Virginia
 Tanseli Savaser #  Assistant Professor of Economics # B.A. (2000) Bogazici University; Ph.D. (2006) Brandeis University
 Kenneth K. Savitsky #  Associate Professor of Psychology # B.A. (1993) Indiana University; Ph.D. (1997) Cornell
 Jana L. Sawicki #  Carl W. Vogt ’58 Professor of Philosophy # B.A. (1974) Sweet Briar; Ph.D. (1983) Columbia
-Morton Owen Schapiro #  Professor of Economics and President of the College # B.S.(1975) Hofstra University; M.A.(1976) University of Pennsylvania; Ph.D.(1979) University of Pennsylvania
+Morton Owen Schapiro #  Professor of Economics and President of the College # B.S. (1975) Hofstra University; M.A.(1976) University of Pennsylvania; Ph.D.(1979) University of Pennsylvania
 Vincent J. Schleitwiler # Assistant Professor of English # B.A. (1996) Oberlin; M.A. (2003) University of Washington
 Lucie Schmidt #  Associate Professor of Economics # A.B. (1992) Smith; Ph.D. (2002) University of Michigan
 * Cheryl L. Shanks #  Professor of Political Science # B.A. (1983) University of California, Santa Cruz; Ph.D. (1994) University of Michigan

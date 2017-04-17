@@ -11,7 +11,7 @@ Jean L. Bacon# Assistant Professor of Sociology# B.A. (1983) Wesleyan; Ph.D. (19
 Duane A. Bailey# Associate Professor of Computer Science# B.A. (1982) Amherst College; Ph.D. (1988) University of Massachusetts
 Jon Bakija# Assistant Professor of Economics# B.A. (1990) Wesleyan; Ph.D. (1999) University of Michigan
 Lois Banta# Visiting Associate Professor of Biology# B.A. (1983) Johns Hopkins; Ph.D. (1990) California Institute of Technology
-David E. Barnard# Assistant Professor of Physical Education# B.A. (1981) Wesleyan M.A.L.S. (1989) Wesleyan
+David E. Barnard# Assistant Professor of Physical Education# B.A. (1981) Wesleyan; M.A.L.S. (1989) Wesleyan
 Annemarie Bean# Assistant Professor of Theatre# B.A. (1988) Wesleyan; M.A. (1991) UCLA
 Donald deB Beaver# Professor of History of Science# A.B. (1958) Harvard; Ph.D. (1966) Yale
 Olga R. Beaver# Professor of Mathematics# B.A. (1968) University of Missouri; Ph.D. (1979) University of Massachusetts
@@ -227,7 +227,7 @@ Karen Newman# Margaret Bundy Scott Visiting Professor of English# B.A. (1970) Ra
 Anthony J. Nicastro# Visiting Professor of Romance Languages# B.A. (1962) New York University; Ph.D. (1971) Columbia
 ** James L. Nolan# Assistant Professor of Sociology and Herbert H. Lehman Fellow of the Oakley Center for the Humanities and Social Sciences# B.A. (1984) University of California; Ph.D. (1995) University of Virginia
 *** Glyn P. Norton# Willcox B. and Harriet M. Adsit Professor of International Studies# A.B. (1963) University of Michigan; Ph.D. (1968) University of Michigan
-Francis C. Oakley# Edward Dorr Griffin Professor of the History of Ideas and President of the College# Emeritus B.A. (1953) Oxford; Ph.D. (1960) Yale
+Francis C. Oakley# Edward Dorr Griffin Professor of the History of Ideas and President of the College Emeritus # B.A. (1953) Oxford; Ph.D. (1960) Yale
 * Carol J. Ockman# Professor of Art# B.A. (1972) Stanford; Ph.D. (1982) Yale
 Julian Onderdonk# Visiting Assistant Professor of Music# B.A. (1986) Bowdoin; Ph.D. (1998) N.Y.U.
 April Overstreet# Visiting Assistant Professor of Romance Languages# B.A. (1990) Pacific Lutheran University; Ph.D. (1999) University of Michigan

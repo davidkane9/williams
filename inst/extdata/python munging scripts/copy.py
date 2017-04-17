@@ -28,10 +28,12 @@ str = open('faculty-2014-2015.txt', 'r').read()
 # 		i = i + 1
 
 
-for name in newList:
-	if name in str:
-		index = str.index(name)
-		str = str[0: index + len(name)] + " # " + str[index + len(name):]
+# for name in newList:
+# 	if name in str:
+# 		index = str.index(name)
+# 		str = str[0: index + len(name)] + " # " + str[index + len(name):]
+
+str = str.replace("\n", " #\n")
 
 target = open("correctedFac.txt", 'w')
 target.write(str)

@@ -159,7 +159,7 @@ Sung Ho Kim # Assistant Professor of Political Science # A.B. (1988) Yonsei Univ
 * John E. Kleiner # Associate Professor of English # B.A. (1983) Amherst; Ph.D. (1991) Stanford
 Sherron E. Knopp # Professor of English # A.B. (1971) Loyola; Ph.D. (1975) U.C.L.A.
 Birgit G. Koehler # Assistant Professor of Chemistry # A.B. (1985) Dartmouth; Ph.D. (1990) Stanford
-Helmut Koester # Croghan Visiting Professor of Religion # Dr. Theol (1954) University of Marberry; Dr. Theol (1991) University of Geneva
+Helmut Koester # Croghan Visiting Professor of Religion # Dr.Theol (1954) University of Marberry; Dr.Theol (1991) University of Geneva
 Thomas A. Kohut # Sue and Edgar Wachenheim III Professor of History and Dean of the Faculty # B.A. (1972) Oberlin; Ph.D. (1983) University of Minnesota
 Matthew A. Kraus # Assistant Professor of Classics # B.A. (1985) Harvard; Ph.D. (1995) University of Michigan
 Meredyth Krych # Visiting Assistant Professor of Psychology # Ph.D. (2001) Stanford
@@ -182,7 +182,7 @@ John K. Limon # Professor of English # B.A. (1974) Harvard; Ph.D. (1981) Univers
 Susan Loepp # Assistant Professor of Mathematics # B.A. (1989) Bethel College; Ph.D. (1994) University of Texas, Austin
 Charles M. Lovett # Philip and Dorothy Schein Professor of Chemistry and Director of the Bronfman Science Center # B.S. (1979) California State Poly.; Ph.D. (1985) Cornell
 Peter Low # Assistant Professor of Art # B.A. (1994) University of Toronto; Ph.D. (2001) Johns Hopkins
-Daniel V. Lynch Professor of Biology # B.S. (1979) University of Lowell; Ph.D. (1983) University of Texas # Austin
+Daniel V. Lynch # Professor of Biology # B.S. (1979) University of Lowell; Ph.D. (1983) University of Texas, Austin
 * Mark Lynch # Assistant Professor of Political Science and Fellow of the Oakley Center for the Humanities and Social Sciences # B.A. (1990) Duke; Ph.D. (1997) Cornell
 Michael D. MacDonald # Woodrow Wilson Professor of Political Science # A.B. (1972) University of California, Berkeley; Ph.D. (1983) University of California, Berkeley
 Jenna MacIntire # Part-time Instructor in Chemistry and Part-time Instructor in Biology # B.A. (1992) University of Vermont

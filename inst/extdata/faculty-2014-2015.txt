@@ -137,7 +137,7 @@ Leo Goldmakher # Assistant Professor of Mathematics #
 +Barry Goldstein # Visiting Professor of Humanities #
 Darra J. Goldstein # Willcox B. and Harriet M. Adsit Professor of Russian #
 Ed Gollin # Associate Professor of Music #
-**MarcGotlieb #   Director of the Graduate Program in Art History and Class of 1955 Memorial Professor of Art #
+**Marc Gotlieb #   Director of the Graduate Program in Art History and Class of 1955 Memorial Professor of Art #
 Alma M. Granado #   C3 Mellon Postdoctoral Fellow in Latina/o Studies #
 Daniel R. Greenberg # Assistant Professor of Physical Education and Head Coach of Men’s Tennis #
 David Gurcay–Morris # Assistant Professor of Theatre #
@@ -151,7 +151,7 @@ Laurie Heatherington # Edward Dorr Griffin Professor of Psychology #
 Guy M. Hedreen # Professor of Art #
 Brent A. Heeringa # Chair and Associate Professor of Computer Science #
 Brianna C. Heggeseth # Assistant Professor of Statistics #
-KrisHerman # Assistant Professor of Physical Education, Head Softball Coach #
+Kris Herman # Assistant Professor of Physical Education, Head Softball Coach #
 Jesús J. Hernández # Visiting Assistant Professor of Latina/o Studies #
 **Jacqueline Hidalgo # Assistant Professor of Latina/o Studies and Religion #
 Josh D. Hillman # Lecturer in Physical Education and Head Men’s Golf Coach #
@@ -196,7 +196,7 @@ Aaron E. Kelton # Assistant Professor of Physical Education and Head Coach of Fo
 *Kathryn R. Kent # Professor of English #
 Bruce Kieffer # Professor of German #
 **Doug Kiel # Assistant Professor of American Studies #
-++JeremyKing # Visiting Professor of History #
+++Jeremy King # Visiting Professor of History #
 Kris N. Kirby # Professor of Psychology #
 **Roger A. Kittleson # Professor of History #
 *John E. Kleiner # Professor of English #
@@ -216,7 +216,7 @@ Kenneth N. Kuttner # Robert F. White Class of 1952 Professor of Economics #
 ***Karen B. Kwitter # Ebenezer Fitch Professor of Astronomy #
 Yuliya V. Ladygina # Visiting Assistant Professor of Russian #
 Aida Laleian # Professor of Art #
-SaraLaLumia # Associate Professor of Economics #
+Sara Lumia # Associate Professor of Economics #
 Edwin I. Lawrence # Artist Associate in Harpsichord, Piano, and Organ, and Instructor in Music #
 *Tim J. Lebestky # Assistant Professor of Biology #
 Seulghee Lee #   C3 Mellon Postdoctoral Fellow in English #
@@ -281,7 +281,7 @@ Tendai Muparutsa #   Artist in Residence in African Music Performance, Director 
 *Thomas P. Murtagh # Professor of Computer Science #
 Kenda B. Mutongi # Professor of History #
 **Steven E. Nafziger # Associate Professor of Economics #
-EricNathan # Visiting Assistant Professor of Music #
+Eric Nathan # Visiting Assistant Professor of Music #
 ***Gail M. Newman # Harold J. Henry Professor of German #
 Anthony J. Nicastro # Visiting Professor of Romance Languages #
 Nimu Njoya # Assistant Professor of Political Science #
@@ -384,12 +384,12 @@ Rebecca E. Taurog # Assistant Professor of Chemistry #
 Christopher Taylor # Visiting Assistant Professor of English #
 John W. Thoman # J. Hodge Markgraf Professor of Chemistry #
 David Thompson # Assistant Professor of Physical Education, Head Men’s Track & Field Coach #
-ChristianThorne # Associate Professor of English #
+Christian Thorne # Associate Professor of English #
 Stephen J. Tifft # Professor of English #
 Claire S. Ting # Associate Professor of Biology #
 Tony Truran # Lecturer in Chemistry #
 *David R. Tucker–Smith # Associate Professor of Physics #
-Ji–YoungUm # Visiting Assistant Professor of English and American Studies #
+Ji–Young Um # Visiting Assistant Professor of English and American Studies #
 Janneke van de Stadt # Professor of Russian #
 Armando Vargas # Assistant Professor in the Program of Comparative Literature #
 Natalie B. Vena # Gaius Charles Bolin Fellow in Anthropology and Environmental Studies #

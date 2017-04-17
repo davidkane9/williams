@@ -10,7 +10,7 @@ David H. Backus # Visiting Lecturer in Geosciences # B.A. (1982) Haverford Colle
 Robert Baker-White # Professor of Theatre # B.A. (1980) Williams; Ph.D (1990) Stanford
 Jon M. Bakija # Associate Professor of Economics # B.A. (1990) Wesleyan; Ph.D. (1999) University of Michigan
 Lois M. Banta # Visiting Associate Professor of Biology # B.A. (1983) Johns Hopkins; Ph.D. (1990) California Institute of Technology
-David E. Barnard # Assistant Professor of Physical Education # B.A. (1981) Wesleyan M.A.L.S. (1989) Wesleyan
+David E. Barnard # Assistant Professor of Physical Education # B.A. (1981) Wesleyan; M.A.L.S. (1989) Wesleyan
 Bill Barrale # Assistant Professor of Physical Education # B.A. (1994) Northeastern University
 Andrea Barrett # Lecturer in English # B.S. (1974) Union College
 Melissa J. Barry # Assistant Professor of Philosophy # B.A. (1988) Wheaton; Ph.D. (1998) Notre Dame
@@ -22,7 +22,7 @@ Robert H. Bell # William R. Kenan, Jr., Professor of English # B.A. (1967) Dartm
 ** Gene H. Bell-Villada # Professor of Romance Languages # B.A. (1963) University of Arizona; Ph.D. (1974) Harvard
 Ben Benedict # Lecturer in Art # B.A. (1973) Yale; M.Arch. (1976) Yale School of Architecture
 Charles Benjamin # Class of 1946 Visiting Professor of Environmental Studies and International Environmental Issues # B.A. (1986) University of Missouri; Ph.D. (2004) University of Michigan
-Magnus T. Bernhardsson # Assistant Professor of History # B.A. (1990) University of Iceland, Ph.D. (1999) Yale
+Magnus T. Bernhardsson # Assistant Professor of History # B.A. (1990) University of Iceland; Ph.D. (1999) Yale
 * Dieter Bingemann # Assistant Professor of Chemistry # Ph.D. (1994) University Gottengen, Germany
 Randall D. Bird # Mellon Postdoctoral Fellow in Art # A.B. (1979) Washington University; Ph.D. (2003) Harvard
 Marcellus Blount # Sterling Brown ’22 Visiting Professor of English, Spring Semester # B.A. (1980) Williams; Ph.D. (1987) Yale
@@ -300,7 +300,7 @@ Sheafe Satterthwaite # Lecturer in Art # B.A. (1962) University of Virginia
 Robert M. Savage # Associate Professor of Biology # B.A. (1987) Bowdoin; Ph.D. (1993) Wesleyan
 Kenneth K. Savitsky # Associate Professor of Psychology # B.A. (1993) Indiana University; Ph.D. (1997) Cornell
 ** Jana L. Sawicki # W. Van Alan Clark ’41 Third Century Professor in the Social Sciences # B.A. (1974) Sweet Briar; Ph.D. (1983) Columbia
-Morton Owen Schapiro # Professor of Economics and President of the College # B.S.(1975)Hofstra University; M.A. (1976) University of Pennsylvania;Ph.D. (1979) University of Pennsylvania
+Morton Owen Schapiro # Professor of Economics and President of the College # B.S. (1975) Hofstra University; M.A. (1976) University of Pennsylvania;Ph.D. (1979) University of Pennsylvania
 *** Lucie Schmidt # Assistant Professor of Economics and Fellow of the Oakley Center for the Humanities and Social Sciences, Spring Semester # A.B. (1992) Smith; Ph.D. (2002) University of Michigan
 Anthony Scinta # Visiting Assistant Professor of Psychology # B.A. (1992) S.U.N.Y., Buffalo; Ph.D. (2004) University of California, Los Angeles
 Julie Seitel # Visiting Lecturer in Theatre # B.A. (1994) Williams
