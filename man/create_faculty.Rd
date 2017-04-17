@@ -28,7 +28,7 @@ Default is FALSE, which returns the same information as in the \code{graduates}
 data frame distributed with the package.}
 }
 \value{
-a dataframe with a row for each graduating senior and 14 associated variables.
+a dataframe with a row for each graduating senior and 15 associated variables.
 }
 \description{
 This function compiles information for all graduates and returns a

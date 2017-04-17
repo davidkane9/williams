@@ -18,8 +18,10 @@
 #'  }
 #'
 #' @importFrom dplyr %>%
+#' @importFrom utils tail
 #'
 #' @export
+
 add_faculty_degrees <- function(x) {
 
   stopifnot(is.data.frame(x))

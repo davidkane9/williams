@@ -15,6 +15,7 @@
 #'   }
 #'
 #' @importFrom dplyr %>%
+#' @importFrom wru merge_surnames
 #'
 #' @export
 
