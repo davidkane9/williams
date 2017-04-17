@@ -5,6 +5,7 @@
 \title{Add Faculty Titles}
 \format{\describe{
  \item{title}{Faculty's title}
+ \item{rank}{Faculty's rank}
  }}
 \usage{
 add_faculty_titles(x)
@@ -18,5 +19,5 @@ the input data frame along with a new columns.
 \description{
 This function takes as input a data frame which includes the raw
   text associated with each faculty member. It returns that data frame along with
-  a new columns for the facutly's title
+  2 new columns: for the facutly's title and faculty's rank
 }

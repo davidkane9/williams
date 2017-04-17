@@ -39,7 +39,7 @@ add_faculty_degrees <- function(x) {
   x$first.degree.school <- degrees %>% purrr::map_chr(1) %>% fetch_school()
 
   ## Add information about last degree
-  x$last.degree <- degrees %>% purrr::map_chr(tail, 1) %>% fetch_degree()
+  x$last.degree <- degrees %>% purrr::map_chr(tail, 1) %>% stringr::str_trim() %>% fetch_degree()
   x$last.degree.year <- degrees %>% purrr::map_chr(tail, 1) %>% fetch_year()
   x$last.degree.school <- degrees %>% purrr::map_chr(tail, 1) %>% fetch_school()
 
@@ -59,10 +59,10 @@ fetch_degree <- function(degree.info){
 ## Given graduation details about a degree, this function finds the year the degree was conferred
 fetch_year <- function(degree.info){
   # Get the parenthesis and what is inside
-  k <- stringr::str_extract_all(degree.info, "\\([^()]+\\)")
+  year <- stringr::str_extract_all(degree.info, "\\([^()]+\\)")
   # Remove parenthesis
-  k <- substring(k, 2, nchar(k)-1)
-  as.numeric(k)
+  year <- substring(year, 2, nchar(year)-1)
+  as.numeric(year)
 }
 
 ## Given graduation details about a degree, this function finds the name of school conferring the degree

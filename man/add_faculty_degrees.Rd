@@ -2,10 +2,26 @@
 % Please edit documentation in R/add_faculty_degrees.R
 \name{add_faculty_degrees}
 \alias{add_faculty_degrees}
-\title{export}
+\title{Add Faculty Degrees}
+\format{\describe{
+ \item{first.degree}{First degree held by faculty; This is generally a bachelors degree}
+ \item{first.degree.year}{Year the first degree was conferred}
+ \item{first.degree.school}{School that conferred first degree}
+ \item{last.degree}{First degree held by faculty; This is generally the highest degree held by the faculty.}
+ \item{last.degree.year}{Year the last degree was conferred}
+ \item{last.degree.school}{School that conferred last degree.}
+ }}
 \usage{
 add_faculty_degrees(x)
 }
+\arguments{
+\item{x}{data frame with raw.text column}
+}
+\value{
+the input data frame along with two new columns.
+}
 \description{
-export
+This function takes as input a data frame which includes the raw
+  text associated with each faculty member. It returns that data frame along with
+  six new columns: first.degree, first.degree.year, first.degree.school, last.degree, last.degree.year and last.degree.school
 }
