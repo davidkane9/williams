@@ -11,7 +11,7 @@ Duane A. Bailey #  Professor of Computer Science # B.A. (1982) Amherst College; 
 * Robert Baker-White #  Professor of Theatre # B.A. (1980) Williams; Ph.D (1990) Stanford
 *** Jon M. Bakija #  Associate Professor of Economics and Fellow of the Oakley Center for the Humanities and Social Sciences. Spring Semester # B.A. (1990) Wesleyan; Ph.D. (1999) University of Michigan
 ****Lois M. Banta #  Associate Professor of Biology # B.A. (1983) Johns Hopkins; Ph.D. (1990) California Institute of Technology
-David E. Barnard #  Assistant Professor of Physical Education # B.A. (1981) Wesleyan M.A.L.S. (1989) Wesleyan
+David E. Barnard #  Assistant Professor of Physical Education # B.A. (1981) Wesleyan; M.A.L.S. (1989) Wesleyan
 Bill Barrale #  Assistant Professor of Physical Education # B.A. (1994) Northeastern; M.A. (2004) Rowan University
 Andrea Barrett #  Lecturer in English # B.S. (1974) Union College
 * Melissa J. Barry #  Assistant Professor of Philosophy # B.A. (1988) Wheaton; Ph.D. (1998) Notre Dame
@@ -25,7 +25,7 @@ Ilona D. Bell #  Professor of English # B.A. (1969) Radcliffe; Ph.D. (1977) Bost
 Gene H. Bell-Villada #  Professor of Romance Languages # B.A. (1963) University of Arizona; Ph.D. (1974) Harvard
 Ben Benedict #  Lecturer in Art # B.A. (1973) Yale; M.Arch. (1976) Yale School of Architecture
 Charles Benjamin #  Visiting Professor of Environmental Studies and Class of 1946 Visiting Professor of International Environmental Issues # B.A. (1986) University of Missouri; Ph.D. (2004) University of Michigan
-* Magnus T. Bernhardsson #  Assistant Professor of History # B.A. (1990) University of Iceland, Ph.D. (1999) Yale
+* Magnus T. Bernhardsson #  Assistant Professor of History # B.A. (1990) University of Iceland; Ph.D. (1999) Yale
 Danielle Bessett # Visiting Assistant Professor of Sociology # B.A. (1996) Mount Holyoke; Ph.D. (2006) New York University
 Dieter Bingemann #  Assistant Professor of Chemistry # Ph.D. (1994) University Gottengen, Germany
 Randall D. Bird #  Mellon Post-doctoral Fellow in Art # A.B. (1979) Washington University; Ph.D. (2003) Harvard
@@ -210,7 +210,7 @@ Diana Leyva # Visiting Lecturer in Psychology, Spring Semester # B.A. (2000) Nat
 Andrew Lieberman #  Assistant Professor of Theatre # B.A. (1993) Lewis and Clark University; M.F.A. (1998) University of Washington
 ** John K. Limon #  John J. Gibson Professor of English # B.A. (1974) Harvard; Ph.D. (1981) University of California, Berkeley
 Susan R. Loepp #  Associate Professor of Mathematics # B.A. (1989) Bethel College; Ph.D. (1994) University of Texas, Austin
-* Margaret G. Long #  Assistant Professor of History # B.A. (1989) Wesleyan, Ph.D. (2003) University of Chicago
+* Margaret G. Long #  Assistant Professor of History # B.A. (1989) Wesleyan; Ph.D. (2003) University of Chicago
 David Love #  Assistant Professor of Economics # B.A. (1996) University of Michigan; Ph.D. (2003) Yale
 Charles M. Lovett # Philip and Dorothy Schein Professor of Chemistry and Director of the Science Center # B.S. (1979) California State Poly.; Ph.D. (1985) Cornell
 * Peter D. Low #  Assistant Professor of Art # B.A. (1994) University of Toronto; Ph.D. (2001) Johns Hopkins
