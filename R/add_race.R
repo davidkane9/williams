@@ -15,15 +15,15 @@
 #'   }
 #'
 #' @importFrom dplyr %>%
-#' @importFrom wru merge_surnames
 #'
 #' @export
 
-add_graduate_race <- function(x, complete = FALSE){
+add_race <- function(x, complete = FALSE){
 
   stopifnot(is.data.frame(x))
   stopifnot(all(c("last.name") %in% names(x)))
   stopifnot(is.character(x$last.name))
+
 
   ## I think that the wru package is suspect and/or that merge_surnames works in
   ## weird ways. Or perhaps I don't understand the correct way to use
@@ -42,12 +42,12 @@ add_graduate_race <- function(x, complete = FALSE){
   x$race <- colnames(z)[max.col(z)]
 
   x <- x %>% dplyr::mutate(race = forcats::fct_recode(race,
-                                    "White" = "p_whi",
-                                    "Black" = "p_bla",
-                                    "Hispanic" = "p_his",
-                                    "Asian" = "p_asi",
-                                    "Other" = "p_oth"
-                                    ))
+                                                      "White" = "p_whi",
+                                                      "Black" = "p_bla",
+                                                      "Hispanic" = "p_his",
+                                                      "Asian" = "p_asi",
+                                                      "Other" = "p_oth"
+  ))
 
   ## Keep only race unless complete = TRUE.
 
