@@ -9,13 +9,14 @@
   \item{latin.honors}{Latin honors}
   \item{Phi.Beta.Kappa}{Boolean value indicating membership in Phi Beta Kappa}
   \item{Sigma.Xi}{Boolean value indicating membership in Sigma Xi}
+  \item{birth.year}{Inferred birth year of graduate}
   }}
 \usage{
 gather_graduates()
 }
 \value{
 a dataframe for the specified years with a row for each graduating
-  senior and five variables.
+  senior and six variables.
 }
 \description{
 This function brings together the information on all Williams

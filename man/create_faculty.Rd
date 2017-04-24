@@ -7,6 +7,7 @@
     \item{first.name}{First name of faculty}
     \item{last.name}{Last name of faculty}
     \item{year}{catalog year from which information is extracted}
+    \item{birth.year}{inferred birth year for faculty member}
     \item{leave.full.year}{Is faculty on leave for full academic year?}
     \item{leave.first.sem}{Is faculty on leave for only first semester?}
     \item{leave.first.sem}{Is faculty on leave for only second semester?}
@@ -28,7 +29,7 @@ Default is FALSE, which returns the same information as in the \code{graduates}
 data frame distributed with the package.}
 }
 \value{
-a dataframe with a row for each graduating senior and 15 associated variables.
+a dataframe with a row for each graduating senior and 16 associated variables.
 }
 \description{
 This function compiles information for all graduates and returns a

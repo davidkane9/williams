@@ -6,10 +6,7 @@
 \format{\describe{
   \item{year}{year}
   \item{raw.text}{Raw text from the Course Catlog associated with each faculty member}
-  \item{leave.full.year}{Boolean value indicating if faculty is on leave for academic year.}
-  \item{leave.first.sem}{Boolean value indicating if faculty is on leave for first semester.}
-  \item{leave.second.sem}{Boolean value indicating if faculty is on leave for second semester.}
-  \item{leave.calender.year}{Boolean value indicating if faculty is on leave for calender year.}
+  \item{leave}{Faculty leave information; one of "Academic Year", "First Semester", "Second Semester", "Calendar Year", or "None"}
   }}
 \usage{
 gather_faculty()

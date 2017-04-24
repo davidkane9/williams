@@ -5,7 +5,9 @@
 \title{Add Faculty Titles}
 \format{\describe{
  \item{title}{Faculty's title}
- \item{rank}{Faculty's rank}
+ \item{rank}{Faculty's rank; one of "Librarian", "Instructor", "Fellow", "Lecturer", "Visiting Professor",
+ "Assistant Professor", "Associate Professor", "Professor"}
+ \item{status}{Faculty's status; as one of "Visiting", "Part-time", Tenure-track", or "Tenured"}
  }}
 \usage{
 add_faculty_titles(x)
