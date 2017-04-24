@@ -15,6 +15,7 @@
 #'   }
 #'
 #' @importFrom dplyr %>%
+#' @importFrom wru merge_surnames
 #'
 #' @export
 
@@ -24,7 +25,6 @@ add_race <- function(x, complete = FALSE){
   stopifnot(all(c("last.name") %in% names(x)))
   stopifnot(is.character(x$last.name))
 
-
   ## I think that the wru package is suspect and/or that merge_surnames works in
   ## weird ways. Or perhaps I don't understand the correct way to use
   ## Imports/Depends.
@@ -33,8 +33,6 @@ add_race <- function(x, complete = FALSE){
   x <- wru::merge_surnames(x)
 
   ## Manipulation to make things nice.
-
-
   x <- x %>%  dplyr::select(-surname, -surname.match)
 
   z <- x[c("p_whi", "p_bla", "p_his", "p_asi", "p_oth")]
