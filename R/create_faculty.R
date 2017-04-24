@@ -41,8 +41,9 @@ create_faculty <- function(complete = FALSE){
   x <- gather_faculty()
   x <- add_faculty_names(x, complete = complete)
   x <- add_faculty_degrees(x)
-  x <- add_faculty_birth_year(x)
+  x$birth.year <- x$first.degree.year - 22
   x <- add_faculty_titles(x)
+  x <- add_gender(x)
 
 
   if(! complete){

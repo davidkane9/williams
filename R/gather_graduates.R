@@ -5,7 +5,7 @@
 #'   also adds Latin honors information.
 #'
 #' @return a dataframe for the specified years with a row for each graduating
-#'   senior and five variables.
+#'   senior and six variables.
 #'
 #' @format \describe{
 #'   \item{year}{Graduation year}
@@ -13,6 +13,7 @@
 #'   \item{latin.honors}{Latin honors}
 #'   \item{Phi.Beta.Kappa}{Boolean value indicating membership in Phi Beta Kappa}
 #'   \item{Sigma.Xi}{Boolean value indicating membership in Sigma Xi}
+#'   \item{birth.year}{Inferred birth year of graduate}
 #'   }
 #' @export
 
@@ -52,8 +53,12 @@ gather_graduates <- function(){
     df$Phi.Beta.Kappa <- stringr::str_detect(df$raw.text, "\\*")
     df$Sigma.Xi <- stringr::str_detect(df$raw.text, "\\+")
 
+    ## Now figure out birth.year using heuristic of undegraduate graduation year minus 22
+    df$birth.year <- df$year - 22
+
     x <- rbind(x, df)
   }
+
 
   x
 }
