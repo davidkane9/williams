@@ -10,10 +10,7 @@
 #' @format \describe{
 #'   \item{year}{year}
 #'   \item{raw.text}{Raw text from the Course Catlog associated with each faculty member}
-#'   \item{leave.full.year}{Boolean value indicating if faculty is on leave for academic year.}
-#'   \item{leave.first.sem}{Boolean value indicating if faculty is on leave for first semester.}
-#'   \item{leave.second.sem}{Boolean value indicating if faculty is on leave for second semester.}
-#'   \item{leave.calender.year}{Boolean value indicating if faculty is on leave for calender year.}
+#'   \item{leave}{Faculty leave information; one of "Academic Year", "First Semester", "Second Semester", "Calendar Year", or "None"}
 #'   }
 #' @export
 
@@ -43,10 +40,10 @@ gather_faculty <- function(){
                              raw.text = raw)
 
     ## Now figure out faculty on leave
-    df$leave.full.year <- stringr::str_count(df$raw.text, "\\*") == 1
-    df$leave.first.sem <- stringr::str_count(df$raw.text, "\\*") == 2
-    df$leave.second.sem <- stringr::str_count(df$raw.text, "\\*") == 3
-    df$leave.calender.year <- stringr::str_count(df$raw.text, "\\*") == 4
+    df$leave <- ifelse(stringr::str_count(df$raw.text, "\\*") == 1, "Academic Year",
+                       ifelse(stringr::str_count(df$raw.text, "\\*") == 2, "First Semester",
+                              ifelse(stringr::str_count(df$raw.text, "\\*") == 3, "Second Semester",
+                                     ifelse(stringr::str_count(df$raw.text, "\\*") == 4, "Calendar Year", "None"))))
 
     x <- rbind(x, df)
   }

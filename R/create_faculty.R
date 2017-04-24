@@ -7,13 +7,14 @@
 #'  Default is FALSE, which returns the same information as in the \code{graduates}
 #'  data frame distributed with the package.
 #'
-#' @return a dataframe with a row for each graduating senior and 15 associated variables.
+#' @return a dataframe with a row for each graduating senior and 16 associated variables.
 #'
 #' @format
 #' \describe{
 #'     \item{first.name}{First name of faculty}
 #'     \item{last.name}{Last name of faculty}
 #'     \item{year}{catalog year from which information is extracted}
+#'     \item{birth.year}{inferred birth year for faculty member}
 #'     \item{leave.full.year}{Is faculty on leave for full academic year?}
 #'     \item{leave.first.sem}{Is faculty on leave for only first semester?}
 #'     \item{leave.first.sem}{Is faculty on leave for only second semester?}
@@ -40,8 +41,8 @@ create_faculty <- function(complete = FALSE){
   x <- gather_faculty()
   x <- add_faculty_names(x, complete = complete)
   x <- add_faculty_degrees(x)
+  x <- add_faculty_birth_year(x)
   x <- add_faculty_titles(x)
-
 
 
   if(! complete){
