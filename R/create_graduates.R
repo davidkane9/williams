@@ -24,9 +24,7 @@
 #'
 #' @examples
 #'
-#' \donttest{
 #'    x <- create_graduates()
-#' }
 #'
 #' @export
 
@@ -36,7 +34,7 @@ create_graduates <- function(complete = FALSE){
   x <- add_graduate_names(x, complete = complete)
   x <- add_graduate_honors(x, complete = complete)
   x <- add_gender(x, complete = complete)
-  # x <- add_race(x, complete = complete)
+  x <- add_race(x, complete = complete)
 
 
   if(! complete){
