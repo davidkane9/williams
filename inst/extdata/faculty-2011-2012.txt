@@ -184,7 +184,7 @@ John E. Kleiner  #  Professor of English # B.A. (1983) Amherst; Ph.D. (1991) Sta
 Elizabeth Kolbert # W. Ford Schumann Visiting Professor in Democratic Studies, Second Semester #
 Sherron E. Knopp  #  John Hawley Roberts Professor of English # A.B. (1971) Loyola; Ph.D. (1975) U.C.L.A.
 Pia M. Kohler # Assistant Professor of Environmental Studies # B.S. (1998) McGill University; Ph.D. (2006) Massachusetts Institute of Technology
-Thomas A. Kohut  #  Sue and Edgar Wachenheim III Professor of # B.A. (1972) Oberlin; Ph.D. (1983) University of Minnesota
+Thomas A. Kohut  #  Sue and Edgar Wachenheim III Professor of History# B.A. (1972) Oberlin; Ph.D. (1983) University of Minnesota
 Cornelius C. Kubler  #  Stanfield Professor of Asian Studies # B.A. (1972) Cornell; M.A. (1978) National Taiwan University; Ph.D. (1981) Cornell
 Steven Kuster  #  Assistant Professor of Physical Education # B.A. (1993) University of Pennsylvania; M.A. (1999) Harvard
 Kenneth N. Kuttner  #  Robert F. White Class of 1952 Professor of Economics # B.A. (1982) University of California, Berkeley; Ph.D. (1989) Harvard University
@@ -256,7 +256,7 @@ Christopher M. B. Nugent  #  Associate Professor of Chinese # B.A. (1991) Brown;
 *Carol J. Ockman  #  Dennis A. Meenan 54 Third Century Professor of Art # B.A. (1972) Stanford; Ph.D. (1982) Yale
 Austin Okigbo # Visiting Assistant Professor of Music, First Semester and Winter Study Period #
 William Olney  #  Assistant Professor of Economics # B.A. (2002) Wesleyan; Ph.D. (2007) University of Colorado
-Stephanie Osbakken # Visiting Assistant Professor of Sociolgoy, Second Semester # B.A. (1994) University of Texas, Austin; M.A. (2008) University of Michgan
+Stephanie Osbakken # Visiting Assistant Professor of Sociology, Second Semester # B.A. (1994) University of Texas, Austin; M.A. (2008) University of Michgan
 Allison Pacelli  #  Associate Professor of Mathematics # B.S. (1997) Union College; Ph.D. (2003) Brown
 Lee Y. Park  #  Professor of Chemistry # B.A. (1986) Wellesley; Ph.D. (1991) M.I.T.
 Paul Park  #  Lecturer in English and the Graduate Program in Art History # B.A. (1975) Hampshire College
@@ -338,7 +338,7 @@ Mihai Stoiciu  #  Associate Professor of Mathematics # B.S. (1999) University of
 ***Jefferson Strait  #  Professor of Physics and College Marshal # A.B. (1975) Harvard; Ph.D. (1985) Brown
 *Frederick W. Strauch  #  Assistant Professor of Physics # B.S. (1998) Loyola College; Ph.D. (2004) University of Maryland
 Catherine B. Stroud # Assistant Professor of Psychology # B.A. (2002) University of Wisconsin, Madison; Ph.D. (2009) State University of New York, Storrs
-Mecca Jamilah Sullivan # Gauis Charles Bolin Fellow in Women s and Gender Studies # B.A. (2003) Smith College; M.A. (2006) Temple University
+Mecca Jamilah Sullivan # Gauis Charles Bolin Fellow in Women's and Gender Studies # B.A. (2003) Smith College; M.A. (2006) Temple University
 Alison Swain  #  Assistant Professor of Physical Education # B.A. (2001) Williams; Ph.D. (2006) University of Washington, Seattle
 Anand V. Swamy  #  Professor of Economics # B.A. (1983) University of Delhi, India; Ph.D. (1993) Northwestern
 *Karen E. Swann  #  Professor of English # B.A. (1975) Oberlin; Ph.D. (1983) Cornell
