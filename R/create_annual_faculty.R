@@ -23,14 +23,14 @@ create_annual_faculty <- function(x) {
   stopifnot("last.degree.year" %in% names(x))
   stopifnot("last.degree.school" %in% names(x))
   stopifnot("birth.year" %in% names(x))
-  stopifnot("department" %in% names(x))
+  #stopifnot("department" %in% names(x))
   stopifnot("title" %in% names(x))
   stopifnot("rank" %in% names(x))
   stopifnot("status" %in% names(x))
   stopifnot("gender" %in% names(x))
   stopifnot(is.character(x$first.name))
   stopifnot(is.character(x$last.name))
-  stopifnot(is.character(x$department))
+  #stopifnot(is.character(x$department))
   stopifnot(is.numeric(x$year))
   stopifnot(is.character(x$leave))
   stopifnot(is.character(x$first.degree))
@@ -62,21 +62,21 @@ create_annual_faculty <- function(x) {
     df$start.year[i] <- min(x$year[which(x$first.name == first.name & x$last.name == last.name)])
 
     ## Fetch information that might be missing for current year, but present in previous years
-    df$first.degree[i] <- fetch_missing_information(first.name = first.name, last.name = last.name,
+    df$first.degree[i] <- fetch_missing_information(firstname = first.name, lastname = last.name,
                                                     x = x, column = "first.degree")
-    df$first.degree.year[i] <- fetch_missing_information(first.name = first.name, last.name = last.name,
+    df$first.degree.year[i] <- fetch_missing_information(firstname = first.name, lastname = last.name,
                                                          x = x, column = "first.degree.year")
-    df$first.degree.school[i] <- fetch_missing_information(first.name = first.name, last.name = last.name,
+    df$first.degree.school[i] <- fetch_missing_information(firstname = first.name, lastname = last.name,
                                                     x = x, column = "first.degree.school")
-    df$last.degree[i] <- fetch_missing_information(first.name = first.name, last.name = last.name,
+    df$last.degree[i] <- fetch_missing_information(firstname = first.name, lastname = last.name,
                                                     x = x, column = "last.degree")
-    df$last.degree.year[i] <- fetch_missing_information(first.name = first.name, last.name = last.name,
+    df$last.degree.year[i] <- fetch_missing_information(firstname = first.name, lastname = last.name,
                                                          x = x, column = "last.degree.year")
-    df$last.degree.school[i] <- fetch_missing_information(first.name = first.name, last.name = last.name,
+    df$last.degree.school[i] <- fetch_missing_information(firstname = first.name, lastname = last.name,
                                                            x = x, column = "last.degree.school")
-    df$first.degree[i] <- fetch_missing_information(first.name = first.name, last.name = last.name,
+    df$first.degree[i] <- fetch_missing_information(firstname = first.name, lastname = last.name,
                                                     x = x, column = "first.degree")
-    df$birth.year[i] <- fetch_missing_information(first.name = first.name, last.name = last.name,
+    df$birth.year[i] <- fetch_missing_information(firstname = first.name, lastname = last.name,
                                                   x = x, column = "birth.year")
 
   }

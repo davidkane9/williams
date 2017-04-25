@@ -15,7 +15,7 @@
 
 add_faculty_department <- function(x) {
   stopifnot(is.data.frame(x))
-  stopifnot("raw,text" %in% names(x))
+  stopifnot("raw.text" %in% names(x))
   stopifnot(is.character(x$title))
 
   # Read in master list of departments
