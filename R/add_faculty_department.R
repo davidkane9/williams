@@ -67,5 +67,3 @@ add_faculty_department <- function(x) {
   x
 
 }
-
-"Steven P. Souza # Senior Lecturer in Astronomy #"
