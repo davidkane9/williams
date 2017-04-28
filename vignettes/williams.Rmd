@@ -2,15 +2,22 @@
 title: "Williams College Faculty and Graduates"
 author: "Karan Tibrewal and David Kane"
 date: "`r Sys.Date()`"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Vignette Title}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+output:
+  tufte::tufte_html: default
+  tufte::tufte_handout:
+    citation_package: natbib
+    latex_engine: xelatex
+  tufte::tufte_book:
+    citation_package: natbib
+    latex_engine: xelatex
 ---
 
+
 ```{r, echo = FALSE}
-knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE)
+knitr::opts_chunk$set(tidy = FALSE,
+                      echo = FALSE, 
+                      message = FALSE, 
+                      warning = FALSE)
 ```
 
 
@@ -102,9 +109,9 @@ x %>% filter(race == "Other") %>% select(full.name, race) %>% as.data.frame()
 ```
 
 There is no publicly available source for the racial breakdown of the graduating class. (True? Check NEPS.) The 2015--2016 Common Data Set [reports](https://provost.williams.edu/files/williams_cds_1516_w_tuition.pdf) that, among all degree-seeking undergraduates at Williams, `r round(243/2065, 2)` Asian, `r round(157/2065, 2)` were 
-Black, `r round(261/2065, 2)` Hispanic, `r round(1106/2065, 2)`, and `r round((161 + 4 + 133)/2065, 2)` in other categories, including Nonresident Aliens, American Indian or Two-or-more races.
+Black, `r round(261/2065, 2)` Hispanic, `r round(1106/2065, 2)` White, and `r round((161 + 4 + 133)/2065, 2)` in other categories, including Nonresident Aliens, American Indian or Two-or-more races.
 
-Our estimates for non-White students are too low. First, we don't even find the same number of Asian/Black/Hispanic students are we know to be at Williams among the US citizen portion of the population. Second, we categories some/many of the students in the other categories (most importantly the international and multi-racial students) as being in non-White categories even though they are not so classified by Williams.
+Our estimates for non-White students are too low. First, we don't even find the same number of Asian/Black/Hispanic students are we know to be at Williams among the US citizen portion of the population. Second, we categorize some/many of the students in the other categories (most importantly the international and multi-racial students) as being in non-White categories even though they are not so classified by Williams.
 
 As an example, we classify Paige Lauren Whidbee '16 as Black. She is the only Phi Beta Kappa member of the class of 2016 that we so classify. However, according to this [photo](http://ephsports.williams.edu/sports/wgolf/2014-15/bios/whidbee_paige_2xmt?view=bio), she probably isn't African-American.
 
