@@ -31,8 +31,6 @@ This function compiles information for all graduates and returns a
 }
 \examples{
 
-\donttest{
    x <- create_graduates()
-}
 
 }
