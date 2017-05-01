@@ -8,20 +8,20 @@
 #'   Riego. If \code{complete} is FALSE, it also returns full.name.
 #'
 #' @param x data frame with raw.text column
-#' @param complete logical to indicate how many variables to add to x. Default is FALSE.
 #'
-#' @return the input data frame along with two new columns.
+#' @return the input data frame along with three new columns.
 #'
 #' @format \describe{
 #'  \item{first.name}{Graduate's first name.}
 #'  \item{last.name}{Graduate's last name.}
+#'  \item{full.name}{Graduate's entire name.}
 #'  }
 #'
 #' @importFrom dplyr %>%
 #'
 #' @export
 
-add_graduate_names <- function(x, complete = FALSE){
+add_graduate_names <- function(x){
 
   stopifnot(is.data.frame(x))
   stopifnot("raw.text" %in% names(x))
@@ -50,15 +50,14 @@ add_graduate_names <- function(x, complete = FALSE){
 
   x$first.name <- names %>% purrr::map_chr(1)
   x$last.name  <- names %>% purrr::map_chr(utils::tail, 1)
+  x$full.name <- full.name
 
-  if(complete){
-    x$full.name <- full.name
-  }
 
   ## Ought to do more robust error-checking, but this is not bad.
 
   stopifnot(all(x$first.name != ""))
-  stopifnot(all(x$last.name != ""))
+  stopifnot(all(x$last.name  != ""))
+  stopifnot(all(x$full.name  != ""))
 
   x
 }

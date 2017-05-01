@@ -5,7 +5,8 @@
 #'
 #' @param complete logical to indicate how many variables to return in the data frame.
 #'  Default is FALSE, which returns the same information as in the \code{graduates}
-#'  data frame distributed with the package.
+#'  data frame distributed with the package. If complete = TRUE, other variables will
+#'  be included, which can be helpful for diagnostics.
 #'
 #' @return a dataframe with a row for each graduating senior and 9 associated variables.
 #'
@@ -22,30 +23,27 @@
 #'     \item{gender}{male or female, based on the \code{gender} package}
 #'     }
 #'
-#' @examples
-#'
-#'    x <- create_graduates()
-#'
 #' @export
 
 create_graduates <- function(complete = FALSE){
 
   x <- gather_graduates()
-  x <- add_graduate_names(x, complete = complete)
-  x <- add_graduate_honors(x, complete = complete)
-  x <- add_gender(x, complete = complete)
-  x <- add_race(x, complete = complete)
+  x <- add_graduate_names(x)
+  x <- add_graduate_honors(x)
+  x <- add_gender(x)
+  x <- add_race(x)
 
 
   if(! complete){
-    x$raw.text <- NULL
+    x <- x %>%
+            select(year, first.name, last.name, gender, race,
+                   latin.honors, Phi.Beta.Kappa, Sigma.Xi, honor, major)
   }
 
-  x <- tibble::as_tibble(x)
 
   ## Could have lots of error checking. Start with:
 
-  stopifnot(all(unique(x$year) > 2000 & unique(x$year) < 2020))
+  stopifnot(all(unique(x$year) > 1999 & unique(x$year) < 2020))
   stopifnot(all(table(x$year) > 500 & table(x$year) < 600))
 
   stopifnot(sum(!is.na(x$major))   == sum(!is.na(x$honor)))

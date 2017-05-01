@@ -20,7 +20,8 @@ create_graduates(complete = FALSE)
 \arguments{
 \item{complete}{logical to indicate how many variables to return in the data frame.
 Default is FALSE, which returns the same information as in the \code{graduates}
-data frame distributed with the package.}
+data frame distributed with the package. If complete = TRUE, other variables will
+be included, which can be helpful for diagnostics.}
 }
 \value{
 a dataframe with a row for each graduating senior and 9 associated variables.
@@ -28,9 +29,4 @@ a dataframe with a row for each graduating senior and 9 associated variables.
 \description{
 This function compiles information for all graduates and returns a
       dataframe.
-}
-\examples{
-
-   x <- create_graduates()
-
 }

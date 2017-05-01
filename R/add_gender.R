@@ -5,8 +5,6 @@
 #'   new column: \code{gender}.
 #'
 #' @param x data frame with \code{first.name} column
-#' @param complete logical to indicate how many variables to add to x. Default
-#'   is FALSE. If TRUE, other diagnostic variables are also added.
 #'
 #' @return the input data frame along with new column(s).
 #'
@@ -18,7 +16,7 @@
 #'
 #' @export
 
-add_gender <- function(x, complete = FALSE){
+add_gender <- function(x){
 
   stopifnot(is.data.frame(x))
   stopifnot(all(c("birth.year", "first.name") %in% names(x)))
@@ -27,9 +25,9 @@ add_gender <- function(x, complete = FALSE){
 
   ## For some rows (esp. in faculty dataset) we don't know the exact birth year.
   ## We will use the mean of the dataset for these rows.
-  index <- which(is.na(x$birth.year))
-  x$birth.year[index] <- mean(x$birth.year, na.rm = T)
 
+  index <- which(is.na(x$birth.year))
+  x$birth.year[index] <- mean(x$birth.year, na.rm = TRUE)
 
   ## We need the genderdata package (not just the gender package) to run the
   ## gender command. I am not sure how to handle this in DESCRIPTION.
@@ -42,13 +40,8 @@ add_gender <- function(x, complete = FALSE){
   x <- dplyr::left_join(x, z)
 
   # Remove artificial birth years.
+
   x$birth.year[index] <- NA
-
-  ## Keep only gender unless complete = TRUE.
-
-  if(! complete){
-    x <- x %>% dplyr::select(-proportion_male, -proportion_female)
-  }
 
   x
 }

@@ -6,17 +6,16 @@
 \format{\describe{
  \item{first.name}{Graduate's first name.}
  \item{last.name}{Graduate's last name.}
+ \item{full.name}{Graduate's entire name.}
  }}
 \usage{
-add_graduate_names(x, complete = FALSE)
+add_graduate_names(x)
 }
 \arguments{
 \item{x}{data frame with raw.text column}
-
-\item{complete}{logical to indicate how many variables to add to x. Default is FALSE.}
 }
 \value{
-the input data frame along with two new columns.
+the input data frame along with three new columns.
 }
 \description{
 This function takes as input a data frame which includes the raw

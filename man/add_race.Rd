@@ -7,13 +7,10 @@
   \item{race}{Graduate's race as determined by the wru package.}
   }}
 \usage{
-add_race(x, complete = FALSE)
+add_race(x)
 }
 \arguments{
 \item{x}{data frame with \code{last.name} column}
-
-\item{complete}{logical to indicate how many variables to add to x. Default
-is FALSE. If TRUE, other diagnostic variables are also added.}
 }
 \value{
 the input data frame along with new column(s).

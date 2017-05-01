@@ -16,12 +16,10 @@
     \item{honor}{Highest honor received, if any}
   }}
 \usage{
-add_graduate_honors(x, complete = FALSE)
+add_graduate_honors(x)
 }
 \arguments{
 \item{x}{data frame with raw.text column}
-
-\item{complete}{logical to indicate how many variables to add to x. Default is FALSE.}
 }
 \value{
 the input data frame along with four new columns.

@@ -23,7 +23,7 @@ knitr::opts_chunk$set(tidy = FALSE,
 
 ## Introduction
 
-This document provides an overview of the data available in the wiliamsmetrics package. We have data on the faculty and graduates of Williams College from the 2000--2001 academic year through 2015--2016.
+This document provides an overview of the data available in the wiliamsmetrics package. We have data on the faculty and graduates of Williams College from the 1999--2000 academic year through 2014--2015.
 
 ```{r}
 library(dplyr)
@@ -62,7 +62,7 @@ The students with the longest last name and first name are:
 x %>% select(year, full.name, first.name, last.name) %>% filter(min_rank(-nchar(first.name)) < 2 | min_rank(-nchar(last.name)) < 2) %>% select(-first.name, -last.name) %>% as.data.frame()
 ```
 
-The students with at least 5 parts to their full names are:
+The students with at least 5 separate parts to their full names are:
 
 ```{r, echo=FALSE}
 x[str_split(x$full.name, " ", simplify = TRUE)[,5] != "",] %>% select(year, full.name) %>% as.data.frame()
@@ -70,13 +70,14 @@ x[str_split(x$full.name, " ", simplify = TRUE)[,5] != "",] %>% select(year, full
 
 ### Gender
 
-The course catalogs do not provide the gender of the graduates, so we estimate it by using the gender package. Our gender variable looks like:
+The course catalogs do not provide the gender of the graduates, so we estimate it by using the **gender** package. 
+`r tufte::margin_note("At some point, we hope to explore a more advanced approach: Kamil Wais (2016). genderizeR: Gender Prediction Based on First Names. R package version 2.0.0. https://CRAN.R-project.org/package=genderizeR")` Our gender variable looks like:
 
 ```{r}
 table(x$gender, exclude = NULL)
 ```
 
-The large number of NAs is a result of the gender package's focus in American names. Consider the most common problem cases:
+The large number of NAs is a result of the gender package's focus on American names. Consider the most common problem cases:
 
 ```{r}
 x %>% filter(is.na(gender)) %>% select(first.name, gender) %>% group_by(first.name, gender) %>% summarize(count = n()) %>% arrange(desc(count)) %>% as.data.frame() %>% head(12)
@@ -114,6 +115,9 @@ Black, `r round(261/2065, 2)` Hispanic, `r round(1106/2065, 2)` White, and `r ro
 Our estimates for non-White students are too low. First, we don't even find the same number of Asian/Black/Hispanic students are we know to be at Williams among the US citizen portion of the population. Second, we categorize some/many of the students in the other categories (most importantly the international and multi-racial students) as being in non-White categories even though they are not so classified by Williams.
 
 As an example, we classify Paige Lauren Whidbee '16 as Black. She is the only Phi Beta Kappa member of the class of 2016 that we so classify. However, according to this [photo](http://ephsports.williams.edu/sports/wgolf/2014-15/bios/whidbee_paige_2xmt?view=bio), she probably isn't African-American.
+
+
+
 
 
 ```{r}

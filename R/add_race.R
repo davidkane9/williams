@@ -5,8 +5,6 @@
 #'   new column: \code{race}.
 #'
 #' @param x data frame with \code{last.name} column
-#' @param complete logical to indicate how many variables to add to x. Default
-#'   is FALSE. If TRUE, other diagnostic variables are also added.
 #'
 #' @return the input data frame along with new column(s).
 #'
@@ -19,7 +17,7 @@
 #'
 #' @export
 
-add_race <- function(x, complete = FALSE){
+add_race <- function(x){
 
   stopifnot(is.data.frame(x))
   stopifnot(all(c("last.name") %in% names(x)))
@@ -33,25 +31,21 @@ add_race <- function(x, complete = FALSE){
   x <- wru::merge_surnames(x)
 
   ## Manipulation to make things nice.
-  x <- x %>%  dplyr::select(-surname, -surname.match)
+
+  x <- x %>% tibble::as_tibble() %>%
+    dplyr::select(-surname, -surname.match)
 
   z <- x[c("p_whi", "p_bla", "p_his", "p_asi", "p_oth")]
 
   x$race <- colnames(z)[max.col(z)]
 
-  x <- x %>% dplyr::mutate(race = forcats::fct_recode(race,
-                                                      "White" = "p_whi",
-                                                      "Black" = "p_bla",
-                                                      "Hispanic" = "p_his",
-                                                      "Asian" = "p_asi",
-                                                      "Other" = "p_oth"
-  ))
-
-  ## Keep only race unless complete = TRUE.
-
-  if(! complete){
-    x <- x %>% dplyr::select(-p_whi, -p_bla, -p_his, -p_asi, -p_oth)
-  }
+  x <- x %>%
+    dplyr::mutate(race = forcats::fct_recode(race,
+                                             "White" = "p_whi",
+                                             "Black" = "p_bla",
+                                             "Hispanic" = "p_his",
+                                             "Asian" = "p_asi",
+                                             "Other" = "p_oth"))
 
   x
 }

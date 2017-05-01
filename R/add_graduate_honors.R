@@ -5,7 +5,6 @@
 #'   six new columns associated with department honors.
 #'
 #' @param x data frame with raw.text column
-#' @param complete logical to indicate how many variables to add to x. Default is FALSE.
 #'
 #' @return the input data frame along with four new columns.
 #'
@@ -24,7 +23,7 @@
 #'
 #' @export
 
-add_graduate_honors <- function(x, complete = FALSE){
+add_graduate_honors <- function(x){
 
   stopifnot(is.data.frame(x))
   stopifnot("raw.text" %in% names(x))
@@ -73,18 +72,14 @@ add_graduate_honors <- function(x, complete = FALSE){
   x$major[stringr::str_detect(x$major, "Africa|Afro")] <- "Africana"
   x$major[stringr::str_detect(x$major, "Enviro")] <- "Environmental"
 
-  ## Tricky case involves Women’s, Gender and Sexuality Studies,
-  ## as a major, because it includes a comma. However, there are no WGES honor
-  ## students who also get honors in another major. But should we really just
-  ## assume that? For now, let's just hack:
+  ## Keep around the second honor and major, along with the unmodified first
+  ## major and, for parellism, the related first honor. Maybe there is a cleaner
+  ## way to handle this . . .
 
-
-  if(complete){
-    x$honor.1 <- honor.1
-    x$honor.2 <- honor.2
-    x$major.1 <- major.1
-    x$major.2 <- major.2
-  }
+  x$honor.1 <- honor.1
+  x$honor.2 <- honor.2
+  x$major.1 <- major.1
+  x$major.2 <- major.2
 
   x
 }

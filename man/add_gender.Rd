@@ -7,13 +7,10 @@
   \item{gender}{gender as determined by the gender package.}
   }}
 \usage{
-add_gender(x, complete = FALSE)
+add_gender(x)
 }
 \arguments{
 \item{x}{data frame with \code{first.name} column}
-
-\item{complete}{logical to indicate how many variables to add to x. Default
-is FALSE. If TRUE, other diagnostic variables are also added.}
 }
 \value{
 the input data frame along with new column(s).
