@@ -39,23 +39,26 @@
 create_faculty <- function(complete = FALSE){
 
   x <- gather_faculty()
-  x <- add_faculty_names(x, complete = complete)
+  x <- add_faculty_names(x)
   x <- add_faculty_degrees(x)
   x$birth.year <- x$first.degree.year - 22
   x <- add_faculty_titles(x)
-  x <- add_gender(x, complete = complete)
+  x <- add_gender(x)
   x <- add_faculty_department(x)
-  # x <- add_race(x, complete = complete)
+  x <- add_race(x)
 
 
   if(! complete){
-    x$raw.text <- NULL
+    x <- x %>%
+              dplyr::select(year, first.name, last.name, title, department, rank, status, leave, birth.year,
+                     first.degree, first.degree.school, first.degree.year, last.degree,
+                     last.degree.school, last.degree.year, gender, race)
   }
 
   x <- tibble::as_tibble(x)
 
   ## Some initial error checking:
-  stopifnot(all(unique(x$year) > 2000 & unique(x$year) < 2020))
+  stopifnot(all(unique(x$year) >= 2000 & unique(x$year) < 2020))
   stopifnot(all(table(x$year) > 300 & table(x$year) < 500))
 
   x

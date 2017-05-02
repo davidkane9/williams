@@ -20,15 +20,15 @@
 
 gather_faculty <- function(){
 
-  x <- data.frame(NULL)
+  x <- tibble::data_frame()
 
   ## If we decide to provide optional year argument in gather_graduates, we should add it here as well.
 
   files <- list.files(paste0(system.file(package = "williamsmetrics"), "/extdata"), pattern = "faculty")
 
   for(i in seq_along(files)){
-    year <- as.numeric(stringr::str_sub(files[i], 14, 17))
-    name <- paste0("extdata/faculty-", (year - 1), "-", year, ".txt", sep = "")
+    year <- as.numeric(stringr::str_sub(files[i], 9, 12))
+    name <- paste0("extdata/faculty-", year, "-", (year + 1), ".txt", sep = "")
 
 
     ## read in raw text from file, and add as column to the dataframe.
