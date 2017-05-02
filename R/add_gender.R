@@ -27,7 +27,7 @@ add_gender <- function(x){
   ## We will use the mean of the dataset for these rows.
 
   index <- which(is.na(x$birth.year))
-  x$birth.year[index] <- mean(x$birth.year, na.rm = TRUE)
+  x$birth.year[index] <- round(mean(x$birth.year, na.rm = T))
 
   ## We need the genderdata package (not just the gender package) to run the
   ## gender command. I am not sure how to handle this in DESCRIPTION.

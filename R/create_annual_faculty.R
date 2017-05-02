@@ -78,6 +78,9 @@ create_annual_faculty <- function(x) {
                                                     x = x, column = "first.degree")
     df$birth.year[i] <- fetch_missing_information(firstname = first.name, lastname = last.name,
                                                   x = x, column = "birth.year")
+    df$gender[i] <- fetch_missing_information(firstname = first.name, lastname = last.name,
+                                                  x = x, column = "gender")
+
 
   }
 
