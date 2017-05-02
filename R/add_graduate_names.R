@@ -2,10 +2,10 @@
 #'
 #' @description This function takes as input a data frame which includes the raw
 #'   text associated with each graduate. It returns that data frame along with
-#'   two new columns: first.name and last.name. We assume that both the first
-#'   name and the last name consist of a single string. That is, even if
+#'   four new columns: first.name, middle.name, last.name and full.name. We assume
+#'   that the first/middle/last names consist of a single string. That is, even if
 #'   someone's true last name is González del Riego, we record the last name as
-#'   Riego. If \code{complete} is FALSE, it also returns full.name.
+#'   Riego.
 #'
 #' @param x data frame with raw.text column
 #'
@@ -13,6 +13,8 @@
 #'
 #' @format \describe{
 #'  \item{first.name}{Graduate's first name.}
+#'  \item{middle.name}{Graduate's middle name. Defined as the second separate string
+#'        in full.name, if there are more than two names total.}
 #'  \item{last.name}{Graduate's last name.}
 #'  \item{full.name}{Graduate's entire name.}
 #'  }
@@ -29,7 +31,8 @@ add_graduate_names <- function(x){
 
   ## Grab all the names --- which are always before the first comma, if there is
   ## one. Then split the names by spaces into a list of lists, after getting rid
-  ## of the */+ that signify Phi Beta Kappa and Sigma Xi.
+  ## of the */+ that signify Phi Beta Kappa and Sigma Xi. names is a a list of
+  ## lists.
 
   full.name <- stringr::str_replace_all(x$raw.text, "\\*|\\+", "")
   full.name <- stringr::str_split(full.name, ",", simplify = TRUE)[ ,1]
@@ -42,16 +45,24 @@ add_graduate_names <- function(x){
   ## with last names that (obviously?) include more than one word, like González
   ## del Riego.
 
-  ## First name is easy. And so is last name, if you (mistakenly!) assume that
-  ## last names are always length 1. For now, we will not worry about middle
-  ## names, although they might be helpful in gender identifications. We also
-  ## ignore complications associated with last names that are of length more
-  ## than one.
+  ## First name is easy.
 
   x$first.name <- names %>% purrr::map_chr(1)
-  x$last.name  <- names %>% purrr::map_chr(utils::tail, 1)
-  x$full.name <- full.name
 
+  ## And so is last name, if you (mistakenly!) assume that last names are always
+  ## length 1. For now, ignore that complication.
+
+  x$last.name  <- names %>% purrr::map_chr(utils::tail, 1)
+
+  ## Middle name is the second name. If there is no third name --- i.e., the
+  ## person has only two names like Vu Le --- we NA middle.name. Must be a more
+  ## elegant way to code this up.
+
+  x$middle.name <- names %>% purrr::map_chr(2)
+  x$middle.name <- ifelse(x$middle.name == x$last.name, NA, x$middle.name)
+
+
+  x$full.name <- full.name
 
   ## Ought to do more robust error-checking, but this is not bad.
 

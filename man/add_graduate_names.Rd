@@ -5,6 +5,8 @@
 \title{Add Graduate Names}
 \format{\describe{
  \item{first.name}{Graduate's first name.}
+ \item{middle.name}{Graduate's middle name. Defined as the second separate string
+       in full.name, if there are more than two names total.}
  \item{last.name}{Graduate's last name.}
  \item{full.name}{Graduate's entire name.}
  }}
@@ -20,8 +22,8 @@ the input data frame along with three new columns.
 \description{
 This function takes as input a data frame which includes the raw
   text associated with each graduate. It returns that data frame along with
-  two new columns: first.name and last.name. We assume that both the first
-  name and the last name consist of a single string. That is, even if
+  four new columns: first.name, middle.name, last.name and full.name. We assume
+  that the first/middle/last names consist of a single string. That is, even if
   someone's true last name is González del Riego, we record the last name as
-  Riego. If \code{complete} is FALSE, it also returns full.name.
+  Riego.
 }

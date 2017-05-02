@@ -8,7 +8,7 @@
  \item{last.name}{Faculty's last name.}
  }}
 \usage{
-add_faculty_names(x, complete = FALSE)
+add_faculty_names(x)
 }
 \arguments{
 \item{x}{data frame with raw.text column}
