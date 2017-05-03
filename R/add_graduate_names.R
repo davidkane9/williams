@@ -45,6 +45,18 @@ add_graduate_names <- function(x){
   ## with last names that (obviously?) include more than one word, like González
   ## del Riego.
 
+  ## In 2016 (for the first time?!), the College began including suffixes like
+  ## III or Jr. We need to delete these, otherwise we will deem them the last
+  ## name of a graduate. Must be a better way! Rows 8406 and 8584 are examples.
+
+  for(i in seq_along(names)){
+    for(j in seq_along(names[[i]])){
+      names[[i]][[j]] <- ifelse(names[[i]][[j]] %in% c("III", "Jr."), NA, names[[i]][[j]])
+    }
+  }
+
+  names <- lapply(names, function(x) x[! is.na(x)])
+
   ## First name is easy.
 
   x$first.name <- names %>% purrr::map_chr(1)

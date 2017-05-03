@@ -4,19 +4,21 @@
 \alias{add_gender}
 \title{Add Gender}
 \format{\describe{
-  \item{gender}{gender as determined by the gender package.}
+  \item{gender}{gender as determined by the \code{gender} package.}
   }}
 \usage{
 add_gender(x)
 }
 \arguments{
-\item{x}{data frame with \code{first.name} column}
+\item{x}{data frame with \code{birth.year}, \code{first.name} and
+\code{middle.name} columns.}
 }
 \value{
 the input data frame along with new column(s).
 }
 \description{
 This function takes as input a data frame which includes the
-  \code{first.name} and \code{birth.year} for each row. It returns that data frame along with a
-  new column: \code{gender}.
+  \code{first.name} and \code{birth.year} for each row. It returns that data
+  frame along with new column \code{gender}, and other supporting
+  information.
 }

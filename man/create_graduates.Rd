@@ -4,15 +4,18 @@
 \alias{create_graduates}
 \title{Create Data Frame of Graduates Data}
 \format{\describe{
+    \item{year}{year of graduation}
     \item{first.name}{First name of graduate}
     \item{last.name}{Last name of graduate}
-    \item{year}{year of graduation}
-    \item{latin.honor}{latin honor recieved by graduate (if any)}
+    \item{gender}{male or female, based on the \code{gender} package}
+    \item{race}{White, Black, Hispanic, Asian or Other, based on \code{wru} package}
+    \item{latin.honors}{latin honor recieved by graduate (if any)}
+    \item{Phi.Beta.Kappa}{TRUE/FALSE indicating membership in Phi Beta Kappa}
+    \item{Sigma.Xi}{TRUE/FALSE indicating membership in Sigma Xi}
     \item{honor}{details of distinction of primary thesis honor (if any)
                    We define the "primary" thesis honor as the first honor
                    appearing alongside grad's name}
     \item{major}{major in which graduate completed primary honor}
-    \item{gender}{male or female, based on the \code{gender} package}
     }}
 \usage{
 create_graduates(complete = FALSE)

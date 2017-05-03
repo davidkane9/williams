@@ -20,4 +20,14 @@ test_that("Package data sensible", {
   stopifnot(length(unique(x$latin.honors)) == 4)
   stopifnot(length(unique(x$honor)) == 3)
 
+
+  ## Are we handling III correctly?
+
+  stopifnot(all(as.data.frame(x[c(8584, 8642), "last.name"])[,1] == c("Capute", "Finnie")))
+
+  ## How about Jr.?
+
+  stopifnot(all(as.data.frame(x[c(8406, 8436, 8740, 8866), "last.name"])[,1] ==
+                  c("McDonald", "Worthington", "Martin", "Vargas" )))
+
 })
