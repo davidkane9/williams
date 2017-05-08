@@ -68,7 +68,6 @@ add_graduate_honors <- function(x){
   ## All types of Contract Majors become just Contract.
 
   x$major[stringr::str_detect(x$major, "Contract")] <- "Contract"
-  x$major[stringr::str_detect(x$major, "Art and Computer Science")] <- "Contract" ## Probably a typo in the catalog.
   x$major[stringr::str_detect(x$major, "Africa|Afro")] <- "Africana"
   x$major[stringr::str_detect(x$major, "Enviro")] <- "Environmental"
 
