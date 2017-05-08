@@ -34,7 +34,7 @@ create_graduates <- function(complete = FALSE){
   x <- gather_graduates()
   x <- add_graduate_names(x)
   x <- add_graduate_honors(x)
-  x <- add_gender(x)
+  x <- add_gender_graduates(x)
   x <- add_race(x)
 
 

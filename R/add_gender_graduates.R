@@ -1,6 +1,6 @@
-#' @title Add Gender
+#' @title Add Gender Graduates
 #'
-#' @description This function takes as input a data frame which includes the
+#' @description This function takes as input a data frame for graduates which includes the
 #'   \code{first.name} and \code{birth.year} for each row. It returns that data
 #'   frame along with new column \code{gender}, and other supporting
 #'   information.
@@ -19,7 +19,7 @@
 #'
 #' @export
 
-add_gender <- function(x){
+add_gender_graduates <- function(x){
 
   stopifnot(is.data.frame(x))
   stopifnot(all(c("birth.year", "first.name", "middle.name") %in% names(x)))
