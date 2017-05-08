@@ -52,7 +52,55 @@ add_faculty_department <- function(x) {
   ## should probably infer department as "Religion". However, this cannot be achieved with the the above str_detect mechansism
   ## and has to be explicitly handled here if required.
 
-  ## x$department[which(x$first.name == "Bernadette" & x$last.name == "Brooten")] <- "Religion"
+  ## First some specific departments which have been named otherwise in titles
+  x$department[which(stringr::str_detect(x$title, "Natural Science") & is.na(x$department))] <- "Geosciences"
+  x$department[which(stringr::str_detect(x$title, "Geology") & is.na(x$department))] <- "Geosciences"
+  x$department[which(stringr::str_detect(x$title, "Librarian") & is.na(x$department))] <- "Library"
+  x$department[which(stringr::str_detect(x$title, "Mystic") & is.na(x$department))] <- "Williams Mystic"
+  x$department[which(stringr::str_detect(x$title, "Legal") & is.na(x$department))] <- "Justice & Law"
+  x$department[which(stringr::str_detect(x$title, "Latina") & is.na(x$department))] <- "Laitna/o Studies"
+
+
+
+  x$department[which(x$first.name == "Bernadette" & x$last.name == "Brooten")] <- "Religion"
+  x$department[which(x$first.name == "Jennifer" & x$last.name == "Austin")] <- "Spanish"
+  x$department[which(x$first.name == "Gene" & x$last.name == "Bell-Villada")] <- "Spanish"
+  x$department[which(x$first.name == "Nicole" & x$last.name == "Desrosiers")] <- "French"
+  x$department[which(x$first.name == "Charles" & x$last.name == "Dew")] <- "History"
+  x$department[which(x$first.name == "Peter" & x$last.name == "Frost")] <- "History"
+  x$department[which(x$first.name == "Charles" & x$last.name == "Fuqua")] <- "Classics"
+  x$department[which(x$first.name == "Antonio" & x$last.name == "Giménez")] <- "Spanish"
+  x$department[which(x$first.name == "Gary" & x$last.name == "Jacobsohn")] <- "Political Science"
+  x$department[which(x$first.name == "Glyn" & x$last.name == "Norton")] <- "French"
+  x$department[which(x$first.name == "Ronald" & x$last.name == "Nigh")] <- "Environmental Studies"
+  x$department[which(x$first.name == "Lawrence" & x$last.name == "Raab")] <- "English"
+  x$department[which(x$first.name == "Gail" & x$last.name == "Newman")] <- "German"
+  x$department[which(x$first.name == "Michael" & x$last.name == "MacDonald")] <- "Political Science"
+  x$department[which(x$first.name == "Ralph" & x$last.name == "Bradburd")] <- "Economics"
+  x$department[which(x$first.name == "Kerry" & x$last.name == "Christensen")] <- "Classics"
+  x$department[which(x$first.name == "Robert" & x$last.name == "Dalzell")] <- "History"
+  x$department[which(x$first.name == "Stephen" & x$last.name == "Sheppard")] <- "Economics"
+  x$department[which(x$first.name == "Susan" & x$last.name == "Dunn")] <- "Leadership Studies"
+  x$department[which(x$first.name == "Soledad" & x$last.name == "Fox")] <- "Spanish"
+  x$department[which(x$first.name == "Isabel" & x$last.name == "Roche")] <- "French"
+  x$department[which(x$first.name == "Jana" & x$last.name == "Sawicki")] <- "Philosophy"
+  x$department[which(x$first.name == "James" & x$last.name == "Pethica")] <- "English"
+  x$department[which(x$first.name == "Wayne" & x$last.name == "Meeks")] <- "Religion"
+  x$department[which(x$first.name == "Jorge" & x$last.name == "Marcone")] <- "Environmental Studies"
+  x$department[which(x$first.name == "Brenna" & x$last.name == "Munro")] <- "Africana Studies"
+  x$department[which(x$first.name == "Luke" & x$last.name == "Bouvier")] <- "French"
+  x$department[which(x$first.name == "April" & x$last.name == "Overstreet")] <- "Spanish"
+  x$department[which(x$first.name == "Anthony" & x$last.name == "Nicastro")] <- "Italian"
+  x$department[which(x$first.name == "Barbara" & x$last.name == "Bell")] <- "Theatre"
+  x$department[which(x$first.name == "David" & x$last.name == "Kaiser")] <- "History"
+  x$department[which(x$first.name == "Leslie" & x$last.name == "Wingard")] <- "English"
+  x$department[which(x$first.name == "Youngshik" & x$last.name == "Bong")] <- "Asian Studies"
+  x$department[which(x$first.name == "Peter" & x$last.name == "Erickson")] <- "English"
+  x$department[which(x$first.name == "Leyla" & x$last.name == "Rouhi")] <- "English"
+  x$department[which(x$first.name == "William" & x$last.name == "Darrow")] <- "Religion"
+  x$department[which(x$first.name == "Barry" & x$last.name == "Goldstein")] <- "Art"
+  x$department[which(x$first.name == "Mark" & x$last.name == "Taylor")] <- "Religion"
+
 
   ## Several more to complete here...
 
