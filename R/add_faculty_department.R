@@ -60,8 +60,7 @@ add_faculty_department <- function(x) {
   x$department[which(stringr::str_detect(x$title, "Legal") & is.na(x$department))] <- "Justice & Law"
   x$department[which(stringr::str_detect(x$title, "Latina") & is.na(x$department))] <- "Laitna/o Studies"
 
-
-
+  ## Now, some specific ones for which department was obvious after a google search
   x$department[which(x$first.name == "Bernadette" & x$last.name == "Brooten")] <- "Religion"
   x$department[which(x$first.name == "Jennifer" & x$last.name == "Austin")] <- "Spanish"
   x$department[which(x$first.name == "Gene" & x$last.name == "Bell-Villada")] <- "Spanish"
