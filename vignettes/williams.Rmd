@@ -34,104 +34,6 @@ data(graduates_details)
 x <- graduates_details
 ```
 
-## Faculty
-
-```{r}
-data("faculty")
-data("faculty_details")
-```
-
-There were `r dim(faculty_details)[1]` faculty at Williams from `r min(faculty_details$year)` through `r max(faculty_details$year)`. The number of faculty averages about `r round(mean(table(faculty_details$year)))` per year. The largest class was `r as.numeric(tail(sort(table(faculty_details$year)), n = 1))` in 
-`r as.numeric(names(tail(sort(table(faculty_details$year)), n = 1)))`. The smallest was 
-`r as.numeric(head(sort(table(faculty_details$year)), n = 1))` in
-`r as.numeric(names(head(sort(table(faculty_details$year)), n = 1)))`. 
-
-##Gender
-
-##Race
-
-##Undegraduate Degree
-
-##Highest Degree
-
-###Department
-
-```{r}
-faculty.na <- faculty_details[which(!is.na(faculty_details$department)), ]
-grouped <-  group_by(faculty.na, year, department)
-summary.df <- summarise(grouped, number_of_faculty = n())
-summary.df.top10 <- summary.df[with(summary.df, order(-number_of_faculty)), ] %>% filter(year == max(summary.df$year))
-summary.df.top10 <- summary.df.top10[1:10, ]
-```
-
-
-
-The course catalogs do not directly provide the department for faculty. Instead, we try to infer the department by a faculty's title. For some, this is easy. For example, "Daniel P. Aalberts, Assistant Professor of Physics" definitely belongs to Physics, and "Colin C. Adams, Francis Christopher Oakley Third Century Professor of Mathematics" to Mathematics.    
-
-Others are more complicated. For example, consider "Bernadette Brooten, Croghan Bicentennial Visiting Professor in Biblical
-and Early Christian Studies, Spring Semester". Although, from Bernadette Brooten's title, it is fairly obvious that she is a Professor of Religion, her department cannot be inferred from the naive procedure with which we infer Colin Adams' or Daniel Alberts' department. We need to handle these cases separately.    
-
-Alas, others are, still, more complicated. "Jennifer Austin, Assistant Professor of Romance Languages" is a case in point: it is obvious that she teaches Romance Languages, but does she teach French, Italian, or Spanish? These cases need to be handled explicitly.       
-
-
-According to our findings, the top 10 departments in terms of faculty employed for the latest year we have data for (`r paste(max(faculty_details$year), max(faculty_details$year) + 1, sep = '-')`) are: 
-
-```{r}
-summary.df.top10  %>% as.data.frame()
-```
-
-```{r, fig.cap="Top 10 departments by number of faculty employed"}
-filter.summary <- summary.df %>% filter(department %in% summary.df.top10$department)
-p <- ggplot(data = filter.summary, aes(x = year, y = number_of_faculty, color = department)) + geom_line() + labs(x = "Year", y = "Number of faculty")
-
-p 
-```
-
-###Birth Year
-
-The course catalogs provide the year a faculty member graduated from college. Assuming (perhaps incorrectly in some cases) that she is 22 when she graduates, we infer her birth year.   
-
-```{r}
-faculty$age <- 2017 - faculty$birth.year
-oldest <- paste(faculty$first.name[which(faculty$age == max(faculty$age, na.rm = T))], faculty$last.name[which(faculty$age == max(faculty$age, na.rm = T))], sep = ' ')
-youngest <- paste(faculty$first.name[which(faculty$age == min(faculty$age, na.rm = T))], faculty$last.name[which(faculty$age == min(faculty$age, na.rm = T))], sep = ' ')
-```
-
-We find that the oldest faculty currently in the college are `r oldest[1]` and `r oldest[2]`. The youngest faculty currently in the college are `r youngest[1]` and `r youngest[2]`. 
-
-###MEAN STATS
-
-```{r}
-faculty$age <- 2017 - faculty$birth.year
-qplot(faculty$age, geom="histogram", fill = I("purple"), color = I("black") )
-
-```
-
-```{r}
-qplot(faculty$age[which(faculty$gender == "male")], geom="histogram", fill = I("blue"), color = I("black") )
-```
-
-```{r}
-qplot(faculty$age[which(faculty$gender == "female")], geom="histogram", fill = I("red"), color = I("black") )
-```
-
-The average age for both male and female faculty has constantly decreased over the years (with the only exception of slight increases during 2007 to 2009. This is, perhaps, expected in view of the financial crisis when Williams had to considerably downsize its faculty. Presumably, newer, and hence, younger faculty, were disproportionately axed).   
-
-```{r, fig.cap="Average age of faculty by gender"}
-faculty_details$age <- 2017 - faculty_details$birth.year
-grouped.year <- dplyr::group_by(faculty_details, year, gender)
-summary.year <- dplyr::summarise(grouped.year, avg_age = mean(age, na.rm = T))
-ggplot(data = summary.year, aes(x = year, y = avg_age, fill = gender)) + geom_bar(stat = "identity", position = "dodge")
-```
-
-
-####### FACULTY AGE BY RACE
-
-```{r}
-grouped.year <- dplyr::group_by(faculty_details, year, race)
-summary.year <- dplyr::summarise(grouped.year, avg_age = mean(age, na.rm = T))
-ggplot(data = summary.year, aes(x = year, y = avg_age, fill = race)) + geom_bar(stat = "identity", position = "dodge")
-```
 
 ## Graduates
 
@@ -217,4 +119,108 @@ As an example, we classify Paige Lauren Whidbee '16 as Black. She is the only Ph
 
 ```{r}
 x %>% select(year, race) %>% count(year, race) %>% mutate(percentage = n/sum(n)) %>% ggplot(aes(year, percentage, color = race)) + geom_line()
+```
+
+
+## Faculty
+
+```{r}
+data("faculty")
+data("faculty_details")
+```
+
+There were `r dim(faculty_details)[1]` faculty at Williams from `r min(faculty_details$year)` through `r max(faculty_details$year)`. The number of faculty averages about `r round(mean(table(faculty_details$year)))` per year. The largest class was `r as.numeric(tail(sort(table(faculty_details$year)), n = 1))` in 
+`r as.numeric(names(tail(sort(table(faculty_details$year)), n = 1)))`. The smallest was 
+`r as.numeric(head(sort(table(faculty_details$year)), n = 1))` in
+`r as.numeric(names(head(sort(table(faculty_details$year)), n = 1)))`. 
+
+##Gender
+
+
+
+##Race
+
+##Undegraduate Degree
+
+##Highest Degree
+
+###Department
+
+```{r}
+faculty.na <- faculty_details[which(!is.na(faculty_details$department)), ]
+grouped <-  group_by(faculty.na, year, department)
+summary.df <- summarise(grouped, number_of_faculty = n())
+summary.df.top10 <- summary.df[with(summary.df, order(-number_of_faculty)), ] %>% filter(year == max(summary.df$year))
+summary.df.top10 <- summary.df.top10[1:10, ]
+```
+
+
+
+The course catalogs do not directly provide the department for faculty. Instead, we try to infer the department by a faculty's title. For some, this is easy. For example, "Daniel P. Aalberts, Assistant Professor of Physics" definitely belongs to Physics, and "Colin C. Adams, Francis Christopher Oakley Third Century Professor of Mathematics" to Mathematics.    
+
+Others are more complicated. For example, consider "Bernadette Brooten, Croghan Bicentennial Visiting Professor in Biblical
+and Early Christian Studies, Spring Semester". Although, from Bernadette Brooten's title, it is fairly obvious that she is a Professor of Religion, her department cannot be inferred from the naive procedure with which we infer Colin Adams' or Daniel Alberts' department. We need to handle these cases separately.    
+
+Alas, others are, still, more complicated. "Jennifer Austin, Assistant Professor of Romance Languages" is a case in point: it is obvious that she teaches Romance Languages, but does she teach French, Italian, or Spanish? These cases need to be handled explicitly.       
+
+
+According to our findings, the top 10 departments in terms of faculty employed for the latest year we have data for (`r paste(max(faculty_details$year), max(faculty_details$year) + 1, sep = '-')`) are: 
+
+```{r}
+summary.df.top10  %>% as.data.frame()
+```
+
+```{r, fig.cap="Top 10 departments by number of faculty employed"}
+filter.summary <- summary.df %>% filter(department %in% summary.df.top10$department)
+p <- ggplot(data = filter.summary, aes(x = year, y = number_of_faculty, color = department)) + geom_line() + labs(x = "Year", y = "Number of faculty")
+
+p 
+```
+
+###Birth Year
+
+The course catalogs provide the year a faculty member graduated from college. Assuming (perhaps incorrectly in some cases) that she is 22 when she graduates, we infer her birth year.   
+
+```{r}
+faculty$age <- 2017 - faculty$birth.year
+oldest <- paste(faculty$first.name[which(faculty$age == max(faculty$age, na.rm = T))], faculty$last.name[which(faculty$age == max(faculty$age, na.rm = T))], sep = ' ')
+youngest <- paste(faculty$first.name[which(faculty$age == min(faculty$age, na.rm = T))], faculty$last.name[which(faculty$age == min(faculty$age, na.rm = T))], sep = ' ')
+```
+
+We find that the oldest faculty currently in the college are `r oldest[1]` and `r oldest[2]`. The youngest faculty currently in the college are `r youngest[1]` and `r youngest[2]`. 
+
+###MEAN STATS
+
+```{r}
+faculty$age <- 2017 - faculty$birth.year
+qplot(faculty$age, geom="histogram", fill = I("purple"), color = I("black") )
+
+```
+
+```{r}
+qplot(faculty$age[which(faculty$gender == "male")], geom="histogram", fill = I("cyan3"), color = I("black") )
+```
+
+```{r}
+qplot(faculty$age[which(faculty$gender == "female")], geom="histogram", fill = I("firebrick3"), color = I("black") )
+```
+
+The average age for both male and female faculty has constantly decreased over the years (with the only exception of slight increases during 2007 to 2009. This is, perhaps, expected in view of the financial crisis when Williams had to considerably downsize its faculty. Presumably, newer, and hence, younger faculty, were disproportionately axed).   
+
+`r tufte::margin_note("Note: College catalogs for 2015-2016 do not contain information about faculty's age." )`
+
+```{r, fig.cap="Average age of faculty by gender"}
+faculty_details$age <- 2017 - faculty_details$birth.year
+grouped.year <- dplyr::group_by(faculty_details, year, gender)
+summary.year <- dplyr::summarise(grouped.year, avg_age = mean(age, na.rm = T))
+ggplot(data = summary.year, aes(x = year, y = avg_age, fill = gender)) + geom_bar(stat = "identity", position = "dodge")
+```
+
+
+####### FACULTY AGE BY RACE
+
+```{r}
+grouped.year <- dplyr::group_by(faculty_details, year, race)
+summary.year <- dplyr::summarise(grouped.year, avg_age = mean(age, na.rm = T))
+ggplot(data = summary.year, aes(x = year, y = avg_age, fill = race)) + geom_line()
 ```
