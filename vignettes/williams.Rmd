@@ -137,8 +137,15 @@ There were `r dim(faculty_details)[1]` faculty at Williams from `r min(faculty_d
 ##Gender
 
 
+```{r}
+faculty_details %>% select(year, gender) %>% count(year, gender) %>% mutate(percentage = n/sum(n)) %>% ggplot(aes(year, percentage, color = gender)) + geom_line()
+```
 
 ##Race
+
+```{r}
+faculty_details %>% select(year, race) %>% count(year, race) %>% mutate(percentage = n/sum(n)) %>% ggplot(aes(year, percentage, color = race)) + geom_line()
+```
 
 ##Undegraduate Degree
 
@@ -222,5 +229,5 @@ ggplot(data = summary.year, aes(x = year, y = avg_age, fill = gender)) + geom_ba
 ```{r}
 grouped.year <- dplyr::group_by(faculty_details, year, race)
 summary.year <- dplyr::summarise(grouped.year, avg_age = mean(age, na.rm = T))
-ggplot(data = summary.year, aes(x = year, y = avg_age, fill = race)) + geom_line()
+ggplot(data = summary.year, aes(x = year, y = avg_age, fill = race)) + geom_bar(stat = "identity", position = "dodge")
 ```
