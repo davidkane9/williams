@@ -46,6 +46,14 @@ There were `r dim(faculty_details)[1]` faculty at Williams from `r min(faculty_d
 `r as.numeric(head(sort(table(faculty_details$year)), n = 1))` in
 `r as.numeric(names(head(sort(table(faculty_details$year)), n = 1)))`. 
 
+##Gender
+
+##Race
+
+##Undegraduate Degree
+
+##Highest Degree
+
 ###Department
 
 ```{r}
