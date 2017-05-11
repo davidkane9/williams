@@ -63,7 +63,7 @@ Cecilia Chang #  Asian Studies Department #
 Jinhwa Chang #  Asian Studies Department #
 Matthew Chao #  Economics Department #
 Jessica ***Chapman #  History Department #
-C. Ondine Chavoya #  Art Department #
+Ondine Chavoya #  Art Department #
 Lauren M. ++Childs #  Mathematics and Statistics #
 Kerry A. Christensen #  Classics Department #
 Jennifer E. Chuks #  Athletics Department #
@@ -151,7 +151,7 @@ Kim Gutschow #  Religion Department #
 Catherine Robinson Hall #  Williams-Mystic Program #
 Amie A. Hane #  Psychology Department #
 Jim A. ++Hanson #  Economics Department #
-J. Albert +Harrill #  Religion Department #
+Albert +Harrill #  Religion Department #
 Nicole T. ++Harrington #  Psychology Department #
 Mamoru Hatakeyama #  Asian Studies Department #
 Kristen M. Haut #  Psychology Department #
@@ -174,8 +174,7 @@ Kiaran Honderich #  Women #
 Scott D. Honecker #  Athletics Department #
 Meredith C. Hoppin #  Classics Department #
 Catherine N. Howe #  Art Department #
-Nicolas C. Howe #  Ctr #
-NA -Environmental Studies # NA #
+Nicolas C. Howe # Environmental Studies #
 Vivian L. Huang #  Women #
 Joan C. Huguet #  Music Department #
 Jeffrey I. Israel #  Religion Department #
@@ -184,13 +183,11 @@ Frank Jackson #  Art Department #
 Sarah A. Jacobson #  Economics Department #
 Andrew W. Jaffe #  Music Department #
 Joy A. ***James #  Humanities Department #
-Ju **Jang # NA #
- Art Department -Yu Scarlett # NA #
+Ju-Yu **Scarlet Jang # Art Department #
 Cathy M. Johnson #  Political Science Department #
 Eugene J. Johnson #  Art Department #
 Liza **Johnson #  Art Department #
 Stewart D. *Johnson #  Mathematics and Statistics #
-NA ++Johnson # NA #
 Melanie -DeBaufre #  Religion Department #
 Walter Johnston #  English Department #
 Kevin M. Jones #  Physics Department #
@@ -209,18 +206,15 @@ Kathryn R. Kent #  English Department #
 Bruce Kieffer #  German and Russian Department #
 Elizabeth A. Kieffer #  German and Russian Department #
 Doug Kiel #  American Studies Program #
-Richard J. King #  Williams #
-NA -Mystic Program # NA #
+Richard J. King #  Williams-Mystic Program #
 Kris N. ***Kirby #  Psychology Department #
 Roger A. Kittleson #  History Department #
 John E. Kleiner #  English Department #
 Bernhard Klingenberg #  Mathematics and Statistics #
 Eric *Knibbs #  History Department #
-Pia M. Kohler #  Ctr #
-NA -Environmental Studies # NA #
+Pia M. Kohler #  Environmental Studies #
 Thomas A. **Kohut #  History Department #
-Elizabeth Kolbert #  Ctr #
-NA -Environmental Studies # NA #
+Elizabeth Kolbert #  Environmental Studies #
 Christophe A. Kone #  German and Russian Department #
 Nate Kornell #  Psychology Department #
 Julia L. +Kowalski #  Anthropology and Sociology #
@@ -257,17 +251,14 @@ Jenna L. MacIntire #  Biology Department #
 James E. ***Mahon Jr. #  Political Science Department #
 Protik K. Majumder #  Physics Department #
 Kate Maloney #  Athletics Department #
-NA Manigault # NA #
-James A. -Bryant #  Africana Studies #
-NA Manigault # NA #
+James A. Manigault-Bryant #  Africana Studies #
 Rhon S. -Bryant #  Africana Studies #
 Patricia M. Manning #  Athletics Department #
 Christopher +Marcisz #  Anthropology and Sociology #
 George E. Marcus #  Political Science Department #
 Luana S. **Maroja #  Biology Department #
 Matthew M. Marsit #  Music Department *Martin #
-NA Martinez # NA #
-Michael -Raguso #  Romance Languages Department #
+Michael Martinez-Raguso #  Romance Languages Department #
 Martha J. Marvin #  Neuroscience Program #
 Christine L. Mason #  Athletics Department #
 James McAllister #  Political Science Department #
@@ -298,14 +289,12 @@ Steven E. Nafziger #  Economics Department #
 Asvelt J. Nduwumwami #  Chemistry Department #
 Gail M. Newman #  German and Russian Department #
 Anthony J. Nicastro #  Romance Languages Department #
-Michael T. Nishizaki #  Williams #
-NA -Mystic Program # NA #
+Michael T. Nishizaki #  Williams-Mystic Program #
 Nimu Njoya #  Political Science Department #
 James L. **Nolan Jr. #  Anthropology and Sociology #
 Christopher M. B. Nugent #  Asian Studies Department #
 Carol **Ockman #  Art Department #
-Kristen Oehlrich #  Graduate Program #
-NA -Art History # NA #
+Kristen Oehlrich #  Graduate Program-Art History #
 Will Olney #  Economics Department #
 Brooke Olson Blair #  Chemistry Department #
 Allison Pacelli #  Mathematics and Statistics #
@@ -316,8 +305,7 @@ Janine Parker #  Dance Department #
 Jamie L. Parra #  American Studies Program #
 Jay M. ***Pasachoff #  Astronomy Department #
 Darel E. Paul #  Political Science Department #
-NA Peacock # NA #
-Enrique -Lopez #  Chemistry Department #
+Enrique Peacock-Lopez #  Chemistry Department #
 Lori A. +Pedersen #  Mathematics and Statistics #
 Julie A. Pedroni #  Philosophy Department #
 Peter L. Pedroni #  Economics Department #
@@ -339,23 +327,19 @@ Anne Reinhardt #  History Department #
 Mark T. Reinhardt #  Political Science Department #
 Bernard J. *Rhie #  English Department #
 David P. **Richardson #  Chemistry Department #
-NA Ringer # NA #
-Kathryn -Hilfinger #  Romance Languages Department #
-Mary Roberts #  Graduate Program #
-NA -Art History # NA #
+Kathryn Ringer-Hilfinger #  Romance Languages Department #
+Mary Roberts #  Graduate Program-Art History #
 Neil Roberts #  Africana Studies #
 Natalie ++Robin #  Theatre Department #
 Mari Rodriguez #  Art Department #
-Adam M. Romero #  Ctr #
-NA -Environmental Studies # NA #
+Adam M. Romero #  Environmental Studies #
 Shawn J. Rosenheim #  English Department #
 Leyla Rouhi #  Romance Languages Department #
 Reginold A. Royston #  Africana Studies #
 Merida **Rua #  Latina/o Studies Program #
 Benjamin B. Rubin #  Classics Department #
 Marketa ++Rulikova #  Anthropology and Sociology #
-NA Saint # NA #
-Sophie F. -Just #  Romance Languages Department #
+Sophie F. Saint-Just #  Romance Languages Department #
 Michael Samson #  Economics Department #
 Marlene J. Sandstrom #  Psychology Department #
 Noah J. Sandstrom #  Psychology Department #
@@ -371,18 +355,16 @@ Cheryl *Shanks #  Political Science Department #
 James R. ***Shepard #  English Department #
 Karen L. Shepard #  English Department #
 Stephen C. ***Sheppard #  Economics Department #
-W. Anthony **Sheppard #  Music Department #
+Anthony **Sheppard #  Music Department #
 Olga Shevchenko #  Anthropology and Sociology #
 Heeryoon Shin #  Art Department #
 Grant Shoffstall #  Anthropology and Sociology #
-NA ***Shore # NA #
-Lara D. -Sheppard #  Economics Department #
+Lara D. ***Shore-Sheppard #  Economics Department #
 Charlotte +Silander #  Global Studies #
 Cesar E. Silva #  Mathematics and Statistics #
 Christina Simko #  Anthropology and Sociology #
 Aishah Shahidah ++Simmons #  Africana Studies #
-Marc A. ++Simpson #  Graduate Program #
-NA -Art History # NA #
+Marc A. ++Simpson #  Graduate Program -Art History #
 Kavita Singh #  Oakley Ctr for Human & Soc Sci #
 Shanti M. Singham #  History Department #
 Eiko Maruko *Siniawer #  History Department #
@@ -420,8 +402,7 @@ Anicia C. Timberlake #  Music Department #
 Claire S. Ting #  Biology Department #
 David J. Traven #  Political Science Department #
 Edwin M. ++Truman #  Economics Department #
-NA Tucker # NA #
-David R. -Smith #  Physics Department #
+David R.Tucker -Smith #  Physics Department #
 Damian Turner #  Biology Department #
 Janneke van de Stadt #  German and Russian Department #
 Kristen ++van Ginhoven #  Theatre Department #
