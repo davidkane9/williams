@@ -79,6 +79,52 @@ p <- ggplot(data = filter.summary, aes(x = year, y = number_of_faculty, color = 
 p 
 ```
 
+###Birth Year
+
+The course catalogs provide the year a faculty member graduated from college. Assuming (perhaps incorrectly in some cases) that she is 22 when she graduates, we infer her birth year.   
+
+```{r}
+faculty$age <- 2017 - faculty$birth.year
+oldest <- paste(faculty$first.name[which(faculty$age == max(faculty$age, na.rm = T))], faculty$last.name[which(faculty$age == max(faculty$age, na.rm = T))], sep = ' ')
+youngest <- paste(faculty$first.name[which(faculty$age == min(faculty$age, na.rm = T))], faculty$last.name[which(faculty$age == min(faculty$age, na.rm = T))], sep = ' ')
+```
+
+We find that the oldest faculty currently in the college are `r oldest[1]` and `r oldest[2]`. The youngest faculty currently in the college are `r youngest[1]` and `r youngest[2]`. 
+
+###MEAN STATS
+
+```{r}
+faculty$age <- 2017 - faculty$birth.year
+qplot(faculty$age, geom="histogram", fill = I("purple"), color = I("black") )
+
+```
+
+```{r}
+qplot(faculty$age[which(faculty$gender == "male")], geom="histogram", fill = I("blue"), color = I("black") )
+```
+
+```{r}
+qplot(faculty$age[which(faculty$gender == "female")], geom="histogram", fill = I("red"), color = I("black") )
+```
+
+The average age for both male and female faculty has constantly decreased over the years (with the only exception of slight increases during 2007 to 2009. This is, perhaps, expected in view of the financial crisis when Williams had to considerably downsize its faculty. Presumably, newer, and hence, younger faculty, were disproportionately axed).   
+
+```{r, fig.cap="Average age of faculty by gender"}
+faculty_details$age <- 2017 - faculty_details$birth.year
+grouped.year <- dplyr::group_by(faculty_details, year, gender)
+summary.year <- dplyr::summarise(grouped.year, avg_age = mean(age, na.rm = T))
+ggplot(data = summary.year, aes(x = year, y = avg_age, fill = gender)) + geom_bar(stat = "identity", position = "dodge")
+```
+
+
+####### FACULTY AGE BY RACE
+
+```{r}
+grouped.year <- dplyr::group_by(faculty_details, year, race)
+summary.year <- dplyr::summarise(grouped.year, avg_age = mean(age, na.rm = T))
+ggplot(data = summary.year, aes(x = year, y = avg_age, fill = race)) + geom_bar(stat = "identity", position = "dodge")
+```
+
 ## Graduates
 
 There were `r dim(x)[1]` graduates of Williams from `r min(x$year)` through `r max(x$year)`. The number of graduates averages about `r round(mean(table(x$year)))` per year. The largest class was `r as.numeric(tail(sort(table(x$year)), n = 1))` in 
