@@ -136,6 +136,15 @@ There were `r dim(faculty_details)[1]` faculty at Williams from `r min(faculty_d
 
 ##Gender
 
+We infer the gender for faculty using the `gender` and `genderizeR` package, as in the case of graduates. The gender variable for faculty currently employed at Williams looks like the following: 
+
+```{r}
+round(prop.table(table(faculty$gender)), 3)
+```
+
+These figures are similar to those [reported](https://provost.williams.edu/files/williams_cds_1617.pdf) by the Williams 2016-2017 Common Data Set. 
+
+
 
 ```{r}
 faculty_details %>% select(year, gender) %>% count(year, gender) %>% mutate(percentage = n/sum(n)) %>% ggplot(aes(year, percentage, color = gender)) + geom_line()
@@ -143,13 +152,52 @@ faculty_details %>% select(year, gender) %>% count(year, gender) %>% mutate(perc
 
 ##Race
 
+As with graduates, we use the wru package to estimate race. The totals for the year `r paste(faculty$year[1], faculty$year[1] + 1, sep = ',')`:
+
+```{r}
+tab <- table(faculty$race, exclude = NULL)
+```
+
+Once again, we seem to be overestimating the number of white faculty. Information about racial breakdown of faculty at Williams is unavailable, but the Williams 2016-2017 Common Data Set [reports]((https://provost.williams.edu/files/williams_cds_1617.pdf)) that the percentage of minority faculty is `r round(60/278, digits = 2)`, while we predict it to be `r round(sum(tab[1:4])/ sum(tab), digits = 2)`. The individual breakdown is: 
+
+```{r}
+round(prop.table(table(faculty$race)), 3)
+```
+
+For the most part, our prediction for Asian and Hispanic faculty seems to be correct. In fact, in 2016-2017, James A. Blair is the only faculty member misclasified as "Asian", and Janis Bravo and Peter Monteil were the two misclassified as Hispanic. 
+
+The problem lies in differentiating between White and Black faculty. In 2016-2017, about half of faculty classified as "Black", are not in fact, African-American. For example, consider [Richard De Veaux](https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/8/000/253/054/273cd6d.jpg). 
+
+
+
 ```{r}
 faculty_details %>% select(year, race) %>% count(year, race) %>% mutate(percentage = n/sum(n)) %>% ggplot(aes(year, percentage, color = race)) + geom_line()
 ```
 
 ##Undegraduate Degree
 
+The `faculty` and `faculty_details` datasets provide information about faculty's undergraduate college degree, the conferring school, and the year the degree was received. 
+
+The top 10 most common colleges that faculty attended are: 
+
+```{r}
+college.summary <- dplyr::filter(faculty, !is.na(first.degree.school)) %>% dplyr::group_by(first.degree.school) %>% summarise(n = n())
+college.summary <- college.summary[with(college.summary, order(-n)), ]
+college.summary[1:10, ] %>% as.data.frame()
+```
+
+
 ##Highest Degree
+
+The `faculty` and `faculty_details` datasets provide information about the highest degree earned by faculty, the conferring school, and the year the degree was received. 
+
+The top 10 most common colleges that faculty attended are: 
+
+```{r}
+college.summary <- dplyr::filter(faculty, !is.na(last.degree.school)) %>% dplyr::group_by(last.degree.school) %>% summarise(n = n())
+college.summary <- college.summary[with(college.summary, order(-n)), ]
+college.summary[1:10, ] %>% as.data.frame()
+```
 
 ###Department
 
@@ -194,7 +242,7 @@ oldest <- paste(faculty$first.name[which(faculty$age == max(faculty$age, na.rm =
 youngest <- paste(faculty$first.name[which(faculty$age == min(faculty$age, na.rm = T))], faculty$last.name[which(faculty$age == min(faculty$age, na.rm = T))], sep = ' ')
 ```
 
-We find that the oldest faculty currently in the college are `r oldest[1]` and `r oldest[2]`. The youngest faculty currently in the college are `r youngest[1]` and `r youngest[2]`. 
+We find that the oldest faculty currently in the college is `r oldest[1]`. The youngest faculty currently in the college is `r youngest[1]`. 
 
 ###MEAN STATS
 
@@ -226,8 +274,11 @@ ggplot(data = summary.year, aes(x = year, y = avg_age, fill = gender)) + geom_ba
 
 ####### FACULTY AGE BY RACE
 
+
 ```{r}
 grouped.year <- dplyr::group_by(faculty_details, year, race)
 summary.year <- dplyr::summarise(grouped.year, avg_age = mean(age, na.rm = T))
 ggplot(data = summary.year, aes(x = year, y = avg_age, fill = race)) + geom_bar(stat = "identity", position = "dodge")
 ```
+
+
