@@ -43,8 +43,16 @@ create_faculty <- function(complete = FALSE){
   x <- add_faculty_degrees(x)
   x$birth.year <- x$first.degree.year - 22
   x <- add_faculty_titles(x)
-  x <- add_gender(x)
+  x <- add_gender_faculty(x)
   x <- add_faculty_department(x)
+  ## But, for the 2015-2016 catalog, titles are weird: we are provided with departments, instead of a title.
+  ## Now that we have added the department column, let's make title, rank, and status for all faculty from 2015 because
+  ## we have no information on these.
+  ## Admittedly, this is a stupid hack.. But it is the only way around I can think of without major refactoring
+  x$title[which(x$year == 2015)] <- NA
+  x$rank[which(x$year == 2015)] <- NA
+  x$status[which(x$year == 2015)] <- NA
+
   x <- add_race(x)
 
 
