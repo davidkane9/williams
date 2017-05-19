@@ -2,14 +2,8 @@
 title: "Williams College Faculty and Graduates"
 author: "Karan Tibrewal and David Kane"
 date: "`r Sys.Date()`"
-output:
-  tufte::tufte_html: default
-  tufte::tufte_handout:
-    citation_package: natbib
-    latex_engine: xelatex
-  tufte::tufte_book:
-    citation_package: natbib
-    latex_engine: xelatex
+output: html_document
+runtime: shiny
 ---
 
 
@@ -30,6 +24,8 @@ library(dplyr)
 library(stringr)
 library(ggplot2)
 library(williamsmetrics)
+library(shiny)
+library(shinydashboard)
 data(graduates_details)
 x <- graduates_details
 ```
@@ -67,20 +63,24 @@ x[str_split(x$full.name, " ", simplify = TRUE)[,5] != "",] %>% select(year, full
 
 ### Gender
 
-The course catalogs do not provide the gender of the graduates, so we estimate it by using the **gender** package. 
-`r tufte::margin_note("At some point, we hope to explore a more advanced approach: Kamil Wais (2016). genderizeR: Gender Prediction Based on First Names. R package version 2.0.0. https://CRAN.R-project.org/package=genderizeR")` Our gender variable looks like:
+The course catalogs do not provide the gender of the graduates, so we estimate it by using the [gender](https://cran.r-project.org/web/packages/gender/gender.pdf) and [genderizeR](https://cran.r-project.org/web/packages/genderizeR/index.html) package. 
+
+These packages predict gender on the basis of names. We first use the `gender` package to predict gender according to the first and middle names of graduates. Alas, the `gender` package focuses heavily on American names, and therefore, this approach is ineffective for non-American names like DoHyun and Qiang. 
+
+To account for this shortcoming, we supplement the `gender` package with the `genderizeR` package which provides more global coverage. However, this is a paid service that limits free access. So, we used it once and then saved the results.
+
+Our gender variable looks like:
 
 ```{r}
 table(x$gender, exclude = NULL)
 ```
 
-The large number of NAs is a result of the gender package's focus on American names. Consider the most common problem cases:
 
 ```{r}
 x %>% filter(is.na(gender)) %>% select(first.name, gender) %>% group_by(first.name, gender) %>% summarize(count = n()) %>% arrange(desc(count)) %>% as.data.frame() %>% head(12)
 ```
 
-Most of the NAs for gender are due to unique first names, names that appear only once amoung the `r dim(x)[1]` graduates. Eventually, we might fix some of these by hand, especially those --- like José --- for which we know the correct gender. There might also be simple ways to add international names. But, for now, we see no reason why these NA should bias any of the later analysis. 
+Most of the NAs for gender are due to unique first names, names that appear only once amoung the `r dim(x)[1]` graduates. Eventually, we might fix some of these by hand. But, for now, we see no reason why these NA should bias any of the later analysis. 
 
 ```{r}
 x %>% select(year, gender) %>% count(year, gender) %>% mutate(percentage = n/sum(n)) %>% ggplot(aes(year, percentage, color = gender)) + geom_line()
@@ -114,9 +114,57 @@ Our estimates for non-White students are too low. First, we don't even find the 
 As an example, we classify Paige Lauren Whidbee '16 as Black. She is the only Phi Beta Kappa member of the class of 2016 that we so classify. However, according to this [photo](http://ephsports.williams.edu/sports/wgolf/2014-15/bios/whidbee_paige_2xmt?view=bio), she probably isn't African-American.
 
 
-
-
-
 ```{r}
 x %>% select(year, race) %>% count(year, race) %>% mutate(percentage = n/sum(n)) %>% ggplot(aes(year, percentage, color = race)) + geom_line()
+```
+
+###Phi Betta Kappa and Sigma Xi
+
+The college inducts students of the highest academic standing to the [Phi Betta Kappa Society](http://web.williams.edu/admin/registrar/faq/distinct.html). At the end of the junior year, all students in the highest five percent of the class, ranked by cumulative grade point average, shall be eligible for election provided they have met the requirements and have completed enough courses to be considered candidates for the B.A. degree in the following year.   
+
+The [Williams College Sigma Xi Chapter](https://science.williams.edu/student-faculty-research/sigma-xi/) recognizes students "graduating science students who have demonstrated exceptional ability and promise for further contributions to the advancement of scientific research".
+
+If the membership of these societies serve as effective proxies for academic distinction at Williams, it might be potentially interesting to see how different student groups (department, race, gender, etc.) perform. The following `Shiny` app explores this: 
+
+```{r}
+
+header <- dashboardHeader(title = "Williams College")
+
+sidebar <- dashboardSidebar(
+  sidebarMenu(
+    menuItem("Phi Betta Kappa", tabName = "PBK", selected = TRUE),
+    menuItem("Sigma Xi", tabName = "SX")
+  )
+)
+body <- dashboardBody(
+  tabItems(
+    tabItem(tabName = "PBK",
+            fluidRow(
+              box(title = "Explore by Gender", 
+                  plotOutput("pbkGender"),
+                  sliderInput("timelinePbkG", "Timeline:", min(graduates$year), max(graduates$year), 
+                              value = c(min(graduates$year), max(graduates$year))),
+                   checkboxGroupInput("racePbkG", "Races to show:",
+                     c("White" = "whi",
+                       "Black" = "bla",
+                       "Hispanic" = "his", 
+                       "Other" = "oth"))
+                  )
+            ),
+            fluidRow(
+              box(
+                  ),
+              box()
+            )
+             
+    ),
+
+    tabItem(tabName = "SX",
+      h2("Widgets tab content")
+    )
+  )
+)
+
+dashboardPage(skin = "purple", header, sidebar, body)
+
 ```
