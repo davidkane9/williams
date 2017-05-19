@@ -12,7 +12,18 @@
 #'
 #' @format
 #' \describe{
-#'   \item{gender}{gender as determined by the \code{gender} package.}
+#'   \item{gender}{character, gender as determined by the \code{gender} package.}
+#'     \item{p_male.first}{numeric, probability that the individual is a male given their first name, as determined by the
+#'     \code{gender} packege}
+#'     \item{p_female.first}{numeric, probability that the individual is a female given their first name, as determined by the
+#'     \code{gender} packege}
+#'     \item{gender.first}{character,gender of an individual given their first name, as determined by the  \code{gender} packege}
+#'     \item{p_male.middle}{numeric, probability that the individual is a male given their middle name, as determined by the
+#'     \code{gender} packege}
+#'     \item{p_female.middle}{numeric, probability that the individual is a female given their middle name, as determined by the
+#'     \code{gender} packege}
+#'     \item{gender.middle}{character,gender of an individual given their middle name, as determined by the  \code{gender} packege}
+#'     \item{gender.g}{character, gender of an individual, as determined by \code{genderizeR} package}
 #'   }
 #'
 #' @importFrom dplyr %>%

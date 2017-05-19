@@ -45,6 +45,8 @@ The `graduates_details` dataset expands on the above, and provides the following
  names(graduates_details)[! names(graduates_details) %in%  names(graduates)] %>% as.data.frame()
 ```
 
+For details on these variables, try `?graduates` or `?graduates_details` on your R console.    
+
 The datasets are created by scraping data from the Course Catalogs which are saved as `.txt` files in the `inst/extdata` directory. These files follow the naming convention of `graduates-<YEAR (YYYY)>-<YEAR + 1 (YYYY)>`, where `YEAR` is the year for the relevant catalog. For example, the text file with information about graduates from 2000 is saved as `graduates-2000-2001.txt`. For convenience, we only save the pages containing information about graduates from the course catalogs to these files. 
 
 Let us look inside these text files. The following is an abstract from `graduates-2000-2001.txt`. We will use it as an example to demonstrate the data munging procedure for gradutes: 
@@ -151,5 +153,9 @@ x %>% dplyr::select(last.name, p_whi, p_bla, p_his, p_asi,p_oth,race) %>% as.dat
 
 ###Summary
 
+The functions described above are called from the `create_graduates` function, that takes in a logical parameter `complete`. Calling `create_graduates` with `complete = TRUE` produces the `graduates_details` data set. If `complete = FALSE`, `create_graduates` trims a dozen or so extraneous columns from `graduates_details` to produce the `graduates` dataset.
+
+`graduates <- create_graduates(complete = FALSE)`             
+`graduates_details <- create_graduates(complete = TRUE)`
 
 

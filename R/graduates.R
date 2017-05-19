@@ -8,7 +8,6 @@
 #' @source \url{https://cran.r-project.org/web/packages/gender/README.html}
 #' @source \url{https://cran.r-project.org/web/packages/wru/index.html}
 #'
-#' @aliases graduates_details
 #'
 #' @format A data frame with 8,357 rows and 10 variables:
 #' \describe{

@@ -3,7 +3,6 @@
 \docType{data}
 \name{graduates}
 \alias{graduates}
-\alias{graduates_details}
 \title{Williams College Graduates}
 \format{A data frame with 8,357 rows and 10 variables:
 \describe{

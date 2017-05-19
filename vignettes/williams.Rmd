@@ -218,7 +218,7 @@ The `faculty` and `faculty_details` datasets provide information about the highe
 The top 10 most common graduate programs that faculty attended are: 
 
 ```{r}
-college.summary <- dplyr::filter(faculty, !is.na(last.degree.school)) %>% dplyr::group_by(last.degree.school) %>% summarise(n = n())
+college.summary <- dplyr::filter(faculty, !is.na(last.degree.school), department == "Computer Science") %>% dplyr::group_by(last.degree.school) %>% summarise(n = n())
 college.summary$percent <- round(college.summary$n / sum(college.summary$n) * 100,2)
 college.summary <- college.summary[with(college.summary, order(-n)), ]
 college.summary[1:20, ] %>% as.data.frame()

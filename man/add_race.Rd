@@ -4,7 +4,12 @@
 \alias{add_race}
 \title{Add Graduate Race}
 \format{\describe{
-  \item{race}{Graduate's race as determined by the wru package.}
+  \item{p_whi}{Prosterior probability that the individual's race is White, as determined by the wru package}
+  \item{p_bla}{Prosterior probability that the individual's race is Black, as determined by the wru package}
+  \item{p_asi}{Prosterior probability that the individual's race is Asian, as determined by the wru package}
+  \item{p_his}{Prosterior probability that the individual's race is Hispanic, as determined by the wru package}
+  \item{p_oth}{Prosterior probability that the individual's race is none of the above, as determined by the wru package}
+  \item{race}{Graduate's race as the racial category with the highest prosterior probability.}
   }}
 \usage{
 add_race(x)
