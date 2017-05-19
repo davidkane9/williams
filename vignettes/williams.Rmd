@@ -134,7 +134,7 @@ There were `r dim(faculty_details)[1]` faculty at Williams from `r min(faculty_d
 `r as.numeric(head(sort(table(faculty_details$year)), n = 1))` in
 `r as.numeric(names(head(sort(table(faculty_details$year)), n = 1)))`. 
 
-##Gender
+###Gender
 
 We infer the gender for faculty using the `gender` and `genderizeR` package, as in the case of graduates. The gender variable for faculty currently employed at Williams looks like the following: 
 
@@ -147,10 +147,10 @@ These figures are similar to those [reported](https://provost.williams.edu/files
 
 
 ```{r}
-faculty_details %>% select(year, gender) %>% count(year, gender) %>% mutate(percentage = n/sum(n)) %>% ggplot(aes(year, percentage, color = gender)) + geom_line()
+faculty_details %>% select(year, gender) %>% count(year, gender) %>% mutate(percentage = n/sum(n)) %>% ggplot(aes(year, percentage, color = gender)) + geom_line() + labs(title = "Comosition of Williams Faculty by Gender", x = "Year", y = "Percentage")
 ```
 
-##Race
+###Race
 
 As with graduates, we use the wru package to estimate race. The totals for the year `r paste(faculty$year[1], faculty$year[1] + 1, sep = ',')`:
 
@@ -171,14 +171,16 @@ The problem lies in differentiating between White and Black faculty. In 2016-201
 
 
 ```{r}
-faculty_details %>% select(year, race) %>% count(year, race) %>% mutate(percentage = n/sum(n)) %>% ggplot(aes(year, percentage, color = race)) + geom_line()
+faculty_details %>% select(year, race) %>% count(year, race) %>% mutate(percentage = n/sum(n)) %>% ggplot(aes(year, percentage, color = race)) + geom_line() + labs(title = "Comosition of Williams Faculty by Race", x = "Year", y = "Percentage")
 ```
 
-##Undegraduate Degree
+###Undegraduate Degree
 
-The `faculty` and `faculty_details` datasets provide information about faculty's undergraduate college degree, the conferring school, and the year the degree was received. 
+The course catalogs provide information about academic degrees earned by faculty. For a given faculty, we infer their undergraduate, or lowest degree, as the first degree we have information about. 
 
-The top 10 most common colleges that faculty attended are: 
+The `faculty` and `faculty_details` datasets provide information about faculty's undergraduate college degree (as defined above), the conferring school, and the year the degree was received. 
+
+The top 10 most common undergraduate programs that faculty attended are: 
 
 ```{r}
 college.summary <- dplyr::filter(faculty, !is.na(first.degree.school)) %>% dplyr::group_by(first.degree.school) %>% summarise(n = n())
@@ -187,17 +189,82 @@ college.summary[1:10, ] %>% as.data.frame()
 ```
 
 
-##Highest Degree
+###Highest Degree
 
-The `faculty` and `faculty_details` datasets provide information about the highest degree earned by faculty, the conferring school, and the year the degree was received. 
+The `faculty` and `faculty_details` datasets provide information about the highest degree earned by faculty (as inferred by course catalogs), the conferring school, and the year the degree was received. 
 
-The top 10 most common colleges that faculty attended are: 
+The top 10 most common graduate programs that faculty attended are: 
 
 ```{r}
 college.summary <- dplyr::filter(faculty, !is.na(last.degree.school)) %>% dplyr::group_by(last.degree.school) %>% summarise(n = n())
 college.summary <- college.summary[with(college.summary, order(-n)), ]
 college.summary[1:10, ] %>% as.data.frame()
 ```
+
+##Title
+
+The college's course catalogs provide the job title for faculty members. They are interesting because, as we will see later, they give us information about facultys' rank and department. 
+
+The five most common titles are: 
+
+```{r}
+ sort(table(faculty$title), decreasing = T)[1:5] %>% as.data.frame() %>% dplyr::select(title = Var1, count = Freq)
+```
+
+
+##Rank
+
+```{r}
+x <- select(faculty_details, start.year = year, first.name, last.name, start.rank = rank)
+faculty_start.rank <- dplyr::left_join(faculty, 
+                            x, 
+                            by = c("first.name", "last.name", "start.year"))
+```
+
+We infer the rank of faculty as one of Professor, Assistant Professor, Lecturer, Associate Professor, Artist-in-Residence, or Fellow from their job title. For example, we classify the rank of "Daniel P. Aalberts, Assistant Professor of Physics" as "Assistant Professor", and  that for "Irma Mayorga, Gauius Charles Bolin Fellow" as "Fellow". 
+
+Among faculty currently employed at Williams, the rank variable looks like: 
+
+```{r}
+table(faculty_start.rank$rank)
+```
+ 
+```{r}
+grouped <- dplyr::filter(faculty, !is.na(rank)) %>% dplyr::group_by(race, rank)
+summarised <- dplyr::summarise(grouped, n = n())
+ggplot(data = summarised, aes(x = rank, y = n, fill = race)) + 
+  geom_bar(stat = "identity", position = "dodge") + 
+  labs(title = "Faculty Rank by Race", x = "Rank", y = "Count") + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+```
+
+```{r}
+grouped <- dplyr::filter(faculty, !is.na(rank)) %>% dplyr::group_by(gender, rank)
+summarised <- dplyr::summarise(grouped, n = n())
+ggplot(data = summarised, aes(x = rank, y = n, fill = gender)) + 
+  geom_bar(stat = "identity", position = "dodge") + 
+  labs(title = "Faculty Rank by Gender", x = "Rank", y = "Count") + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+```
+
+```{r}
+assistant_prof <- faculty_start.rank[which(faculty_start.rank$rank == "Professor" & 
+                                           faculty_start.rank$start.rank == "Assistant Professor"), ] 
+assoc_prof <- faculty_start.rank[which(faculty_start.rank$rank == "Professor" & 
+                                           faculty_start.rank$start.rank == "Assistant Professor"), ] 
+prof <- faculty_details[which(faculty_details$rank == "Professor"), ] %>% 
+       dplyr::filter(!duplicated(paste(first.name, last.name))) %>%
+       dplyr::select(first.name, last.name, promotion.year = year)
+assistant_prof <- dplyr::left_join(assistant_prof, prof, by = c("first.name", "last.name"))
+assoc_prof <- dplyr::left_join(assoc_prof, prof, by = c("first.name", "last.name"))
+
+assistant_prof$promotion_time <- assistant_prof$promotion.year - assistant_prof$start.year
+assoc_prof$promotion_time <- assoc_prof$promotion.year - assoc_prof$start.year
+```
+
+
+We find that of the `r total = sum(faculty_start.rank$rank == "Professor", na.rm = T)` `r total` faculty members with rank `Professor` currently employed at Williams, `r round(sum(faculty_start.rank$rank == "Professor" & faculty_start.rank$start.rank == "Assistant Professor", na.rm = T)/total * 100, 2)`% were first employed as `Assistant Professor` and at average, took `r round(mean(assistant_prof$promotion_time), 2)` years to be promoted. `r round(sum(faculty_start.rank$rank == "Professor" & faculty_start.rank$start.rank == "Associate Professor", na.rm = T)/total * 100, 2)`% were first employed as `Associate Professor`, and at average, took `r round(mean(assoc_prof$promotion_time), 2)` years to be promoted.
+
 
 ###Department
 
@@ -227,7 +294,7 @@ summary.df.top10  %>% as.data.frame()
 
 ```{r, fig.cap="Top 10 departments by number of faculty employed"}
 filter.summary <- summary.df %>% filter(department %in% summary.df.top10$department)
-p <- ggplot(data = filter.summary, aes(x = year, y = number_of_faculty, color = department)) + geom_line() + labs(x = "Year", y = "Number of faculty")
+p <- ggplot(data = filter.summary, aes(x = year, y = number_of_faculty, color = department)) + geom_line() + labs(x = "Year", y = "Number of faculty", title = "Number of Faculty by Department")
 
 p 
 ```
@@ -243,22 +310,18 @@ youngest <- paste(faculty$first.name[which(faculty$age == min(faculty$age, na.rm
 ```
 
 We find that the oldest faculty currently in the college is `r oldest[1]`. The youngest faculty currently in the college is `r youngest[1]`. 
+The age variable for faculty currently employed at Williams looks like:
 
-###MEAN STATS
+```{r}
+summary(faculty$age)
+```
 
 ```{r}
 faculty$age <- 2017 - faculty$birth.year
-qplot(faculty$age, geom="histogram", fill = I("purple"), color = I("black") )
+qplot(faculty$age, geom="histogram", fill = I("purple"), color = I("black") ) + labs(title = "Distribution of Age of Faculty currently employed at Williams", y = "Count", x = "Age")
 
 ```
 
-```{r}
-qplot(faculty$age[which(faculty$gender == "male")], geom="histogram", fill = I("cyan3"), color = I("black") )
-```
-
-```{r}
-qplot(faculty$age[which(faculty$gender == "female")], geom="histogram", fill = I("firebrick3"), color = I("black") )
-```
 
 The average age for both male and female faculty has constantly decreased over the years (with the only exception of slight increases during 2007 to 2009. This is, perhaps, expected in view of the financial crisis when Williams had to considerably downsize its faculty. Presumably, newer, and hence, younger faculty, were disproportionately axed).   
 
@@ -268,17 +331,42 @@ The average age for both male and female faculty has constantly decreased over t
 faculty_details$age <- 2017 - faculty_details$birth.year
 grouped.year <- dplyr::group_by(faculty_details, year, gender)
 summary.year <- dplyr::summarise(grouped.year, avg_age = mean(age, na.rm = T))
-ggplot(data = summary.year, aes(x = year, y = avg_age, fill = gender)) + geom_bar(stat = "identity", position = "dodge")
+ggplot(data = summary.year, aes(x = year, y = avg_age, fill = gender)) + geom_bar(stat = "identity", position = "dodge") + labs(title = "Average Age of Faculty by Gender", x = "Year", y = "Average Age")
 ```
 
+The average age of all but Black faculty has fallen steadily over the years. The average age of Black faculty increased during the first few years of 2000, and then steadily decreased to reach similar levels as other races. 
 
-####### FACULTY AGE BY RACE
-
+`r tufte::margin_note("Note: College catalogs for 2015-2016 do not contain information about faculty's age." )`
 
 ```{r}
 grouped.year <- dplyr::group_by(faculty_details, year, race)
 summary.year <- dplyr::summarise(grouped.year, avg_age = mean(age, na.rm = T))
-ggplot(data = summary.year, aes(x = year, y = avg_age, fill = race)) + geom_bar(stat = "identity", position = "dodge")
+ggplot(data = summary.year, aes(x = year, y = avg_age, fill = race)) + geom_bar(stat = "identity", position = "dodge") + labs(title = "Average Age of Faculty by Race", x = "Year", y = "Average Age")
+```
+
+###Start Year
+
+We infer a faculty's `start.year`, or the first year they joined Williams, as the year of the first catalog that lists them as faculty of the college. 
+
+`r tufte::margin_note(paste("Note: this inference is correct for all faculty, but for whom we infer the year to be the first year we have data about, that is ", min(faculty_details$year, na.rm = T), ". This is because these faculty may have very well started their career at Williams earlier than ", min(faculty_details$year, na.rm = T), "and we just don't have any data to know precisely. For these faculty, the start.year should be perhaps more accurately interpreted as <= ", min(faculty_details$year, na.rm = T), ".", sep = " "))`
+
+The `start.year` variable gives us insight into how long the current faculty at Williams have been around: 
+```{r}
+faculty$term <- 2017 - faculty$start.year
+summary(faculty$term)
+```
+```{r}
+qplot(faculty$term, geom="histogram", fill = I("purple"), color = I("black") ) + labs(title = "Length of Tenure of Williams College faculty", y = "Count", x = "Years") + scale_y_continuous(limits = c(0, 100))
 ```
 
 
+```{r}
+dplyr::filter(faculty, !is.na(gender)) %>% ggplot(aes(term, fill = gender)) + geom_histogram(aes(y = ..density..), position = 'dodge') + labs(title = "Length of Tenure of Williams College Faculty by Gender", y = "Count", x = "Years")
+
+```
+
+
+```{r}
+dplyr::filter(faculty, !is.na(gender)) %>% ggplot(aes(term, fill = race)) + geom_histogram(aes(y = ..density..), position = 'dodge') + labs(title = "Length of Tenure of Williams College Faculty by Race", y = "Count", x = "Years")
+
+```
