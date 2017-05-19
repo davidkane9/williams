@@ -23,7 +23,7 @@ knitr::opts_chunk$set(tidy = FALSE,
 
 ## Introduction
 
-This document provides an overview of the data available in the wiliamsmetrics package. We have data on the faculty and graduates of Williams College from the 1999--2000 academic year through 2014--2015.
+This document provides an overview of the data available in the wiliamsmetrics package. We have data on the faculty and graduates of Williams College from the 1999--2000 academic year through 2015--2016.
 
 ```{r}
 library(dplyr)
