@@ -2,7 +2,7 @@
 #'
 #' @description This function brings together the information on all Williams
 #'   graduates for the years that we have downloaded the data in the package. It
-#'   also adds Latin honors information.
+#'   also adds Latin honors, Phi Betta Kappa, Sigma Xi, and birth year information.
 #'
 #' @return a dataframe for the specified years with a row for each graduating
 #'   senior and six variables.

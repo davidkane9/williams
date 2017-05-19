@@ -9,7 +9,12 @@
 #' @return the input data frame along with new column(s).
 #'
 #' @format \describe{
-#'   \item{race}{Graduate's race as determined by the wru package.}
+#'   \item{p_whi}{Prosterior probability that the graduate's race is White, as determined by the wru package}
+#'   \item{p_bla}{Prosterior probability that the graduate's race is Black, as determined by the wru package}
+#'   \item{p_asi}{Prosterior probability that the graduate's race is Asian, as determined by the wru package}
+#'   \item{p_his}{Prosterior probability that the graduate's race is Hispanic, as determined by the wru package}
+#'   \item{p_oth}{Prosterior probability that the graduate's race is none of the above, as determined by the wru package}
+#'   \item{race}{Graduate's race as the racial category with the highest prosterior probability.}
 #'   }
 #'
 #' @importFrom dplyr %>%
