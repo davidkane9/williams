@@ -134,6 +134,28 @@ There were `r dim(faculty_details)[1]` faculty at Williams from `r min(faculty_d
 `r as.numeric(head(sort(table(faculty_details$year)), n = 1))` in
 `r as.numeric(names(head(sort(table(faculty_details$year)), n = 1)))`. 
 
+###Names
+
+We have records of faculty firstnames and lastnames. 
+
+The most common first names for the entire dataset are: 
+
+```{r}
+ sort(table(faculty_details$first.name), decreasing = T)[1:5] %>% as.data.frame() %>% dplyr::select(title = Var1, count = Freq)
+
+```
+
+The most common last names are: 
+
+```{r}
+ sort(table(faculty_details$last.name), decreasing = T)[1:5] %>% as.data.frame() %>% dplyr::select(title = Var1, count = Freq)
+```
+```{r}
+faculty_details$full.name <- paste(faculty_details$first.name, faculty_details$last.name, sep = " ")
+```
+
+The longest name is `r faculty_details %>% select(year, full.name) %>% filter(min_rank(-nchar(full.name)) < 2) %>% as.character() %>% tail(1)` and the shortest name is `r faculty_details %>% select(year, full.name) %>% filter(min_rank(-nchar(full.name)) < 2) %>% as.character() %>% head(1)`.
+
 ###Gender
 
 We infer the gender for faculty using the `gender` and `genderizeR` package, as in the case of graduates. The gender variable for faculty currently employed at Williams looks like the following: 
