@@ -12,7 +12,8 @@ sidebar <- dashboardSidebar(
     menuItem("Summa Cum Laude", tabName = "summa", selected = TRUE),
     menuItem("Magna Cum Laude", tabName = "magna"),
     menuItem("Cum Laude", tabName = "cum"),
-    menuItem("None", tabName = "None")
+    menuItem("None", tabName = "none")
+
   )
 )
 body <- dashboardBody(
@@ -34,8 +35,8 @@ body <- dashboardBody(
             fluidRow(
 
               box(width = 300, title = "Explore by Race",
-                  plotOutput("sumaRace"),
-                  sliderInput("timelineSumaR", "Timeline:", min(graduates$year), max(graduates$year),
+                  plotOutput("summaRace"),
+                  sliderInput("timelineSummaR", "Timeline:", min(graduates$year), max(graduates$year),
                               value = c(min(graduates$year), max(graduates$year))),
                   checkboxGroupInput("genderSummaR", "Genders to show:",
                                      c("Male" = "male",
@@ -64,8 +65,8 @@ body <- dashboardBody(
             fluidRow(
 
               box(width = 300, title = "Explore by Race",
-                  plotOutput("sumaRace"),
-                  sliderInput("timelineSumaR", "Timeline:", min(graduates$year), max(graduates$year),
+                  plotOutput("magnaRace"),
+                  sliderInput("timelineMagnaR", "Timeline:", min(graduates$year), max(graduates$year),
                               value = c(min(graduates$year), max(graduates$year))),
                   checkboxGroupInput("genderMagnaR", "Genders to show:",
                                      c("Male" = "male",
@@ -140,7 +141,6 @@ body <- dashboardBody(
 )
 
 renderGenderPlot <- function(timeline, races, hon){
-  print("HERE")
   graduates$latin.honors[which(is.na(graduates$latin.honors))] <- "None"
   x <- graduates %>% dplyr::filter(year >= timeline[1], year <= timeline[2], race %in% races, !is.na(gender), latin.honors == hon) %>%
     dplyr::group_by(year) %>% mutate(total = n()) %>% group_by(gender, total, add = TRUE) %>% dplyr::mutate(percent = n()/ total * 100)
@@ -148,6 +148,7 @@ renderGenderPlot <- function(timeline, races, hon){
 }
 
 renderRacePlot <- function(timeline, genders, hon){
+  print(hon)
   graduates$latin.honors[which(is.na(graduates$latin.honors))] <- "None"
   x <- graduates %>% dplyr::filter(year >= timeline[1], year <= timeline[2], gender %in% genders, !is.na(race), latin.honors == hon) %>%
     dplyr::group_by(year) %>% mutate(total = n()) %>% group_by(race, total, add = TRUE) %>% dplyr::mutate(percent = n()/ total * 100)
@@ -185,14 +186,6 @@ server <- function(input, output) {
   })
   output$noneRace <- renderPlot({
     renderRacePlot(input$timelineNoneR, input$genderNoneR, "None")
-  })
-
-
-  output$SXGender <- renderPlot({
-    renderSXGenderPlot(input$timelineSXG, input$raceSXG)
-  })
-  output$SXRace <- renderPlot({
-    renderSXRacePlot(input$timelineSXR, input$genderSXR)
   })
 }
 

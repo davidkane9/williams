@@ -1,5 +1,5 @@
 #' @title Create Current Faculty
-#' @description This function accepts the faculty.detail data frame, and returns information about the college's faculty for
+#' @description This function accepts the faculty_details data frame, and returns information about the college's faculty for
 #'              the current year (the last year for which information is available).
 #' @param x the faculty.detail data set with year, leave, first.name, last.name, first.degree, first.degree.year, first.degree.school,
 #'                                           last.degree, last.degree.year, last.degree.school, birth.year, title, rank, status, department

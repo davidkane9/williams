@@ -8,9 +8,9 @@
 #'   member and six variables.
 #'
 #' @format \describe{
-#'   \item{year}{year}
-#'   \item{raw.text}{Raw text from the Course Catlog associated with each faculty member}
-#'   \item{leave}{Faculty leave information; one of "Academic Year", "First Semester", "Second Semester", "Calendar Year", or "None"}
+#'   \item{year}{numeric <YYYY>, year}
+#'   \item{raw.text}{character, Raw text from the Course Catlog associated with each faculty member}
+#'   \item{leave}{character, Faculty leave information; one of "Academic Year", "First Semester", "Second Semester", "Calendar Year", or "None"}
 #'   }
 #' @export
 

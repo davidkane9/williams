@@ -3,13 +3,9 @@ title: "Williams College Faculty and Graduates Data Manual"
 author: "Karan Tibrewal and David Kane"
 date: "`r Sys.Date()`"
 output:
-  tufte::tufte_html: default
-  tufte::tufte_handout:
-    citation_package: natbib
-    latex_engine: xelatex
-  tufte::tufte_book:
-    citation_package: natbib
-    latex_engine: xelatex
+  html_document:
+    toc: true
+    fig_caption: true
 ---
 
 
@@ -82,7 +78,7 @@ Mark Douglas Conrad
 This function brings together the information on all Williams graduates for the years that we have downloaded the data in the package. It
 also adds Latin honors, Phi Betta Kappa, Sigma Xi, and birth year information.
 
-The first step is to read in the information from the text files. Once the raw information for graduates is available, we can immediately infer some data points:  
+The first step is to read in the information from the text files. This leads to the creation of a data frame with a column called `raw.text` with a row for each line in the text files. Once the `raw.text` for graduates is available, we can immediately infer some data points:  
 
 * **Latin Honors:** The information for graduates in the text files are grouped by their Latin honors. Notice the lines reading "Bachelor of Arts, Summa Cum Laude" and "Bachelor of Arts, Magna Cum Laude" in the above example. All graduates between these lines graduated with Summa Cum Laude. Similarly, all graduates between the lines "Bachelor of Arts, Magna Cum Laude" and "Bachelor of Arts, Cum Laude" graduated with Magna Cum Laude. As of such, we classify Latin honors for each graduate as one of Summa Cum Laude, Magna Cum Laude, Cum Laude, or NA.   
 * **Phi Betta Kappa:** The course catalogs indicate membership of Phi Betta Kappa by a "*" before the graduate's name. 
@@ -132,9 +128,10 @@ The course catalogs do not provide the gender of the graduates, so we estimate i
 
 These packages predict gender on the basis of names. We first use the `gender` package to predict gender according to the first and middle names of graduates. Alas, the `gender` package focuses heavily on American names, and therefore, this approach is ineffective for non-American names like DoHyun and Qiang. 
 
-`r tufte::margin_note("The results from genderizeR are saved as data frame in sys.rda in the R directory as genderizeR.graduates. While adding information about subsequent years, this data set must be regenerated.")`
 
-To account for this shortcoming, we supplement the `gender` package with the `genderizeR` package which provides more global coverage. However, this is a paid service that limits free access. So, we used it once and then saved the results. 
+To account for this shortcoming, we supplement the `gender` package with the `genderizeR` package which provides more global coverage. However, this is a paid service that limits free access. So, we used it once and then saved the results.[^1] 
+
+[^1]: The results from genderizeR are saved as data frame in sys.rda in the R directory as genderizeR.graduates. While adding information about subsequent years, this data set must be regenerated.
 
 ```{r, echo = TRUE}
 x <- add_gender_graduates(x)
@@ -157,5 +154,151 @@ The functions described above are called from the `create_graduates` function, t
 
 `graduates <- create_graduates(complete = FALSE)`             
 `graduates_details <- create_graduates(complete = TRUE)`
+
+
+##Faculty
+
+Next up are faculty. Our package provides two datasets: `faculty` and `faculty_details`. Let us begin by examining the `faculty_details` dataset. It has the following columns: 
+
+```{r}
+names(faculty_details) %>% as.data.frame()
+```
+
+For details on these variables, try `?faculty_details` on your R console.    
+
+The datasets are created by scraping data from the Course Catalogs which are saved as `.txt` files in the `inst/extdata` directory. These files follow the naming convention of `faculty-<YEAR (YYYY)>-<YEAR + 1 (YYYY)>`, where `YEAR` is the year for the relevant catalog. For example, the text file with information about graduates from 2000 is saved as `faculty-2000-2001.txt`. For convenience, we only save the pages containing information about faculty from the course catalogs to these files. 
+
+Let us look inside these text files. The following is an abstract from `faculty-2000-2001.txt`. We will use it as an example to demonstrate the data munging procedure for faculty: 
+
+```
+* Daniel P. Aalberts# Assistant Professor of Physics# B.S. (1989) M.I.T.; Ph.D. (1994) M.I.T.       
+* Colin C. Adams# Francis Christopher Oakley Third Century Professor of Mathematics# B.S. (1978) M.I.T.; Ph.D. (1983) University of Wisconsin      
+Elizabeth M. Adler# Assistant Professor of Biology# B.S. (1975) Antioch College; Ph.D. (1986) University of Pennsylvania      
+* Laylah Ali# Assistant Professor of Art# B.A. (1991) Williams; M.F.A. (1994) Washington University     
+Marsha I. Altschuler# Associate Professor of Biology# B.S. (1972) University of Rochester; Ph.D. (1979) Indiana University     
+Rachael Aráuz# Visiting Assistant Professor of Art# B.A. (1991) Wellesley; M.A. (1995) University of Pennsylvania      
+Henry W. Art# Samuel Fessenden Clarke Professor of Biology and Director of the Center for Environmental Studies# A.B. (1966) Dartmouth; Ph.D. (1971) Yale       
+Jennifer Austin# Assistant Professor of Romance Languages# B.A. (1991) Earlham College; M.A. (1996) Cornell University       
+Michael Awkward# Sterling A. Brown ’22 Visiting Professor of English#         
+Jean L. Bacon# Assistant Professor of Sociology# B.A. (1983) Wesleyan; Ph.D. (1993) University of Chicago        
+Duane A. Bailey# Associate Professor of Computer Science# B.A. (1982) Amherst College; Ph.D. (1988) University of Massachusetts        
+Jon Bakija# Assistant Professor of Economics# B.A. (1990) Wesleyan; Ph.D. (1999) University of Michigan        
+Lois Banta# Visiting Associate Professor of Biology# B.A. (1983) Johns Hopkins; Ph.D. (1990) California Institute of Technology       
+David E. Barnard# Assistant Professor of Physical Education# B.A. (1981) Wesleyan; M.A.L.S. (1989) Wesleyan         
+```
+###gather_faculty()
+
+This function brings together the information on all Williams faculty for the years that we have downloaded the data in the package. It
+also adds information about faculty on leave.
+
+The first step is to read in the information from the text files. This leads to the creation of a data frame with a column called `raw.text` with a row for each line in the text files. Once the `raw.text` column for faculty is available, we can immediately infer the leave status for each faculty. The course catalogs follow the following convention: 
+
+* **Academic Year:** A single asteriks ("*") before the faculty's name.
+* **First Semester:** Two asteriks ("**") before the faculty's name.
+* **Second Semester:** Three asteriks ("***") before the faculty's name.
+
+
+```{r, echo = TRUE}
+x <- gather_faculty()
+x %>% as.data.frame() %>% head(15)
+```
+
+
+###add_faculty_names()
+
+This function takes as input a data frame which includes the raw text associated with each faculty member. It returns that data frame along with two new columns: first.name and last.name. 
+
+For faculty, information about the name is always present before the first "#" in the `raw.text` column.  We will assume assume that the first word in the name is always the first name. Middle names (if present) seem to be collapsed into a single alphabet after the first name. All preceding words after the first (except collapsed middle names) in the name will be the last name.
+
+Then, for example, for "Danial P. Alberts", we infer "Daniel" as first name, and "Alberts" as last name. Similarly, for "Jennifer Austin", "Jenifer" as the first name, and "Austin" as the last. Alas, for "Ju-Yu Scarlett Jang", we infer first name as "Ju-Yu", and last name as "Scarlett Jang", although "Scarlett" is probably a middle name. However, this complication seem to be exceptions, rather than the rule. 
+
+
+```{r, echo = TRUE}
+x <- add_faculty_names(x)
+x %>% dplyr::select(raw.text, first.name, last.name) %>% as.data.frame() %>% head(15)
+```
+
+###add_faculty_degrees
+
+This function takes as input a data frame which includes the `raw.text` associated with each faculty member. It returns that data frame along with six new columns: first.degree, first.degree.year, first.degree.school, last.degree, last.degree.year and last.degree.school.
+
+The relevant information is provided after the last "#" in the `raw.text` column. There is a delimiting ";" between information about different degrees in the case where faculty have more than one degree.
+
+```{r}
+head(x$raw.text, 5)
+```
+
+We record the lowest degree earned by a faculty as `first.degree` , the conferring school as `first.degree.school`, and the corresponding year as `first.degree.year`. `last.degree`, `last.degree.year` and `last.degree.school` give the same context as above, but for the highest degree earned by the faculty. Note, in the case where the faculty has only one degree, the lowest and highest degree refer to the same. 
+
+
+```{r, echo = TRUE}
+x <- add_faculty_degrees(x)
+x %>% dplyr::select(first.degree, first.degree.year, first.degree.school, last.degree, last.degree.year, last.degree.school) %>% as.data.frame() %>% head(15)
+```
+
+##add_faculty_titles
+
+```{r}
+x <- add_faculty_titles(x)
+x %>% as.data.frame() %>% head(15)
+```
+
+###add_faculty_department
+
+The course catalogs do not directly provide the department for faculty. Instead, we try to infer the department by a faculty's title. For some, this is easy. For example, "Daniel P. Aalberts, Assistant Professor of Physics" definitely belongs to Physics, and "Colin C. Adams, Francis Christopher Oakley Third Century Professor of Mathematics" to Mathematics. In order to accomplish this, we enlist the various Williams academic departments in text file `departments.txt` in `inst/extdata` directory, and use `stringr::str_detect` on the title. 
+
+Others are more complicated. For example, consider "Bernadette Brooten, Croghan Bicentennial Visiting Professor in Biblical
+and Early Christian Studies, Spring Semester". Although, from Bernadette Brooten's title, it is fairly obvious that she is a Professor of Religion, her department cannot be inferred from the naive procedure with which we infer Colin Adams' or Daniel Alberts' department. We need to handle these cases separately.    
+
+Alas, others are, still, more complicated. "Jennifer Austin, Assistant Professor of Romance Languages" is a case in point: it is obvious that she teaches Romance Languages, but does she teach French, Italian, or Spanish? These cases need to be handled explicitly by hand.  
+
+```{r}
+x <- add_faculty_department(x)
+x %>% as.data.frame() %>% select(title, department) %>% head(15)
+```
+
+
+###add_gender_faculty
+
+The course catalogs do not provide the gender of the faculty, so we estimate it by using the [gender](https://cran.r-project.org/web/packages/gender/gender.pdf) and [genderizeR](https://cran.r-project.org/web/packages/genderizeR/index.html) package. 
+
+These packages predict gender on the basis of names. We first use the `gender` package to predict gender according to the first names of faculty. Alas, the `gender` package focuses heavily on American names, and therefore, this approach is ineffective for non-American names like Aamir and Amar. 
+
+To account for this shortcoming, we supplement the `gender` package with the `genderizeR` package which provides more global coverage. However, this is a paid service that limits free access. So, we used it once and then saved the results. [^2] 
+
+[^2]: [The results from genderizeR are saved as data frame in sys.rda in the R directory as genderizeR.faculty. While adding information about subsequent years, this data set must be regenerated.]
+
+
+```{r, echo = TRUE}
+x$birth.year <- x$first.degree.year - 22
+x <- add_gender_faculty(x)
+x %>% dplyr::select(first.name, gender) %>% as.data.frame() %>% head(15)
+```
+
+
+###add_race
+
+We use the [wru](https://cran.r-project.org/web/packages/wru/wru.pdf) package to estimate race on the basis of last name. The package utilizes the Bayes' Rule to compute the posterior probability from Voter Registration Records of each racial category for any given individual's name. We predict the individual's race as the racial category with the highest prosterior probability. 
+
+```{r, echo = TRUE}
+x <- add_race(x)
+x %>% dplyr::select(last.name, p_whi, p_bla, p_his, p_asi,p_oth,race) %>% as.data.frame() %>% head(15)
+```
+
+
+###Summary
+
+The functions described above are called from the `create_faculty` function, that takes in a logical parameter `complete`. Calling `create_faculty` with `complete = FALSE` produces the `faculty_details` data set. If  `complete = TRUE` several intermediarry columns are appended to `faculty_details`. 
+
+`faculty_details <- create_faculty(complete = FALSE)`
+
+
+**Creating `faculty` dataset:**     
+
+Now that we understand how to create the `faculty_details` from scratch, let us consider the `faculty` dataset. Simply put, `faculty` summarizes `faculty_details` for the current year. We can create it by using the `create_annual_faculty` function. 
+
+`faculty <- create_annual_faculty(faculty_details)`
+
+In addition to filtering the `faculty_detais` dataset for the current year, the `create_annual_faculty` also consolidates any information about faculty that is not present in the latest course catalog (and hence, also in the rows containing information about the latest year). For example, if the undergraduate degree for a faculty is not listed in the course catalog for 2016, but was listed in the 2015 course catalog, `create_annual_faculty` will transfer this information onto the lower columns.        
 
 

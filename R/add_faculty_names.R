@@ -2,11 +2,9 @@
 #'
 #' @description This function takes as input a data frame which includes the raw
 #'   text associated with each faculty member. It returns that data frame along with
-#'   two new columns: first.name and last.name. If \code{complete} is FALSE, it also
-#'   returns full.name.
+#'   two new columns: first.name and last.name.
 #'
 #' @param x data frame with raw.text column
-#' @param complete logical to indicate how many variables to add to x. Default is FALSE.
 #'
 #' @return the input data frame along with two new columns.
 #'

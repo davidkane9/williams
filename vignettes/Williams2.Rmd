@@ -118,7 +118,39 @@ As an example, we classify Paige Lauren Whidbee '16 as Black. She is the only Ph
 x %>% select(year, race) %>% count(year, race) %>% mutate(percentage = n/sum(n)) %>% ggplot(aes(year, percentage, color = race)) + geom_line()
 ```
 
-###Latin Honors
+###Latin Honors, Phi Beta Kappa, and Sigma Xi
+
+The College awards latin honors by the following rules: 
+
+* 35% of the graduating class -- Bachelor of Arts cum laude or higher
+* 15% of the graduating class -- Bachelor of Arts magna cum laude or higher
+* 2% of the graduating class -- Bachelor of Arts summa cum laude
+
+The remaining 65% receive no honors. 
+
+```{r}
+round(prop.table(table(graduates$latin.honors))*100, 2)
+```
+
+The college inducts students of the highest academic standing to the [Phi Beta Kappa Society](http://web.williams.edu/admin/registrar/faq/distinct.html). At the end of the junior year, all students in the highest five percent of the class, ranked by cumulative grade point average, shall be eligible for election.  At the end of their senior year, students in the 12.5 percent of the class, excluding those already elected, are eligible for election.
+
+```{r}
+x <- filter(graduates, Phi.Beta.Kappa) %>% group_by(year) %>% summarise(n = n())
+x$n <- x$n / table(graduates$year)
+x %>% select(year, percent = n)
+```
+
+The [Williams College Sigma Xi Chapter](https://science.williams.edu/student-faculty-research/sigma-xi/) recognizes students "graduating science students who have demonstrated exceptional ability and promise for further contributions to the advancement of scientific research"
+
+```{r}
+x <- filter(graduates, Sigma.Xi) %>% group_by(year) %>% summarise(n = n())
+x$n <- x$n / table(graduates$year)
+x %>% select(year, percent = n)
+```
+
+Since colleges are (rightly!) protective about GPA data, latin honors and membership of these societies can be effective proxies for academic excellence. The following `Shiny` App explores the relationship between them and gender and race:
+
+
 
 ```{r}
 header <- dashboardHeader(title = "Williams College")
@@ -128,7 +160,9 @@ sidebar <- dashboardSidebar(
     menuItem("Summa Cum Laude", tabName = "summa", selected = TRUE),
     menuItem("Magna Cum Laude", tabName = "magna"),
     menuItem("Cum Laude", tabName = "cum"),
-    menuItem("None", tabName = "none")
+    menuItem("None", tabName = "none"),
+    menuItem("Phi Betta Kappa", tabName = "PBK"),
+    menuItem("Sigma Xi", tabName = "SX")
 
   )
 )
@@ -252,87 +286,7 @@ body <- dashboardBody(
             )
 
 
-    )
-  )
-)
-
-renderGenderPlot <- function(timeline, races, hon){
-  graduates$latin.honors[which(is.na(graduates$latin.honors))] <- "None"
-  x <- graduates %>% dplyr::filter(year >= timeline[1], year <= timeline[2], race %in% races, !is.na(gender), latin.honors == hon) %>%
-    dplyr::group_by(year) %>% mutate(total = n()) %>% group_by(gender, total, add = TRUE) %>% dplyr::mutate(percent = n()/ total * 100)
-  ggplot(x, aes(x = year, y = percent, fill = gender)) + geom_bar(stat = "identity", position = "dodge") + labs(x = "Year", y = "Percent")
-}
-
-renderRacePlot <- function(timeline, genders, hon){
-  print(hon)
-  graduates$latin.honors[which(is.na(graduates$latin.honors))] <- "None"
-  x <- graduates %>% dplyr::filter(year >= timeline[1], year <= timeline[2], gender %in% genders, !is.na(race), latin.honors == hon) %>%
-    dplyr::group_by(year) %>% mutate(total = n()) %>% group_by(race, total, add = TRUE) %>% dplyr::mutate(percent = n()/ total * 100)
-  ggplot(x, aes(x = year, y = percent, fill = race)) + geom_bar(stat = "identity", position = "dodge") + labs(x = "Year", y = "Percent")
-}
-
-
-
-ui <- dashboardPage(skin = "purple", header, sidebar, body)
-server <- function(input, output) {
-
-  output$summaGender <- renderPlot({
-    renderGenderPlot(input$timelineSummaG, input$raceSummaG, "Summa Cum Laude")
-  })
-  output$summaRace <- renderPlot({
-    renderRacePlot(input$timelineSummaR, input$genderSummaR, "Summa Cum Laude")
-  })
-
-  output$magnaGender <- renderPlot({
-    renderGenderPlot(input$timelineMagnaG, input$raceMagnaG, "Magna Cum Laude")
-  })
-  output$magnaRace <- renderPlot({
-    renderRacePlot(input$timelineMagnaR, input$genderMagnaR, "Magna Cum Laude")
-  })
-
-  output$cumGender <- renderPlot({
-    renderGenderPlot(input$timelineCumG, input$raceCumG, "Cum Laude")
-  })
-  output$cumRace <- renderPlot({
-    renderRacePlot(input$timelineCumR, input$genderCumR, "Cum Laude")
-  })
-
-  output$noneGender <- renderPlot({
-    renderGenderPlot(input$timelineNoneG, input$raceNoneG, "None")
-  })
-  output$noneRace <- renderPlot({
-    renderRacePlot(input$timelineNoneR, input$genderNoneR, "None")
-  })
-}
-
-
-shinyApp(ui, server, options = list(height = 1350, width = 850))
-
-```
-
-
-
-###Phi Betta Kappa and Sigma Xi
-
-The college inducts students of the highest academic standing to the [Phi Betta Kappa Society](http://web.williams.edu/admin/registrar/faq/distinct.html). At the end of the junior year, all students in the highest five percent of the class, ranked by cumulative grade point average, shall be eligible for election provided they have met the requirements and have completed enough courses to be considered candidates for the B.A. degree in the following year.   
-
-The [Williams College Sigma Xi Chapter](https://science.williams.edu/student-faculty-research/sigma-xi/) recognizes students "graduating science students who have demonstrated exceptional ability and promise for further contributions to the advancement of scientific research".
-
-If the membership of these societies serve as effective proxies for academic distinction at Williams, it might be potentially interesting to see how different student groups (department, race, gender, etc.) perform. The following `Shiny` app explores this: 
-
-
-```{r}
-
-header <- dashboardHeader(title = "Williams College")
-
-sidebar <- dashboardSidebar(
-  sidebarMenu(
-    menuItem("Phi Betta Kappa", tabName = "PBK", selected = TRUE),
-    menuItem("Sigma Xi", tabName = "SX")
-  )
-)
-body <- dashboardBody(
-  tabItems(
+    ),
     tabItem(tabName = "PBK",
             fluidRow(
               box(width = 300, title = "Explore by Gender",
@@ -394,6 +348,21 @@ body <- dashboardBody(
   )
 )
 
+renderGenderPlot <- function(timeline, races, hon){
+  graduates$latin.honors[which(is.na(graduates$latin.honors))] <- "None"
+  x <- graduates %>% dplyr::filter(year >= timeline[1], year <= timeline[2], race %in% races, !is.na(gender), latin.honors == hon) %>%
+    dplyr::group_by(year) %>% mutate(total = n()) %>% group_by(gender, total, add = TRUE) %>% dplyr::mutate(percent = n()/ total * 100)
+  ggplot(x, aes(x = year, y = percent, color = gender)) + geom_line() + labs(x = "Year", y = "Percent")
+}
+
+renderRacePlot <- function(timeline, genders, hon){
+  print(hon)
+  graduates$latin.honors[which(is.na(graduates$latin.honors))] <- "None"
+  x <- graduates %>% dplyr::filter(year >= timeline[1], year <= timeline[2], gender %in% genders, !is.na(race), latin.honors == hon) %>%
+    dplyr::group_by(year) %>% mutate(total = n()) %>% group_by(race, total, add = TRUE) %>% dplyr::mutate(percent = n()/ total * 100)
+  ggplot(x, aes(x = year, y = percent, fill = race)) + geom_bar(stat = "identity", position = "dodge") + labs(x = "Year", y = "Percent")
+}
+
 renderPBKGenderPlot <- function(timeline, races){
   x <- graduates %>% dplyr::filter(year >= timeline[1], year <= timeline[2], race %in% races, !is.na(gender), Phi.Beta.Kappa) %>%
     dplyr::group_by(year) %>% mutate(total = n()) %>% group_by(gender, total, add = TRUE) %>% dplyr::mutate(percent = n()/ total * 100)
@@ -420,10 +389,38 @@ renderSXGenderPlot <- function(timeline, races){
   ggplot(x, aes(x = year, y = percent, fill = gender)) + geom_bar(stat = "identity", position = "dodge") + labs(x = "Year", y = "Percent")
 }
 
+
 ui <- dashboardPage(skin = "purple", header, sidebar, body)
 server <- function(input, output) {
 
-  output$PBKGender <- renderPlot({
+  output$summaGender <- renderPlot({
+    renderGenderPlot(input$timelineSummaG, input$raceSummaG, "Summa Cum Laude")
+  })
+  output$summaRace <- renderPlot({
+    renderRacePlot(input$timelineSummaR, input$genderSummaR, "Summa Cum Laude")
+  })
+
+  output$magnaGender <- renderPlot({
+    renderGenderPlot(input$timelineMagnaG, input$raceMagnaG, "Magna Cum Laude")
+  })
+  output$magnaRace <- renderPlot({
+    renderRacePlot(input$timelineMagnaR, input$genderMagnaR, "Magna Cum Laude")
+  })
+
+  output$cumGender <- renderPlot({
+    renderGenderPlot(input$timelineCumG, input$raceCumG, "Cum Laude")
+  })
+  output$cumRace <- renderPlot({
+    renderRacePlot(input$timelineCumR, input$genderCumR, "Cum Laude")
+  })
+
+  output$noneGender <- renderPlot({
+    renderGenderPlot(input$timelineNoneG, input$raceNoneG, "None")
+  })
+  output$noneRace <- renderPlot({
+    renderRacePlot(input$timelineNoneR, input$genderNoneR, "None")
+  })
+    output$PBKGender <- renderPlot({
     renderPBKGenderPlot(input$timelinePbkG, input$racePbkG)
   })
   output$PBKRace <- renderPlot({
@@ -440,6 +437,29 @@ server <- function(input, output) {
 
 
 shinyApp(ui, server, options = list(height = 1350, width = 850))
+
 ```
+
+Notice that Summa Cum Laude honors are fairly evenly distributed between the two genders, except for in some years like `2003, 2004, 2005,` and `2011` where males significantly out perform females. Further, almost always there is a higher percentage of females that receive Cum Laude honors than their male counterparts, and almost always a higher percentage of males who receive no latin honors. This view of the data is consistent with the [theory](http://www.sciencedirect.com/science/article/pii/S0160289606001115) that on average, men and women are equally intelligent, but male intelligence has a higher variance. 
+
+In a decade and half worth data, we do not classify a single graduate receiving Summa Cum Laude honors as Hispanic. Is this, in fact, true? Indeed, we performed Google searches on Summa Cum Laude graduates over the last 10 years (Good news: Finishing on the top 2% of your class at Williams almost certainly garauntees that you are very Google-able), but we do not find any data to suggest otherwise. 
+
+Black graduates follow a similar pattern. In fact, in the last 10 years, we classify 2 graduates receiving Summa Cum Laude as Black. Unfortonately, neither of the two, [Blacke Mackall](http://ephsports.williams.edu/sports/mten/2014-15/bios/mackall_blake_n3y8) nor [Erika Williams](https://neuroscience.williams.edu/files/2012/10/ErikaWilliams2.jpg), is in fact black. Then, as far as we can tell, no Black Williams student graduated with Suma Cum Laude in the last decade. 
+
+Early Phi Beta Kappa
+
+Asian Graduates? 
+
+
+Across divisions, how races/ gender are "successful". 
+
+```{r}
+graduates$asian <- graduates$race == "Hispanic"
+graduates$summa <- graduates$latin.honors == "Summa Cum Laude"
+l <- lm(graduates$summa~graduates$asian + graduates$major)
+
+```
+
+
 
 
