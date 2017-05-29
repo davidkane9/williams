@@ -81,8 +81,8 @@ also adds Latin honors, Phi Betta Kappa, Sigma Xi, and birth year information.
 The first step is to read in the information from the text files. This leads to the creation of a data frame with a column called `raw.text` with a row for each line in the text files. Once the `raw.text` for graduates is available, we can immediately infer some data points:  
 
 * **Latin Honors:** The information for graduates in the text files are grouped by their Latin honors. Notice the lines reading "Bachelor of Arts, Summa Cum Laude" and "Bachelor of Arts, Magna Cum Laude" in the above example. All graduates between these lines graduated with Summa Cum Laude. Similarly, all graduates between the lines "Bachelor of Arts, Magna Cum Laude" and "Bachelor of Arts, Cum Laude" graduated with Magna Cum Laude. As of such, we classify Latin honors for each graduate as one of Summa Cum Laude, Magna Cum Laude, Cum Laude, or NA.   
-* **Phi Betta Kappa:** The course catalogs indicate membership of Phi Betta Kappa by a "*" before the graduate's name. 
-* **Sigma Xi:** The course catalogs indicate membership of Phi Betta Kappa by a "+" before the graduate's name. 
+* **Phi Beta Kappa:** The course catalogs indicate membership of Phi Beta Kappa by a "*" before the graduate's name. 
+* **Sigma Xi:** The course catalogs indicate membership of Sigma Xi by a "+" before the graduate's name. 
 * **Birth Year:** We calculate the birth year using heuristic of undegraduate graduation year minus 22. 
 
 
@@ -148,12 +148,56 @@ x <- add_race(x)
 x %>% dplyr::select(last.name, p_whi, p_bla, p_his, p_asi,p_oth,race) %>% as.data.frame() %>% head(15)
 ```
 
-###Summary
+###Wraping Up
 
 The functions described above are called from the `create_graduates` function, that takes in a logical parameter `complete`. Calling `create_graduates` with `complete = TRUE` produces the `graduates_details` data set. If `complete = FALSE`, `create_graduates` trims a dozen or so extraneous columns from `graduates_details` to produce the `graduates` dataset.
 
 `graduates <- create_graduates(complete = FALSE)`             
 `graduates_details <- create_graduates(complete = TRUE)`
+
+###TL;DR
+
+In order to use the package to create the `graduates` and `graduates_details` datasets for subsequent years, follow the following steps: 
+
+1. **Add information about graduates from the course catalogs to text files**. Follow the naming convention of `graduates-<YEAR (YYYY)>-<YEAR + 1 (YYYY)>`, where `YEAR` is the year for the relevant catalog. For example, the text file with information about graduates from 2000 is saved as `graduates-2000-2001.txt`. These files need to be saved in the `inst/extdata` directory.        
+
+2. **Edit the text files to follow the munging syntax.** Such editing may often require getting your hands dirty with the text files. We describe the syntax below. 
+
+```
+Bachelor of Arts, Summa Cum Laude
+<Information about graduates with Summa Cum Laude latin honors> 
+Bachelor of Arts, Magna Cum Laude
+<Information about graduates with Magna Cum Laude latin honors> 
+Bachelor of Arts, Cum Laude
+<Information about graduates with Cum Laude latin honors> 
+Bachelor of Arts
+<Information about graduates with no latin honors> 
+```
+Each line in these text files (except those, like "Bachelor of Arts, Summa Cum Laude", that serve as demarcations between different latin honors), contains information about a single graduate. These lines are organized as: 
+
+```
+<name>, <honors information>
+```
+
+Here, `<name>` is just the name of the graduate, for example, "DoHyun Tony Chung".     
+
+`<honors information>` provides information about department honors earned by the graduate (if any). They are of the form `with <honors level> in <department>`. For example, "with honors in Political Economy" or "with highest honors in Mathematics". If the graduate has received honors from more than one department, the information about each is delimitted by a comma (`<information about department honor 1>, <information about department honor 2>`). For example, "with honors in Political Economy, with highest honors in Mathematics".      
+
+Finally, add information about Phi Beta Kappa & Sigma Xi. Membership of Phi Beta Kappa is indicated by a "*" before the graduate's name, and that of Sigma Xi Kappa by a "+" before the graduate's name. 
+
+Then, for example, information about a graduate takes the form: "*DoHyun Tony Chung, with honors in Political Economy". 
+
+3. **Recreate the `genderizeR` dataset for new graduates, and save it in `sysdata.rda`**. For more information on how to achieve this, refer to the [genderizeR documentation](https://cran.r-project.org/web/packages/genderizeR/genderizeR.pdf).       
+
+4. **Create and save the datasets**.  
+
+`graduates <- create_graduates(complete = FALSE)`             
+`graduates_details <- create_graduates(complete = TRUE)`
+`save(graduates, file = .../data/graduates.RData)`
+`save(graduates_details, file = .../data/graduates_details.RData)`
+
+
+ 
 
 
 ##Faculty
@@ -238,9 +282,22 @@ x %>% dplyr::select(first.degree, first.degree.year, first.degree.school, last.d
 
 ##add_faculty_titles
 
+This function takes as input a data frame which includes the raw text associated with each faculty member. It returns that data frame along with 2 new columns: for the facutly's title and faculty's rank.
+
+The facultys' job title is always present between the first and second '#'s in the `raw.text` column. It easy to grab using `stringr::str_split`. Once we have the title in place, we can infer the rank: 
+
+* ** Assistant Professor: ** If the words "Assistant Professor" appears on the job title.
+* **Assosciate Professor** If the words "Assosciate Professor" appears on the job title.
+* **Professor** If the word "Professor" appears on the job title, but none of the above.
+* **Fellow:** If the word "Fellow" appears on the job title, but none of the above.
+* **Librarian:** If the word "Librarian" appears on the job title, but none of the above.
+* **Instructor:** If the word "Instructor" appears on the job title, but none of the above.
+* **Lecturer:** If the word "Lecturer" appears on the job title, but none of the above.
+* **Artist-in-Residence:** If the word "Artist-in-Residence" appears on the job title, but not "Professor", but none of the above. 
+
 ```{r}
 x <- add_faculty_titles(x)
-x %>% as.data.frame() %>% head(15)
+x %>% as.data.frame() %>% select(raw.text, title) %>% head(15)
 ```
 
 ###add_faculty_department
@@ -254,7 +311,7 @@ Alas, others are, still, more complicated. "Jennifer Austin, Assistant Professor
 
 ```{r}
 x <- add_faculty_department(x)
-x %>% as.data.frame() %>% select(title, department) %>% head(15)
+x %>% as.data.frame() %>% select(first.name, last.name, title, department) %>% head(15)
 ```
 
 
@@ -286,7 +343,7 @@ x %>% dplyr::select(last.name, p_whi, p_bla, p_his, p_asi,p_oth,race) %>% as.dat
 ```
 
 
-###Summary
+###Wrapping Up
 
 The functions described above are called from the `create_faculty` function, that takes in a logical parameter `complete`. Calling `create_faculty` with `complete = FALSE` produces the `faculty_details` data set. If  `complete = TRUE` several intermediarry columns are appended to `faculty_details`. 
 
@@ -300,5 +357,42 @@ Now that we understand how to create the `faculty_details` from scratch, let us 
 `faculty <- create_annual_faculty(faculty_details)`
 
 In addition to filtering the `faculty_detais` dataset for the current year, the `create_annual_faculty` also consolidates any information about faculty that is not present in the latest course catalog (and hence, also in the rows containing information about the latest year). For example, if the undergraduate degree for a faculty is not listed in the course catalog for 2016, but was listed in the 2015 course catalog, `create_annual_faculty` will transfer this information onto the lower columns.        
+
+
+###TL;DR
+
+In order to use the package to create the `faculty` and `fauclty_details` datasets for subsequent years, follow the following steps: 
+
+1. **Add information about faculty from the course catalogs to text files**. Follow the naming convention of `faculty-<YEAR (YYYY)>-<YEAR + 1 (YYYY)>`, where `YEAR` is the year for the relevant catalog. For example, the text file with information about faculty from 2000 is saved as `faculty-2000-2001.txt`. These files need to be saved in the `inst/extdata` directory. 
+
+2. **Edit the text files to follow the munging syntax.** Such editing may often require getting your hands dirty with the text files. We describe the syntax below. 
+
+Each line in these text files contains information about a single faculty. These lines are organized as: 
+
+```
+<leave information> <name> # <job title> # <degree information> 
+```
+
+
+Here, `<leave information` is described by asteriks ("*") before the faculty's name.  Leave for the Academic Year is denoted by a single asteriks ("*"), while that for the first semester, by two asteriks ("**"), and that for the second semester, by three asteriks ("***").
+
+`<name>` is just the name of the faculty, for example, "Daniel P. Alberts".    
+
+`<job title>` is the job title of the faculty, which is provided in the course catalogs. For example, "Professor of Mathematics", or "Sterling A. Brown ’22 Visiting Professor of English". 
+
+`degree information` provides information about the faculty's academic career. They are of the form `<degree> (<year>) <conferring school>`, where `<degree>` is the name of the degree, `<year>` is the year in which the degree was conferred, and `<conferring school>`, as the name suggests, in the school that conferred the degree on the faculty. For example, `<degree information>` about a faculty, may take the form "B.S. (1978) M.I.T.; Ph.D. (1983) University of Wisconsin". Notice that if the faculty has earned more than one degree, than information about each is delimitted by a semi-colon.     
+
+Then, for example, information about a faculty takes the form: "* Daniel P. Aalberts# Assistant Professor of Physics# B.S. (1989) M.I.T.; Ph.D. (1994) M.I.T." 
+
+3. **Recreate the `genderizeR` dataset for new faculty, and save it in `sysdata.rda`**. For more information on how to achieve this, refer to the [genderizeR documentation](https://cran.r-project.org/web/packages/genderizeR/genderizeR.pdf).       
+
+4. **Create and save the datasets.**  
+
+`faculty_details <- create_faculty(complete = FALSE)`             
+`faculty <- create_annual_faculty(faculty_details)`
+`save(faculty, file = .../data/faculty.RData)`
+`save(faculty_details, file = .../data/faculty_details.RData)`
+
+
 
 

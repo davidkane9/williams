@@ -15,6 +15,6 @@ gender, and race columns}
 data set for faculty information for the last year
 }
 \description{
-This function accepts the faculty.detail data frame, and returns information about the college's faculty for
+This function accepts the faculty_details data frame, and returns information about the college's faculty for
              the current year (the last year for which information is available).
 }

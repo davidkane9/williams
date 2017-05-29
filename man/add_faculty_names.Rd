@@ -12,8 +12,6 @@ add_faculty_names(x)
 }
 \arguments{
 \item{x}{data frame with raw.text column}
-
-\item{complete}{logical to indicate how many variables to add to x. Default is FALSE.}
 }
 \value{
 the input data frame along with two new columns.
@@ -21,6 +19,5 @@ the input data frame along with two new columns.
 \description{
 This function takes as input a data frame which includes the raw
   text associated with each faculty member. It returns that data frame along with
-  two new columns: first.name and last.name. If \code{complete} is FALSE, it also
-  returns full.name.
+  two new columns: first.name and last.name.
 }
