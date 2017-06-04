@@ -67,20 +67,24 @@ x[str_split(x$full.name, " ", simplify = TRUE)[,5] != "",] %>% select(year, full
 
 ### Gender
 
-The course catalogs do not provide the gender of the graduates, so we estimate it by using the **gender** package. 
-`r tufte::margin_note("At some point, we hope to explore a more advanced approach: Kamil Wais (2016). genderizeR: Gender Prediction Based on First Names. R package version 2.0.0. https://CRAN.R-project.org/package=genderizeR")` Our gender variable looks like:
+The course catalogs do not provide the gender of the graduates, so we estimate it by using the [gender](https://cran.r-project.org/web/packages/gender/gender.pdf) and [genderizeR](https://cran.r-project.org/web/packages/genderizeR/index.html) package. 
+
+These packages predict gender on the basis of names. We first use the `gender` package to predict gender according to the first and middle names of graduates. Alas, the `gender` package focuses heavily on American names, and therefore, this approach is ineffective for non-American names like DoHyun and Qiang. 
+
+To account for this shortcoming, we supplement the `gender` package with the `genderizeR` package which provides more global coverage. However, this is a paid service that limits free access. So, we used it once and then saved the results.
+
+Our gender variable looks like:
 
 ```{r}
 table(x$gender, exclude = NULL)
 ```
 
-The large number of NAs is a result of the gender package's focus on American names. Consider the most common problem cases:
 
 ```{r}
 x %>% filter(is.na(gender)) %>% select(first.name, gender) %>% group_by(first.name, gender) %>% summarize(count = n()) %>% arrange(desc(count)) %>% as.data.frame() %>% head(12)
 ```
 
-Most of the NAs for gender are due to unique first names, names that appear only once amoung the `r dim(x)[1]` graduates. Eventually, we might fix some of these by hand, especially those --- like José --- for which we know the correct gender. There might also be simple ways to add international names. But, for now, we see no reason why these NA should bias any of the later analysis. 
+Most of the NAs for gender are due to unique first names, names that appear only once amoung the `r dim(x)[1]` graduates. Eventually, we might fix some of these by hand. But, for now, we see no reason why these NA should bias any of the later analysis. 
 
 ```{r}
 x %>% select(year, gender) %>% count(year, gender) %>% mutate(percentage = n/sum(n)) %>% ggplot(aes(year, percentage, color = gender)) + geom_line()
@@ -112,6 +116,156 @@ Black, `r round(261/2065, 2)` Hispanic, `r round(1106/2065, 2)` White, and `r ro
 Our estimates for non-White students are too low. First, we don't even find the same number of Asian/Black/Hispanic students are we know to be at Williams among the US citizen portion of the population. Second, we categorize some/many of the students in the other categories (most importantly the international and multi-racial students) as being in non-White categories even though they are not so classified by Williams.
 
 As an example, we classify Paige Lauren Whidbee '16 as Black. She is the only Phi Beta Kappa member of the class of 2016 that we so classify. However, according to this [photo](http://ephsports.williams.edu/sports/wgolf/2014-15/bios/whidbee_paige_2xmt?view=bio), she probably isn't African-American.
+
+
+```{r}
+x %>% select(year, race) %>% count(year, race) %>% mutate(percentage = n/sum(n)) %>% ggplot(aes(year, percentage, color = race)) + geom_line()
+```
+
+###Effect of Race and Gender on Latin Honors, Phi Beta Kappa, and Sigma Xi
+
+The College awards latin honors by the following rules: 
+
+* 35% of the graduating class -- Bachelor of Arts cum laude or higher
+* 15% of the graduating class -- Bachelor of Arts magna cum laude or higher
+* 2% of the graduating class -- Bachelor of Arts summa cum laude
+
+The remaining 65% receive no honors. 
+
+```{r}
+round(prop.table(table(graduates$latin.honors))*100, 2)
+```
+
+The college inducts students of the highest academic standing to the [Phi Beta Kappa Society](http://web.williams.edu/admin/registrar/faq/distinct.html). At the end of the junior year, all students in the highest five percent of the class, ranked by cumulative grade point average, shall be eligible for election.  At the end of their senior year, students in the top 12.5 percent of the class, excluding those already elected, are eligible for election.
+
+```{r}
+round(prop.table(table(graduates$Phi.Beta.Kappa))*100, 2)
+```
+
+The [Williams College Sigma Xi Chapter](https://science.williams.edu/student-faculty-research/sigma-xi/) recognizes students "graduating science students who have demonstrated exceptional ability and promise for further contributions to the advancement of scientific research".
+
+```{r}
+round(prop.table(table(graduates$Sigma.Xi))*100, 2)
+```
+
+Since colleges are (rightly!) protective about GPA data, latin honors and membership of these societies can be effective proxies for academic excellence. Here, we will study the effect of race and gender on such measures of academic excellence.    
+
+
+Let us first look at Sigma Xi. Figure # shows the percentage of male and female students inducted into Sigma Xi from 2000 to 2016. We run a logistic regression of the binary variable indicating membership into Sigma Xi on gender. The regression equation is: 
+
+$$\hat{p} = \beta_0 + \beta_1 genderMale$$
+
+where, $\hat{p}$ is the probability that a graduate is inducted into Sigma Xi, and $genderMale$ is an indicator variable with value $1$ if the graduate is male, and $0$ if the graduate is female. The results for this regression are summarized in Table # below. We find that on average, males are slightly more likely to be inducted into Sigma Xi, but the effect is neither statistically significant, nor large in magnitude.     
+
+```{r}
+x <- graduates %>% dplyr::filter(Sigma.Xi) %>% dplyr::group_by(year) %>% mutate(total = n()) %>% group_by(gender, total, add = TRUE) %>% dplyr::mutate(percent = n()/ total * 100)
+ggplot(x, aes(x = year, y = percent, fill = gender)) + geom_bar(stat = "identity", position = "dodge") + labs(x = "Year", y = "Percent")
+```
+
+```{r}
+l.gender.Sigma.Xi <- lm(graduates$Sigma.Xi~graduates$gender)
+summary(l.gender.Sigma.Xi)
+```
+
+
+Consider race: we run a similar logistic regression of the binary variable indicating membership into Sigma Xi on the race. The regression equation is of the form: 
+
+$$\hat{p} = \beta_0 + \beta_1 raceBlack + \beta_2 raceHispanic + \beta_3 raceWhite$$
+
+where, $\hat{p}$ is the probability that a graduate is inducted into Sigma Xi, and $raceBlack$ is an indicator variable with value $1$ if and only if the graduate is Black, $raceHispanic$ is an indicator variable with value $1$ if and only if the graduate is Hispanic, and $raceWhite$ is an indicator variable with value $1$ if and only if the graduate is White. The results are summarized below in table #. 
+
+We find that asians are the most likely to be inducted into Sigma Xi, followed by Whites, Hispanics, and Blacks (in that order). Evidence to support this assertion is significant at the 0.001 level. In fact, our point estimates suggest that Asians are almost twice as likely to be inducted into Sigma Xi, compared to Blacks or Hispanics. 
+
+
+```{r}
+x <- graduates %>% dplyr::filter(Sigma.Xi, ! race == "Other") %>% dplyr::group_by(year) %>% mutate(total = n()) %>% group_by(race, total, add = TRUE) %>% dplyr::mutate(percent = n()/ total * 100)
+ggplot(x, aes(x = year, y = percent, fill = race)) + geom_bar(stat = "identity", position = "dodge") + labs(x = "Year", y = "Percent")
+```
+
+```{r}
+l.race.Sigma.Xi <- lm(x$Sigma.Xi~x$race)
+summary(l.race.Sigma.Xi)
+```
+
+Indeed, membership into Sigma Xi is not the perfect proxy for academic excellence. For starters, membership recognizes "exceptional ability and promise for further contributions to the advancement of scientific research", and therefore, obviously disadvantages students in non-scientific discplines. Further, membership is by nomination, which opens the question of any artificial bias. 
+
+On the other hand, Suma Cum Laude and Phi Beta Kappa recognizes students solely by academic performance (their GPA). As of such, they are perhaps, better proxies for academic excellence. Let us look at how race and gender effects these at Williams College.    
+
+
+```{r fig.show='hold', out.width = '50%'}
+x <- graduates %>% dplyr::filter(Phi.Beta.Kappa) %>% dplyr::group_by(year) %>% mutate(total = n()) %>% group_by(gender, total, add = TRUE) %>% dplyr::mutate(percent = n()/ total * 100)
+p1 <- ggplot(x, aes(x = year, y = percent, fill = gender)) + geom_bar(stat = "identity", position = "dodge") + labs(title = "Gender and Phi Beta Kappa at Williams College", x = "Year", y = "Percent") 
+x <- graduates %>% dplyr::filter(latin.honors == "Summa Cum Laude") %>% dplyr::group_by(year) %>% mutate(total = n()) %>% group_by(gender, total, add = TRUE) %>% dplyr::mutate(percent = n()/ total * 100)
+p2 <- ggplot(x, aes(x = year, y = percent, fill = gender)) + geom_bar(stat = "identity", position = "dodge") + labs(title = "Gender and Suma Cum Laude at Williams College", x = "Year", y = "Percent")
+p1
+p2
+```
+
+As before, we run logistic regressions of membership in Phi Beta Kappa and conferral of Suma Cum Laude on gender. As with Sigma Xi, these proxies for academic excellence seem to be completely unaffected by gender. The results of the regression are summarized in Table # and Table #. 
+
+```{r}
+l.gender.PBK <- lm(graduates$Phi.Beta.Kappa~graduates$gender)
+summary(l.gender.PBK)
+```
+
+```{r}
+graduates$is.suma <- graduates$latin.honors == "Summa Cum Laude"
+l.gender.Summa <- lm(graduates$is.suma~graduates$gender)
+summary(l.gender.Summa)
+```
+
+
+What about race? Figure # shows the distribution of races in Phi Beta Kappa members and Summa Cum Laude awardees from 2000 to 2016. 
+
+```{r fig.show='hold', out.width = '50%'}
+x <- graduates %>% dplyr::filter(Phi.Beta.Kappa) %>% dplyr::group_by(year) %>% mutate(total = n()) %>% group_by(race, total, add = TRUE) %>% dplyr::mutate(percent = n()/ total * 100)
+p1 <- ggplot(x, aes(x = year, y = percent, fill = race)) + geom_bar(stat = "identity", position = "dodge") + labs(title = "Race and Phi Beta Kappa at Williams College", x = "Year", y = "Percent") 
+x <- graduates %>% dplyr::filter(latin.honors == "Summa Cum Laude") %>% dplyr::group_by(year) %>% mutate(total = n()) %>% group_by(race, add = TRUE) %>% dplyr::mutate(percent = n()/ total * 100)
+p2 <- ggplot(x, aes(x = year, y = percent, fill = race)) + geom_bar(stat = "identity", position = "dodge") + labs(title = "Race and Suma Cum Laude at Williams College", x = "Year", y = "Percent")
+p1
+p2
+```
+
+In a decade and half worth data, we do not classify a single graduate receiving Summa Cum Laude honors as Hispanic. Is this, in fact, true? Indeed, we performed Google searches on Summa Cum Laude graduates over the last 10 years (Good news: Finishing on the top 2% of your class at Williams almost certainly garauntees that you are very Google-able), but we do not find any data to suggest otherwise. 
+
+Black graduates follow a similar pattern. In fact, in the last 10 years, we classify 2 graduates receiving Summa Cum Laude as Black. Unfortonately, neither of the two, [Blake Mackall](http://ephsports.williams.edu/sports/mten/2014-15/bios/mackall_blake_n3y8) nor [Erika Williams](https://neuroscience.williams.edu/files/2012/10/ErikaWilliams2.jpg), is in fact black. Then, as far as we can tell, no Black Williams student graduated with Suma Cum Laude in the last decade. 
+
+Results from our regression models are summarized in Tables # and #. We find that Asians are significantly (at the 0.01 level) more likely to be members of Phi Beta Kappa and awarded Suma Cum Laude than Blacks or Hispanics. 
+
+```{r}
+l.race.PBK <- lm(graduates$Phi.Beta.Kappa~graduates$race)
+summary(l.race.PBK)
+```
+
+```{r}
+graduates$is.suma <- graduates$latin.honors == "Summa Cum Laude"
+l.race.Summa <- lm(graduates$is.suma~graduates$race)
+summary(l.race.Summa)
+```
+
+
+Our data provides strong evidence that on average, Asians at Williams College academically out perform their counterparts from other minority groups. What might be driving this effect? 
+
+
+* *The Athlete Effect*      
+The [2009 Report by the Athletics Committee: Varsity Athletes and Academics](http://www.ephblog.com/wp-content/uploads/2009/06/athleticsreport09final.pdf) finds that athletes in high-profile varsity sports under perform even after accounting for academic qualifications prior to enrolling at Williams College, socio-economic status, and the individual’s year (e.g. sophomore, senior). Asians are definitely underrepresented at these sports, and therefore, controlling for "high-profile varsity athlete" status will give us a clearer picture on the effect of race on academic excellence at Williams.  
+
+* *Asians are over represented in international students*     
+Although there is no publically available work studying the academic performance of international students at Williams, there is (some evidence)[http://ephblog.com/2006/05/25/international-student-qualifications-and-performance/] to suggest that they fare better academically than their domestic counterparts. In so much that there are more Asian international students than those from other minority groups, this effect maybe biasing our findings.     
+
+* *It's a preference thing*   
+On average, do Asians value academic recognition more than their counterparts from other minority groups? This line of thinking advocates that in reality, other minority groups are academically as capable as Asians at Williams, but Asians value academic recognition more highly, and therefore, have more incentive to spend, say, another 10 hours in the library every week to boost their GPAs from 3.90 to 4.00, while others rather spend this time joining an a cappella group, or even just hang out more in the common room. That is, if other minority groups _really_ wanted that 4.00, they could get it.    
+If this was true, we might expect Asians, in their pursuit of academic recognition, to cut corners and take easier classes. Figure # shows number of Asians who wrote a thesis during their senior year at Williams by department. We see that a fair amount of Asians major in disciplines like Physics, Chemistry, and Mathematics that a recent [Record article](http://williamsrecord.com/2017/03/15/student-perceptions-of-rigor-of-college-majors/) finds to be the "most rigorous majors" according to Williams College students. Of course, this data is far from conclusive: firstly, we only have department information about Asians that wrote a thesis; secondly, it might so be that Asians major in these rigorous disciplines, but tend to take easier classes within the discplines. 
+
+```{r}
+asianSumma <- filter(graduates, race == "Asian", ! is.na(major)) %>% group_by(major) %>% summarise(total = n())
+ggplot(asianSumma, aes(x = major, y = total)) + geom_bar(stat = "identity", position = "dodge", fill = "purple") + labs(title = "Race and Suma Cum Laude at Williams College", x = "Year", y = "Percent") + theme(axis.text.x = element_text(angle = 90, hjust = 1))
+```
+
+* *Admission Discrimination* 
+In so much that the above don't fully explain the huge disparity between academic performance of Asians and that of other minority groups, we have reason to believe that there is discrimination against Asians at the Williams College Admissions Office. Such discrimination in college admissions has some fan following. Students for Fair Admissions (SFFA)—a group representing primarily Asian American students and parents- recently [sued](http://samv91khoyt2i553a2t1s05i-wpengine.netdna-ssl.com/wp-content/uploads/2014/11/SFFA-v.-Harvard-Complaint.pdf) Harvard College for using implicit racial quotas. At least [one](http://www.businessinsider.com/asian-americans-on-affirmative-action-ruling-2016-6) recent Williams graduate has also taken the matter to court. 
+
+
 
 
 
