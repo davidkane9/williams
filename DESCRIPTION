@@ -1,4 +1,4 @@
-Package: williamsmetrics
+Package: williams
 Type: Package
 Title: Williams College Related Metrics
 Version: 0.3.9
