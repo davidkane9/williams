@@ -73,7 +73,7 @@ Phoebe A. *Cohen #  Geosciences Department #
 Jeremy D. Cone #  Psychology Department #
 Michael P. Conforti #  Graduate Program-Art History #
 Mea S. Cook #  Geosciences Department #
-Margaux E. Cowden #  Women #
+Margaux E. Cowden #  Women's Gender and Sexuality Studies #
 Ronadh Cox #  Geosciences Department #
 George T. Crane #  Political Science Department #
 Marshall K. Creighton #  Athletics Department #
@@ -170,12 +170,12 @@ Alan Hirsch #  Humanities Department #
 Marjorie W. Hirsch #  Music Department #
 Nate D. Hoey #  Athletics Department #
 Amy S. **Holzapfel #  Theatre Department #
-Kiaran Honderich #  Women #
+Kiaran Honderich #  Women's Gender and Sexuality Studies #
 Scott D. Honecker #  Athletics Department #
 Meredith C. Hoppin #  Classics Department #
 Catherine N. Howe #  Art Department #
 Nicolas C. Howe # Environmental Studies #
-Vivian L. Huang #  Women #
+Vivian L. Huang #  Women's Gender and Sexuality Studies #
 Joan C. Huguet #  Music Department #
 Jeffrey I. Israel #  Religion Department #
 Robert Jackall #  Anthropology and Sociology #
@@ -273,7 +273,7 @@ Karen R. Merrill #  History Department #
 Jason Mientkiewicz #  Art Department #
 Carolyn D. Miles #  Athletics Department #
 Steven J. ***Miller #  Mathematics and Statistics #
-Gregory C. *Mitchell #  Women #
+Gregory C. *Mitchell #  Women's Gender and Sexuality Studies #
 Bojana Mladenovic #  Philosophy Department #
 Jeff Moher #  Psychology Department #
 Mariko Moher #  Psychology Department #
