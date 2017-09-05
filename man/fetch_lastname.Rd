@@ -13,6 +13,7 @@ fetch_lastname(name)
 last name (as defined above)
 }
 \description{
-Given a list of words in a name, this function will find the last name
-             (defined as all words in the name after the first, not including collapsed middlenames if any).
+Given a list of words in a name, this function will find the
+  last name (defined as all words in the name after the first, not including
+  middle initials, if any).
 }

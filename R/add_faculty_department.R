@@ -1,8 +1,9 @@
 #' @title Add Faculty Department
-#' @description The function accepts a data frame with raw.text column, and adds a column for the faculty's department
+#' @description The function accepts a data frame with raw.text column, and adds 
+#'  a column for the faculty's department
 #'
 #' @param x data frame with raw.text column
-#'@return the input data frame along with a new columns.
+#' @return the input data frame along with a new columns.
 #'
 #' @format \describe{
 #'  \item{department}{the faculty member's department}
@@ -11,38 +12,43 @@
 #' @importFrom dplyr %>%
 #'
 #' @export
-#'
 
 add_faculty_department <- function(x) {
+
   stopifnot(is.data.frame(x))
   stopifnot("title" %in% names(x))
-  stopifnot("first.name" %in% names(x))
-  stopifnot("last.name" %in% names(x))
   stopifnot(is.character(x$title))
-  stopifnot(is.character(x$first.name))
   stopifnot(is.character(x$last.name))
 
-
   # Read in master list of departments
-  filename <- system.file("extdata/departments.txt", package = "williamsmetrics")
+  
+  filename <- system.file("extdata/departments.txt", package = "williams")
   departments <- readr::read_lines(filename)
 
   ## Handle edge cases:
-  ## Absurdly many ways to say WGES!!
+  
+  ## Absurdly many ways to say WGES! Basic idea is that, during the time period,
+  ## WGES had two main names: first, Women’s and Gender Studies; second, Women's
+  ## Gender and Sexuality Studies. And dealing with the different versions of 
+  ## the apostraphe in Women's is not simple. Unicode is confusing! Fortunately,
+  ## a simple regexp seems to do the job.
+  
   x$raw <- x$title
-  x$raw <- stringr::str_replace_all(x$raw, "Women's, Gender and Sexuality Studies|Women's and Gender Studies|Women’s and Gender Studies|
-                                    Women’s, Gender and Sexuality Studies|Women’s, Gender and Sexuality Studies|Women’s, Gender, and Sexuality Studies
-                                    Womens’, Gender, and Sexuality Studies|Womens’, Gender, and Sexuality Studies|Women’s, Gender, and Sexuality Studies|
-                                    Women s and Gender Studies", "WGES")
+  x$raw <- stringr::str_replace(x$raw, "Women(.*)Studies", "WGES")
 
   ## "Economics" mispelled
+  
   x$raw <- stringr::str_replace_all(x$raw, "Economic", "Economics")
 
-  ## It seems like there are too many edge cases to design a simple munging criteria like we did for majors in graduates.
-  ## Instead, we've used a manually prepared master list of departments and str_detect to get the departments.
-  ## For example, for Daniel P. Aalberts #  Associate Professor of Physics # B.S. (1989) M.I.T.; Ph.D. (1994) M.I.T.
-  ## we would infer deopartment as "Phsyics"
+  ## It seems like there are too many edge cases to design a simple munging
+  ## criteria like we did for majors in graduates. Instead, we've used a
+  ## manually prepared master list of departments and str_detect to get the
+  ## departments. For example, for Daniel P. Aalberts #  Associate Professor of
+  ## Physics # B.S. (1989) M.I.T.; Ph.D. (1994) M.I.T. we would infer
+  ## deopartment as "Phsyics"
+  
   x$department <- NA
+  
   for(department in departments){
     x$department[which(stringr::str_detect(x$raw, department) & is.na(x$department))] <- department
   }
@@ -53,6 +59,7 @@ add_faculty_department <- function(x) {
   ## and has to be explicitly handled here if required.
 
   ## First some specific departments which have been named otherwise in titles
+  
   x$department[which(stringr::str_detect(x$title, "Natural Science") & is.na(x$department))] <- "Geosciences"
   x$department[which(stringr::str_detect(x$title, "Geology") & is.na(x$department))] <- "Geosciences"
   x$department[which(stringr::str_detect(x$title, "Librarian") & is.na(x$department))] <- "Library"
@@ -61,6 +68,7 @@ add_faculty_department <- function(x) {
   x$department[which(stringr::str_detect(x$title, "Latina") & is.na(x$department))] <- "Laitna/o Studies"
 
   ## Now, some specific ones for which department was obvious after a google search
+  
   x$department[which(x$first.name == "Bernadette" & x$last.name == "Brooten")] <- "Religion"
   x$department[which(x$first.name == "Jennifer" & x$last.name == "Austin")] <- "Spanish"
   x$department[which(x$first.name == "Gene" & x$last.name == "Bell-Villada")] <- "Spanish"
@@ -100,11 +108,8 @@ add_faculty_department <- function(x) {
   x$department[which(x$first.name == "Barry" & x$last.name == "Goldstein")] <- "Art"
   x$department[which(x$first.name == "Mark" & x$last.name == "Taylor")] <- "Religion"
 
-
   ## Several more to complete here...
-
 
   x$raw <- NULL
   x
-
 }

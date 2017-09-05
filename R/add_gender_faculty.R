@@ -27,6 +27,7 @@ add_gender_faculty <- function(x){
 
   ## For some rows (esp. in faculty dataset) we don't know the exact birth year.
   ## We will stick to our earlier approach of using the average birth year here.
+  
   index <- is.na(x$birth.year)
   x$birth.year[index] <- round(mean(x$birth.year, na.rm = TRUE))
 
@@ -59,9 +60,11 @@ add_gender_faculty <- function(x){
 
   ## Now, clean up the data set
   ## (1) Make NAs for faculty whose birth.year was initially unknown
+  
   x$birth.year[index] <- NA
 
   ## (2) Remove g.gender column
+  
   x$g.gender <- NULL
 
   x

@@ -1,4 +1,4 @@
-library(williamsmetrics)
+library(williams)
 
 context("create_graduates")
 

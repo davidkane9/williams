@@ -4,8 +4,8 @@
 \alias{add_faculty_names}
 \title{Add Faculty Names}
 \format{\describe{
- \item{first.name}{Faculty's first name.}
- \item{last.name}{Faculty's last name.}
+ \item{first.name}{First name of faculty member}
+ \item{last.name}{Last name or faculty member}
  }}
 \usage{
 add_faculty_names(x)

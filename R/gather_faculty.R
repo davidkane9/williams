@@ -9,8 +9,11 @@
 #'
 #' @format \describe{
 #'   \item{year}{numeric <YYYY>, year}
-#'   \item{raw.text}{character, Raw text from the Course Catlog associated with each faculty member}
-#'   \item{leave}{character, Faculty leave information; one of "Academic Year", "First Semester", "Second Semester", "Calendar Year", or "None"}
+#'   \item{raw.text}{character, Raw text from the Course Catlog 
+#'       associated with each faculty member}
+#'   \item{leave}{character, Faculty leave information; 
+#'       one of "Academic Year", "First Semester", "Second Semester", 
+#'       "Calendar Year", or "None"}
 #'   }
 #' @export
 
@@ -22,24 +25,26 @@ gather_faculty <- function(){
 
   x <- tibble::data_frame()
 
-  ## If we decide to provide optional year argument in gather_graduates, we should add it here as well.
+  ## If we decide to provide optional year argument in gather_graduates, we
+  ## should add it here as well.
 
-  files <- list.files(paste0(system.file(package = "williamsmetrics"), "/extdata"), pattern = "faculty")
+  files <- list.files(paste0(system.file(package = "williams"), "/extdata"), pattern = "faculty")
 
   for(i in seq_along(files)){
     year <- as.numeric(stringr::str_sub(files[i], 9, 12))
     name <- paste0("extdata/faculty-", year, "-", (year + 1), ".txt", sep = "")
 
-
     ## read in raw text from file, and add as column to the dataframe.
     ## Also, add in column for year.
-    filename <- system.file(name, package = "williamsmetrics")
+
+    filename <- system.file(name, package = "williams")
     raw <- readr::read_lines(filename)
 
     df <- tibble::data_frame(year = rep(year, length(raw)),
                              raw.text = raw)
 
-    ## Now figure out faculty on leave
+    ## Now figure out faculty on leave. Must be a nicer way of doing this . . .
+    
     df$leave <- ifelse(stringr::str_count(df$raw.text, "\\*") == 1, "Academic Year",
                        ifelse(stringr::str_count(df$raw.text, "\\*") == 2, "First Semester",
                               ifelse(stringr::str_count(df$raw.text, "\\*") == 3, "Second Semester",
@@ -47,6 +52,7 @@ gather_faculty <- function(){
 
     x <- rbind(x, df)
   }
+  
   x
 }
 

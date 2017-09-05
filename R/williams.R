@@ -1,7 +1,7 @@
-#' @title williamsmetrics: A package of data associated with Williams College and tools for creating it.
+#' @title williams: A package of data associated with Williams College and tools for creating it.
 #'
 #' @description
-#' The heart of \code{williamsmetrics} are the data frames \code{graduates} and \code{faculty}. This
+#' The heart of \code{williams} are the data frames \code{graduates} and \code{faculty}. This
 #' document describes how this data was collected, and provides instructions for adding data in
 #' subsequent years. The college maintains an
 #' [archive](http://web.williams.edu/admin/registrar/catalog/archive.html) of
@@ -39,5 +39,5 @@
 #' We need a similarly detailed description of how to handle faculty information.
 #'
 #' @docType package
-#' @name williamsmetrics
+#' @name williams
 NULL

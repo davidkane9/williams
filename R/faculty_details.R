@@ -1,9 +1,9 @@
-#' Williams College Faculty
+#' Williams College Faculty Details
 #'
-#' A dataset containing information for the current members (what years?) 
-#' of the Williams faculty using information extracted from the 
-#' Williams College course catalog. See also the \code{faculty_details}
-#' data frame for the full history.
+#' A dataset containing information for all members of the 
+#' Williams faculty since 2000, contrudcted using information extracted 
+#' from the Williams College course catalog. See also the \code{faculty} 
+#' data frame.
 #'
 #' @source \url{http://web.williams.edu/admin/registrar/catalog/archive.html}
 #' @format
@@ -31,7 +31,6 @@
 #'     \item{last.degree.school}{School that conferred last degree.}
 #'     \item{gender}{Estimated gender.}
 #'     \item{race}{Estimated race: "Asian", "Black", "Hispanic", "Other", "White"}
-#'     \item{start.year}{First year teaching at Williams.}
 #'     }
-"faculty"
+"faculty_details"
 

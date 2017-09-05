@@ -9,8 +9,8 @@
 #' @return the input data frame along with two new columns.
 #'
 #' @format \describe{
-#'  \item{first.name}{Faculty's first name.}
-#'  \item{last.name}{Faculty's last name.}
+#'  \item{first.name}{First name of faculty member}
+#'  \item{last.name}{Last name or faculty member}
 #'  }
 #'
 #' @importFrom dplyr %>%
@@ -31,13 +31,20 @@ add_faculty_names <- function(x){
   full.name <- stringr::str_split(full.name, "#", simplify = TRUE)[ ,1] %>% stringr::str_trim()
   names <- stringr::str_split(full.name, " ")
 
-  ## For faculty, middle names (if present) seem to be collapsed into a single alphabet after the first name.
-  ## We will assume assume that the first word in the name is always the first name.
-  ## All preceding words (except collapsed middle names) in the name will be the last name.
+  ## For faculty, middle names (if present) seem to be collapsed into a single 
+  ## initial after the first name, e.g., Colin C. Adams. This is very different
+  ## than the graduates data. We will assume that the first word in the name is
+  ## always the first name.
 
   x$first.name <- names %>% purrr::map_chr(1)
-  x$last.name  <- names %>% purrr::map_chr(fetch_lastname)
 
+  ## Last names are trickier for two reasons. First, some people have two (or 
+  ## zero) middle initials, so the lists in names are of different length, e.g.,
+  ## Ronadh Cox and Stuart J. B. Crampton. Second, some faculty have compound 
+  ## last names, e.g. De Veaux and de Gooyer. fetch_lastname (see bottom of this
+  ## file) does the trick, although in an aesthetically offensive way.
+  
+  x$last.name  <- names %>% purrr::map_chr(fetch_lastname)
 
   ## Ought to do more robust error-checking, but this is not bad.
 
@@ -52,27 +59,34 @@ add_faculty_names <- function(x){
   x
 }
 
-## Notice: mapping names to x$last.name is slightly more complicated than mapping names to x$first.name.
-## We can no longer just use indexing, as we need to deal with the middle name. Instead, we map using
-## a function.
+## Notice: mapping names to x$last.name is slightly more complicated than
+## mapping names to x$first.name. We can no longer just use indexing, as we need
+## to deal with the middle name. Instead, we map using a function.
 
-## I have included this function here, instead of giving it its seperate file, because we use it locally
-## for purposes of add_faculty_names, and it has no relevance whatsoever to other functionality.
+## I have included this function here, instead of giving it its seperate file,
+## because we use it locally for purposes of add_faculty_names, and it has no
+## relevance whatsoever to other functionality.
 
 #' @title Fetch Lastname
-#' @description Given a list of words in a name, this function will find the last name
-#'              (defined as all words in the name after the first, not including collapsed middlenames if any).
+#' @description Given a list of words in a name, this function will find the
+#'   last name (defined as all words in the name after the first, not including
+#'   middle initials, if any).
 #' @param name list of words in a name
 #' @return last name (as defined above)
+
 fetch_lastname <- function(name) {
+  
   ## Dealing with the case where no lastname is present ("Ju-Yu")
+
   if(length(name) < 2) { return ("")}
 
   ## If a collapsed middlename is present, ignore it.
+  
   if(substr(name[2], 2, 2) == '.'){
     return(paste(name[3:length(name)], collapse = " "))
   }
 
   ## else return everything but the firstname
+  
   return(paste(name[2:length(name)], collapse = " "))
 }

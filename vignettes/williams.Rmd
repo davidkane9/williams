@@ -29,7 +29,7 @@ This document provides an overview of the data available in the wiliamsmetrics p
 library(dplyr)
 library(stringr)
 library(ggplot2)
-library(williamsmetrics)
+library(williams)
 data(graduates_details)
 x <- graduates_details
 ```
@@ -290,7 +290,7 @@ There were `r dim(faculty_details)[1]` faculty at Williams from `r min(faculty_d
 
 ###Names
 
-We have records of faculty firstnames and lastnames. 
+We have records of faculty first names and last names. 
 
 The most common first names for the entire dataset are: 
 

@@ -23,12 +23,12 @@ gather_graduates <- function(){
 
   ## Maybe provide an optional year argument that could be used to get just one file?
 
-  files <- list.files(paste0(system.file(package = "williamsmetrics"), "/extdata"), pattern = "graduates")
+  files <- list.files(paste0(system.file(package = "williams"), "/extdata"), pattern = "graduates")
 
   for(i in seq_along(files)){
     year <- as.numeric(stringr::str_sub(files[i], 11, 14))
     name <- paste0("extdata/graduates-", (year), "-", (year + 1), ".txt", sep = "")
-    filename <- system.file(name, package = "williamsmetrics")
+    filename <- system.file(name, package = "williams")
     raw <- readr::read_lines(filename)
 
     clean <- raw[! stringr::str_detect(raw, "Bachelor of Arts")]

@@ -16,5 +16,6 @@ add_faculty_department(x)
 the input data frame along with a new columns.
 }
 \description{
-The function accepts a data frame with raw.text column, and adds a column for the faculty's department
+The function accepts a data frame with raw.text column, and adds 
+ a column for the faculty's department
 }

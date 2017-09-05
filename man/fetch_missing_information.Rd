@@ -4,21 +4,21 @@
 \alias{fetch_missing_information}
 \title{Fetch Missing Information}
 \usage{
-fetch_missing_information(x, firstname, lastname, column)
+fetch_missing_information(x, first.name, last.name, column)
 }
 \arguments{
 \item{x}{data set to search in}
 
-\item{column}{column of interest}
-
 \item{first.name}{Faculty's first name}
 
 \item{last.name}{Faculty's last name}
+
+\item{column}{column of interest}
 }
 \value{
 last recorded non NA value for column of interest for given faculty
 }
 \description{
 This function takes in a faculty's name and a column name, and returns the last recorded
-             non NA value for that column for given faculty
+             non NA value for that column for given faculty.
 }

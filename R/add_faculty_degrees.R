@@ -30,35 +30,42 @@ add_faculty_degrees <- function(x) {
 
   ## Grab all degree info: these are always succeeding the third '#' in the raw text
   ## Also, remove any leading/trailing white spaces
+  
   degree.info <- stringr::str_split(x$raw.text, "#", simplify = TRUE)[ ,3] %>% stringr::str_trim()
 
   ## Now, each information about each degree is seperated by ";". Let's break that up.
+  
   degrees <- stringr::str_split(degree.info, ";")
 
   ## Add information about first degree
+  
   x$first.degree <- degrees %>% purrr::map_chr(1) %>% fetch_degree()
   x$first.degree.year <- degrees %>% purrr::map_chr(1) %>% fetch_year()
   x$first.degree.school <- degrees %>% purrr::map_chr(1) %>% fetch_school()
 
   ## Add information about last degree
+  
   x$last.degree <- degrees %>% purrr::map_chr(tail, 1) %>% stringr::str_trim() %>% fetch_degree()
   x$last.degree.year <- degrees %>% purrr::map_chr(tail, 1) %>% fetch_year()
   x$last.degree.school <- degrees %>% purrr::map_chr(tail, 1) %>% fetch_school()
 
   x
-
 }
 
 ## The following our standalone functions that help add the degree columns
 ## I have included them here (instead of their independent file) as they are only of
 ## relevance to add_faculty_degrees
 
-## Given graduation details about a degree, this function finds the name of the degree
+## Given graduation details about a degree, this function finds the name of the
+## degree
+
 fetch_degree <- function(degree.info){
   stringr::str_split(degree.info, " ", simplify = TRUE)[ ,1] %>% stringr::str_trim()
 }
 
-## Given graduation details about a degree, this function finds the year the degree was conferred
+## Given graduation details about a degree, this function finds the year the
+## degree was conferred
+
 fetch_year <- function(degree.info){
   # Get the parenthesis and what is inside
   year <- stringr::str_extract_all(degree.info, "\\([^()]+\\)")
@@ -67,7 +74,9 @@ fetch_year <- function(degree.info){
   as.numeric(year)
 }
 
-## Given graduation details about a degree, this function finds the name of school conferring the degree
+## Given graduation details about a degree, this function finds the name of
+## school conferring the degree
+
 fetch_school <- function(degree.info){
   stringr::str_split(degree.info, "\\)", simplify = TRUE)[,2] %>%  stringr::str_trim()
 }

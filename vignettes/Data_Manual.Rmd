@@ -20,7 +20,7 @@ knitr::opts_chunk$set(tidy = FALSE,
 # Introduction
 
 ```{r}
-library(williamsmetrics)
+library(williams)
 library(dplyr)
 
 ```
@@ -286,7 +286,7 @@ This function takes as input a data frame which includes the raw text associated
 
 The facultys' job title is always present between the first and second '#'s in the `raw.text` column. It easy to grab using `stringr::str_split`. Once we have the title in place, we can infer the rank: 
 
-* ** Assistant Professor: ** If the words "Assistant Professor" appears on the job title.
+* **Assistant Professor** If the words "Assistant Professor" appears on the job title.
 * **Assosciate Professor** If the words "Assosciate Professor" appears on the job title.
 * **Professor** If the word "Professor" appears on the job title, but none of the above.
 * **Fellow:** If the word "Fellow" appears on the job title, but none of the above.

@@ -27,10 +27,12 @@ add_faculty_titles <- function(x){
 
   ## Grab all titles: these are always between the first and second '#'
   ## in the raw text
+  
   x$title <- stringr::str_split(x$raw.text, "#", simplify = TRUE)[ ,2] %>% stringr::str_trim()
 
   ## Now add rank as one of "Librarian", "Instructor", "Fellow", "Lecturer", "Artist-in-Residence","Visiting Professor",
   ## "Assistant Professor", "Associate Professor", "Professor"
+  
   x$rank <- NA
   x$rank[which(stringr::str_detect(x$title, "Assistant Professor"))] <- "Assistant Professor"
   x$rank[which(stringr::str_detect(x$title, "Associate Professor") & is.na(x$rank))] <- "Associate Professor"
@@ -46,6 +48,7 @@ add_faculty_titles <- function(x){
   ## The course catalogs do not give information about "tenure-track" or "tenured".
   ## We assume that all "associate" or "full" professors are "tenured".
   ## All "assisstant" professors are "tenure-track"
+  
   x$status <- NA
   x$status[which(stringr::str_detect(x$title, "Part-time") | stringr::str_detect(x$title, "Part-Time"))] <- "Part-time"
   x$status[which(x$rank == "Associate Professor" | x$rank == "Professor")] <- "Tenured"
@@ -53,6 +56,7 @@ add_faculty_titles <- function(x){
   x$status[which(stringr::str_detect(x$title, "Visiting"))] <- "Visiting"
 
   ## Some error checking
+  
   stopifnot(all(x$title != ""))
 
   x
