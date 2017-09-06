@@ -26,12 +26,16 @@ add_faculty_department <- function(x) {
   departments <- readr::read_lines(filename)
 
   ## Handle edge cases:
-  
+ 
   ## Absurdly many ways to say WGES! Basic idea is that, during the time period,
-  ## WGES had two main names: first, Women’s and Gender Studies; second, Women's
+  ## WGES had two main names: first, Women's and Gender Studies; second, Women's
   ## Gender and Sexuality Studies. And dealing with the different versions of 
   ## the apostraphe in Women's is not simple. Unicode is confusing! Fortunately,
   ## a simple regexp seems to do the job.
+  
+  ## Note that this is not that important since most professors who have an 
+  ## affiliation to WGES have it as a second affiliation. We use the first
+  ## affiliation to assign a department.
   
   x$raw <- x$title
   x$raw <- stringr::str_replace(x$raw, "Women(.*)Studies", "WGES")
@@ -54,7 +58,7 @@ add_faculty_department <- function(x) {
   }
 
   ## But there are some annoying titles: for example, Bernadette Brooten # Croghan Bicentennial Visiting Professor in Biblical
-  ## and Early Christian Studies, Spring Semester # B.A. (1971) University of Portland; Ph.D. (1982) Harvard”. From above, we
+  ## and Early Christian Studies, Spring Semester # B.A. (1971) University of Portland; Ph.D. (1982) Harvard". From above, we
   ## should probably infer department as "Religion". However, this cannot be achieved with the the above str_detect mechansism
   ## and has to be explicitly handled here if required.
 
@@ -76,7 +80,7 @@ add_faculty_department <- function(x) {
   x$department[which(x$first.name == "Charles" & x$last.name == "Dew")] <- "History"
   x$department[which(x$first.name == "Peter" & x$last.name == "Frost")] <- "History"
   x$department[which(x$first.name == "Charles" & x$last.name == "Fuqua")] <- "Classics"
-  x$department[which(x$first.name == "Antonio" & x$last.name == "Giménez")] <- "Spanish"
+  x$department[which(x$first.name == "Antonio" & str_detect(x$last.name, "^Gim"))] <- "Spanish"
   x$department[which(x$first.name == "Gary" & x$last.name == "Jacobsohn")] <- "Political Science"
   x$department[which(x$first.name == "Glyn" & x$last.name == "Norton")] <- "French"
   x$department[which(x$first.name == "Ronald" & x$last.name == "Nigh")] <- "Environmental Studies"
