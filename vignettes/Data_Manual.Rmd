@@ -22,10 +22,11 @@ knitr::opts_chunk$set(tidy = FALSE,
 ```{r}
 library(williams)
 library(dplyr)
-
+data("graduates")
+data("graduates_details")
 ```
 
-The purpose of this document is to document the procedure for the creation of the faculty and graduate datasets. The data is collected from archives of the College's [Course Catalogs](http://web.williams.edu/admin/registrar//catalog/archive.html), from `r min(graduates$year)` to `r max(graduates$year)`. 
+The purpose of this document is to describe the procedure for the creating the faculty and graduate datasets. The data is collected from archives of the College's [course catalogs](https://catalog.williams.edu/archive/), from `r min(graduates$year)` to `r max(graduates$year)`. 
 
 ##Graduates
 
@@ -41,11 +42,17 @@ The `graduates_details` dataset expands on the above, and provides the following
  names(graduates_details)[! names(graduates_details) %in%  names(graduates)] %>% as.data.frame()
 ```
 
-For details on these variables, try `?graduates` or `?graduates_details` on your R console.    
+For details on these variables, try `?graduates` and `?graduates_details`.    
 
-The datasets are created by scraping data from the Course Catalogs which are saved as `.txt` files in the `inst/extdata` directory. These files follow the naming convention of `graduates-<YEAR (YYYY)>-<YEAR + 1 (YYYY)>`, where `YEAR` is the year for the relevant catalog. For example, the text file with information about graduates from 2000 is saved as `graduates-2000-2001.txt`. For convenience, we only save the pages containing information about graduates from the course catalogs to these files. 
+The datasets are created by scraping data from the course catalogs which are saved as `.txt` files in the `inst/extdata` directory. 
+These files follow the naming convention of `graduates-<YEAR (YYYY)>-<YEAR + 1 (YYYY)>`, where `YEAR` is the year 
+for the relevant catalog. For example, the text file with information about graduates from 2000 is saved 
+as `graduates-2000-2001.txt`. The reason for this awkward naming convention is that the graduates from (spring) 2000 are 
+listed in the course catalog which comes out in fall of 2000, which is the catalog for the 2000-2001 academic year. 
+For convenience, we only save the pages containing information about graduates from the course catalogs to these files. 
 
-Let us look inside these text files. The following is an abstract from `graduates-2000-2001.txt`. We will use it as an example to demonstrate the data munging procedure for gradutes: 
+Let us look inside these text files. The following is an section from `graduates-2000-2001.txt`. 
+We will use it as an example to demonstrate the data munging procedure for gradutes: 
 
 ```
 Bachelor of Arts, Summa Cum Laude
@@ -73,7 +80,7 @@ Mark Douglas Conrad
 *Mary Bowman Cummins
 *Yana Dadiomova
 ```
-###gather_graduates()
+### gather_graduates()
 
 This function brings together the information on all Williams graduates for the years that we have downloaded the data in the package. It
 also adds Latin honors, Phi Betta Kappa, Sigma Xi, and birth year information.
@@ -93,7 +100,7 @@ x %>% as.data.frame() %>% head(15)
 ```
 
 
-###add_graduate_names()
+### add_graduate_names()
 
 We infer `first.name`, `middle.name`, and `last.name` for graduates from the `raw.text` column from above. The names are always provided before the first comma. 
 
@@ -106,7 +113,7 @@ x <- add_graduate_names(x)
 x %>% dplyr::select(raw.text, first.name, middle.name, last.name) %>% as.data.frame() %>% head(15)
 ```
 
-###add_graduate_honors
+### add_graduate_honors
 
 This function takes as input a data frame which includes the raw text associated with each graduate. It returns that data frame along with
 six new columns (`honor.1`, `honor.2`, `honor`, `major.1`, `major.2`, and `major`) associated with department honors. Department honors are conferred on graduates who write a thesis during their senior year. 
@@ -122,7 +129,7 @@ x <- add_graduate_honors(x)
 x %>% dplyr::select(raw.text, honor.1, major.1, honor.2, major.2, honor, major) %>% as.data.frame() %>% head(15)
 ```
 
-###add_gender_graduates
+### add_gender_graduates
 
 The course catalogs do not provide the gender of the graduates, so we estimate it by using the [gender](https://cran.r-project.org/web/packages/gender/gender.pdf) and [genderizeR](https://cran.r-project.org/web/packages/genderizeR/index.html) package. 
 
@@ -138,7 +145,7 @@ x <- add_gender_graduates(x)
 x %>% dplyr::select(first.name, middle.name, gender) %>% as.data.frame() %>% head(15)
 ```
 
-###add_race
+### add_race
 
 
 We use the [wru](https://cran.r-project.org/web/packages/wru/wru.pdf) package to estimate race on the basis of last name. The package utilizes the Bayes' Rule to compute the posterior probability from Voter Registration Records of each racial category for any given individual's name. We predict the individual's race as the racial category with the highest prosterior probability. 
@@ -148,14 +155,14 @@ x <- add_race(x)
 x %>% dplyr::select(last.name, p_whi, p_bla, p_his, p_asi,p_oth,race) %>% as.data.frame() %>% head(15)
 ```
 
-###Wraping Up
+### Wraping Up
 
 The functions described above are called from the `create_graduates` function, that takes in a logical parameter `complete`. Calling `create_graduates` with `complete = TRUE` produces the `graduates_details` data set. If `complete = FALSE`, `create_graduates` trims a dozen or so extraneous columns from `graduates_details` to produce the `graduates` dataset.
 
 `graduates <- create_graduates(complete = FALSE)`             
 `graduates_details <- create_graduates(complete = TRUE)`
 
-###TL;DR
+### Adding More Data
 
 In order to use the package to create the `graduates` and `graduates_details` datasets for subsequent years, follow the following steps: 
 
@@ -200,7 +207,7 @@ Then, for example, information about a graduate takes the form: "*DoHyun Tony Ch
  
 
 
-##Faculty
+## Faculty
 
 Next up are faculty. Our package provides two datasets: `faculty` and `faculty_details`. Let us begin by examining the `faculty_details` dataset. It has the following columns: 
 
@@ -230,7 +237,7 @@ Jon Bakija# Assistant Professor of Economics# B.A. (1990) Wesleyan; Ph.D. (1999)
 Lois Banta# Visiting Associate Professor of Biology# B.A. (1983) Johns Hopkins; Ph.D. (1990) California Institute of Technology       
 David E. Barnard# Assistant Professor of Physical Education# B.A. (1981) Wesleyan; M.A.L.S. (1989) Wesleyan         
 ```
-###gather_faculty()
+### gather_faculty()
 
 This function brings together the information on all Williams faculty for the years that we have downloaded the data in the package. It
 also adds information about faculty on leave.
@@ -248,7 +255,7 @@ x %>% as.data.frame() %>% head(15)
 ```
 
 
-###add_faculty_names()
+### add_faculty_names()
 
 This function takes as input a data frame which includes the raw text associated with each faculty member. It returns that data frame along with two new columns: first.name and last.name. 
 
@@ -262,7 +269,7 @@ x <- add_faculty_names(x)
 x %>% dplyr::select(raw.text, first.name, last.name) %>% as.data.frame() %>% head(15)
 ```
 
-###add_faculty_degrees
+### add_faculty_degrees
 
 This function takes as input a data frame which includes the `raw.text` associated with each faculty member. It returns that data frame along with six new columns: first.degree, first.degree.year, first.degree.school, last.degree, last.degree.year and last.degree.school.
 
@@ -280,7 +287,7 @@ x <- add_faculty_degrees(x)
 x %>% dplyr::select(first.degree, first.degree.year, first.degree.school, last.degree, last.degree.year, last.degree.school) %>% as.data.frame() %>% head(15)
 ```
 
-##add_faculty_titles
+### add_faculty_titles
 
 This function takes as input a data frame which includes the raw text associated with each faculty member. It returns that data frame along with 2 new columns: for the facutly's title and faculty's rank.
 
@@ -297,7 +304,7 @@ The facultys' job title is always present between the first and second '#'s in t
 
 ```{r}
 x <- add_faculty_titles(x)
-x %>% as.data.frame() %>% select(raw.text, title) %>% head(15)
+x %>% as.data.frame() %>% dplyr::select(raw.text, title) %>% head(15)
 ```
 
 ###add_faculty_department
@@ -311,7 +318,7 @@ Alas, others are, still, more complicated. "Jennifer Austin, Assistant Professor
 
 ```{r}
 x <- add_faculty_department(x)
-x %>% as.data.frame() %>% select(first.name, last.name, title, department) %>% head(15)
+x %>% as.data.frame() %>% dplyr::select(first.name, last.name, title, department) %>% head(15)
 ```
 
 
@@ -359,9 +366,9 @@ Now that we understand how to create the `faculty_details` from scratch, let us 
 In addition to filtering the `faculty_detais` dataset for the current year, the `create_annual_faculty` also consolidates any information about faculty that is not present in the latest course catalog (and hence, also in the rows containing information about the latest year). For example, if the undergraduate degree for a faculty is not listed in the course catalog for 2016, but was listed in the 2015 course catalog, `create_annual_faculty` will transfer this information onto the lower columns.        
 
 
-###TL;DR
+### Adding More Data
 
-In order to use the package to create the `faculty` and `fauclty_details` datasets for subsequent years, follow the following steps: 
+Steps to use the package to create the `faculty` and `fauclty_details` datasets for subsequent years: 
 
 1. **Add information about faculty from the course catalogs to text files**. Follow the naming convention of `faculty-<YEAR (YYYY)>-<YEAR + 1 (YYYY)>`, where `YEAR` is the year for the relevant catalog. For example, the text file with information about faculty from 2000 is saved as `faculty-2000-2001.txt`. These files need to be saved in the `inst/extdata` directory. 
 

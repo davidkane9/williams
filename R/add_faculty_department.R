@@ -80,7 +80,7 @@ add_faculty_department <- function(x) {
   x$department[which(x$first.name == "Charles" & x$last.name == "Dew")] <- "History"
   x$department[which(x$first.name == "Peter" & x$last.name == "Frost")] <- "History"
   x$department[which(x$first.name == "Charles" & x$last.name == "Fuqua")] <- "Classics"
-  x$department[which(x$first.name == "Antonio" & str_detect(x$last.name, "^Gim"))] <- "Spanish"
+  x$department[which(x$first.name == "Antonio" & stringr::str_detect(x$last.name, "^Gim"))] <- "Spanish"
   x$department[which(x$first.name == "Gary" & x$last.name == "Jacobsohn")] <- "Political Science"
   x$department[which(x$first.name == "Glyn" & x$last.name == "Norton")] <- "French"
   x$department[which(x$first.name == "Ronald" & x$last.name == "Nigh")] <- "Environmental Studies"

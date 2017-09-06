@@ -40,7 +40,7 @@ create_graduates <- function(complete = FALSE){
 
   if(! complete){
     x <- x %>%
-            select(year, first.name, last.name, gender, race,
+      dplyr::select(year, first.name, last.name, gender, race,
                    latin.honors, Phi.Beta.Kappa, Sigma.Xi, honor, major)
   }
 
