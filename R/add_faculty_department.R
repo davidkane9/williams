@@ -16,8 +16,9 @@
 add_faculty_department <- function(x) {
 
   stopifnot(is.data.frame(x))
-  stopifnot("title" %in% names(x))
-  stopifnot(is.character(x$title))
+  stopifnot("raw.text" %in% names(x))
+  stopifnot(is.character(x$raw.text))
+  stopifnot(is.character(x$first.name))
   stopifnot(is.character(x$last.name))
 
   # Read in master list of departments
@@ -37,12 +38,12 @@ add_faculty_department <- function(x) {
   ## affiliation to WGES have it as a second affiliation. We use the first
   ## affiliation to assign a department.
   
-  x$raw <- x$title
-  x$raw <- stringr::str_replace(x$raw, "Women(.*)Studies", "WGES")
+  x$temp <- x$raw.text
+  x$temp <- stringr::str_replace(x$temp, "Women(.*)Studies", "WGES")
 
   ## "Economics" mispelled
   
-  x$raw <- stringr::str_replace_all(x$raw, "Economic", "Economics")
+  x$temp <- stringr::str_replace_all(x$temp, "Economic", "Economics")
 
   ## It seems like there are too many edge cases to design a simple munging
   ## criteria like we did for majors in graduates. Instead, we've used a
@@ -54,7 +55,7 @@ add_faculty_department <- function(x) {
   x$department <- NA
   
   for(department in departments){
-    x$department[which(stringr::str_detect(x$raw, department) & is.na(x$department))] <- department
+    x$department[which(stringr::str_detect(x$temp, department) & is.na(x$department))] <- department
   }
 
   ## But there are some annoying titles: for example, Bernadette Brooten # Croghan Bicentennial Visiting Professor in Biblical
@@ -114,6 +115,6 @@ add_faculty_department <- function(x) {
 
   ## Several more to complete here...
 
-  x$raw <- NULL
+  x$temp <- NULL
   x
 }

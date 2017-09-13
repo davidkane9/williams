@@ -10,9 +10,10 @@
 #'
 #' @format \describe{
 #'  \item{title}{Faculty's title}
-#'  \item{rank}{Faculty's rank; one of "Librarian", "Instructor", "Fellow", "Lecturer", "Visiting Professor",
-#'  "Assistant Professor", "Associate Professor", "Professor"}
-#'  \item{status}{Faculty's status; as one of "Visiting", "Part-time", Tenure-track", or "Tenured"}
+#'  \item{rank}{Faculty's rank; one of "Librarian", "Instructor", "Fellow", "Lecturer", 
+#'      "Visiting Professor", "Assistant Professor", "Associate Professor", "Professor"}
+#'  \item{status}{Faculty's status; as one of "Athletic", "Visiting", "Part-time", 
+#'     "Tenure-track", or "Tenured"}
 #'  }
 #'
 #' @importFrom dplyr %>%
@@ -55,6 +56,11 @@ add_faculty_titles <- function(x){
   x$status[which(x$rank == "Assistant Professor")] <- "Tenure-track"
   x$status[which(stringr::str_detect(x$title, "Visiting"))] <- "Visiting"
 
+  ## Coaches are not tenured or tenure track, so we use "Athletic" for status if
+  ## the department is "Physical Education."
+  
+  x$status <- ifelse(x$department == "Physical Education", "Athletic", x$status)
+  
   ## Some error checking
   
   stopifnot(all(x$title != ""))

@@ -41,11 +41,13 @@ create_faculty <- function(complete = FALSE){
   x <- gather_faculty()
   x <- add_faculty_names(x)
   x <- add_faculty_degrees(x)
-  x$birth.year <- x$first.degree.year - 22
-  x <- add_faculty_titles(x)
-  x <- add_gender_faculty(x)
   x <- add_faculty_department(x)
+  x <- add_faculty_titles(x)
   
+  x$birth.year <- x$first.degree.year - 22
+  
+  x <- add_gender_faculty(x)
+ 
   ## But, for the 2015-2016 catalog, titles are weird: we are provided with
   ## departments, instead of a title. Now that we have added the department
   ## column, let's make title, rank, and status for all faculty from 2015
@@ -59,19 +61,22 @@ create_faculty <- function(complete = FALSE){
 
   x <- add_race(x)
 
+  ## Some initial error checking:
+  
+  stopifnot(all(unique(x$year) >= 2000 & unique(x$year) < 2020))
+  stopifnot(all(table(x$year) > 300 & table(x$year) < 500))
+  stopifnot(all(x$last.name != "") & all(! is.na(x$last.name)))
+  
+  ## Add first year in catalog. Perhaps add by hand start year at Williams for
+  ## all current faculty
 
   if(! complete){
     x <- x %>%
-              dplyr::select(year, first.name, last.name, title, department, rank, status, leave, birth.year,
+        dplyr::select(year, first.name, last.name, title, department, rank, status, leave, birth.year,
                      first.degree, first.degree.school, first.degree.year, last.degree,
-                     last.degree.school, last.degree.year, gender, race)
+                     last.degree.school, last.degree.year, gender, race) %>% 
+        dplyr::filter(year == max(year))
   }
 
   x <- tibble::as_tibble(x)
-
-  ## Some initial error checking:
-  stopifnot(all(unique(x$year) >= 2000 & unique(x$year) < 2020))
-  stopifnot(all(table(x$year) > 300 & table(x$year) < 500))
-
-  x
 }
