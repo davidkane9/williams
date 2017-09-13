@@ -49,12 +49,7 @@ add_faculty_names <- function(x){
   ## Ought to do more robust error-checking, but this is not bad.
 
   stopifnot(all(x$first.name != ""))
-
-  ## Take note of " Ju-Yu, Scarlett Jang Professor of Art" edge case. She doesn't seem
-  ## to have a lastname by our definition. Will add back following error check once we
-  ## decide what to do with this edge case.
-
-  # stopifnot(all(x$last.name != ""))
+  stopifnot(all(x$last.name != ""))
 
   x
 }
