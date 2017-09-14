@@ -1,0 +1,10 @@
+Purpose of this file is to keep track of items to work on.
+
+1. Get rid of the messsages and warnings when running create_factulty() or create_graduates().
+2. Add faculty for 2017-2018 year, including .txt file. Update faculty.rda (use use_data() from devtools).
+3. Fix python script errors having to do with Madison from Sam Crane and 
+     Scarlett Jang parsing. (Just in case we ever need to recreate them.)
+4. There are lots of errors in graduates/faculty. Look for them (especially 
+    missing values). We should have an explicit NA rather than just white space.
+5. Start using HW development advice, in, for example, release numbering schemes.
+6. Release to CRAN. (Make sure to not waste CRAN's time.)
