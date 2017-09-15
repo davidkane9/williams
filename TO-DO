@@ -8,3 +8,4 @@ Purpose of this file is to keep track of items to work on.
     missing values). We should have an explicit NA rather than just white space.
 5. Start using HW development advice, in, for example, release numbering schemes.
 6. Release to CRAN. (Make sure to not waste CRAN's time.)
+7. Send e-mail message to CRAN Package Announcement once package is on CRAN.
