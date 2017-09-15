@@ -58,19 +58,21 @@ add_faculty_department <- function(x) {
     x$department[which(stringr::str_detect(x$temp, department) & is.na(x$department))] <- department
   }
 
-  ## But there are some annoying titles: for example, Bernadette Brooten # Croghan Bicentennial Visiting Professor in Biblical
-  ## and Early Christian Studies, Spring Semester # B.A. (1971) University of Portland; Ph.D. (1982) Harvard". From above, we
-  ## should probably infer department as "Religion". However, this cannot be achieved with the the above str_detect mechansism
+  ## But there are some annoying titles: for example, Bernadette Brooten #
+  ## Croghan Bicentennial Visiting Professor in Biblical and Early Christian
+  ## Studies, Spring Semester # B.A. (1971) University of Portland; Ph.D. (1982)
+  ## Harvard". From above, we should probably infer department as "Religion".
+  ## However, this cannot be achieved with the the above str_detect mechansism 
   ## and has to be explicitly handled here if required.
 
   ## First some specific departments which have been named otherwise in titles
   
-  x$department[which(stringr::str_detect(x$title, "Natural Science") & is.na(x$department))] <- "Geosciences"
-  x$department[which(stringr::str_detect(x$title, "Geology") & is.na(x$department))] <- "Geosciences"
-  x$department[which(stringr::str_detect(x$title, "Librarian") & is.na(x$department))] <- "Library"
-  x$department[which(stringr::str_detect(x$title, "Mystic") & is.na(x$department))] <- "Williams Mystic"
-  x$department[which(stringr::str_detect(x$title, "Legal") & is.na(x$department))] <- "Justice & Law"
-  x$department[which(stringr::str_detect(x$title, "Latina") & is.na(x$department))] <- "Laitna/o Studies"
+  x$department[which(stringr::str_detect(x$temp, "Natural Science") & is.na(x$department))] <- "Geosciences"
+  x$department[which(stringr::str_detect(x$temp, "Geology") & is.na(x$department))] <- "Geosciences"
+  x$department[which(stringr::str_detect(x$temp, "Librarian") & is.na(x$department))] <- "Library"
+  x$department[which(stringr::str_detect(x$temp, "Mystic") & is.na(x$department))] <- "Williams Mystic"
+  x$department[which(stringr::str_detect(x$temp, "Legal") & is.na(x$department))] <- "Justice & Law"
+  x$department[which(stringr::str_detect(x$temp, "Latina") & is.na(x$department))] <- "Laitna/o Studies"
 
   ## Now, some specific ones for which department was obvious after a google search
   

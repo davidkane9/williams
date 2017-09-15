@@ -23,7 +23,7 @@ knitr::opts_chunk$set(tidy = FALSE,
 library(williams)
 library(dplyr)
 data("graduates")
-data("graduates_details")
+graduates_details <- create_graduates(complete = TRUE)
 ```
 
 The purpose of this document is to describe the procedure for the creating the faculty and graduate datasets. The data is collected from archives of the College's [course catalogs](https://catalog.williams.edu/archive/), from `r min(graduates$year)` to `r max(graduates$year)`. 
@@ -209,17 +209,15 @@ Then, for example, information about a graduate takes the form: "*DoHyun Tony Ch
 
 ## Faculty
 
-Next up are faculty. Our package provides two datasets: `faculty` and `faculty_details`. Let us begin by examining the `faculty_details` dataset. It has the following columns: 
-
 ```{r}
-names(faculty_details) %>% as.data.frame()
+data(faculty)
 ```
 
-For details on these variables, try `?faculty_details` on your R console.    
+Next up are faculty. Our package provides a `faculty` data set, created by `create_faculty()`, with information on the `r nrow(faculty)` current members of the faculty. Using `create_faculty(complete = TRUE)`, the user can create a tibble which includes the time series of faculty members since 2000. 
 
-The datasets are created by scraping data from the Course Catalogs which are saved as `.txt` files in the `inst/extdata` directory. These files follow the naming convention of `faculty-<YEAR (YYYY)>-<YEAR + 1 (YYYY)>`, where `YEAR` is the year for the relevant catalog. For example, the text file with information about graduates from 2000 is saved as `faculty-2000-2001.txt`. For convenience, we only save the pages containing information about faculty from the course catalogs to these files. 
+Information scraped from the archived course catalogs is saved as `.txt` files in the `inst/extdata` directory. These files follow the naming convention of the course catalog from which they are derived: `faculty-<YEAR (YYYY)>-<YEAR + 1 (YYYY)>`. We include a `year` variable in the final tibble. For example, `year = 2016` means that the information comes from the 2016-2017 course catalog.  
 
-Let us look inside these text files. The following is an abstract from `faculty-2000-2001.txt`. We will use it as an example to demonstrate the data munging procedure for faculty: 
+Consider a portion of the `faculty-2000-2001.txt` file. We will use it as an example to demonstrate the data munging procedure for faculty: 
 
 ```
 * Daniel P. Aalberts# Assistant Professor of Physics# B.S. (1989) M.I.T.; Ph.D. (1994) M.I.T.       

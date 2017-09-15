@@ -1,11 +1,29 @@
 Purpose of this file is to keep track of items to work on.
 
-1. Get rid of the messsages and warnings when running create_factulty() or create_graduates().
-2. Add faculty for 2017-2018 year, including .txt file. Update faculty.rda (use use_data() from devtools).
-3. Fix python script errors having to do with Madison from Sam Crane and 
-     Scarlett Jang parsing. (Just in case we ever need to recreate them.)
-4. There are lots of errors in graduates/faculty. Look for them (especially 
-    missing values). We should have an explicit NA rather than just white space.
-5. Start using HW development advice, in, for example, release numbering schemes.
-6. Release to CRAN. (Make sure to not waste CRAN's time.)
-7. Send e-mail message to CRAN Package Announcement once package is on CRAN.
+* Standardize naming convention of the text files. graduates{faculty}-2016-2017.txt should (obviously!) come from the same catalog, and that should be the catalog with 2016-2017 in its title. I think that this is the case now, but wanted to confirm.
+
+* Correct (?) the code (and the documentation) in faculty/graduates accordingly. In graduates, year is the year of graduation. In faculty, year should be the year of the start of the academic year. So, faculty information from the 2016-2017 catalog (and text file) is given year = 2016. (Note that graduate information from this file also gets year = 2016.)
+
+* Remove 90% of the material from the Data_Manual. (Much of that material is duplicative to what we already have documented in the individual functions. Such material belongs there, either in Roxygen or in code comments.) The only material that belongs here is the details on how one adds data from a new catalog to the collection of raw text files. Once a file is in inst/extdata, this document has nothing to say because everything related to the processing of those text files is covered in the code code/comments.
+
+* Add graduates/faculty for 2017-2018 year, including .txt file. Update graduates.rda, faculty.rda (use use_data() from devtools). This provides a good occasion to document everything you need to do in the Data_Manual. Again, focus is on Python, copy/paste and other hackery. Note that they seem to have totally changed the format!!! Including new information for graduates, including major and hometown. Change the process in sensible ways to include this information.
+
+* Add back in a first.year variable for faculty.
+
+* Get rid of the messsages and warnings when running create_factulty() or create_graduates().
+
+* Fix python script errors having to do with Madison from Sam Crane and  Scarlett Jang parsing. (Just in case we ever need to recreate them.)
+
+* There are lots of errors in graduates/faculty. Look for them (especially  missing values). We should have an explicit NA rather than just white space.
+
+* Start using Hadley Wickham development advice, in, for example, release numbering schemes.
+
+* Release to CRAN. (Make sure to not waste CRAN's time.)
+
+* Send e-mail message to CRAN Package Announcement once package is on CRAN.
+
+* Add a README to github. Doens't need to include much more information than the DESCRIPTION.
+
+* Figure out how to deal with files like TO-DO and README in terms of git and R. We don't want them to be included in the R package when it is built, which I guess is handled in .Rbuildignore. Are we handling that correctly?
+
+*Get the missing genders in the faculty data set correct, using the same set of tricks we used for graduates.

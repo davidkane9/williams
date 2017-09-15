@@ -23,15 +23,14 @@ knitr::opts_chunk$set(tidy = FALSE,
 
 ## Introduction
 
-This document provides an overview of the data available in the wiliamsmetrics package. We have data on the faculty and graduates of Williams College from the 1999--2000 academic year through 2015--2016.
+This document provides an overview of the data available in the wiliams package. We have data on the faculty and graduates of Williams College from the 2000--2001 through 2016--2017 academic years, obtained from archived course catalogs.
 
 ```{r}
 library(dplyr)
 library(stringr)
 library(ggplot2)
 library(williams)
-data(graduates_details)
-x <- graduates_details
+x <- create_graduates(complete = TRUE)
 ```
 
 
@@ -280,7 +279,7 @@ x %>% select(year, race) %>% count(year, race) %>% mutate(percentage = n/sum(n))
 
 ```{r}
 data("faculty")
-data("faculty_details")
+faculty_details <- create_faculty(complete = TRUE)
 ```
 
 There were `r dim(faculty_details)[1]` faculty at Williams from `r min(faculty_details$year)` through `r max(faculty_details$year)`. The number of faculty averages about `r round(mean(table(faculty_details$year)))` per year. The largest class was `r as.numeric(tail(sort(table(faculty_details$year)), n = 1))` in 
@@ -391,20 +390,8 @@ The five most common titles are:
 
 ##Rank
 
-```{r}
-x <- select(faculty_details, start.year = year, first.name, last.name, start.rank = rank)
-faculty_start.rank <- dplyr::left_join(faculty, 
-                            x, 
-                            by = c("first.name", "last.name", "start.year"))
-```
-
 We infer the rank of faculty as one of Professor, Assistant Professor, Lecturer, Associate Professor, Artist-in-Residence, or Fellow from their job title. For example, we classify the rank of "Daniel P. Aalberts, Assistant Professor of Physics" as "Assistant Professor", and  that for "Irma Mayorga, Gauius Charles Bolin Fellow" as "Fellow". 
 
-Among faculty currently employed at Williams, the rank variable looks like: 
-
-```{r}
-table(faculty_start.rank$rank)
-```
  
 ```{r}
 grouped <- dplyr::filter(faculty, !is.na(rank)) %>% dplyr::group_by(race, rank)
@@ -424,26 +411,11 @@ ggplot(data = summarised, aes(x = rank, y = n, fill = gender)) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ```
 
-```{r}
-assistant_prof <- faculty_start.rank[which(faculty_start.rank$rank == "Professor" & 
-                                           faculty_start.rank$start.rank == "Assistant Professor"), ] 
-assoc_prof <- faculty_start.rank[which(faculty_start.rank$rank == "Professor" & 
-                                           faculty_start.rank$start.rank == "Assistant Professor"), ] 
-prof <- faculty_details[which(faculty_details$rank == "Professor"), ] %>% 
-       dplyr::filter(!duplicated(paste(first.name, last.name))) %>%
-       dplyr::select(first.name, last.name, promotion.year = year)
-assistant_prof <- dplyr::left_join(assistant_prof, prof, by = c("first.name", "last.name"))
-assoc_prof <- dplyr::left_join(assoc_prof, prof, by = c("first.name", "last.name"))
-
-assistant_prof$promotion_time <- assistant_prof$promotion.year - assistant_prof$start.year
-assoc_prof$promotion_time <- assoc_prof$promotion.year - assoc_prof$start.year
-```
-
 
 We find that of the `r total = sum(faculty_start.rank$rank == "Professor", na.rm = T)` `r total` faculty members with rank `Professor` currently employed at Williams, `r round(sum(faculty_start.rank$rank == "Professor" & faculty_start.rank$start.rank == "Assistant Professor", na.rm = T)/total * 100, 2)`% were first employed as `Assistant Professor` and at average, took `r round(mean(assistant_prof$promotion_time), 2)` years to be promoted. `r round(sum(faculty_start.rank$rank == "Professor" & faculty_start.rank$start.rank == "Associate Professor", na.rm = T)/total * 100, 2)`% were first employed as `Associate Professor`, and at average, took `r round(mean(assoc_prof$promotion_time), 2)` years to be promoted.
 
 
-###Department
+### Department
 
 ```{r}
 faculty.na <- faculty_details[which(!is.na(faculty_details$department)), ]
@@ -476,7 +448,7 @@ p <- ggplot(data = filter.summary, aes(x = year, y = number_of_faculty, color = 
 p 
 ```
 
-###Birth Year
+### Birth Year
 
 The course catalogs provide the year a faculty member graduated from college. Assuming (perhaps incorrectly in some cases) that she is 22 when she graduates, we infer her birth year.   
 
@@ -521,7 +493,7 @@ summary.year <- dplyr::summarise(grouped.year, avg_age = mean(age, na.rm = T))
 ggplot(data = summary.year, aes(x = year, y = avg_age, fill = race)) + geom_bar(stat = "identity", position = "dodge") + labs(title = "Average Age of Faculty by Race", x = "Year", y = "Average Age")
 ```
 
-###Start Year
+### Start Year
 
 We infer a faculty's `start.year`, or the first year they joined Williams, as the year of the first catalog that lists them as faculty of the college. 
 

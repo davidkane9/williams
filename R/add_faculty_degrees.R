@@ -36,6 +36,10 @@ add_faculty_degrees <- function(x) {
   ## Now, each information about each degree is seperated by ";". Let's break that up.
   
   degrees <- stringr::str_split(degree.info, ";")
+  
+  ## Be wary of two observations that look like: B.A. () Reed; M.A. () Stanford 
+  
+  ## I am also a little concerned about missing values and extra white space.
 
   ## Add information about first degree
   
@@ -59,17 +63,21 @@ add_faculty_degrees <- function(x) {
 ## Given graduation details about a degree, this function finds the name of the
 ## degree
 
-fetch_degree <- function(degree.info){
-  stringr::str_split(degree.info, " ", simplify = TRUE)[ ,1] %>% stringr::str_trim()
+fetch_degree <- function(y){
+  stringr::str_split(y, " ", simplify = TRUE)[ ,1] %>% stringr::str_trim()
 }
 
 ## Given graduation details about a degree, this function finds the year the
 ## degree was conferred
 
-fetch_year <- function(degree.info){
-  # Get the parenthesis and what is inside
-  year <- stringr::str_extract_all(degree.info, "\\([^()]+\\)")
-  # Remove parenthesis
+fetch_year <- function(y){
+
+  ## Get the parenthesis and what is inside
+  
+  year <- stringr::str_extract(y, "\\([^()]+\\)")
+  
+  ## Remove parenthesis
+  
   year <- substring(year, 2, nchar(year)-1)
   as.numeric(year)
 }
@@ -77,7 +85,7 @@ fetch_year <- function(degree.info){
 ## Given graduation details about a degree, this function finds the name of
 ## school conferring the degree
 
-fetch_school <- function(degree.info){
-  stringr::str_split(degree.info, "\\)", simplify = TRUE)[,2] %>%  stringr::str_trim()
+fetch_school <- function(y){
+  stringr::str_split(y, "\\)", simplify = TRUE)[,2] %>%  stringr::str_trim()
 }
 
