@@ -1,5 +1,7 @@
 Purpose of this file is to keep track of items to work on.
 
+* New data. 
+
 * Standardize naming convention of the text files. graduates{faculty}-2016-2017.txt should (obviously!) come from the same catalog, and that should be the catalog with 2016-2017 in its title. I think that this is the case now, but wanted to confirm.
 
 * Correct (?) the code (and the documentation) in faculty/graduates accordingly. In graduates, year is the year of graduation. In faculty, year should be the year of the start of the academic year. So, faculty information from the 2016-2017 catalog (and text file) is given year = 2016. (Note that graduate information from this file also gets year = 2016.)
