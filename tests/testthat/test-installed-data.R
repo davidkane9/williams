@@ -40,7 +40,7 @@ test_that("graduate data sensible", {
 
 test_that("faculty data sensible", {
   
-  data(graduates)
+  data(faculty)
   
   ## There should not be "" entries. They should be explicitly NA instead.
   
@@ -54,13 +54,13 @@ test_that("faculty data sensible", {
   ## Must be a better way to handle ranges and comparisons which have NA values
   ## sometime.
   
-  stopifnot(nrow(filter(faculty, ! between(birth.year, 1900, 2000))) == 0)
-  stopifnot(nrow(filter(faculty, ! birth.year < first.degree.year)) == 0)
+  stopifnot(nrow(dplyr::filter(faculty, ! dplyr::between(birth.year, 1900, 2000))) == 0)
+  stopifnot(nrow(dplyr::filter(faculty, ! birth.year < first.degree.year)) == 0)
 
   ## Some professors only have one degree, so we list that as both first and 
   ## last degree (with same year). Not sure if that makes sense. Other
   ## professors have a masters as a last degree, awarded in same year as BA.
   
-  stopifnot(nrow(filter(faculty, ! first.degree.year <= last.degree.year)) == 0)
+  stopifnot(nrow(dplyr::filter(faculty, ! first.degree.year <= last.degree.year)) == 0)
   
 })
