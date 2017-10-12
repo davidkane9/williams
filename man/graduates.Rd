@@ -24,7 +24,7 @@
 graduates
 }
 \description{
-A dataset containing graduation information for 8,357 ephs (classes of 2001 to 2016), extracted from the
+A dataset containing graduation information for 8,893 ephs (classes of 2001 to 2016), extracted from the
 Williams College course catalog. graduates_details is a similar data frame, with the same
 number of rows and all the same variables. It also includes a dozen or so other variables.
 }
