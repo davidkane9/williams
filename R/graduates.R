@@ -4,12 +4,9 @@
 #' Williams College course catalog. graduates_details is a similar data frame, with the same
 #' number of rows and all the same variables. It also includes a dozen or so other variables.
 #'
-#' @source \url{http://web.williams.edu/admin/registrar/catalog/archive.html}
-#' @source \url{https://cran.r-project.org/web/packages/gender/README.html}
-#' @source \url{https://cran.r-project.org/web/packages/wru/index.html}
+#' @source \url{https://catalog.williams.edu/archive/}
 #'
-#'
-#' @format A data frame with 8,357 rows and 10 variables:
+#' @format A data frame with 8,893 rows and 10 variables:
 #' \describe{
 #'     \item{year}{numeric, year of graduation}
 #'     \item{first.name}{character, first name of graduate}

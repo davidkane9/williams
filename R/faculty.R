@@ -5,7 +5,7 @@
 #' Williams College course catalog. See also the \code{faculty_details}
 #' data frame for the full history.
 #'
-#' @source \url{http://web.williams.edu/admin/registrar/catalog/archive.html}
+#' @source \url{https://catalog.williams.edu/archive/}
 #' @format
 #' \describe{
 #'     \item{year}{Catalog year from which information is extracted}

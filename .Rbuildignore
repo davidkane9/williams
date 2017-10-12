@@ -1,3 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 TO-DO*
+README*
+.gitignore
+.Rbuildignore

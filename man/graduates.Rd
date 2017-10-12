@@ -4,7 +4,7 @@
 \name{graduates}
 \alias{graduates}
 \title{Williams College Graduates}
-\format{A data frame with 8,357 rows and 10 variables:
+\format{A data frame with 8,893 rows and 10 variables:
 \describe{
     \item{year}{numeric, year of graduation}
     \item{first.name}{character, first name of graduate}
@@ -18,11 +18,7 @@
     \item{race}{character, based on \code{last.name}, using the wru package.}
 }}
 \source{
-\url{http://web.williams.edu/admin/registrar/catalog/archive.html}
-
-\url{https://cran.r-project.org/web/packages/gender/README.html}
-
-\url{https://cran.r-project.org/web/packages/wru/index.html}
+\url{https://catalog.williams.edu/archive/}
 }
 \usage{
 graduates

@@ -31,7 +31,7 @@
     \item{start.year}{First year teaching at Williams.}
     }}
 \source{
-\url{http://web.williams.edu/admin/registrar/catalog/archive.html}
+\url{https://catalog.williams.edu/archive/}
 }
 \usage{
 faculty

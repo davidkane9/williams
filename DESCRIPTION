@@ -1,6 +1,6 @@
 Package: williams
 Type: Package
-Title: Williams College Related Metrics
+Title: Williams College Data and Tools
 Version: 0.4.3
 Date: 2017-09-15
 Author: c(
@@ -8,10 +8,10 @@ Author: c(
                   role = c("aut", "cre")), 
         person("David", "Kane", email = "dave.kane@gmail.com",
                   role = c("aut", "cre")))
-Maintainer: Karan Tibrewal <karan.tibrewal@williams.edu>
+Maintainer: David Kane <dave.kane@gmail.com>
 Description: The williams packages serves two functions. First, it is a repository of 
   data related to Williams College, most importantly a list of all the faculty and graduates
-  since 2000. Second, it is a set of functions for updating this data in the future.
+  since 2000. Second, it is a set of functions for updating some of this data in the future.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
