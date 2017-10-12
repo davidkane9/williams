@@ -1,6 +1,6 @@
 Package: williams
 Type: Package
-Title: Williams College Data and Tools
+Title: Data and Tools Associated with Williams College 
 Version: 0.4.3
 Date: 2017-09-15
 Author: c(
@@ -11,13 +11,14 @@ Author: c(
 Maintainer: David Kane <dave.kane@gmail.com>
 Description: The williams packages serves two functions. First, it is a repository of 
   data related to Williams College, most importantly a list of all the faculty and graduates
-  since 2000. Second, it is a set of functions for updating some of this data in the future.
+  from 2000 through 2016. Second, it is a set of functions for updating some of this data in the future.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
 Depends: R (>= 2.10), wru
-Suggests: knitr, genderdata, tufte
+Additional_repositories: http://packages.ropensci.org
+Suggests: knitr, genderdata
 Imports:
     utils,
     gender,
