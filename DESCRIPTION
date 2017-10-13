@@ -1,8 +1,8 @@
 Package: williams
 Type: Package
 Title: Data and Tools Associated with Williams College 
-Version: 0.4.3
-Date: 2017-09-15
+Version: 0.4.4
+Date: 2017-10-13
 Author: c(
         person("Karan", "Tibrewal", email = "karan.tibrewal@williams.edu",
                   role = c("aut", "cre")), 
