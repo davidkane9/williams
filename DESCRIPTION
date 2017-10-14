@@ -9,9 +9,10 @@ Author: c(
         person("David", "Kane", email = "dave.kane@gmail.com",
                   role = c("aut", "cre")))
 Maintainer: David Kane <dave.kane@gmail.com>
-Description: The williams packages serves two functions. First, it is a repository of 
-  data related to Williams College, most importantly a list of all the faculty and graduates
-  from 2000 through 2016. Second, it is a set of functions for updating some of this data in the future.
+Description: The williams packages serves two functions. First, it is a 
+  repository of data related to Williams College, most importantly a list of 
+  the current faculty and of all the graduates from 2000 through 2016. Second, 
+  it is a set of functions for updating some of this data in the future.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
