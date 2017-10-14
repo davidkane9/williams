@@ -5,6 +5,10 @@
 #' the raw source for this data was submitted anonymously to EphBlog. We can not
 #' guarantee its accuracy. The data has been modified to make it impossible to
 #' identify specific applicants, something that was possible in the raw data.
+#' 
+#' Original command to go from raw data to what we have here is:
+#' 
+#' read_csv("inst/admissions.csv") %>% mutate(enrolled = as.logical(enrolled)) %>% mutate(sex = recode(sex, "M" = "male", "F" = "female")) %>% mutate(country = recode(country, "United States" = "USA", .default = "foreign")) %>% mutate(SAT = reading + math) %>% rename(ACT = act, race = ethnicity, nationality = country) %>% select(-state, -math, -reading, -writing) %>% mutate(race = recode(race, "Asian American" = "Asian", "Hispanic/Latino"= "Hispanic", "Non-US" = NA_character_, "Unidentified" = NA_character_)) -> admits
 #'
 #' @source \url{https://www.ephblog.com}
 #'
