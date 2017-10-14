@@ -4,31 +4,35 @@
 \name{faculty}
 \alias{faculty}
 \title{Williams College Faculty}
-\format{\describe{
-    \item{year}{Catalog year from which information is extracted}
-    \item{first.name}{First name of faculty member}
-    \item{last.name}{Last name of faculty member}
-    \item{title}{Title of faculty member}
-    \item{department}{Department of faculty member}
-    \item{rank}{Rank of faculty member: one of "Librarian", "Instructor", 
-        "Fellow", "Lecturer", "Visiting Professor",
-        "Assistant Professor", "Associate Professor", "Professor". Otherwise, blank.} 
-    \item{status}{Teaching status of faculty member: one of "Part-time", 
-         "Tenure-track", "Tenured", or "Visiting". Otherwise, blank.}
-    \item{leave}{Faculty member's leave status. One of "Academic Year",   
-          "Calendar Year", "First Semester", "None", or "Second Semester".} 
-    \item{birth.year}{Estimated year of birth, based on the assumption 
+\format{A tibble with 428 rows and 17 variables.
+\describe{
+    \item{year}{catalog start year from which information is extracted}
+    \item{first.name}{first name of faculty member}
+    \item{last.name}{last name of faculty member}
+    \item{title}{title of faculty member}
+    \item{department}{department of faculty member}
+    \item{rank}{rank of faculty member: one of "Instructor", 
+        "Fellow", "Lecturer", "Visiting Professor", "Artist-in-Residence",
+        "Assistant Professor", "Associate Professor", "Professor".
+        "Librarian" is a rank sometimes used in previous years.} 
+    \item{status}{teaching status of faculty member: one of  
+         "Tenure-track", "Tenured", "Athletic" or "Visiting". 
+         "Part-time" has been used in previous years.}
+    \item{leave}{faculty member's leave status. One of "Academic Year",   
+          "First Semester", "None", or "Second Semester". "Calendar Year" has
+          been used in previous years.} 
+    \item{birth.year}{estimated year of birth, based on the assumption 
            that the first degree was awarded at age 22.}            
-    \item{first.degree}{First degree held by faculty. This is generally 
+    \item{first.degree}{first degree held by faculty. This is generally 
            a bachelors degree}
-    \item{first.degree.year}{Year the first degree was conferred}
-    \item{first.degree.school}{School that conferred first degree}
-    \item{last.degree}{Last degree held by faculty; This is generally the highest degree held by the faculty.}
-    \item{last.degree.year}{Year the last degree was conferred}
-    \item{last.degree.school}{School that conferred last degree.}
-    \item{gender}{Estimated gender.}
-    \item{race}{Estimated race: "Asian", "Black", "Hispanic", "Other", "White"}
-    \item{start.year}{First year teaching at Williams.}
+    \item{first.degree.year}{year the first degree was conferred}
+    \item{first.degree.school}{school that conferred first degree}
+    \item{last.degree}{last degree held by faculty; This is generally the highest degree held by the faculty.}
+    \item{last.degree.year}{year the last degree was conferred}
+    \item{last.degree.school}{school that conferred last degree}
+    \item{gender}{character, based on \code{first.name}, using the gender package.}
+    \item{race}{character, based on \code{last.name}, using the wru package. 
+        Values are "Asian", "Black", "Hispanic", "White"}
     }}
 \source{
 \url{https://catalog.williams.edu/archive/}
@@ -37,9 +41,8 @@
 faculty
 }
 \description{
-A dataset containing information for the current members (what years?) 
+A tibble containing information for the 2016-2017 members 
 of the Williams faculty using information extracted from the 
-Williams College course catalog. See also the \code{faculty_details}
-data frame for the full history.
+Williams College course catalog.
 }
 \keyword{datasets}
