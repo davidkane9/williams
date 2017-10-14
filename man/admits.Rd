@@ -35,4 +35,17 @@ the raw source for this data was submitted anonymously to EphBlog. We can not
 guarantee its accuracy. The data has been modified to make it impossible to
 identify specific applicants, something that was possible in the raw data.
 }
+\details{
+The data is, obviously, not a complete set of all the applicants admitted to
+Williams over this time period. For example, it includes no information from
+the classes of 2012 and 2018. The largest number of applicants in any year is
+391 for the class of 2017, but that is only a small portion of the more than
+1,200 applicants that Williams accepts in most years.
+
+However, the data seems reasonable. For example, the mean SAT score for
+Black/White enrolled students is 1274/1480. \emph{Race and Class Matters at an
+Elite College} by Elizabeth Aries reports (p. 22) a similar gap 1284/1488 for
+an older sample at Amherst College, a school with a very similar profile to
+Williams.
+}
 \keyword{datasets}

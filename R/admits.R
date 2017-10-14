@@ -6,10 +6,18 @@
 #' guarantee its accuracy. The data has been modified to make it impossible to
 #' identify specific applicants, something that was possible in the raw data.
 #' 
-#' Original command to go from raw data to what we have here is:
+#' The data is, obviously, not a complete set of all the applicants admitted to
+#' Williams over this time period. For example, it includes no information from
+#' the classes of 2012 and 2018. The largest number of applicants in any year is
+#' 391 for the class of 2017, but that is only a small portion of the more than
+#' 1,200 applicants that Williams accepts in most years.
 #' 
-#' read_csv("inst/admissions.csv") %>% mutate(enrolled = as.logical(enrolled)) %>% mutate(sex = recode(sex, "M" = "male", "F" = "female")) %>% mutate(country = recode(country, "United States" = "USA", .default = "foreign")) %>% mutate(SAT = reading + math) %>% rename(ACT = act, race = ethnicity, nationality = country) %>% select(-state, -math, -reading, -writing) %>% mutate(race = recode(race, "Asian American" = "Asian", "Hispanic/Latino"= "Hispanic", "Non-US" = NA_character_, "Unidentified" = NA_character_)) -> admits
-#'
+#' However, the data seems reasonable. For example, the mean SAT score for
+#' Black/White enrolled students is 1274/1480. \emph{Race and Class Matters at an
+#' Elite College} by Elizabeth Aries reports (p. 22) a similar gap 1284/1488 for
+#' an older sample at Amherst College, a school with a very similar profile to
+#' Williams.
+#' 
 #' @source \url{https://www.ephblog.com}
 #'
 #' @format A tibble with 2,110 rows and 7 variables:
