@@ -1,8 +1,8 @@
 #' Williams College Faculty
 #'
 #' A tibble containing information for the 2016-2017 members 
-#' of the Williams faculty using information extracted from the 
-#' Williams College course catalog. 
+#' of the Williams College faculty using information extracted from the 
+#' course catalog. Created by running \code{create_faculty()}.
 #'
 #' @source \url{https://catalog.williams.edu/archive/}
 #' @format A tibble with 428 rows and 17 variables.

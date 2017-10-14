@@ -1,7 +1,8 @@
 #' Williams College Graduates
 #'
-#' A tibble containing graduation information for 8,893 ephs (classes of 2001 to
-#' 2016), extracted from the Williams College course catalog. 
+#' A tibble containing information for 8,893 graduates of Williams
+#' College, classes of 2001 through 2016, extracted from the 
+#' course catalog. Created by running \code{create_graduates()}.
 #'
 #' @source \url{https://catalog.williams.edu/archive/}
 #'

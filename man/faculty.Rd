@@ -42,7 +42,7 @@ faculty
 }
 \description{
 A tibble containing information for the 2016-2017 members 
-of the Williams faculty using information extracted from the 
-Williams College course catalog.
+of the Williams College faculty using information extracted from the 
+course catalog. Created by running \code{create_faculty()}.
 }
 \keyword{datasets}
