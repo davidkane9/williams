@@ -1,8 +1,8 @@
 Package: williams
 Type: Package
 Title: Data and Tools Associated with Williams College 
-Version: 0.4.4
-Date: 2017-10-13
+Version: 0.4.5
+Date: 2017-10-14
 Author: c(
         person("Karan", "Tibrewal", email = "karan.tibrewal@williams.edu",
                   role = c("aut", "cre")), 
@@ -17,8 +17,7 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
 Depends: R (>= 2.10), wru
-Additional_repositories: http://packages.ropensci.org
-Suggests: knitr, genderdata
+Suggests: knitr
 Imports:
     utils,
     gender,

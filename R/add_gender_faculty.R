@@ -32,7 +32,9 @@ add_gender_faculty <- function(x){
   x$birth.year[index] <- round(mean(x$birth.year, na.rm = TRUE))
 
   ## We need the genderdata package (not just the gender package) to run the
-  ## gender command. We do this twice: for first names and for middle names.
+  ## gender command. Unfortunately, I could not get R CMD check to pass while
+  ## including this package in the Suggests field, presumably because it is not
+  ## on CRAN. We do this twice: for first names and for middle names.
 
   z <- gender::gender_df(x, name_col = "first.name", year_col = "birth.year")
 
