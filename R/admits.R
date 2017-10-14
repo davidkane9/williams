@@ -18,7 +18,7 @@
 #' an older sample at Amherst College, a school with a very similar profile to
 #' Williams.
 #' 
-#' @source \url{https://www.ephblog.com}
+#' @source \url{http://www.ephblog.com}
 #'
 #' @format A tibble with 2,110 rows and 7 variables:
 #' \describe{

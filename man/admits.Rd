@@ -23,7 +23,7 @@
     \item{SAT}{sum of the score on the math and reading portions of the SAT}
 }}
 \source{
-\url{https://www.ephblog.com}
+\url{http://www.ephblog.com}
 }
 \usage{
 admits
