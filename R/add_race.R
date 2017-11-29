@@ -51,6 +51,44 @@ add_race <- function(x){
                                              "Hispanic" = "p_his",
                                              "Asian" = "p_asi",
                                              "Other" = "p_oth"))
-
+  
+  ## Add some hacks for specific people. Probably should separate this out into
+  ## separate functions for graduates and faculty. 
+  
+  ## Students
+  
+  x$race[x$last.name == "Hall" & x$first.name == "Todd" & x$year == 2016] <- "Black"
+  x$race[x$last.name == "Wosen" & x$first.name == "Jonathan" & x$year == 2013] <- "Black"
+  x$race[x$last.name == "Martin" & x$first.name == "Naya-Joi" & x$year == 2009] <- "Black"
+  
+  x$race[x$last.name == "Mackall" & x$first.name == "Blake" & x$year == 2016] <- "White"
+  x$race[x$last.name == "Whidbee" & x$first.name == "Paige" & x$year == 2015] <- "White"
+  x$race[x$last.name == "Frett" & x$first.name == "Barry" & x$year == 2012] <- "White"
+  x$race[x$last.name == "Jackson" & x$first.name == "Steven" & x$year == 2010] <- "White"
+  x$race[x$last.name == "Blackshear" & x$first.name == "Chloe" & x$year == 2010] <- "White"
+  x$race[x$last.name == "Williams" & x$first.name == "Erika" & x$year == 2008] <- "White"
+  x$race[x$last.name == "Williams" & x$first.name == "Martin" & x$year == 2007] <- "White"
+  x$race[x$last.name == "Grier" & x$first.name == "Alexandra" & x$year == 2006] <- "White"
+  x$race[x$last.name == "Williams" & x$first.name == "Catherine" & x$year == 2000] <- "White"
+  x$race[x$last.name == "Trice" & x$first.name == "Laura" & x$year == 2000] <- "White"
+  
+  ## Faculty. I assume this will work even when we start processing all the years again.
+  
+  x$race[x$last.name == "De Veaux" & x$first.name == "Richard"] <- "White"
+  
+  x$race[x$last.name == "Foias" & x$first.name == "Antonia"] <- "Hispanic"
+  x$race[x$last.name == "Fox" & x$first.name == "Soledad"] <- "Hispanic"
+  x$race[x$last.name == "Whalen" & x$first.name == "Carmen"] <- "Hispanic"
+  
+  x$race[x$last.name == "Ali" & x$first.name == "Laylah"] <- "Black"
+  x$race[x$last.name == "James" & x$first.name == "Joy"] <- "Black"
+  x$race[x$last.name == "Munemo" & x$first.name == "Ngonidzashe"] <- "Black"
+  
+  ## Note the difficulty of the two David Smiths on the faculty. We want to use
+  ## "department to identify the one we want but that variable does not exist in
+  ## the student data frame. For now, we ignore.
+  
+  ## x$race[x$last.name == "Smith" & x$first.name == "David" & department == "English"] <- "Black"
+  
   x
 }

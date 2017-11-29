@@ -29,12 +29,17 @@ test_that("graduate data sensible", {
   stopifnot(all(as.data.frame(graduates[c(8406, 8436, 8740, 8866), "last.name"])[,1] ==
                   c("McDonald", "Worthington", "Martin", "Vargas" )))
   
+  ## Race classifications, some done by hand.
+  
+  stopifnot(all(as.data.frame(graduates[c(6867, 7912, 8384, 8482), "race"])[,1] == 
+                  c("Black", "White", "Black", "White")))
+
+  
   ## No empty cells.
   
   stopifnot(! any(graduates == "", na.rm = TRUE))
 
   ## Need more tests here. 
-  
   
 })
 
@@ -62,5 +67,11 @@ test_that("faculty data sensible", {
   ## professors have a masters as a last degree, awarded in same year as BA.
   
   stopifnot(nrow(dplyr::filter(faculty, ! first.degree.year <= last.degree.year)) == 0)
+  
+  ## Should add more race classification checks. Need to handle multiple years
+  ## of data better.
+  
+  stopifnot(all(faculty[which(faculty$last.name == "De Veaux"), "race"] == "White"))
+  stopifnot(all(faculty[which(faculty$last.name == "Ali"), "race"] == "Black"))
   
 })

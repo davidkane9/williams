@@ -31,7 +31,7 @@
     \item{last.degree.year}{year the last degree was conferred}
     \item{last.degree.school}{school that conferred last degree}
     \item{gender}{character, based on \code{first.name}, using the gender package.}
-    \item{race}{character, based on \code{last.name}, using the wru package. 
+    \item{race}{character, based on \code{last.name}, mainly using the wru package. 
         Values are "Asian", "Black", "Hispanic", "White"}
     }}
 \source{

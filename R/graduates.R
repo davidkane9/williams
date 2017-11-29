@@ -12,7 +12,7 @@
 #'     \item{first.name}{first name of graduate}
 #'     \item{last.name}{last name of graduate}
 #'     \item{gender}{based on \code{first.name}, using the gender package.}
-#'     \item{race}{based on \code{last.name}, using the wru package.}
+#'     \item{race}{based on \code{last.name}, mainly using the wru package. Values are "Asian", "Black", "Hispanic", "Other", and "White"}
 #'     \item{latin.honors}{character, Latin Honors recieved by graduate, if any}
 #'     \item{Phi.Beta.Kappa}{logical, indicates Phi Beta Kappa membership}
 #'     \item{Sigma.Xi}{logical, indicates Sigma Xi membership}
