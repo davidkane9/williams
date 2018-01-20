@@ -13,8 +13,6 @@
 #'  \item{last.name}{Last name or faculty member}
 #'  }
 #'
-#' @importFrom dplyr %>%
-#'
 #' @export
 
 add_faculty_names <- function(x){

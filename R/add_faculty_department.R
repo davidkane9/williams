@@ -9,8 +9,6 @@
 #'  \item{department}{the faculty member's department}
 #'  }
 #'
-#' @importFrom dplyr %>%
-#'
 #' @export
 
 add_faculty_department <- function(x) {

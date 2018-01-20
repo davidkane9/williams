@@ -16,8 +16,6 @@
 #'     "Tenure-track", or "Tenured"}
 #'  }
 #'
-#' @importFrom dplyr %>%
-#'
 #' @export
 
 add_faculty_titles <- function(x){

@@ -26,8 +26,6 @@
 #'     \item{gender.g}{character, gender of an individual, as determined by \code{genderizeR} package}
 #'   }
 #'
-#' @importFrom dplyr %>%
-#'
 #' @export
 
 add_gender_graduates <- function(x){

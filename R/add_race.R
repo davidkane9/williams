@@ -17,7 +17,6 @@
 #'   \item{race}{Graduate's race as the racial category with the highest prosterior probability.}
 #'   }
 #'
-#' @importFrom dplyr %>%
 #' @importFrom wru merge_surnames
 #'
 #' @export

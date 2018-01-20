@@ -15,9 +15,8 @@
 #'   \item{gender}{gender as determined by the \code{gender} package.}
 #'   }
 #'
-#' @importFrom dplyr %>%
-#'
 #' @export
+
 add_gender_faculty <- function(x){
 
   stopifnot(is.data.frame(x))

@@ -17,7 +17,6 @@
 #'  \item{last.degree.school}{School that conferred last degree.}
 #'  }
 #'
-#' @importFrom dplyr %>%
 #' @importFrom utils tail
 #'
 #' @export

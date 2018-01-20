@@ -6,8 +6,6 @@
 #'                                           gender, and race columns
 #' @return data set for faculty information for the last year
 #'
-#' @importFrom dplyr %>%
-#'
 #' @export
 
 create_annual_faculty <- function(x) {
