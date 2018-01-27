@@ -60,6 +60,9 @@ add_race <- function(x){
   x$race[x$last.name == "Wosen" & x$first.name == "Jonathan" & x$year == 2013] <- "Black"
   x$race[x$last.name == "Martin" & x$first.name == "Naya-Joi" & x$year == 2009] <- "Black"
   
+  x$race[  x$last.name == "Gijima" & x$first.name == "Desire" & x$year == 2010] <- "Black"
+  x$gender[x$last.name == "Gijima" & x$first.name == "Desire" & x$year == 2010] <- "male"
+   
   x$race[x$last.name == "Mackall" & x$first.name == "Blake" & x$year == 2016] <- "White"
   x$race[x$last.name == "Whidbee" & x$first.name == "Paige" & x$year == 2015] <- "White"
   x$race[x$last.name == "Frett" & x$first.name == "Barry" & x$year == 2012] <- "White"
